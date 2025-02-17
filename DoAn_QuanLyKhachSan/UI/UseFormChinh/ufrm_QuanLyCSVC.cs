@@ -16,5 +16,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
         {
             InitializeComponent();
         }
+
+        
     }
 }

@@ -77,6 +77,7 @@
             this.data_Tang.RowTemplate.Height = 24;
             this.data_Tang.Size = new System.Drawing.Size(703, 364);
             this.data_Tang.TabIndex = 65;
+            this.data_Tang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Tang_CellClick_1);
             // 
             // txtTimKiemTang
             // 
@@ -121,6 +122,7 @@
             this.btnThemTang.TabIndex = 60;
             this.btnThemTang.Text = "Thêm";
             this.btnThemTang.UseVisualStyleBackColor = true;
+            this.btnThemTang.Click += new System.EventHandler(this.btnThemTang_Click);
             // 
             // btnTroLaiTang
             // 

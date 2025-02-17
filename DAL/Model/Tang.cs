@@ -8,6 +8,7 @@ namespace DAL.Model
 {
     public class Tang
     {
-
+        public int MaTang { get; set; }
+        public string TenTang { get; set; }
     }
 }

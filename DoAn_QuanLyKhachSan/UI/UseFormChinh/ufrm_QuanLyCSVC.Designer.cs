@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ufrm_QuanLyCSVC));
             this.label1 = new System.Windows.Forms.Label();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.ThongTinPhong = new System.Windows.Forms.ToolStripButton();
+            this.ThongTinLoaiPhong = new System.Windows.Forms.ToolStripButton();
+            this.ThongTinTang = new System.Windows.Forms.ToolStripButton();
+            this.ThongTinThietBi = new System.Windows.Forms.ToolStripButton();
+            this.ThongTinDichVu = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,56 +52,56 @@
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton3,
-            this.toolStripButton2,
-            this.toolStripButton1,
-            this.toolStripButton5,
-            this.toolStripButton4});
+            this.ThongTinPhong,
+            this.ThongTinLoaiPhong,
+            this.ThongTinTang,
+            this.ThongTinThietBi,
+            this.ThongTinDichVu});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1250, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(1250, 31);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // ThongTinPhong
             // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(136, 24);
-            this.toolStripButton1.Text = "Thông Tin Tầng";
+            this.ThongTinPhong.Image = ((System.Drawing.Image)(resources.GetObject("ThongTinPhong.Image")));
+            this.ThongTinPhong.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ThongTinPhong.Name = "ThongTinPhong";
+            this.ThongTinPhong.Size = new System.Drawing.Size(145, 28);
+            this.ThongTinPhong.Text = "Thông Tin Phòng";
             // 
-            // toolStripButton2
+            // ThongTinLoaiPhong
             // 
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(177, 24);
-            this.toolStripButton2.Text = "Thông Tin Loại Phòng";
+            this.ThongTinLoaiPhong.Image = ((System.Drawing.Image)(resources.GetObject("ThongTinLoaiPhong.Image")));
+            this.ThongTinLoaiPhong.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ThongTinLoaiPhong.Name = "ThongTinLoaiPhong";
+            this.ThongTinLoaiPhong.Size = new System.Drawing.Size(177, 24);
+            this.ThongTinLoaiPhong.Text = "Thông Tin Loại Phòng";
             // 
-            // toolStripButton3
+            // ThongTinTang
             // 
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(145, 24);
-            this.toolStripButton3.Text = "Thông Tin Phòng";
+            this.ThongTinTang.Image = ((System.Drawing.Image)(resources.GetObject("ThongTinTang.Image")));
+            this.ThongTinTang.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ThongTinTang.Name = "ThongTinTang";
+            this.ThongTinTang.Size = new System.Drawing.Size(136, 24);
+            this.ThongTinTang.Text = "Thông Tin Tầng";
             // 
-            // toolStripButton4
+            // ThongTinThietBi
             // 
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(154, 24);
-            this.toolStripButton4.Text = "Thông Tin Dịch Vụ";
+            this.ThongTinThietBi.Image = ((System.Drawing.Image)(resources.GetObject("ThongTinThietBi.Image")));
+            this.ThongTinThietBi.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ThongTinThietBi.Name = "ThongTinThietBi";
+            this.ThongTinThietBi.Size = new System.Drawing.Size(153, 24);
+            this.ThongTinThietBi.Text = "Thông Tin Thiết Bị";
             // 
-            // toolStripButton5
+            // ThongTinDichVu
             // 
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(153, 24);
-            this.toolStripButton5.Text = "Thông Tin Thiết Bị";
+            this.ThongTinDichVu.Image = ((System.Drawing.Image)(resources.GetObject("ThongTinDichVu.Image")));
+            this.ThongTinDichVu.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ThongTinDichVu.Name = "ThongTinDichVu";
+            this.ThongTinDichVu.Size = new System.Drawing.Size(154, 28);
+            this.ThongTinDichVu.Text = "Thông Tin Dịch Vụ";
             // 
             // ufrm_QuanLyCSVC
             // 
@@ -122,10 +122,10 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton ThongTinPhong;
+        private System.Windows.Forms.ToolStripButton ThongTinLoaiPhong;
+        private System.Windows.Forms.ToolStripButton ThongTinTang;
+        private System.Windows.Forms.ToolStripButton ThongTinThietBi;
+        private System.Windows.Forms.ToolStripButton ThongTinDichVu;
     }
 }
