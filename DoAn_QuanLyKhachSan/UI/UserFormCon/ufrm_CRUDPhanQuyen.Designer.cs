@@ -234,6 +234,7 @@
             this.button5.TabIndex = 14;
             this.button5.Text = "Xóa Dữ Liệu";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // data_PhanQuyen
             // 
@@ -246,7 +247,6 @@
             this.data_PhanQuyen.Size = new System.Drawing.Size(703, 371);
             this.data_PhanQuyen.TabIndex = 15;
             this.data_PhanQuyen.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_PhanQuyen_CellClick);
-            this.data_PhanQuyen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_PhanQuyen_CellContentClick);
             this.data_PhanQuyen.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.data_PhanQuyen_CellFormatting);
             // 
             // txtTimKiemQuyen
@@ -286,7 +286,6 @@
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
             this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.nhânViênToolStripMenuItem.Text = "Nhân Viên";
-            this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
             // 
             // khachHangToolStripMenuItem
             // 

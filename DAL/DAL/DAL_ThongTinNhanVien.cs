@@ -26,7 +26,8 @@ namespace DAL.DAL
             {
                 connection.Open();
 
-                string getQuery = "SELECT * FROM NHAN_VIEN";
+              
+                string getQuery = @" SELECT NHAN_VIEN.HOTEN,NHAN_VIEN.NGAYSINH,NHAN_VIEN.DIACHI,NHAN_VIEN.SDT,NHAN_VIEN.TONGNGAYCONG,NHAN_VIEN.TONGLUONG,NHAN_VIEN.ID_TAIKHOAN,TAIKHOAN.EMAIL  FROM NHAN_VIEN JOIN TAIKHOAN ON NHAN_VIEN.ID_TAIKHOAN = TAIKHOAN.ID_TAIKHOAN";
 
                 SqlDataAdapter adapterNhanVien = new SqlDataAdapter(getQuery, connection);
 
@@ -63,15 +64,15 @@ namespace DAL.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                connection.Open();
-               string AddQuery = "INSERT INTO NHAN_VIEN (HOTEN, NGAYSINH, DIACHI, SDT, TONGNGAYCONG, ID_NHANVIEN ) VALUES (@HOTEN, @NGAYSINH, @DIACHI, @SDT, @TONGNGAYCONG, @ID_NHANVIEN )";
+               string AddQuery = "INSERT INTO NHAN_VIEN (HOTEN, NGAYSINH, DIACHI, SDT, TONGNGAYCONG,TONGLUONG, ID_TAIKHOAN ) VALUES (@HOTEN, @NGAYSINH, @DIACHI, @SDT, @TONGNGAYCONG,@TONGLUONG, @ID_TAIKHOAN )";
                 SqlCommand AddCommand = new SqlCommand(AddQuery, connection);
                 AddCommand.Parameters.AddWithValue("@HOTEN", nhanVien.HOTEN);
                 AddCommand.Parameters.AddWithValue("@NGAYSINH", nhanVien.NGAYSINH);
                 AddCommand.Parameters.AddWithValue("@DIACHI", nhanVien.DIACHI);
                 AddCommand.Parameters.AddWithValue("@SDT", nhanVien.SDT);
                 AddCommand.Parameters.AddWithValue("@TONGNGAYCONG", nhanVien.TONGNGAYCONG);
-               // AddCommand.Parameters.AddWithValue("@TONGLUONG", nhanVien.TONGLUONG);
-                AddCommand.Parameters.AddWithValue("@ID_NHANVIEN", nhanVien.ID_NHANVIEN);
+                AddCommand.Parameters.AddWithValue("@TONGLUONG", nhanVien.TONGLUONG);
+                AddCommand.Parameters.AddWithValue("@ID_TAIKHOAN", nhanVien.ID_TAIKHOAN); // <---
                 return AddCommand.ExecuteNonQuery() > 0;
 
             }
@@ -103,9 +104,13 @@ namespace DAL.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
+
                 string DeleteQuery = "DELETE FROM NHAN_VIEN WHERE ID_NHANVIEN = @ID_NHANVIEN";
+
                 SqlCommand DeleteCommand = new SqlCommand(DeleteQuery, connection);
+
                 DeleteCommand.Parameters.AddWithValue("@ID_NHANVIEN", ID_NHANVIEN);
+
                 return DeleteCommand.ExecuteNonQuery() > 0;
             }
         }

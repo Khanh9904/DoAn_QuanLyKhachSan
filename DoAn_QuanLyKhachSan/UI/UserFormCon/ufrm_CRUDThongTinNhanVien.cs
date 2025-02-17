@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
         private BLL_ThongTinNhanVien BLL_ThongTinNhanVien;
         //--------------------------------------------------------------------------------
 
+        private Timer taiKhoanTimer;
+
 
 
 
@@ -34,7 +37,40 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
 
             LoadNhanVien();
 
+            taiKhoanTimer = new Timer();
+            taiKhoanTimer.Interval = 1000;
+            taiKhoanTimer.Tick += (s, e) => LoadNhanVienComboBox();
+            taiKhoanTimer.Start();
 
+
+        }
+
+        public void LoadNhanVienComboBox()
+        {
+            string connectionString = new Database().GetDataSet();
+            string query = "SELECT ID_TAIKHOAN, EMAIL FROM TAIKHOAN";
+
+
+            var selectedValue = cbIDTaiKhoan.SelectedValue;
+
+            SqlDataAdapter da = new SqlDataAdapter(query, connectionString);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            cbIDTaiKhoan.DisplayMember = "EMAIL";
+            cbIDTaiKhoan.ValueMember = "ID_TAIKHOAN";
+            cbIDTaiKhoan.DataSource = dt;
+
+
+            if (selectedValue != null && dt.AsEnumerable().Any(row => row["ID_TAIKHOAN"].ToString() == selectedValue.ToString()))
+            {
+                cbIDTaiKhoan.SelectedValue = selectedValue;
+            }
+            else
+            {
+
+                cbIDTaiKhoan.SelectedIndex = 0;
+            }
         }
 
         //--------------------------------------------------------------------------------
@@ -51,7 +87,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             }
         }
 
-            
+
 
         private void nHAN_VIENBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -79,12 +115,12 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             hOTENTextBox.Text = "";
             nGAYSINHDateTimePicker.Text = "";
             dIACHITextBox.Text = "";
-            sDTTextBox.Text = "";   
+            sDTTextBox.Text = "";
         }
 
         //------------------------------------------------------------------------
 
-        
+
 
 
         //--------------------------------------------------------------------------------
@@ -95,17 +131,18 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             {
                 NhanVien nhanVien = new NhanVien()
                 {
-                   HOTEN = hOTENTextBox.Text,
-                   NGAYSINH = nGAYSINHDateTimePicker.Value,
+                    HOTEN = hOTENTextBox.Text,
+                    NGAYSINH = nGAYSINHDateTimePicker.Value,
                     DIACHI = dIACHITextBox.Text,
                     SDT = sDTTextBox.Text,
                     TONGNGAYCONG = int.Parse(tONGNGAYCONGTextBox.Text.Trim()),
                     TONGLUONG = int.Parse(tONGLUONGTextBox.Text.Trim()),
-                    ID_TAIKHOAN = int.Parse(iD_TAIKHOANTextBox.Text.Trim()),
+                    ID_TAIKHOAN = (int)cbIDTaiKhoan.SelectedValue,
                 };
 
                 BLL_ThongTinNhanVien.AddNhanVien(nhanVien);
 
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadNhanVien();
 
                 btnDonThongTin();
@@ -115,6 +152,51 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi thông tin liên kết nối : " + ex.Message, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //--------------------------------------------------------------------------------
+        //hàm xóa nhân viên
+
+       
+
+        //--------------------------------------------------------------------------
+
+
+
+        
+
+        
+
+
+
+
+
+        private void data_NhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow rowst = data_NhanVien.Rows[e.RowIndex];
+
+
+
+                hOTENTextBox.Text = rowst.Cells["HOTEN"]?.Value != DBNull.Value ? rowst.Cells["HOTEN"].Value.ToString() : "";
+
+                nGAYSINHDateTimePicker.Text = rowst.Cells["NGAYSINH"]?.Value != DBNull.Value ? rowst.Cells["NGAYSINH"].Value.ToString() : "";
+
+                dIACHITextBox.Text = rowst.Cells["DIACHI"]?.Value != DBNull.Value ? rowst.Cells["DIACHI"].Value.ToString() : "";
+
+                sDTTextBox.Text = rowst.Cells["SDT"]?.Value != DBNull.Value ? rowst.Cells["SDT"].Value.ToString() : "";
+
+                tONGNGAYCONGTextBox.Text = rowst.Cells["TONGNGAYCONG"]?.Value != DBNull.Value ? rowst.Cells["TONGNGAYCONG"].Value.ToString() : "";
+
+                tONGLUONGTextBox.Text = rowst.Cells["TONGLUONG"]?.Value != DBNull.Value ? rowst.Cells["TONGLUONG"].Value.ToString() : "";
+
+                cbIDTaiKhoan.SelectedValue = rowst.Cells["ID_TAIKHOAN"]?.Value != DBNull.Value ? rowst.Cells["ID_TAIKHOAN"].Value : 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -142,16 +224,12 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
                 btnDonThongTin();
             }
 
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Lỗi thông tin liên kết nối : " + ex.Message, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }
-
-        //--------------------------------------------------------------------------
-
-
 
         //--------------------------------------------------------------------------------
         //hàm sửa nhân viên
@@ -180,35 +258,11 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
         }
 
         //--------------------------------------------------------------------------------
-        //dọn thông tin
-        private void btnDonThongTin_Click(object sender, EventArgs e)
+        //hàm clear thông tin
+
+        private void btnClearNhanVien_Click(object sender, EventArgs e)
         {
             btnDonThongTin();
         }
-
-        private void data_NhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                DataGridViewRow rowst = data_NhanVien.Rows[e.RowIndex];
-
-
-                iD_NHANVIENTextBox.Text = rowst.Cells["HOTEN"]?.Value != DBNull.Value ? rowst.Cells["HOTEN"].Value.ToString() : "";
-
-                dIACHITextBox.Text = rowst.Cells["DIACHI"]?.Value != DBNull.Value ? rowst.Cells["DIACHI"].Value.ToString() : "";
-
-
-                nGAYSINHDateTimePicker.Text = rowst.Cells["NGAYSINH"]?.Value != DBNull.Value ? rowst.Cells["NGAYSINH"].Value.ToString() : "";
-
-                sDTTextBox.Text = rowst.Cells["SDT"]?.Value != DBNull.Value ? rowst.Cells["SDT"].Value.ToString() : "";
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-       
     }
 }

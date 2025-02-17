@@ -24,6 +24,7 @@ namespace DAL.DAL
         public DataTable LoadPhanQuyen()
         {
             DataTable dt = new DataTable();
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();

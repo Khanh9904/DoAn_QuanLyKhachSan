@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAn_QuanLyKhachSan.UI.UserFormPhu;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,12 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
             InitializeComponent();
         }
 
-        
+        private void ThongTinTang_Click(object sender, EventArgs e)
+        {
+            ufrm_CRUDTang kh = new ufrm_CRUDTang();
+            this.Controls.Clear();
+            this.Controls.Add(kh);
+            kh.Dock = DockStyle.Fill;
+        }
     }
 }

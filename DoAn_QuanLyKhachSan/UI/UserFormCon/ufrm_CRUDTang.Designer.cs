@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ufrm_CRUDTang));
             System.Windows.Forms.Label maTangLabel;
             System.Windows.Forms.Label tenTangLabel;
             this.data_Tang = new System.Windows.Forms.DataGridView();
@@ -44,19 +43,6 @@
             this.tangLauBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tangLauTableAdapter = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSet1TableAdapters.TangLauTableAdapter();
             this.tableAdapterManager = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSet1TableAdapters.TableAdapterManager();
-            this.tangLauBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.tangLauBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.maTangTextBox = new System.Windows.Forms.TextBox();
             this.tenTangTextBox = new System.Windows.Forms.TextBox();
             maTangLabel = new System.Windows.Forms.Label();
@@ -64,9 +50,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.data_Tang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tangLauBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tangLauBindingNavigator)).BeginInit();
-            this.tangLauBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // maTangLabel
+            // 
+            maTangLabel.AutoSize = true;
+            maTangLabel.Location = new System.Drawing.Point(91, 279);
+            maTangLabel.Name = "maTangLabel";
+            maTangLabel.Size = new System.Drawing.Size(64, 16);
+            maTangLabel.TabIndex = 83;
+            maTangLabel.Text = "Ma Tang:";
+            // 
+            // tenTangLabel
+            // 
+            tenTangLabel.AutoSize = true;
+            tenTangLabel.Location = new System.Drawing.Point(91, 307);
+            tenTangLabel.Name = "tenTangLabel";
+            tenTangLabel.Size = new System.Drawing.Size(69, 16);
+            tenTangLabel.TabIndex = 85;
+            tenTangLabel.Text = "Ten Tang:";
             // 
             // data_Tang
             // 
@@ -86,6 +88,7 @@
             this.txtTimKiemTang.Name = "txtTimKiemTang";
             this.txtTimKiemTang.Size = new System.Drawing.Size(703, 22);
             this.txtTimKiemTang.TabIndex = 64;
+            this.txtTimKiemTang.TextChanged += new System.EventHandler(this.txtTimKiemTang_TextChanged);
             // 
             // btnClearTang
             // 
@@ -95,6 +98,7 @@
             this.btnClearTang.TabIndex = 63;
             this.btnClearTang.Text = "Xóa Dữ Liệu";
             this.btnClearTang.UseVisualStyleBackColor = true;
+            this.btnClearTang.Click += new System.EventHandler(this.btnClearTang_Click);
             // 
             // btnXoaTang
             // 
@@ -104,6 +108,7 @@
             this.btnXoaTang.TabIndex = 62;
             this.btnXoaTang.Text = "Xóa";
             this.btnXoaTang.UseVisualStyleBackColor = true;
+            this.btnXoaTang.Click += new System.EventHandler(this.btnXoaTang_Click);
             // 
             // btnSuaTang
             // 
@@ -113,6 +118,7 @@
             this.btnSuaTang.TabIndex = 61;
             this.btnSuaTang.Text = "Sửa";
             this.btnSuaTang.UseVisualStyleBackColor = true;
+            this.btnSuaTang.Click += new System.EventHandler(this.btnSuaTang_Click);
             // 
             // btnThemTang
             // 
@@ -132,6 +138,7 @@
             this.btnTroLaiTang.TabIndex = 59;
             this.btnTroLaiTang.Text = "Trở lại";
             this.btnTroLaiTang.UseVisualStyleBackColor = true;
+            this.btnTroLaiTang.Click += new System.EventHandler(this.btnTroLaiTang_Click);
             // 
             // label1
             // 
@@ -176,141 +183,6 @@
             this.tableAdapterManager.THIET_BITableAdapter = null;
             this.tableAdapterManager.UpdateOrder = DoAn_QuanLyKhachSan.HeThongKhachSanDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // tangLauBindingNavigator
-            // 
-            this.tangLauBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.tangLauBindingNavigator.BindingSource = this.tangLauBindingSource;
-            this.tangLauBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.tangLauBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.tangLauBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.tangLauBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.tangLauBindingNavigatorSaveItem});
-            this.tangLauBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.tangLauBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.tangLauBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.tangLauBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.tangLauBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.tangLauBindingNavigator.Name = "tangLauBindingNavigator";
-            this.tangLauBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.tangLauBindingNavigator.Size = new System.Drawing.Size(1191, 27);
-            this.tangLauBindingNavigator.TabIndex = 83;
-            this.tangLauBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // tangLauBindingNavigatorSaveItem
-            // 
-            this.tangLauBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tangLauBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("tangLauBindingNavigatorSaveItem.Image")));
-            this.tangLauBindingNavigatorSaveItem.Name = "tangLauBindingNavigatorSaveItem";
-            this.tangLauBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
-            this.tangLauBindingNavigatorSaveItem.Text = "Save Data";
-            this.tangLauBindingNavigatorSaveItem.Click += new System.EventHandler(this.tangLauBindingNavigatorSaveItem_Click_1);
-            // 
-            // maTangLabel
-            // 
-            maTangLabel.AutoSize = true;
-            maTangLabel.Location = new System.Drawing.Point(91, 279);
-            maTangLabel.Name = "maTangLabel";
-            maTangLabel.Size = new System.Drawing.Size(64, 16);
-            maTangLabel.TabIndex = 83;
-            maTangLabel.Text = "Ma Tang:";
-            // 
             // maTangTextBox
             // 
             this.maTangTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tangLauBindingSource, "MaTang", true));
@@ -318,15 +190,6 @@
             this.maTangTextBox.Name = "maTangTextBox";
             this.maTangTextBox.Size = new System.Drawing.Size(100, 22);
             this.maTangTextBox.TabIndex = 84;
-            // 
-            // tenTangLabel
-            // 
-            tenTangLabel.AutoSize = true;
-            tenTangLabel.Location = new System.Drawing.Point(91, 307);
-            tenTangLabel.Name = "tenTangLabel";
-            tenTangLabel.Size = new System.Drawing.Size(69, 16);
-            tenTangLabel.TabIndex = 85;
-            tenTangLabel.Text = "Ten Tang:";
             // 
             // tenTangTextBox
             // 
@@ -344,7 +207,6 @@
             this.Controls.Add(this.maTangTextBox);
             this.Controls.Add(tenTangLabel);
             this.Controls.Add(this.tenTangTextBox);
-            this.Controls.Add(this.tangLauBindingNavigator);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.data_Tang);
             this.Controls.Add(this.txtTimKiemTang);
@@ -358,9 +220,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.data_Tang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tangLauBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tangLauBindingNavigator)).EndInit();
-            this.tangLauBindingNavigator.ResumeLayout(false);
-            this.tangLauBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,19 +238,6 @@
         private System.Windows.Forms.BindingSource tangLauBindingSource;
         private HeThongKhachSanDataSet1TableAdapters.TangLauTableAdapter tangLauTableAdapter;
         private HeThongKhachSanDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator tangLauBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton tangLauBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox maTangTextBox;
         private System.Windows.Forms.TextBox tenTangTextBox;
     }

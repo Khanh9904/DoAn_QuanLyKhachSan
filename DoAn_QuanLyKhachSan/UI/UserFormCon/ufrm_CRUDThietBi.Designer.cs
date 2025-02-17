@@ -28,8 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // ufrm_CRUDThietBi
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "ufrm_CRUDThietBi";
+            this.Size = new System.Drawing.Size(1191, 830);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

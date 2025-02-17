@@ -217,6 +217,9 @@
     <EmbeddedResource Include="UI\UserFormCon\ufrm_CRUDTang.resx">
       <DependentUpon>ufrm_CRUDTang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserFormCon\ufrm_CRUDThietBi.resx">
+      <DependentUpon>ufrm_CRUDThietBi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\UserFormCon\ufrm_CRUDThongTinKhachHang.resx">
       <DependentUpon>ufrm_CRUDThongTinKhachHang.cs</DependentUpon>
     </EmbeddedResource>

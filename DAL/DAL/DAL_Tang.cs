@@ -21,12 +21,17 @@ namespace DAL.DAL
         public DataTable LoadTang()
         {
             DataTable dt = new DataTable();
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
+
                 string getQuery = "SELECT * FROM TangLau";
+
                 SqlDataAdapter adapterTang = new SqlDataAdapter(getQuery, connection);
+
                 adapterTang.Fill(dt);
+
                 return dt;
             }
 
@@ -68,7 +73,8 @@ namespace DAL.DAL
                 connection.Open();
                 string UpdateQuery = "UPDATE TangLau SET TenTang = @TenTang WHERE MaTang = @MaTang";
                 SqlCommand UpdateComand = new SqlCommand(UpdateQuery, connection);
-                
+
+                UpdateComand.Parameters.AddWithValue("@MaTang", tang.MaTang);
                 UpdateComand.Parameters.AddWithValue("@TenTang", tang.TenTang);
                 return UpdateComand.ExecuteNonQuery() > 0;
             }
@@ -90,17 +96,28 @@ namespace DAL.DAL
         // tìm kiếm tầng
         public DataTable SearchTang(string TenTang)
         {
-            DataTable dt = new DataTable();
+            
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                connection.Open();
-                string SearchQuery = "SELECT * FROM TangLau WHERE TenTang LIKE @TenTang";
-                SqlCommand SearchComand = new SqlCommand(SearchQuery, connection);
-                SearchComand.Parameters.AddWithValue("@TenTang", "%" + TenTang + "%");
-                SqlDataAdapter adapterTang = new SqlDataAdapter(SearchQuery, connection);
-             
-                adapterTang.Fill(dt);
-                return dt;
+               
+                
+                    connection.Open();
+
+                    string TimKiemQuery = "SELECT * FROM TangLau WHERE TenTang LIKE @TenTang";
+
+                    SqlDataAdapter TimKiemAdapter = new SqlDataAdapter(TimKiemQuery, connection);
+
+                    TimKiemAdapter.SelectCommand.Parameters.AddWithValue("@TenTang", "%" + TenTang + "%");
+
+                    SqlDataAdapter adapterPhanQuyen = new SqlDataAdapter(TimKiemQuery, connection);
+
+                    DataTable dt = new DataTable();
+
+                    TimKiemAdapter.Fill(dt);
+
+                    return dt;
+              
             }
         }
 

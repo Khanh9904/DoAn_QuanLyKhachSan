@@ -1,6 +1,7 @@
 ﻿using BLL;
 using DAL.Database;
 using DAL.Model;
+using DoAn_QuanLyKhachSan.UI.UseForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,7 +38,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
         {
             try
             {
-                tangLauBindingSource.DataSource = BLL_Tang.GetDataTang();
+                data_Tang.DataSource = BLL_Tang.GetDataTang();
             }
             catch (Exception ex)
             {
@@ -74,7 +75,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             {
                 Tang tang = new Tang()
                 {
-                    TenTang = btnThemTang.Text,
+                    TenTang = tenTangTextBox.Text,
 
                 };
 
@@ -93,25 +94,73 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             }
         }
 
-        private void btnSuaTang_Click(object sender, EventArgs e)
+       
+
+       
+       
+
+        private void data_Tang_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                Tang tang = new Tang()
+                if (data_Tang.CurrentRow != null)
                 {
-                    MaTang = int.Parse(maTangTextBox.Text),
-                    TenTang = tenTangTextBox.Text
-                };
-                BLL_Tang.UpdateTang(tang);
-                MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadTang();
-                DonThongTin();
+                    maTangTextBox.Text = data_Tang.CurrentRow.Cells["MaTang"].Value.ToString();
+                    tenTangTextBox.Text = data_Tang.CurrentRow.Cells["TenTang"].Value.ToString();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi thông tin liên kết nối : " + ex.Message, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnTroLaiTang_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            ufrm_QuanLyCSVC quanly = new ufrm_QuanLyCSVC();
+            this.Controls.Add(quanly);
+            quanly.Dock = DockStyle.Fill;
+        }
+
+
+        //--------------------------------------------------------------------------------
+        //hàm sửa tầng
+        private void btnSuaTang_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (data_Tang.CurrentRow == null)
+                {
+                    MessageBox.Show("Vui lòng chọn phân quyền cần sửa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                Tang tang = new Tang()
+                {
+                    MaTang = Convert.ToInt32(data_Tang.CurrentRow.Cells["MaTang"].Value),
+                    TenTang = tenTangTextBox.Text.Trim(),
+                    
+                };
+
+                BLL_Tang.UpdateTang(tang);
+
+                MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                LoadTang();
+
+                DonThongTin();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi thông tin liên kết nối : " + ex.Message, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        //--------------------------------------------------------------------------------
+        //hàm xóa tầng
+
 
         private void btnXoaTang_Click(object sender, EventArgs e)
         {
@@ -132,31 +181,22 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             {
                 MessageBox.Show("Lỗi thông tin liên kết nối : " + ex.Message, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
         }
 
-        private void data_Tang_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void btnClearTang_Click(object sender, EventArgs e)
         {
-            if (data_Tang.CurrentRow != null)
-            {
-                maTangTextBox.Text = data_Tang.CurrentRow.Cells["MaTang"].Value.ToString();
-                tenTangTextBox.Text = data_Tang.CurrentRow.Cells["TenTang"].Value.ToString();
-            }
+            DonThongTin();
         }
 
-        private void data_Tang_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        private void txtTimKiemTang_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                if (data_Tang.CurrentRow != null)
-                {
-                    maTangTextBox.Text = data_Tang.CurrentRow.Cells["MaTang"].Value.ToString();
-                    tenTangTextBox.Text = data_Tang.CurrentRow.Cells["TenTang"].Value.ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi thông tin liên kết nối : " + ex.Message, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            string keyword = txtTimKiemTang.Text.Trim();
+
+            DataTable dt = BLL_Tang.SearchTang(keyword);
+
+            data_Tang.DataSource = dt;
         }
     }
 }

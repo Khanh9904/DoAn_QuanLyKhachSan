@@ -216,10 +216,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
 
        
 
-        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void khachHangToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -238,9 +235,9 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
             data_PhanQuyen.DataSource = dt;
         }
 
-        private void data_PhanQuyen_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-
+            DonThongTin();
         }
     }
 }

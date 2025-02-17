@@ -15,7 +15,6 @@ namespace DAL.DAL
     using System.Text;
     using System.Threading.Tasks;
     using System.Collections;
-    //using DAL.Model;
     using global::DAL.Model;
 
     namespace DoAn_QuanLyKhachSan.DAL
@@ -98,9 +97,9 @@ namespace DAL.DAL
                     try
                     {
                         connection.Open();
-                        string addQuery = "INSERT INTO NHANVIEN (TENTK, MATKHAU, ID_PHANQUYEN) VALUES (@TENTK, @MATKHAU, @ID_PHANQUYEN)";
+                        string addQuery = "INSERT INTO TAiKHOAN (EMAIL, MATKHAU, ID_PHANQUYEN) VALUES (@TENTK, @MATKHAU, @ID_PHANQUYEN)";
                         SqlCommand cmd = new SqlCommand(addQuery, connection);
-                        cmd.Parameters.AddWithValue("@TENTK", taikhoan.TENTK);
+                        cmd.Parameters.AddWithValue("@TENTK", taikhoan.EMAIL);
                         cmd.Parameters.AddWithValue("@MATKHAU", taikhoan.MATKHAU);
                         cmd.Parameters.AddWithValue("@ID_PHANQUYEN", taikhoan.ID_PHANQUYEN);
                         return cmd.ExecuteNonQuery() > 0;

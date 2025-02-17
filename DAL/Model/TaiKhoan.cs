@@ -8,8 +8,8 @@ namespace DAL.Model
 {
     public class TaiKhoan
     {
-        public int IDTK { get; set; }
-        public string TENTK { get; set; }
+        public int ID_TAIKHOAN { get; set; }
+        public string EMAIL { get; set; }
         public string MATKHAU { get; set; }
         public int ID_PHANQUYEN { get; set; }
     }

@@ -59,7 +59,7 @@
             this.ThongTinDichVu});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1250, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1250, 27);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -68,7 +68,7 @@
             this.ThongTinPhong.Image = ((System.Drawing.Image)(resources.GetObject("ThongTinPhong.Image")));
             this.ThongTinPhong.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ThongTinPhong.Name = "ThongTinPhong";
-            this.ThongTinPhong.Size = new System.Drawing.Size(145, 28);
+            this.ThongTinPhong.Size = new System.Drawing.Size(145, 24);
             this.ThongTinPhong.Text = "Thông Tin Phòng";
             // 
             // ThongTinLoaiPhong
@@ -86,6 +86,7 @@
             this.ThongTinTang.Name = "ThongTinTang";
             this.ThongTinTang.Size = new System.Drawing.Size(136, 24);
             this.ThongTinTang.Text = "Thông Tin Tầng";
+            this.ThongTinTang.Click += new System.EventHandler(this.ThongTinTang_Click);
             // 
             // ThongTinThietBi
             // 
@@ -100,7 +101,7 @@
             this.ThongTinDichVu.Image = ((System.Drawing.Image)(resources.GetObject("ThongTinDichVu.Image")));
             this.ThongTinDichVu.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ThongTinDichVu.Name = "ThongTinDichVu";
-            this.ThongTinDichVu.Size = new System.Drawing.Size(154, 28);
+            this.ThongTinDichVu.Size = new System.Drawing.Size(154, 24);
             this.ThongTinDichVu.Text = "Thông Tin Dịch Vụ";
             // 
             // ufrm_QuanLyCSVC
