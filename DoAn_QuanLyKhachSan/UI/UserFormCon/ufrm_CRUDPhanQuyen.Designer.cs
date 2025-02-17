@@ -1,6 +1,6 @@
 ﻿namespace DoAn_QuanLyKhachSan.UI.UseForm
 {
-    partial class ufrm_PhanQuyen
+    partial class ufrm_CRUDPhanQuyen
     {
         /// <summary> 
         /// Required designer variable.
@@ -48,10 +48,11 @@
             this.btnXoaQuyen = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.data_PhanQuyen = new System.Windows.Forms.DataGridView();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.txtTimKiemQuyen = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.quảnLýLoạiPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nhânViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.khachHangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.phòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loạiPhòngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,7 +65,6 @@
             this.phânCôngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýĐăngNhậpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.khachHangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             iD_PHANQUYENLabel = new System.Windows.Forms.Label();
             tENQUYENLabel = new System.Windows.Forms.Label();
             moTaLabel = new System.Windows.Forms.Label();
@@ -246,16 +246,17 @@
             this.data_PhanQuyen.Size = new System.Drawing.Size(703, 371);
             this.data_PhanQuyen.TabIndex = 15;
             this.data_PhanQuyen.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_PhanQuyen_CellClick);
+            this.data_PhanQuyen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_PhanQuyen_CellContentClick);
             this.data_PhanQuyen.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.data_PhanQuyen_CellFormatting);
             // 
-            // txtTimKiem
+            // txtTimKiemQuyen
             // 
-            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtTimKiem.Location = new System.Drawing.Point(411, 86);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(703, 22);
-            this.txtTimKiem.TabIndex = 16;
-            this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
+            this.txtTimKiemQuyen.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtTimKiemQuyen.Location = new System.Drawing.Point(411, 86);
+            this.txtTimKiemQuyen.Name = "txtTimKiemQuyen";
+            this.txtTimKiemQuyen.Size = new System.Drawing.Size(703, 22);
+            this.txtTimKiemQuyen.TabIndex = 16;
+            this.txtTimKiemQuyen.TextChanged += new System.EventHandler(this.txtTimKiemQuyen_TextChanged);
             // 
             // menuStrip1
             // 
@@ -267,7 +268,7 @@
             this.quảnLýĐăngNhậpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1191, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1250, 28);
             this.menuStrip1.TabIndex = 17;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -283,9 +284,16 @@
             // nhânViênToolStripMenuItem
             // 
             this.nhânViênToolStripMenuItem.Name = "nhânViênToolStripMenuItem";
-            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.nhânViênToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
             this.nhânViênToolStripMenuItem.Text = "Nhân Viên";
             this.nhânViênToolStripMenuItem.Click += new System.EventHandler(this.nhânViênToolStripMenuItem_Click);
+            // 
+            // khachHangToolStripMenuItem
+            // 
+            this.khachHangToolStripMenuItem.Name = "khachHangToolStripMenuItem";
+            this.khachHangToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.khachHangToolStripMenuItem.Text = "khach hang";
+            this.khachHangToolStripMenuItem.Click += new System.EventHandler(this.khachHangToolStripMenuItem_Click);
             // 
             // quảnLýPhòngToolStripMenuItem
             // 
@@ -368,22 +376,15 @@
             // tàiKhoảnToolStripMenuItem
             // 
             this.tàiKhoảnToolStripMenuItem.Name = "tàiKhoảnToolStripMenuItem";
-            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.tàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.tàiKhoảnToolStripMenuItem.Text = "Tài Khoản";
             // 
-            // khachHangToolStripMenuItem
-            // 
-            this.khachHangToolStripMenuItem.Name = "khachHangToolStripMenuItem";
-            this.khachHangToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.khachHangToolStripMenuItem.Text = "khach hang";
-            this.khachHangToolStripMenuItem.Click += new System.EventHandler(this.khachHangToolStripMenuItem_Click);
-            // 
-            // ufrm_PhanQuyen
+            // ufrm_CRUDPhanQuyen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.txtTimKiem);
+            this.Controls.Add(this.txtTimKiemQuyen);
             this.Controls.Add(this.data_PhanQuyen);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnXoaQuyen);
@@ -399,8 +400,8 @@
             this.Controls.Add(this.btnMoTa);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
-            this.Name = "ufrm_PhanQuyen";
-            this.Size = new System.Drawing.Size(1191, 830);
+            this.Name = "ufrm_CRUDPhanQuyen";
+            this.Size = new System.Drawing.Size(1250, 830);
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHANQUYENBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.data_PhanQuyen)).EndInit();
@@ -428,7 +429,7 @@
         private System.Windows.Forms.Button btnXoaQuyen;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DataGridView data_PhanQuyen;
-        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.TextBox txtTimKiemQuyen;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem quảnLýLoạiPhòngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nhânViênToolStripMenuItem;

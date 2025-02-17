@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DoAn_QuanLyKhachSan.UI.UserFormPhu;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,28 +11,19 @@ using System.Windows.Forms;
 
 namespace DoAn_QuanLyKhachSan.UI.UseForm
 {
-    public partial class ufrm_QuanLy : UserControl
+    public partial class ufrm_QuanLyTaiKhoan : UserControl
     {
-        public ufrm_QuanLy()
+        public ufrm_QuanLyTaiKhoan()
         {
             InitializeComponent();
         }
 
-       
-
-        private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripButton2_Click(object sender, EventArgs e)
         {
-            ufrm_QuanLyKhachHang kh = new ufrm_QuanLyKhachHang();
+            ufrm_CRUDPhanQuyen kh = new ufrm_CRUDPhanQuyen();
             this.Controls.Clear();
             this.Controls.Add(kh);
             kh.Dock = DockStyle.Fill;
         }
-
-        private void quảnLýĐăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
     }
 }

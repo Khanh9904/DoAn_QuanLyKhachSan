@@ -59,41 +59,119 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\UseForm\ufrm_BaoCao.cs">
+    <Compile Include="UI\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UseFormChinh\ufrm_BaoCaoThongKe.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\UseForm\ufrm_BaoCao.Designer.cs">
-      <DependentUpon>ufrm_BaoCao.cs</DependentUpon>
+    <Compile Include="UI\UseFormChinh\ufrm_BaoCaoThongKe.Designer.cs">
+      <DependentUpon>ufrm_BaoCaoThongKe.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\UseForm\ufrm_ManHinhHeThong.cs">
+    <Compile Include="UI\UseFormChinh\ufrm_ManHinhHeThong.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\UseForm\ufrm_ManHinhHeThong.Designer.cs">
+    <Compile Include="UI\UseFormChinh\ufrm_ManHinhHeThong.Designer.cs">
       <DependentUpon>ufrm_ManHinhHeThong.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\UseForm\ufrm_PhanQuyen.cs">
+    <Compile Include="UI\UseFormChinh\ufrm_QuanLyKhachHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\UseForm\ufrm_PhanQuyen.Designer.cs">
-      <DependentUpon>ufrm_PhanQuyen.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\UseForm\ufrm_QuanLy.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\UseForm\ufrm_QuanLy.Designer.cs">
-      <DependentUpon>ufrm_QuanLy.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UI\UseForm\ufrm_QuanLyKhachHang.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\UseForm\ufrm_QuanLyKhachHang.Designer.cs">
+    <Compile Include="UI\UseFormChinh\ufrm_QuanLyKhachHang.Designer.cs">
       <DependentUpon>ufrm_QuanLyKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\UseForm\ufrm_ThongTinKhachHang.cs">
+    <Compile Include="UI\UserFormCon\ufrm_CRUDDichVu.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\UseForm\ufrm_ThongTinKhachHang.Designer.cs">
+    <Compile Include="UI\UserFormCon\ufrm_CRUDDichVu.Designer.cs">
+      <DependentUpon>ufrm_CRUDDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_CRUDLoaiPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_CRUDLoaiPhong.Designer.cs">
+      <DependentUpon>ufrm_CRUDLoaiPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_CRUDTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_CRUDTaiKhoan.Designer.cs">
+      <DependentUpon>ufrm_CRUDTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_CRUDPhanQuyen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_CRUDPhanQuyen.Designer.cs">
+      <DependentUpon>ufrm_CRUDPhanQuyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UseFormChinh\ufrm_QuanLyCSVC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UseFormChinh\ufrm_QuanLyCSVC.Designer.cs">
+      <DependentUpon>ufrm_QuanLyCSVC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UseFormChinh\ufrm_QuanLyNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UseFormChinh\ufrm_QuanLyNhanVien.Designer.cs">
+      <DependentUpon>ufrm_QuanLyNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UseFormChinh\ufrm_QuanLyTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UseFormChinh\ufrm_QuanLyTaiKhoan.Designer.cs">
+      <DependentUpon>ufrm_QuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_CRUDTang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_CRUDTang.Designer.cs">
+      <DependentUpon>ufrm_CRUDTang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_CRUDThietBi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_CRUDThietBi.Designer.cs">
+      <DependentUpon>ufrm_CRUDThietBi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_CRUDThongTinKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_CRUDThongTinKhachHang.Designer.cs">
+      <DependentUpon>ufrm_CRUDThongTinKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_CRUDPhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_CRUDPhong.Designer.cs">
+      <DependentUpon>ufrm_CRUDPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UseFormChinh\ufrm_ThongTinKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UseFormChinh\ufrm_ThongTinKhachHang.Designer.cs">
       <DependentUpon>ufrm_ThongTinKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_CRUDThongTinNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_CRUDThongTinNhanVien.Designer.cs">
+      <DependentUpon>ufrm_CRUDThongTinNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_PhanCongCaLam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_PhanCongCaLam.Designer.cs">
+      <DependentUpon>ufrm_PhanCongCaLam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_TinhLuong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_TinhLuong.Designer.cs">
+      <DependentUpon>ufrm_TinhLuong.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,23 +185,41 @@
     <EmbeddedResource Include="UI\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\UseForm\ufrm_BaoCao.resx">
-      <DependentUpon>ufrm_BaoCao.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\UseForm\ufrm_ManHinhHeThong.resx">
+    <EmbeddedResource Include="UI\UseFormChinh\ufrm_BaoCaoThongKe.resx">
+      <DependentUpon>ufrm_BaoCaoThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UseFormChinh\ufrm_ManHinhHeThong.resx">
       <DependentUpon>ufrm_ManHinhHeThong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\UseForm\ufrm_PhanQuyen.resx">
-      <DependentUpon>ufrm_PhanQuyen.cs</DependentUpon>
+    <EmbeddedResource Include="UI\UseFormChinh\ufrm_QuanLyCSVC.resx">
+      <DependentUpon>ufrm_QuanLyCSVC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\UseForm\ufrm_QuanLy.resx">
-      <DependentUpon>ufrm_QuanLy.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UI\UseForm\ufrm_QuanLyKhachHang.resx">
+    <EmbeddedResource Include="UI\UseFormChinh\ufrm_QuanLyKhachHang.resx">
       <DependentUpon>ufrm_QuanLyKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\UseForm\ufrm_ThongTinKhachHang.resx">
+    <EmbeddedResource Include="UI\UseFormChinh\ufrm_QuanLyTaiKhoan.resx">
+      <DependentUpon>ufrm_QuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserFormCon\ufrm_CRUDPhanQuyen.resx">
+      <DependentUpon>ufrm_CRUDPhanQuyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UseFormChinh\ufrm_QuanLyNhanVien.resx">
+      <DependentUpon>ufrm_QuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserFormCon\ufrm_CRUDThongTinKhachHang.resx">
+      <DependentUpon>ufrm_CRUDThongTinKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserFormCon\ufrm_CRUDPhong.resx">
+      <DependentUpon>ufrm_CRUDPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UseFormChinh\ufrm_ThongTinKhachHang.resx">
       <DependentUpon>ufrm_ThongTinKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserFormCon\ufrm_CRUDThongTinNhanVien.resx">
+      <DependentUpon>ufrm_CRUDThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="HeThongKhachSanDataSet.xsc">
       <DependentUpon>HeThongKhachSanDataSet.xsd</DependentUpon>
@@ -159,6 +255,8 @@
       <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Anh\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

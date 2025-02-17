@@ -1,6 +1,6 @@
-﻿namespace DoAn_QuanLyKhachSan.UI.UseForm
+﻿namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
 {
-    partial class ufrm_ThongTinKhachHang
+    partial class ufrm_CRUDTang
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,16 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // ufrm_ThongTinKhachHang
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "ufrm_ThongTinKhachHang";
-            this.Size = new System.Drawing.Size(1424, 890);
-            this.ResumeLayout(false);
-
         }
 
         #endregion

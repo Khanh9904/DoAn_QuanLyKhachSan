@@ -41,40 +41,84 @@ namespace DoAn_QuanLyKhachSan
         private void btnManHinhHeThong_Click(object sender, EventArgs e)
         {
             ufrm_ManHinhHeThong1.Visible = true;
-            ufrm_BaoCao1.Visible = false;
-            ufrm_PhanQuyen1.Visible = false;
+            ufrm_QuanLyNhanVien1.Visible = false;
+            ufrm_QuanLyCSVC1.Visible = false;
+            
+            ufrm_QuanLyTaiKhoan1.Visible = false;
             ufrm_ThongTinKhachHang1.Visible = false;
+            ufrm_BaoCaoThongKe1.Visible = false;
             HighlightButton((Button)sender);
+            
         }
 
-        private void btnQuanLy_Click(object sender, EventArgs e)
-        {
-            ufrm_PhanQuyen1.Visible = true;
-            ufrm_ManHinhHeThong1.Visible = false;
-            ufrm_BaoCao1.Visible = false;
-            ufrm_ThongTinKhachHang1.Visible = false;
-            HighlightButton((Button)sender);
-
-        }
+        
 
         private void btnThongTinKhachHang_Click(object sender, EventArgs e)
         {
-            ufrm_ThongTinKhachHang1.Visible =true;
             ufrm_ManHinhHeThong1.Visible = false;
-            ufrm_BaoCao1.Visible = false;
-            ufrm_PhanQuyen1.Visible = false;
-            HighlightButton((Button)sender);
+            ufrm_QuanLyNhanVien1.Visible = false;
+            ufrm_QuanLyCSVC1.Visible = false;
 
+            ufrm_QuanLyTaiKhoan1.Visible = false;
+            ufrm_ThongTinKhachHang1.Visible = true;
+            ufrm_BaoCaoThongKe1.Visible = false;
+            HighlightButton((Button)sender);
         }
 
         private void btnBaoCao_Click(object sender, EventArgs e)
         {
-            ufrm_BaoCao1.Visible =true;
             ufrm_ManHinhHeThong1.Visible = false;
-            ufrm_PhanQuyen1.Visible = false;
+            ufrm_QuanLyNhanVien1.Visible = false;
+            ufrm_QuanLyCSVC1.Visible = false;
+
+            ufrm_QuanLyTaiKhoan1.Visible = false;
             ufrm_ThongTinKhachHang1.Visible = false;
+            ufrm_BaoCaoThongKe1.Visible = true;
             HighlightButton((Button)sender);
         }
+
+        private void btnQuanLyNhanVien_Click(object sender, EventArgs e)
+        {
+            ufrm_ManHinhHeThong1.Visible = false;
+            ufrm_QuanLyNhanVien1.Visible = true;
+            ufrm_QuanLyCSVC1.Visible = false;
+
+            ufrm_QuanLyTaiKhoan1.Visible = false;
+            ufrm_ThongTinKhachHang1.Visible = false;
+            ufrm_BaoCaoThongKe1.Visible = false;
+            HighlightButton((Button)sender);
+        }
+
+        private void btnQuanLyCoSoVatChat_Click(object sender, EventArgs e)
+        {
+            ufrm_ManHinhHeThong1.Visible = false;
+            ufrm_QuanLyNhanVien1.Visible = false;
+            ufrm_QuanLyCSVC1.Visible = true;
+
+            ufrm_QuanLyTaiKhoan1.Visible = false;
+            ufrm_ThongTinKhachHang1.Visible = false;
+            ufrm_BaoCaoThongKe1.Visible = false;
+            HighlightButton((Button)sender);
+        }
+
+        private void btnQuanLyTaiKhoan_Click(object sender, EventArgs e)
+        {
+            ufrm_ManHinhHeThong1.Visible = false;
+            ufrm_QuanLyNhanVien1.Visible = false;
+            ufrm_QuanLyCSVC1.Visible = false;
+
+            ufrm_QuanLyTaiKhoan1.Visible = true;
+            ufrm_ThongTinKhachHang1.Visible = false;
+            ufrm_BaoCaoThongKe1.Visible = false;
+            HighlightButton((Button)sender);
+        }
+
+        private void btnQuanLyKhachHang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
 
         //-------------------------------------------------------------------------------------------------------------------
 

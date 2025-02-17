@@ -16,7 +16,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
 {
 
 
-    public partial class ufrm_PhanQuyen : UserControl
+    public partial class ufrm_CRUDPhanQuyen : UserControl
     {
 
         // tạo đối tượng gọi kết nối
@@ -27,7 +27,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
 
 
 
-        public ufrm_PhanQuyen()
+        public ufrm_CRUDPhanQuyen()
         {
 
             InitializeComponent();
@@ -69,7 +69,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
         private void button1_Click(object sender, EventArgs e)
         {
             this.Controls.Clear();
-            ufrm_QuanLy quanly = new ufrm_QuanLy();
+            ufrm_QuanLyNhanVien quanly = new ufrm_QuanLyNhanVien();
             this.Controls.Add(quanly);
             quanly.Dock = DockStyle.Fill;
         }
@@ -88,7 +88,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
         // Them phan quyen
         private void btnThemQuyen_Click(object sender, EventArgs e)
         {
-            try
+                try
             {
                 PhanQuyen Quyen = new PhanQuyen()
                 {
@@ -96,6 +96,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
                     MoTa = btnMoTa.Text,
                     MUCLUONGLAMVIEC = decimal.Parse(btnMucLuong.Text.Trim())
                 };
+
                 BLL_QuanLyPhanQuyen.AddNewPhanQuyen(Quyen);
 
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -213,14 +214,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
             }
         }
 
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
-        {
-            string keyword = txtTimKiem.Text.Trim();
-
-            DataTable dt = BLL_QuanLyPhanQuyen.TimKiemPhanQuyen(keyword);
-
-            data_PhanQuyen.DataSource = dt;
-        }
+       
 
         private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -229,10 +223,24 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
 
         private void khachHangToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ufrm_QuanLyKhachHang kh = new ufrm_QuanLyKhachHang();
+            ufrm_CRUDThongTinKhachHang kh = new ufrm_CRUDThongTinKhachHang();
             this.Controls.Clear();
             this.Controls.Add(kh);
             kh.Dock = DockStyle.Fill;
+        }
+
+        private void txtTimKiemQuyen_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtTimKiemQuyen.Text.Trim();
+
+            DataTable dt = BLL_QuanLyPhanQuyen.TimKiemPhanQuyen(keyword);
+
+            data_PhanQuyen.DataSource = dt;
+        }
+
+        private void data_PhanQuyen_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

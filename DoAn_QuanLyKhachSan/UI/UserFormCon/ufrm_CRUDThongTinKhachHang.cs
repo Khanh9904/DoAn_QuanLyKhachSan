@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DoAn_QuanLyKhachSan.UI.UseForm
 {
-    public partial class ufrm_QuanLyKhachHang : UserControl
+    public partial class ufrm_CRUDThongTinKhachHang : UserControl
     {
-        public ufrm_QuanLyKhachHang()
+        public ufrm_CRUDThongTinKhachHang()
         {
             InitializeComponent();
         }
@@ -28,7 +28,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
         private void button1_Click(object sender, EventArgs e)
         {
             this.Controls.Clear();
-            ufrm_PhanQuyen quanly = new ufrm_PhanQuyen();
+            ufrm_CRUDPhanQuyen quanly = new ufrm_CRUDPhanQuyen();
             this.Controls.Add(quanly);
             quanly.Dock = DockStyle.Fill;
         }

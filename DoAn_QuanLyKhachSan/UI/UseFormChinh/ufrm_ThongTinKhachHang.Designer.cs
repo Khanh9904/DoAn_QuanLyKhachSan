@@ -1,6 +1,6 @@
 ﻿namespace DoAn_QuanLyKhachSan.UI.UseForm
 {
-    partial class ufrm_ManHinhHeThong
+    partial class ufrm_ThongTinKhachHang
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,18 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // ufrm_ManHinhHeThong
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(684, 437);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "tt khách";
+            // 
+            // ufrm_ThongTinKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "ufrm_ManHinhHeThong";
+            this.Controls.Add(this.label1);
+            this.Name = "ufrm_ThongTinKhachHang";
             this.Size = new System.Drawing.Size(1424, 890);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
     }
 }

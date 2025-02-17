@@ -1,6 +1,6 @@
 ﻿namespace DoAn_QuanLyKhachSan.UI.UseForm
 {
-    partial class ufrm_QuanLyKhachHang
+    partial class ufrm_CRUDThongTinKhachHang
     {
         /// <summary> 
         /// Required designer variable.
@@ -50,7 +50,6 @@
             this.cCCDTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             maKhachHangLabel = new System.Windows.Forms.Label();
             hoTenLabel = new System.Windows.Forms.Label();
             ngaySinhLabel = new System.Windows.Forms.Label();
@@ -61,8 +60,70 @@
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHACH_HANGBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
+            // 
+            // maKhachHangLabel
+            // 
+            maKhachHangLabel.AutoSize = true;
+            maKhachHangLabel.Location = new System.Drawing.Point(58, 114);
+            maKhachHangLabel.Name = "maKhachHangLabel";
+            maKhachHangLabel.Size = new System.Drawing.Size(105, 16);
+            maKhachHangLabel.TabIndex = 2;
+            maKhachHangLabel.Text = "Ma Khach Hang:";
+            // 
+            // hoTenLabel
+            // 
+            hoTenLabel.AutoSize = true;
+            hoTenLabel.Location = new System.Drawing.Point(58, 142);
+            hoTenLabel.Name = "hoTenLabel";
+            hoTenLabel.Size = new System.Drawing.Size(55, 16);
+            hoTenLabel.TabIndex = 4;
+            hoTenLabel.Text = "Ho Ten:";
+            // 
+            // ngaySinhLabel
+            // 
+            ngaySinhLabel.AutoSize = true;
+            ngaySinhLabel.Location = new System.Drawing.Point(58, 171);
+            ngaySinhLabel.Name = "ngaySinhLabel";
+            ngaySinhLabel.Size = new System.Drawing.Size(72, 16);
+            ngaySinhLabel.TabIndex = 6;
+            ngaySinhLabel.Text = "Ngay Sinh:";
+            // 
+            // gioiTinhLabel
+            // 
+            gioiTinhLabel.AutoSize = true;
+            gioiTinhLabel.Location = new System.Drawing.Point(58, 203);
+            gioiTinhLabel.Name = "gioiTinhLabel";
+            gioiTinhLabel.Size = new System.Drawing.Size(63, 16);
+            gioiTinhLabel.TabIndex = 8;
+            gioiTinhLabel.Text = "Gioi Tinh:";
+            // 
+            // sDTLabel
+            // 
+            sDTLabel.AutoSize = true;
+            sDTLabel.Location = new System.Drawing.Point(58, 231);
+            sDTLabel.Name = "sDTLabel";
+            sDTLabel.Size = new System.Drawing.Size(38, 16);
+            sDTLabel.TabIndex = 10;
+            sDTLabel.Text = "SDT:";
+            // 
+            // diaChiLabel
+            // 
+            diaChiLabel.AutoSize = true;
+            diaChiLabel.Location = new System.Drawing.Point(58, 259);
+            diaChiLabel.Name = "diaChiLabel";
+            diaChiLabel.Size = new System.Drawing.Size(53, 16);
+            diaChiLabel.TabIndex = 12;
+            diaChiLabel.Text = "Dia Chi:";
+            // 
+            // cCCDLabel
+            // 
+            cCCDLabel.AutoSize = true;
+            cCCDLabel.Location = new System.Drawing.Point(58, 287);
+            cCCDLabel.Name = "cCCDLabel";
+            cCCDLabel.Size = new System.Drawing.Size(47, 16);
+            cCCDLabel.TabIndex = 14;
+            cCCDLabel.Text = "CCCD:";
             // 
             // label1
             // 
@@ -70,9 +131,9 @@
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(421, 36);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(257, 29);
+            this.label1.Size = new System.Drawing.Size(391, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "QUẢN LÝ KHÁCH HÀNG";
+            this.label1.Text = "QUẢN LÝ THÔNG TIN KHÁCH HÀNG";
             // 
             // heThongKhachSanDataSet
             // 
@@ -106,15 +167,6 @@
             this.tableAdapterManager.THIET_BITableAdapter = null;
             this.tableAdapterManager.UpdateOrder = DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // maKhachHangLabel
-            // 
-            maKhachHangLabel.AutoSize = true;
-            maKhachHangLabel.Location = new System.Drawing.Point(58, 114);
-            maKhachHangLabel.Name = "maKhachHangLabel";
-            maKhachHangLabel.Size = new System.Drawing.Size(105, 16);
-            maKhachHangLabel.TabIndex = 2;
-            maKhachHangLabel.Text = "Ma Khach Hang:";
-            // 
             // maKhachHangTextBox
             // 
             this.maKhachHangTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHACH_HANGBindingSource, "MaKhachHang", true));
@@ -122,15 +174,6 @@
             this.maKhachHangTextBox.Name = "maKhachHangTextBox";
             this.maKhachHangTextBox.Size = new System.Drawing.Size(200, 22);
             this.maKhachHangTextBox.TabIndex = 3;
-            // 
-            // hoTenLabel
-            // 
-            hoTenLabel.AutoSize = true;
-            hoTenLabel.Location = new System.Drawing.Point(58, 142);
-            hoTenLabel.Name = "hoTenLabel";
-            hoTenLabel.Size = new System.Drawing.Size(55, 16);
-            hoTenLabel.TabIndex = 4;
-            hoTenLabel.Text = "Ho Ten:";
             // 
             // hoTenTextBox
             // 
@@ -140,15 +183,6 @@
             this.hoTenTextBox.Size = new System.Drawing.Size(200, 22);
             this.hoTenTextBox.TabIndex = 5;
             // 
-            // ngaySinhLabel
-            // 
-            ngaySinhLabel.AutoSize = true;
-            ngaySinhLabel.Location = new System.Drawing.Point(58, 171);
-            ngaySinhLabel.Name = "ngaySinhLabel";
-            ngaySinhLabel.Size = new System.Drawing.Size(72, 16);
-            ngaySinhLabel.TabIndex = 6;
-            ngaySinhLabel.Text = "Ngay Sinh:";
-            // 
             // ngaySinhDateTimePicker
             // 
             this.ngaySinhDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.kHACH_HANGBindingSource, "NgaySinh", true));
@@ -156,15 +190,6 @@
             this.ngaySinhDateTimePicker.Name = "ngaySinhDateTimePicker";
             this.ngaySinhDateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.ngaySinhDateTimePicker.TabIndex = 7;
-            // 
-            // gioiTinhLabel
-            // 
-            gioiTinhLabel.AutoSize = true;
-            gioiTinhLabel.Location = new System.Drawing.Point(58, 203);
-            gioiTinhLabel.Name = "gioiTinhLabel";
-            gioiTinhLabel.Size = new System.Drawing.Size(63, 16);
-            gioiTinhLabel.TabIndex = 8;
-            gioiTinhLabel.Text = "Gioi Tinh:";
             // 
             // gioiTinhTextBox
             // 
@@ -174,15 +199,6 @@
             this.gioiTinhTextBox.Size = new System.Drawing.Size(200, 22);
             this.gioiTinhTextBox.TabIndex = 9;
             // 
-            // sDTLabel
-            // 
-            sDTLabel.AutoSize = true;
-            sDTLabel.Location = new System.Drawing.Point(58, 231);
-            sDTLabel.Name = "sDTLabel";
-            sDTLabel.Size = new System.Drawing.Size(38, 16);
-            sDTLabel.TabIndex = 10;
-            sDTLabel.Text = "SDT:";
-            // 
             // sDTTextBox
             // 
             this.sDTTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHACH_HANGBindingSource, "SDT", true));
@@ -191,15 +207,6 @@
             this.sDTTextBox.Size = new System.Drawing.Size(200, 22);
             this.sDTTextBox.TabIndex = 11;
             // 
-            // diaChiLabel
-            // 
-            diaChiLabel.AutoSize = true;
-            diaChiLabel.Location = new System.Drawing.Point(58, 259);
-            diaChiLabel.Name = "diaChiLabel";
-            diaChiLabel.Size = new System.Drawing.Size(53, 16);
-            diaChiLabel.TabIndex = 12;
-            diaChiLabel.Text = "Dia Chi:";
-            // 
             // diaChiTextBox
             // 
             this.diaChiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHACH_HANGBindingSource, "DiaChi", true));
@@ -207,15 +214,6 @@
             this.diaChiTextBox.Name = "diaChiTextBox";
             this.diaChiTextBox.Size = new System.Drawing.Size(200, 22);
             this.diaChiTextBox.TabIndex = 13;
-            // 
-            // cCCDLabel
-            // 
-            cCCDLabel.AutoSize = true;
-            cCCDLabel.Location = new System.Drawing.Point(58, 287);
-            cCCDLabel.Name = "cCCDLabel";
-            cCCDLabel.Size = new System.Drawing.Size(47, 16);
-            cCCDLabel.TabIndex = 14;
-            cCCDLabel.Text = "CCCD:";
             // 
             // cCCDTextBox
             // 
@@ -238,28 +236,17 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(708, 71);
+            this.dataGridView1.Location = new System.Drawing.Point(634, 139);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(402, 249);
             this.dataGridView1.TabIndex = 17;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(940, 71);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(8, 8);
-            this.dataGridView2.TabIndex = 18;
-            // 
-            // ufrm_QuanLyKhachHang
+            // ufrm_QuanLyThongTinKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(maKhachHangLabel);
@@ -277,12 +264,11 @@
             this.Controls.Add(cCCDLabel);
             this.Controls.Add(this.cCCDTextBox);
             this.Controls.Add(this.label1);
-            this.Name = "ufrm_QuanLyKhachHang";
+            this.Name = "ufrm_QuanLyThongTinKhachHang";
             this.Size = new System.Drawing.Size(1191, 830);
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHACH_HANGBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,6 +290,5 @@
         private System.Windows.Forms.TextBox cCCDTextBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }

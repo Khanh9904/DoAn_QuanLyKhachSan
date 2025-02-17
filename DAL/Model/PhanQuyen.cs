@@ -16,4 +16,7 @@ namespace DAL.Model
 
         public decimal MUCLUONGLAMVIEC { get; set; }
     }
+
+    
+
 }

@@ -1,6 +1,6 @@
-﻿namespace DoAn_QuanLyKhachSan.UI.UseForm
+﻿namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
 {
-    partial class ufrm_BaoCao
+    partial class ufrm_CRUDDichVu
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,16 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // ufrm_BaoCao
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "ufrm_BaoCao";
-            this.Size = new System.Drawing.Size(1424, 890);
-            this.ResumeLayout(false);
-
         }
 
         #endregion

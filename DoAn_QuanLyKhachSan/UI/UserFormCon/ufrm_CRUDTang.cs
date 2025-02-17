@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DoAn_QuanLyKhachSan.UI.UseForm
+namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
 {
-    public partial class ufrm_BaoCao : UserControl
+    public partial class ufrm_CRUDTang : UserControl
     {
-        public ufrm_BaoCao()
+        public ufrm_CRUDTang()
         {
             InitializeComponent();
         }
