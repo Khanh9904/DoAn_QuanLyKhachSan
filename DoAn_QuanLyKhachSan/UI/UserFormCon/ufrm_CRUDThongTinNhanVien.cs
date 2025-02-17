@@ -32,7 +32,9 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
 
             BLL_ThongTinNhanVien = new BLL_ThongTinNhanVien(new Database().GetDataSet());
 
-            
+            LoadNhanVien();
+
+
         }
 
         //--------------------------------------------------------------------------------
@@ -93,10 +95,13 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             {
                 NhanVien nhanVien = new NhanVien()
                 {
-                    TENNHANVIEN = hOTENTextBox.Text,
-                    NGAYSINH = nGAYSINHDateTimePicker.Value,
+                   HOTEN = hOTENTextBox.Text,
+                   NGAYSINH = nGAYSINHDateTimePicker.Value,
                     DIACHI = dIACHITextBox.Text,
-                    SDT = sDTTextBox.Text
+                    SDT = sDTTextBox.Text,
+                    TONGNGAYCONG = int.Parse(tONGNGAYCONGTextBox.Text.Trim()),
+                    TONGLUONG = int.Parse(tONGLUONGTextBox.Text.Trim()),
+                    ID_TAIKHOAN = int.Parse(iD_TAIKHOANTextBox.Text.Trim()),
                 };
 
                 BLL_ThongTinNhanVien.AddNhanVien(nhanVien);
@@ -158,7 +163,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
                 NhanVien nhanVien = new NhanVien()
                 {
                     ID_NHANVIEN = Convert.ToInt32(iD_NHANVIENTextBox.Text),
-                    TENNHANVIEN = hOTENTextBox.Text,
+                    HOTEN = hOTENTextBox.Text,
                     NGAYSINH = nGAYSINHDateTimePicker.Value,
                     DIACHI = dIACHITextBox.Text,
                     SDT = sDTTextBox.Text

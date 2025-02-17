@@ -25,7 +25,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
         private BLL_QuanLyPhanQuyen BLL_QuanLyPhanQuyen;
 
 
-
+            
 
         public ufrm_CRUDPhanQuyen()
         {

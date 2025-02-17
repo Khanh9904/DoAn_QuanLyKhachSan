@@ -16,5 +16,21 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
         {
             InitializeComponent();
         }
+
+        private void tangLauBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.tangLauBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.heThongKhachSanDataSet1);
+
+        }
+
+        private void tangLauBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.tangLauBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.heThongKhachSanDataSet1);
+
+        }
     }
 }

@@ -36,14 +36,14 @@ namespace BLL
         public bool AddNhanVien(NhanVien nhanVien)
         {
             // Kiem tra du lieu dau vao
-            if (string.IsNullOrWhiteSpace(nhanVien.TENNHANVIEN) || string.IsNullOrWhiteSpace(nhanVien.DIACHI) || string.IsNullOrWhiteSpace(nhanVien.SDT))
+            if (string.IsNullOrWhiteSpace(nhanVien.HOTEN) || string.IsNullOrWhiteSpace(nhanVien.DIACHI) || string.IsNullOrWhiteSpace(nhanVien.SDT))
             {
                 throw new Exception("Vui lòng nhập đủ thông tin");
             }
             // Kiem tra ten nhan vien da ton tai chua
-            if (DAL_ThongTinNhanVien.CheckNhanVien(nhanVien.TENNHANVIEN))
+            if (DAL_ThongTinNhanVien.CheckNhanVien(nhanVien.HOTEN))
             {
-                throw new Exception($"Tên Nhân Viên : {nhanVien.TENNHANVIEN} đã tồn tại");
+                throw new Exception($"Tên Nhân Viên : {nhanVien.HOTEN} đã tồn tại");
             }
             // tra ve thong tin them thanh cong
             return DAL_ThongTinNhanVien.AddNhanVien(nhanVien);
@@ -55,7 +55,7 @@ namespace BLL
         public bool UpdateNhanVien(NhanVien nhanVien)
         {
             // Kiem tra du lieu dau vao
-            if (nhanVien.ID_NHANVIEN <= 0 || string.IsNullOrWhiteSpace(nhanVien.TENNHANVIEN) || string.IsNullOrWhiteSpace(nhanVien.DIACHI) || string.IsNullOrWhiteSpace(nhanVien.SDT))
+            if (nhanVien.ID_NHANVIEN <= 0 || string.IsNullOrWhiteSpace(nhanVien.HOTEN) || string.IsNullOrWhiteSpace(nhanVien.DIACHI) || string.IsNullOrWhiteSpace(nhanVien.SDT))
             {
                 throw new Exception("Vui lòng nhập đủ thông tin");
             }
@@ -78,9 +78,9 @@ namespace BLL
 
         //-------------------------------------------------------------
         // ham tim kiem du lieu
-        public DataTable SearchNhanVien(string TENNHANVIEN)
+        public DataTable SearchNhanVien(string HOTEN)
         {
-            return DAL_ThongTinNhanVien.SearchNhanVien(TENNHANVIEN);
+            return DAL_ThongTinNhanVien.SearchNhanVien(HOTEN);
         }
 
 

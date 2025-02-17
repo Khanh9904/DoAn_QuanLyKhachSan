@@ -51,6 +51,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HeThongKhachSanDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="HeThongKhachSanDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HeThongKhachSanDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +214,9 @@
     <EmbeddedResource Include="UI\UseFormChinh\ufrm_QuanLyNhanVien.resx">
       <DependentUpon>ufrm_QuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserFormCon\ufrm_CRUDTang.resx">
+      <DependentUpon>ufrm_CRUDTang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\UserFormCon\ufrm_CRUDThongTinKhachHang.resx">
       <DependentUpon>ufrm_CRUDThongTinKhachHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +239,17 @@
     </None>
     <None Include="HeThongKhachSanDataSet.xss">
       <DependentUpon>HeThongKhachSanDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HeThongKhachSanDataSet1.xsc">
+      <DependentUpon>HeThongKhachSanDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="HeThongKhachSanDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HeThongKhachSanDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HeThongKhachSanDataSet1.xss">
+      <DependentUpon>HeThongKhachSanDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

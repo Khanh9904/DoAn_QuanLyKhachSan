@@ -62,16 +62,18 @@ namespace DAL.DAL
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                connection.Open();
-                string AddQuery = "INSERT INTO NHAN_VIEN(HOTEN, NGAYSINH, DIACHI, SDT, EMAIL) VALUES(@HOTEN, @NGAYSINH, @DIACHI, @SDT, @EMAIL)";
+               connection.Open();
+               string AddQuery = "INSERT INTO NHAN_VIEN (HOTEN, NGAYSINH, DIACHI, SDT, TONGNGAYCONG, ID_NHANVIEN ) VALUES (@HOTEN, @NGAYSINH, @DIACHI, @SDT, @TONGNGAYCONG, @ID_NHANVIEN )";
                 SqlCommand AddCommand = new SqlCommand(AddQuery, connection);
-                AddCommand.Parameters.AddWithValue("@HOTEN", nhanVien.TENNHANVIEN);
+                AddCommand.Parameters.AddWithValue("@HOTEN", nhanVien.HOTEN);
                 AddCommand.Parameters.AddWithValue("@NGAYSINH", nhanVien.NGAYSINH);
                 AddCommand.Parameters.AddWithValue("@DIACHI", nhanVien.DIACHI);
                 AddCommand.Parameters.AddWithValue("@SDT", nhanVien.SDT);
-                AddCommand.Parameters.AddWithValue("@EMAIL", nhanVien.EMAIL);
-                
+                AddCommand.Parameters.AddWithValue("@TONGNGAYCONG", nhanVien.TONGNGAYCONG);
+               // AddCommand.Parameters.AddWithValue("@TONGLUONG", nhanVien.TONGLUONG);
+                AddCommand.Parameters.AddWithValue("@ID_NHANVIEN", nhanVien.ID_NHANVIEN);
                 return AddCommand.ExecuteNonQuery() > 0;
+
             }
         }
 
@@ -82,13 +84,13 @@ namespace DAL.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string UpdateQuery = "UPDATE NHAN_VIEN SET HOTEN = @HOTEN, NGAYSINH = @NGAYSINH, DIACHI = @DIACHI, SDT = @SDT, EMAIL = @EMAIL WHERE ID_NHANVIEN = @ID_NHANVIEN";
+                string UpdateQuery = "UPDATE NHAN_VIEN SET HOTEN = @HOTEN, NGAYSINH = @NGAYSINH, DIACHI = @DIACHI, SDT = @SDT WHERE ID_NHANVIEN = @ID_NHANVIEN";
                 SqlCommand UpdateCommand = new SqlCommand(UpdateQuery, connection);
-                UpdateCommand.Parameters.AddWithValue("@HOTEN", nhanVien.TENNHANVIEN);
+                UpdateCommand.Parameters.AddWithValue("@HOTEN", nhanVien.HOTEN);
                 UpdateCommand.Parameters.AddWithValue("@NGAYSINH", nhanVien.NGAYSINH);
                 UpdateCommand.Parameters.AddWithValue("@DIACHI", nhanVien.DIACHI);
                 UpdateCommand.Parameters.AddWithValue("@SDT", nhanVien.SDT);
-                UpdateCommand.Parameters.AddWithValue("@EMAIL", nhanVien.EMAIL);
+                
                 return UpdateCommand.ExecuteNonQuery() > 0;
             }
             

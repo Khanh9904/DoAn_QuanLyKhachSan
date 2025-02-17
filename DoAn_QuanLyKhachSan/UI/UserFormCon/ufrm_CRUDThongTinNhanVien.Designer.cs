@@ -34,6 +34,9 @@
             System.Windows.Forms.Label nGAYSINHLabel;
             System.Windows.Forms.Label dIACHILabel;
             System.Windows.Forms.Label sDTLabel;
+            System.Windows.Forms.Label tONGNGAYCONGLabel;
+            System.Windows.Forms.Label tONGLUONGLabel;
+            System.Windows.Forms.Label iD_TAIKHOANLabel;
             this.txtTimKiemnNhanVien = new System.Windows.Forms.TextBox();
             this.btnClearNhanVien = new System.Windows.Forms.Button();
             this.btnXoaNhanVien = new System.Windows.Forms.Button();
@@ -45,68 +48,29 @@
             this.nHAN_VIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nHAN_VIENTableAdapter = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.NHAN_VIENTableAdapter();
             this.tableAdapterManager = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.TableAdapterManager();
+            this.heThongKhachSanDataSet1 = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSet();
+            this.data_NhanVien = new System.Windows.Forms.DataGridView();
             this.iD_NHANVIENTextBox = new System.Windows.Forms.TextBox();
             this.hOTENTextBox = new System.Windows.Forms.TextBox();
             this.nGAYSINHDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dIACHITextBox = new System.Windows.Forms.TextBox();
             this.sDTTextBox = new System.Windows.Forms.TextBox();
-            this.heThongKhachSanDataSet1 = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSet();
-            this.data_NhanVien = new System.Windows.Forms.DataGridView();
+            this.tONGNGAYCONGTextBox = new System.Windows.Forms.TextBox();
+            this.tONGLUONGTextBox = new System.Windows.Forms.TextBox();
+            this.iD_TAIKHOANTextBox = new System.Windows.Forms.TextBox();
             iD_NHANVIENLabel = new System.Windows.Forms.Label();
             hOTENLabel = new System.Windows.Forms.Label();
             nGAYSINHLabel = new System.Windows.Forms.Label();
             dIACHILabel = new System.Windows.Forms.Label();
             sDTLabel = new System.Windows.Forms.Label();
+            tONGNGAYCONGLabel = new System.Windows.Forms.Label();
+            tONGLUONGLabel = new System.Windows.Forms.Label();
+            iD_TAIKHOANLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHAN_VIENBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.data_NhanVien)).BeginInit();
             this.SuspendLayout();
-            // 
-            // iD_NHANVIENLabel
-            // 
-            iD_NHANVIENLabel.AutoSize = true;
-            iD_NHANVIENLabel.Location = new System.Drawing.Point(48, 254);
-            iD_NHANVIENLabel.Name = "iD_NHANVIENLabel";
-            iD_NHANVIENLabel.Size = new System.Drawing.Size(96, 16);
-            iD_NHANVIENLabel.TabIndex = 33;
-            iD_NHANVIENLabel.Text = "ID NHANVIEN:";
-            // 
-            // hOTENLabel
-            // 
-            hOTENLabel.AutoSize = true;
-            hOTENLabel.Location = new System.Drawing.Point(48, 282);
-            hOTENLabel.Name = "hOTENLabel";
-            hOTENLabel.Size = new System.Drawing.Size(58, 16);
-            hOTENLabel.TabIndex = 35;
-            hOTENLabel.Text = "HOTEN:";
-            // 
-            // nGAYSINHLabel
-            // 
-            nGAYSINHLabel.AutoSize = true;
-            nGAYSINHLabel.Location = new System.Drawing.Point(48, 311);
-            nGAYSINHLabel.Name = "nGAYSINHLabel";
-            nGAYSINHLabel.Size = new System.Drawing.Size(80, 16);
-            nGAYSINHLabel.TabIndex = 37;
-            nGAYSINHLabel.Text = "NGAYSINH:";
-            // 
-            // dIACHILabel
-            // 
-            dIACHILabel.AutoSize = true;
-            dIACHILabel.Location = new System.Drawing.Point(48, 338);
-            dIACHILabel.Name = "dIACHILabel";
-            dIACHILabel.Size = new System.Drawing.Size(54, 16);
-            dIACHILabel.TabIndex = 39;
-            dIACHILabel.Text = "DIACHI:";
-            // 
-            // sDTLabel
-            // 
-            sDTLabel.AutoSize = true;
-            sDTLabel.Location = new System.Drawing.Point(48, 366);
-            sDTLabel.Name = "sDTLabel";
-            sDTLabel.Size = new System.Drawing.Size(38, 16);
-            sDTLabel.TabIndex = 41;
-            sDTLabel.Text = "SDT:";
             // 
             // txtTimKiemnNhanVien
             // 
@@ -205,46 +169,6 @@
             this.tableAdapterManager.THIET_BITableAdapter = null;
             this.tableAdapterManager.UpdateOrder = DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // iD_NHANVIENTextBox
-            // 
-            this.iD_NHANVIENTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nHAN_VIENBindingSource, "ID_NHANVIEN", true));
-            this.iD_NHANVIENTextBox.Location = new System.Drawing.Point(180, 251);
-            this.iD_NHANVIENTextBox.Name = "iD_NHANVIENTextBox";
-            this.iD_NHANVIENTextBox.Size = new System.Drawing.Size(200, 22);
-            this.iD_NHANVIENTextBox.TabIndex = 34;
-            // 
-            // hOTENTextBox
-            // 
-            this.hOTENTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nHAN_VIENBindingSource, "HOTEN", true));
-            this.hOTENTextBox.Location = new System.Drawing.Point(180, 279);
-            this.hOTENTextBox.Name = "hOTENTextBox";
-            this.hOTENTextBox.Size = new System.Drawing.Size(200, 22);
-            this.hOTENTextBox.TabIndex = 36;
-            // 
-            // nGAYSINHDateTimePicker
-            // 
-            this.nGAYSINHDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.nHAN_VIENBindingSource, "NGAYSINH", true));
-            this.nGAYSINHDateTimePicker.Location = new System.Drawing.Point(180, 307);
-            this.nGAYSINHDateTimePicker.Name = "nGAYSINHDateTimePicker";
-            this.nGAYSINHDateTimePicker.Size = new System.Drawing.Size(200, 22);
-            this.nGAYSINHDateTimePicker.TabIndex = 38;
-            // 
-            // dIACHITextBox
-            // 
-            this.dIACHITextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nHAN_VIENBindingSource, "DIACHI", true));
-            this.dIACHITextBox.Location = new System.Drawing.Point(180, 335);
-            this.dIACHITextBox.Name = "dIACHITextBox";
-            this.dIACHITextBox.Size = new System.Drawing.Size(200, 22);
-            this.dIACHITextBox.TabIndex = 40;
-            // 
-            // sDTTextBox
-            // 
-            this.sDTTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nHAN_VIENBindingSource, "SDT", true));
-            this.sDTTextBox.Location = new System.Drawing.Point(180, 363);
-            this.sDTTextBox.Name = "sDTTextBox";
-            this.sDTTextBox.Size = new System.Drawing.Size(200, 22);
-            this.sDTTextBox.TabIndex = 42;
-            // 
             // heThongKhachSanDataSet1
             // 
             this.heThongKhachSanDataSet1.DataSetName = "HeThongKhachSanDataSet";
@@ -260,11 +184,146 @@
             this.data_NhanVien.Size = new System.Drawing.Size(703, 364);
             this.data_NhanVien.TabIndex = 43;
             // 
+            // iD_NHANVIENLabel
+            // 
+            iD_NHANVIENLabel.AutoSize = true;
+            iD_NHANVIENLabel.Location = new System.Drawing.Point(87, 268);
+            iD_NHANVIENLabel.Name = "iD_NHANVIENLabel";
+            iD_NHANVIENLabel.Size = new System.Drawing.Size(96, 16);
+            iD_NHANVIENLabel.TabIndex = 43;
+            iD_NHANVIENLabel.Text = "ID NHANVIEN:";
+            // 
+            // iD_NHANVIENTextBox
+            // 
+            this.iD_NHANVIENTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nHAN_VIENBindingSource, "ID_NHANVIEN", true));
+            this.iD_NHANVIENTextBox.Location = new System.Drawing.Point(219, 265);
+            this.iD_NHANVIENTextBox.Name = "iD_NHANVIENTextBox";
+            this.iD_NHANVIENTextBox.Size = new System.Drawing.Size(200, 22);
+            this.iD_NHANVIENTextBox.TabIndex = 44;
+            // 
+            // hOTENLabel
+            // 
+            hOTENLabel.AutoSize = true;
+            hOTENLabel.Location = new System.Drawing.Point(87, 296);
+            hOTENLabel.Name = "hOTENLabel";
+            hOTENLabel.Size = new System.Drawing.Size(58, 16);
+            hOTENLabel.TabIndex = 45;
+            hOTENLabel.Text = "HOTEN:";
+            // 
+            // hOTENTextBox
+            // 
+            this.hOTENTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nHAN_VIENBindingSource, "HOTEN", true));
+            this.hOTENTextBox.Location = new System.Drawing.Point(219, 293);
+            this.hOTENTextBox.Name = "hOTENTextBox";
+            this.hOTENTextBox.Size = new System.Drawing.Size(200, 22);
+            this.hOTENTextBox.TabIndex = 46;
+            // 
+            // nGAYSINHLabel
+            // 
+            nGAYSINHLabel.AutoSize = true;
+            nGAYSINHLabel.Location = new System.Drawing.Point(87, 325);
+            nGAYSINHLabel.Name = "nGAYSINHLabel";
+            nGAYSINHLabel.Size = new System.Drawing.Size(80, 16);
+            nGAYSINHLabel.TabIndex = 47;
+            nGAYSINHLabel.Text = "NGAYSINH:";
+            // 
+            // nGAYSINHDateTimePicker
+            // 
+            this.nGAYSINHDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.nHAN_VIENBindingSource, "NGAYSINH", true));
+            this.nGAYSINHDateTimePicker.Location = new System.Drawing.Point(219, 321);
+            this.nGAYSINHDateTimePicker.Name = "nGAYSINHDateTimePicker";
+            this.nGAYSINHDateTimePicker.Size = new System.Drawing.Size(200, 22);
+            this.nGAYSINHDateTimePicker.TabIndex = 48;
+            // 
+            // dIACHILabel
+            // 
+            dIACHILabel.AutoSize = true;
+            dIACHILabel.Location = new System.Drawing.Point(87, 352);
+            dIACHILabel.Name = "dIACHILabel";
+            dIACHILabel.Size = new System.Drawing.Size(54, 16);
+            dIACHILabel.TabIndex = 49;
+            dIACHILabel.Text = "DIACHI:";
+            // 
+            // dIACHITextBox
+            // 
+            this.dIACHITextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nHAN_VIENBindingSource, "DIACHI", true));
+            this.dIACHITextBox.Location = new System.Drawing.Point(219, 349);
+            this.dIACHITextBox.Name = "dIACHITextBox";
+            this.dIACHITextBox.Size = new System.Drawing.Size(200, 22);
+            this.dIACHITextBox.TabIndex = 50;
+            // 
+            // sDTLabel
+            // 
+            sDTLabel.AutoSize = true;
+            sDTLabel.Location = new System.Drawing.Point(87, 380);
+            sDTLabel.Name = "sDTLabel";
+            sDTLabel.Size = new System.Drawing.Size(38, 16);
+            sDTLabel.TabIndex = 51;
+            sDTLabel.Text = "SDT:";
+            // 
+            // sDTTextBox
+            // 
+            this.sDTTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nHAN_VIENBindingSource, "SDT", true));
+            this.sDTTextBox.Location = new System.Drawing.Point(219, 377);
+            this.sDTTextBox.Name = "sDTTextBox";
+            this.sDTTextBox.Size = new System.Drawing.Size(200, 22);
+            this.sDTTextBox.TabIndex = 52;
+            // 
+            // tONGNGAYCONGLabel
+            // 
+            tONGNGAYCONGLabel.AutoSize = true;
+            tONGNGAYCONGLabel.Location = new System.Drawing.Point(87, 408);
+            tONGNGAYCONGLabel.Name = "tONGNGAYCONGLabel";
+            tONGNGAYCONGLabel.Size = new System.Drawing.Size(126, 16);
+            tONGNGAYCONGLabel.TabIndex = 53;
+            tONGNGAYCONGLabel.Text = "TONGNGAYCONG:";
+            // 
+            // tONGNGAYCONGTextBox
+            // 
+            this.tONGNGAYCONGTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nHAN_VIENBindingSource, "TONGNGAYCONG", true));
+            this.tONGNGAYCONGTextBox.Location = new System.Drawing.Point(219, 405);
+            this.tONGNGAYCONGTextBox.Name = "tONGNGAYCONGTextBox";
+            this.tONGNGAYCONGTextBox.Size = new System.Drawing.Size(200, 22);
+            this.tONGNGAYCONGTextBox.TabIndex = 54;
+            // 
+            // tONGLUONGLabel
+            // 
+            tONGLUONGLabel.AutoSize = true;
+            tONGLUONGLabel.Location = new System.Drawing.Point(87, 436);
+            tONGLUONGLabel.Name = "tONGLUONGLabel";
+            tONGLUONGLabel.Size = new System.Drawing.Size(96, 16);
+            tONGLUONGLabel.TabIndex = 55;
+            tONGLUONGLabel.Text = "TONGLUONG:";
+            // 
+            // tONGLUONGTextBox
+            // 
+            this.tONGLUONGTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nHAN_VIENBindingSource, "TONGLUONG", true));
+            this.tONGLUONGTextBox.Location = new System.Drawing.Point(219, 433);
+            this.tONGLUONGTextBox.Name = "tONGLUONGTextBox";
+            this.tONGLUONGTextBox.Size = new System.Drawing.Size(200, 22);
+            this.tONGLUONGTextBox.TabIndex = 56;
+            // 
+            // iD_TAIKHOANLabel
+            // 
+            iD_TAIKHOANLabel.AutoSize = true;
+            iD_TAIKHOANLabel.Location = new System.Drawing.Point(87, 464);
+            iD_TAIKHOANLabel.Name = "iD_TAIKHOANLabel";
+            iD_TAIKHOANLabel.Size = new System.Drawing.Size(94, 16);
+            iD_TAIKHOANLabel.TabIndex = 57;
+            iD_TAIKHOANLabel.Text = "ID TAIKHOAN:";
+            // 
+            // iD_TAIKHOANTextBox
+            // 
+            this.iD_TAIKHOANTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nHAN_VIENBindingSource, "ID_TAIKHOAN", true));
+            this.iD_TAIKHOANTextBox.Location = new System.Drawing.Point(219, 461);
+            this.iD_TAIKHOANTextBox.Name = "iD_TAIKHOANTextBox";
+            this.iD_TAIKHOANTextBox.Size = new System.Drawing.Size(200, 22);
+            this.iD_TAIKHOANTextBox.TabIndex = 58;
+            // 
             // ufrm_CRUDThongTinNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.data_NhanVien);
             this.Controls.Add(iD_NHANVIENLabel);
             this.Controls.Add(this.iD_NHANVIENTextBox);
             this.Controls.Add(hOTENLabel);
@@ -275,6 +334,13 @@
             this.Controls.Add(this.dIACHITextBox);
             this.Controls.Add(sDTLabel);
             this.Controls.Add(this.sDTTextBox);
+            this.Controls.Add(tONGNGAYCONGLabel);
+            this.Controls.Add(this.tONGNGAYCONGTextBox);
+            this.Controls.Add(tONGLUONGLabel);
+            this.Controls.Add(this.tONGLUONGTextBox);
+            this.Controls.Add(iD_TAIKHOANLabel);
+            this.Controls.Add(this.iD_TAIKHOANTextBox);
+            this.Controls.Add(this.data_NhanVien);
             this.Controls.Add(this.txtTimKiemnNhanVien);
             this.Controls.Add(this.btnClearNhanVien);
             this.Controls.Add(this.btnXoaNhanVien);
@@ -306,12 +372,15 @@
         private System.Windows.Forms.BindingSource nHAN_VIENBindingSource;
         private HeThongKhachSanDataSetTableAdapters.NHAN_VIENTableAdapter nHAN_VIENTableAdapter;
         private HeThongKhachSanDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private HeThongKhachSanDataSet heThongKhachSanDataSet1;
+        private System.Windows.Forms.DataGridView data_NhanVien;
         private System.Windows.Forms.TextBox iD_NHANVIENTextBox;
         private System.Windows.Forms.TextBox hOTENTextBox;
         private System.Windows.Forms.DateTimePicker nGAYSINHDateTimePicker;
         private System.Windows.Forms.TextBox dIACHITextBox;
         private System.Windows.Forms.TextBox sDTTextBox;
-        private HeThongKhachSanDataSet heThongKhachSanDataSet1;
-        private System.Windows.Forms.DataGridView data_NhanVien;
+        private System.Windows.Forms.TextBox tONGNGAYCONGTextBox;
+        private System.Windows.Forms.TextBox tONGLUONGTextBox;
+        private System.Windows.Forms.TextBox iD_TAIKHOANTextBox;
     }
 }
