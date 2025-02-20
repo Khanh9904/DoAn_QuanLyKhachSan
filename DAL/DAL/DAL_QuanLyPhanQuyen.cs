@@ -145,7 +145,7 @@ namespace DAL.DAL
                 TimKiemAdapter.SelectCommand.Parameters.AddWithValue("@TENQUYEN", "%" + keyword + "%");
 
                 SqlDataAdapter adapterPhanQuyen = new SqlDataAdapter(TimKiemQuery, connection);
-
+                        
                 DataTable dt = new DataTable();
 
                 TimKiemAdapter.Fill(dt);

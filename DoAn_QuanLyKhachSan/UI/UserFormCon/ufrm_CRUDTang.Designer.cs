@@ -39,10 +39,10 @@
             this.btnThemTang = new System.Windows.Forms.Button();
             this.btnTroLaiTang = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.heThongKhachSanDataSet1 = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSet1();
+            this.heThongKhachSanDataSet1 = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSet();
             this.tangLauBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tangLauTableAdapter = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSet1TableAdapters.TangLauTableAdapter();
-            this.tableAdapterManager = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSet1TableAdapters.TableAdapterManager();
+            this.tangLauTableAdapter = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.TangLauTableAdapter();
+            this.tableAdapterManager = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.TableAdapterManager();
             this.maTangTextBox = new System.Windows.Forms.TextBox();
             this.tenTangTextBox = new System.Windows.Forms.TextBox();
             maTangLabel = new System.Windows.Forms.Label();
@@ -181,7 +181,7 @@
             this.tableAdapterManager.TAIKHOANTableAdapter = null;
             this.tableAdapterManager.TangLauTableAdapter = this.tangLauTableAdapter;
             this.tableAdapterManager.THIET_BITableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = DoAn_QuanLyKhachSan.HeThongKhachSanDataSet1TableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.UpdateOrder = DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // maTangTextBox
             // 
@@ -234,10 +234,10 @@
         private System.Windows.Forms.Button btnThemTang;
         private System.Windows.Forms.Button btnTroLaiTang;
         private System.Windows.Forms.Label label1;
-        private HeThongKhachSanDataSet1 heThongKhachSanDataSet1;
+        private HeThongKhachSanDataSet heThongKhachSanDataSet1;
         private System.Windows.Forms.BindingSource tangLauBindingSource;
-        private HeThongKhachSanDataSet1TableAdapters.TangLauTableAdapter tangLauTableAdapter;
-        private HeThongKhachSanDataSet1TableAdapters.TableAdapterManager tableAdapterManager;
+        private HeThongKhachSanDataSetTableAdapters.TangLauTableAdapter tangLauTableAdapter;
+        private HeThongKhachSanDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox maTangTextBox;
         private System.Windows.Forms.TextBox tenTangTextBox;
     }

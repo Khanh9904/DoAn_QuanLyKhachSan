@@ -37,7 +37,7 @@
             System.Windows.Forms.Label tONGNGAYCONGLabel;
             System.Windows.Forms.Label tONGLUONGLabel;
             System.Windows.Forms.Label iD_TAIKHOANLabel;
-            this.txtTimKiemnNhanVien = new System.Windows.Forms.TextBox();
+            this.txtTimKiemNhanVien = new System.Windows.Forms.TextBox();
             this.btnClearNhanVien = new System.Windows.Forms.Button();
             this.btnXoaNhanVien = new System.Windows.Forms.Button();
             this.btnSuaNhanVien = new System.Windows.Forms.Button();
@@ -144,13 +144,14 @@
             iD_TAIKHOANLabel.TabIndex = 57;
             iD_TAIKHOANLabel.Text = "ID TAIKHOAN:";
             // 
-            // txtTimKiemnNhanVien
+            // txtTimKiemNhanVien
             // 
-            this.txtTimKiemnNhanVien.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtTimKiemnNhanVien.Location = new System.Drawing.Point(461, 213);
-            this.txtTimKiemnNhanVien.Name = "txtTimKiemnNhanVien";
-            this.txtTimKiemnNhanVien.Size = new System.Drawing.Size(703, 22);
-            this.txtTimKiemnNhanVien.TabIndex = 32;
+            this.txtTimKiemNhanVien.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtTimKiemNhanVien.Location = new System.Drawing.Point(461, 213);
+            this.txtTimKiemNhanVien.Name = "txtTimKiemNhanVien";
+            this.txtTimKiemNhanVien.Size = new System.Drawing.Size(703, 22);
+            this.txtTimKiemNhanVien.TabIndex = 32;
+            this.txtTimKiemNhanVien.TextChanged += new System.EventHandler(this.txtTimKiemNhanVien_TextChanged);
             // 
             // btnClearNhanVien
             // 
@@ -241,6 +242,7 @@
             this.tableAdapterManager.PHIEU_DAT_PHONGTableAdapter = null;
             this.tableAdapterManager.PHONGTableAdapter = null;
             this.tableAdapterManager.TAIKHOANTableAdapter = null;
+            this.tableAdapterManager.TangLauTableAdapter = null;
             this.tableAdapterManager.THIET_BITableAdapter = null;
             this.tableAdapterManager.UpdateOrder = DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -312,6 +314,7 @@
             this.cbIDTaiKhoan.Name = "cbIDTaiKhoan";
             this.cbIDTaiKhoan.Size = new System.Drawing.Size(197, 24);
             this.cbIDTaiKhoan.TabIndex = 58;
+            this.cbIDTaiKhoan.SelectedIndexChanged += new System.EventHandler(this.cbIDTaiKhoan_SelectedIndexChanged);
             // 
             // data_NhanVien
             // 
@@ -345,7 +348,7 @@
             this.Controls.Add(tONGLUONGLabel);
             this.Controls.Add(this.tONGLUONGTextBox);
             this.Controls.Add(iD_TAIKHOANLabel);
-            this.Controls.Add(this.txtTimKiemnNhanVien);
+            this.Controls.Add(this.txtTimKiemNhanVien);
             this.Controls.Add(this.btnClearNhanVien);
             this.Controls.Add(this.btnXoaNhanVien);
             this.Controls.Add(this.btnSuaNhanVien);
@@ -365,7 +368,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtTimKiemnNhanVien;
+        private System.Windows.Forms.TextBox txtTimKiemNhanVien;
         private System.Windows.Forms.Button btnClearNhanVien;
         private System.Windows.Forms.Button btnXoaNhanVien;
         private System.Windows.Forms.Button btnSuaNhanVien;

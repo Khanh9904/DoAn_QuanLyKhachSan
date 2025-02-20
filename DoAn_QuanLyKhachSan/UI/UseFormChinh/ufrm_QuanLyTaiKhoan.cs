@@ -1,4 +1,5 @@
-﻿using DoAn_QuanLyKhachSan.UI.UserFormPhu;
+﻿using DoAn_QuanLyKhachSan.UI.UserFormCon;
+using DoAn_QuanLyKhachSan.UI.UserFormPhu;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,14 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
         private void toolStripButton2_Click(object sender, EventArgs e)
         {
             ufrm_CRUDPhanQuyen kh = new ufrm_CRUDPhanQuyen();
+            this.Controls.Clear();
+            this.Controls.Add(kh);
+            kh.Dock = DockStyle.Fill;
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            ufrm_CRUDTaiKhoan kh = new ufrm_CRUDTaiKhoan();
             this.Controls.Clear();
             this.Controls.Add(kh);
             kh.Dock = DockStyle.Fill;

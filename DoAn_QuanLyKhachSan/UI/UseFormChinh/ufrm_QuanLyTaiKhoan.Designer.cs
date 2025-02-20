@@ -73,6 +73,7 @@
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.Size = new System.Drawing.Size(97, 24);
             this.toolStripButton1.Text = "Tài Khoản";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // ufrm_QuanLyTaiKhoan
             // 

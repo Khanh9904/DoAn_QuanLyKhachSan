@@ -44,21 +44,26 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
 
 
         }
-
+        //--------------------------------------------------------------------------------
         public void LoadNhanVienComboBox()
         {
             string connectionString = new Database().GetDataSet();
+
             string query = "SELECT ID_TAIKHOAN, EMAIL FROM TAIKHOAN";
 
 
             var selectedValue = cbIDTaiKhoan.SelectedValue;
 
             SqlDataAdapter da = new SqlDataAdapter(query, connectionString);
+
             DataTable dt = new DataTable();
+
             da.Fill(dt);
 
             cbIDTaiKhoan.DisplayMember = "EMAIL";
+
             cbIDTaiKhoan.ValueMember = "ID_TAIKHOAN";
+
             cbIDTaiKhoan.DataSource = dt;
 
 
@@ -117,22 +122,22 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             dIACHITextBox.Text = "";
             sDTTextBox.Text = "";
         }
-
-        //------------------------------------------------------------------------
-
+        
 
 
 
-        //--------------------------------------------------------------------------------
+        //-------------------------------------------------------------------------------------------------------------------------------------------------
         // Ham them nhan vien
         private void btnThemNhanVien_Click(object sender, EventArgs e)
         {
             try
             {
+                DateTime ngaysinh = nGAYSINHDateTimePicker.Value;
+
                 NhanVien nhanVien = new NhanVien()
                 {
                     HOTEN = hOTENTextBox.Text,
-                    NGAYSINH = nGAYSINHDateTimePicker.Value,
+                    NGAYSINH = ngaysinh,
                     DIACHI = dIACHITextBox.Text,
                     SDT = sDTTextBox.Text,
                     TONGNGAYCONG = int.Parse(tONGNGAYCONGTextBox.Text.Trim()),
@@ -155,22 +160,8 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             }
         }
 
-        //--------------------------------------------------------------------------------
-        //hàm xóa nhân viên
-
+        //------------------------------------------------------------------------------------------------------------------------------------------------
        
-
-        //--------------------------------------------------------------------------
-
-
-
-        
-
-        
-
-
-
-
 
         private void data_NhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -182,7 +173,15 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
 
                 hOTENTextBox.Text = rowst.Cells["HOTEN"]?.Value != DBNull.Value ? rowst.Cells["HOTEN"].Value.ToString() : "";
 
-                nGAYSINHDateTimePicker.Text = rowst.Cells["NGAYSINH"]?.Value != DBNull.Value ? rowst.Cells["NGAYSINH"].Value.ToString() : "";
+                //nGAYSINHDateTimePicker.Text = rowst.Cells["NGAYSINH"]?.Value != DBNull.Value ? rowst.Cells["NGAYSINH"].Value.ToString() : "";
+
+                if (rowst.Cells["NGAYSINH"]?.Value != DBNull.Value && rowst.Cells["NGAYSINH"]?.Value != null)
+                {
+                    nGAYSINHDateTimePicker.Text = rowst.Cells["NGAYSINH"].Value.ToString();
+                }
+                else { 
+                nGAYSINHDateTimePicker.Value = DateTime.Now;
+                }
 
                 dIACHITextBox.Text = rowst.Cells["DIACHI"]?.Value != DBNull.Value ? rowst.Cells["DIACHI"].Value.ToString() : "";
 
@@ -192,7 +191,17 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
 
                 tONGLUONGTextBox.Text = rowst.Cells["TONGLUONG"]?.Value != DBNull.Value ? rowst.Cells["TONGLUONG"].Value.ToString() : "";
 
-                cbIDTaiKhoan.SelectedValue = rowst.Cells["ID_TAIKHOAN"]?.Value != DBNull.Value ? rowst.Cells["ID_TAIKHOAN"].Value : 0;
+                //cbIDTaiKhoan.SelectedValue = rowst.Cells["ID_TAIKHOAN"]?.Value != DBNull.Value ? rowst.Cells["ID_TAIKHOAN"].Value : 0;
+
+                if (rowst.Cells["ID_TAIKHOAN"]?.Value != null && rowst.Cells["ID_TAIKHOAN"].Value != DBNull.Value)
+                {
+                    int idTaiKhoan = Convert.ToInt32(rowst.Cells["ID_TAIKHOAN"].Value);
+                    cbIDTaiKhoan.SelectedValue = idTaiKhoan;
+                }
+                else
+                {
+                    cbIDTaiKhoan.SelectedIndex = -1;
+                }
             }
             catch (Exception ex)
             {
@@ -200,7 +209,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             }
         }
 
-        //--------------------------------------------------------------------------------
+        //---------------------------------------------------------------------------------------------------------------------------------------------
         //hàm xóa nhân viên
 
         private void btnXoaNhanVien_Click(object sender, EventArgs e)
@@ -231,24 +240,34 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             }
         }
 
-        //--------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------------------------------
         //hàm sửa nhân viên
 
         private void btnSuaNhanVien_Click(object sender, EventArgs e)
         {
             try
             {
+                DateTime ngaysinh = nGAYSINHDateTimePicker.Value;
+
                 NhanVien nhanVien = new NhanVien()
                 {
-                    ID_NHANVIEN = Convert.ToInt32(iD_NHANVIENTextBox.Text),
-                    HOTEN = hOTENTextBox.Text,
-                    NGAYSINH = nGAYSINHDateTimePicker.Value,
-                    DIACHI = dIACHITextBox.Text,
-                    SDT = sDTTextBox.Text
+                    ID_NHANVIEN = Convert.ToInt32(data_NhanVien.CurrentRow.Cells["ID_NHANVIEN"].Value),
+                    HOTEN = hOTENTextBox.Text.Trim(),
+                    NGAYSINH = ngaysinh,
+                    DIACHI = dIACHITextBox.Text.Trim(),
+                    SDT = sDTTextBox.Text.Trim(),
+                    TONGNGAYCONG = int.Parse(tONGNGAYCONGTextBox.Text.Trim()),
+                    TONGLUONG = int.Parse(tONGLUONGTextBox.Text.Trim()),
+                    ID_TAIKHOAN = (int)cbIDTaiKhoan.SelectedValue,
+
                 };
+
                 BLL_ThongTinNhanVien.UpdateNhanVien(nhanVien);
+
                 MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 LoadNhanVien();
+
                 btnDonThongTin();
             }
             catch (Exception ex)
@@ -257,12 +276,34 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             }
         }
 
-        //--------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------------------------------------------------------
         //hàm clear thông tin
 
         private void btnClearNhanVien_Click(object sender, EventArgs e)
         {
             btnDonThongTin();
         }
+
+        private void cbIDTaiKhoan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        //------------------------------------------------------------------------------------------------------------------------------------------------
+        //hàm tìm kiếm nhân viên
+        private void txtTimKiemNhanVien_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtTimKiemNhanVien.Text.Trim();
+
+            DataTable dt = BLL_ThongTinNhanVien.SearchNhanVien(keyword);
+
+            data_NhanVien.DataSource = dt;
+        }
+
+        //------------------------------------------------------------------------------------------------------------------------------------------------
+
+       
+
     }
 }

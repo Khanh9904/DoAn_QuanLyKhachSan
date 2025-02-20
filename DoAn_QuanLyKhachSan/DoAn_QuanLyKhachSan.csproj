@@ -51,11 +51,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HeThongKhachSanDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="HeThongKhachSanDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HeThongKhachSanDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="UI\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,12 +95,6 @@
     <Compile Include="UI\UserFormCon\ufrm_CRUDLoaiPhong.Designer.cs">
       <DependentUpon>ufrm_CRUDLoaiPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\UserFormCon\ufrm_CRUDTaiKhoan.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\UserFormCon\ufrm_CRUDTaiKhoan.Designer.cs">
-      <DependentUpon>ufrm_CRUDTaiKhoan.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\UserFormCon\ufrm_CRUDPhanQuyen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -129,6 +118,12 @@
     </Compile>
     <Compile Include="UI\UseFormChinh\ufrm_QuanLyTaiKhoan.Designer.cs">
       <DependentUpon>ufrm_QuanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_CRUDTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_CRUDTaiKhoan.Designer.cs">
+      <DependentUpon>ufrm_CRUDTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\UserFormCon\ufrm_CRUDTang.cs">
       <SubType>UserControl</SubType>
@@ -208,11 +203,20 @@
     <EmbeddedResource Include="UI\UseFormChinh\ufrm_QuanLyTaiKhoan.resx">
       <DependentUpon>ufrm_QuanLyTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserFormCon\ufrm_CRUDDichVu.resx">
+      <DependentUpon>ufrm_CRUDDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserFormCon\ufrm_CRUDLoaiPhong.resx">
+      <DependentUpon>ufrm_CRUDLoaiPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\UserFormCon\ufrm_CRUDPhanQuyen.resx">
       <DependentUpon>ufrm_CRUDPhanQuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UseFormChinh\ufrm_QuanLyNhanVien.resx">
       <DependentUpon>ufrm_QuanLyNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserFormCon\ufrm_CRUDTaiKhoan.resx">
+      <DependentUpon>ufrm_CRUDTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserFormCon\ufrm_CRUDTang.resx">
       <DependentUpon>ufrm_CRUDTang.cs</DependentUpon>
@@ -232,6 +236,12 @@
     <EmbeddedResource Include="UI\UserFormCon\ufrm_CRUDThongTinNhanVien.resx">
       <DependentUpon>ufrm_CRUDThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserFormCon\ufrm_PhanCongCaLam.resx">
+      <DependentUpon>ufrm_PhanCongCaLam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserFormCon\ufrm_TinhLuong.resx">
+      <DependentUpon>ufrm_TinhLuong.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="HeThongKhachSanDataSet.xsc">
       <DependentUpon>HeThongKhachSanDataSet.xsd</DependentUpon>
     </None>
@@ -242,17 +252,6 @@
     </None>
     <None Include="HeThongKhachSanDataSet.xss">
       <DependentUpon>HeThongKhachSanDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="HeThongKhachSanDataSet1.xsc">
-      <DependentUpon>HeThongKhachSanDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="HeThongKhachSanDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HeThongKhachSanDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="HeThongKhachSanDataSet1.xss">
-      <DependentUpon>HeThongKhachSanDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

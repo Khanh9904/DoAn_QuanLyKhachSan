@@ -35,26 +35,12 @@
             System.Windows.Forms.Label maLoaiPhongLabel;
             System.Windows.Forms.Label maThietBiLabel;
             System.Windows.Forms.Label maDichVuLabel;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ufrm_CRUDPhong));
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.heThongKhachSanDataSet = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSet();
             this.pHONGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pHONGTableAdapter = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.PHONGTableAdapter();
             this.tableAdapterManager = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.TableAdapterManager();
-            this.pHONGBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.pHONGBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.maPhongTextBox = new System.Windows.Forms.TextBox();
             this.tenPhongTextBox = new System.Windows.Forms.TextBox();
             this.tinhTrangTextBox = new System.Windows.Forms.TextBox();
@@ -76,8 +62,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHONGBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pHONGBindingNavigator)).BeginInit();
-            this.pHONGBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
             // maPhongLabel
@@ -183,133 +167,9 @@
             this.tableAdapterManager.PHIEU_DAT_PHONGTableAdapter = null;
             this.tableAdapterManager.PHONGTableAdapter = this.pHONGTableAdapter;
             this.tableAdapterManager.TAIKHOANTableAdapter = null;
+            this.tableAdapterManager.TangLauTableAdapter = null;
             this.tableAdapterManager.THIET_BITableAdapter = null;
             this.tableAdapterManager.UpdateOrder = DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // pHONGBindingNavigator
-            // 
-            this.pHONGBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.pHONGBindingNavigator.BindingSource = this.pHONGBindingSource;
-            this.pHONGBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.pHONGBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.pHONGBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.pHONGBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.pHONGBindingNavigatorSaveItem});
-            this.pHONGBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.pHONGBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.pHONGBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.pHONGBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.pHONGBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.pHONGBindingNavigator.Name = "pHONGBindingNavigator";
-            this.pHONGBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.pHONGBindingNavigator.Size = new System.Drawing.Size(1250, 31);
-            this.pHONGBindingNavigator.TabIndex = 3;
-            this.pHONGBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 28);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 28);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 28);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 28);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 28);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 28);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
-            // 
-            // pHONGBindingNavigatorSaveItem
-            // 
-            this.pHONGBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.pHONGBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("pHONGBindingNavigatorSaveItem.Image")));
-            this.pHONGBindingNavigatorSaveItem.Name = "pHONGBindingNavigatorSaveItem";
-            this.pHONGBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 28);
-            this.pHONGBindingNavigatorSaveItem.Text = "Save Data";
-            this.pHONGBindingNavigatorSaveItem.Click += new System.EventHandler(this.pHONGBindingNavigatorSaveItem_Click);
             // 
             // maPhongTextBox
             // 
@@ -435,7 +295,6 @@
             this.Controls.Add(this.maThietBiTextBox);
             this.Controls.Add(maDichVuLabel);
             this.Controls.Add(this.maDichVuTextBox);
-            this.Controls.Add(this.pHONGBindingNavigator);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "ufrm_CRUDPhong";
@@ -443,9 +302,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHONGBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pHONGBindingNavigator)).EndInit();
-            this.pHONGBindingNavigator.ResumeLayout(false);
-            this.pHONGBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -459,19 +315,6 @@
         private System.Windows.Forms.BindingSource pHONGBindingSource;
         private HeThongKhachSanDataSetTableAdapters.PHONGTableAdapter pHONGTableAdapter;
         private HeThongKhachSanDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator pHONGBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton pHONGBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox maPhongTextBox;
         private System.Windows.Forms.TextBox tenPhongTextBox;
         private System.Windows.Forms.TextBox tinhTrangTextBox;

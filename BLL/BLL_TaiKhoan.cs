@@ -1,4 +1,5 @@
-﻿using DAL.DAL.DoAn_QuanLyKhachSan.DAL;
+﻿using DAL.DAL;
+using DAL.DAL.DoAn_QuanLyKhachSan.DAL;
 using DAL.Model;
 using System;
 using System.Collections.Generic;
@@ -17,60 +18,70 @@ namespace BLL
         {
             DAL_TaiKhoan = new DAL_TaiKhoan(Dbconnection);
         }
+        
+
+        //-------------------------------------------------------------
+        // ham load du lieu
         public DataTable GetDataTaiKhoan()
         {
             return DAL_TaiKhoan.LoadTaiKhoan();
         }
 
+        //-----------------------------------------------------------------------------------
+        // hàm thêm tài khoản
         public bool AddTaiKhoan(TaiKhoan taikhoan)
         {
 
-            // Kiểm tra tên tài khoản đã tồn tại chưa
-            if (DAL_TaiKhoan.CheckTaiKhoan(taikhoan.IDTK.ToString())) // Chuyển IDTK sang string nếu cần
+            
+            if (DAL_TaiKhoan.CheckTaiKhoan(taikhoan.ID_TAIKHOAN.ToString()))
             {
-                throw new Exception($"Tên Tài Khoản : {taikhoan.TENTK} đã tồn tại");
+                throw new Exception($"Tên Tài Khoản : {taikhoan.EMAIL} đã tồn tại");
             }
-            // Trả về thông tin thêm thành công
+            
             return DAL_TaiKhoan.AddTaiKhoan(taikhoan);
         }
+
+        //-----------------------------------------------------------------------------------
+        // hàm cập nhật tài khoản
         public bool UpdateTaiKhoan(TaiKhoan taikhoan)
         {
-            // Kiểm tra dữ liệu đầu vào
+            
             if (taikhoan == null)
             {
                 throw new ArgumentNullException(nameof(taikhoan), "Tài khoản không được để trống!");
             }
 
-            if (taikhoan.IDTK <= 0 ||
-                string.IsNullOrWhiteSpace(taikhoan.TENTK) ||
+            if (taikhoan.ID_TAIKHOAN <= 0 ||
+                string.IsNullOrWhiteSpace(taikhoan.EMAIL) ||
                 string.IsNullOrWhiteSpace(taikhoan.MATKHAU) ||
                 taikhoan.ID_PHANQUYEN <= 0)
             {
                 throw new Exception("Vui lòng nhập đầy đủ thông tin tài khoản hợp lệ!");
             }
 
-            // Gọi phương thức cập nhật từ DAL và trả về kết quả
+           
             return DAL_TaiKhoan.UpdateTaiKhoan(taikhoan);
         }
 
-
-        public bool DeleteTaiKhoan(int IDTK)
+        //-----------------------------------------------------------------------------------
+        // hàm xóa tài khoản
+        public bool DeleteTaiKhoan(int ID_TAIKHOAN)
         {
-            // Kiểm tra dữ liệu đầu vào
-            if (IDTK <= 0)
+            
+            if (ID_TAIKHOAN <= 0)
             {
                 throw new Exception("Vui lòng chọn tài khoản hợp lệ để xóa!");
             }
 
-            // Gọi phương thức xóa từ DAL và trả về kết quả
-            return DAL_TaiKhoan.DeleteTaiKhoan(IDTK);
+            
+            return DAL_TaiKhoan.DeleteTaiKhoan(ID_TAIKHOAN);
         }
 
 
         // Hàm tìm kiếm tài khoản theo tên tài khoản
-        public DataTable SearchTaiKhoan(string TENTK)
+        public DataTable SearchTaiKhoan(string EMAIL)
         {
-            return DAL_TaiKhoan.SearchTaiKhoan(TENTK);
+            return DAL_TaiKhoan.SearchTaiKhoan(EMAIL);
         }
     }
 }

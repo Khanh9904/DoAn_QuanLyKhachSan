@@ -69,7 +69,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
         private void button1_Click(object sender, EventArgs e)
         {
             this.Controls.Clear();
-            ufrm_QuanLyNhanVien quanly = new ufrm_QuanLyNhanVien();
+            ufrm_QuanLyTaiKhoan quanly = new ufrm_QuanLyTaiKhoan();
             this.Controls.Add(quanly);
             quanly.Dock = DockStyle.Fill;
         }

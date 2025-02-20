@@ -24,6 +24,9 @@ namespace BLL
         {
             return DAL_ThongTinNhanVien.LoadNhanVien();
         }
+
+
+
         //-------------------------------------------------------------
         // ham kiem tra ten nhan vien co ton tai khong
         public bool CheckNhanVien(string TenNhanVien)
@@ -31,21 +34,34 @@ namespace BLL
             return DAL_ThongTinNhanVien.CheckNhanVien(TenNhanVien);
         }
 
+
+
+
+
+
         //-------------------------------------------------------------
         // ham them du lieu
         public bool AddNhanVien(NhanVien nhanVien)
         {
-            // Kiem tra du lieu dau vao
-            if (string.IsNullOrWhiteSpace(nhanVien.HOTEN) || string.IsNullOrWhiteSpace(nhanVien.DIACHI) || string.IsNullOrWhiteSpace(nhanVien.SDT))
+           
+            
+            if (nhanVien.NGAYSINH ==default || string.IsNullOrWhiteSpace(nhanVien.HOTEN) || string.IsNullOrWhiteSpace(nhanVien.DIACHI) || string.IsNullOrWhiteSpace(nhanVien.SDT))
             {
                 throw new Exception("Vui lòng nhập đủ thông tin");
             }
-            // Kiem tra ten nhan vien da ton tai chua
+           
             if (DAL_ThongTinNhanVien.CheckNhanVien(nhanVien.HOTEN))
             {
                 throw new Exception($"Tên Nhân Viên : {nhanVien.HOTEN} đã tồn tại");
             }
-            // tra ve thong tin them thanh cong
+
+            if (nhanVien.NGAYSINH >= DateTime.Now)
+            {
+                throw new Exception("Ngày sinh không hợp lệ");
+            }
+
+           
+
             return DAL_ThongTinNhanVien.AddNhanVien(nhanVien);
         }
 
@@ -54,12 +70,18 @@ namespace BLL
         // ham sua du lieu
         public bool UpdateNhanVien(NhanVien nhanVien)
         {
-            // Kiem tra du lieu dau vao
-            if (nhanVien.ID_NHANVIEN <= 0 || string.IsNullOrWhiteSpace(nhanVien.HOTEN) || string.IsNullOrWhiteSpace(nhanVien.DIACHI) || string.IsNullOrWhiteSpace(nhanVien.SDT))
+            
+            if (nhanVien.ID_NHANVIEN <= 0 || string.IsNullOrWhiteSpace(nhanVien.HOTEN) || string.IsNullOrWhiteSpace(nhanVien.DIACHI) || string.IsNullOrWhiteSpace(nhanVien.SDT) || nhanVien.NGAYSINH == default)
             {
                 throw new Exception("Vui lòng nhập đủ thông tin");
             }
-            // tra ve thong tin sua thanh cong
+
+            if (nhanVien.NGAYSINH >= DateTime.Now)
+            {
+                throw new Exception("Ngày sinh không hợp lệ");
+            }
+
+
             return DAL_ThongTinNhanVien.UpdateNhanVien(nhanVien);
         }
 
@@ -67,12 +89,12 @@ namespace BLL
         // ham xoa du lieu
         public bool DeleteNhanVien(int ID_NHANVIEN)
         {
-            // Kiem tra du lieu dau vao
+            
             if (ID_NHANVIEN <= 0)
             {
                 throw new Exception("Vui lòng chọn nhân viên cần xóa");
             }
-            // tra ve thong tin xoa thanh cong
+           
             return DAL_ThongTinNhanVien.DeleteNhanVien(ID_NHANVIEN);
         }
 

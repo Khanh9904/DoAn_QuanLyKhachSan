@@ -1,4 +1,6 @@
-﻿namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
+﻿using System.Windows.Forms;
+
+namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
 {
     partial class ufrm_PhanCongCaLam
     {
@@ -28,10 +30,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // ufrm_PhanCongCaLam
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "ufrm_PhanCongCaLam";
+            this.Size = new System.Drawing.Size(1250, 830);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
+       
 }

@@ -16,5 +16,13 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
         {
             InitializeComponent();
         }
+
+        private void dICH_VUBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.dICH_VUBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.heThongKhachSanDataSet);
+
+        }
     }
 }
