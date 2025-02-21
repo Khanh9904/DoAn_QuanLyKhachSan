@@ -45,8 +45,8 @@
             this.kHACH_HANGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kHACH_HANGTableAdapter = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.KHACH_HANGTableAdapter();
             this.tableAdapterManager = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.TableAdapterManager();
-            this.lOAI_PHONGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lOAI_PHONGTableAdapter = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.LOAI_PHONGTableAdapter();
+            this.lOAI_PHONGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.maLoaiPhongTextBox = new System.Windows.Forms.TextBox();
             this.tenLoaiPhongTextBox = new System.Windows.Forms.TextBox();
             this.giaTextBox = new System.Windows.Forms.TextBox();
@@ -61,6 +61,42 @@
             ((System.ComponentModel.ISupportInitialize)(this.lOAI_PHONGBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // maLoaiPhongLabel
+            // 
+            maLoaiPhongLabel.AutoSize = true;
+            maLoaiPhongLabel.Location = new System.Drawing.Point(83, 209);
+            maLoaiPhongLabel.Name = "maLoaiPhongLabel";
+            maLoaiPhongLabel.Size = new System.Drawing.Size(100, 16);
+            maLoaiPhongLabel.TabIndex = 69;
+            maLoaiPhongLabel.Text = "Ma Loai Phong:";
+            // 
+            // tenLoaiPhongLabel
+            // 
+            tenLoaiPhongLabel.AutoSize = true;
+            tenLoaiPhongLabel.Location = new System.Drawing.Point(83, 237);
+            tenLoaiPhongLabel.Name = "tenLoaiPhongLabel";
+            tenLoaiPhongLabel.Size = new System.Drawing.Size(105, 16);
+            tenLoaiPhongLabel.TabIndex = 71;
+            tenLoaiPhongLabel.Text = "Ten Loai Phong:";
+            // 
+            // giaLabel
+            // 
+            giaLabel.AutoSize = true;
+            giaLabel.Location = new System.Drawing.Point(83, 265);
+            giaLabel.Name = "giaLabel";
+            giaLabel.Size = new System.Drawing.Size(31, 16);
+            giaLabel.TabIndex = 73;
+            giaLabel.Text = "Gia:";
+            // 
+            // soNguoiToiDaLabel
+            // 
+            soNguoiToiDaLabel.AutoSize = true;
+            soNguoiToiDaLabel.Location = new System.Drawing.Point(83, 293);
+            soNguoiToiDaLabel.Name = "soNguoiToiDaLabel";
+            soNguoiToiDaLabel.Size = new System.Drawing.Size(110, 16);
+            soNguoiToiDaLabel.TabIndex = 75;
+            soNguoiToiDaLabel.Text = "So Nguoi Toi Da:";
+            // 
             // txtTimKiemLoaiPhong
             // 
             this.txtTimKiemLoaiPhong.Cursor = System.Windows.Forms.Cursors.Default;
@@ -68,6 +104,7 @@
             this.txtTimKiemLoaiPhong.Name = "txtTimKiemLoaiPhong";
             this.txtTimKiemLoaiPhong.Size = new System.Drawing.Size(603, 22);
             this.txtTimKiemLoaiPhong.TabIndex = 68;
+            this.txtTimKiemLoaiPhong.TextChanged += new System.EventHandler(this.txtTimKiemLoaiPhong_TextChanged);
             // 
             // btnClearLoaiPhong
             // 
@@ -77,6 +114,7 @@
             this.btnClearLoaiPhong.TabIndex = 57;
             this.btnClearLoaiPhong.Text = "Xóa Dữ Liệu";
             this.btnClearLoaiPhong.UseVisualStyleBackColor = true;
+            this.btnClearLoaiPhong.Click += new System.EventHandler(this.btnClearLoaiPhong_Click);
             // 
             // btnXoaLoaiPhong
             // 
@@ -86,6 +124,7 @@
             this.btnXoaLoaiPhong.TabIndex = 56;
             this.btnXoaLoaiPhong.Text = "Xóa";
             this.btnXoaLoaiPhong.UseVisualStyleBackColor = true;
+            this.btnXoaLoaiPhong.Click += new System.EventHandler(this.btnXoaLoaiPhong_Click);
             // 
             // btnSuaLoaiPhong
             // 
@@ -95,6 +134,7 @@
             this.btnSuaLoaiPhong.TabIndex = 55;
             this.btnSuaLoaiPhong.Text = "Sửa";
             this.btnSuaLoaiPhong.UseVisualStyleBackColor = true;
+            this.btnSuaLoaiPhong.Click += new System.EventHandler(this.btnSuaLoaiPhong_Click);
             // 
             // btnThemLoaiPhong
             // 
@@ -104,6 +144,7 @@
             this.btnThemLoaiPhong.TabIndex = 54;
             this.btnThemLoaiPhong.Text = "Thêm";
             this.btnThemLoaiPhong.UseVisualStyleBackColor = true;
+            this.btnThemLoaiPhong.Click += new System.EventHandler(this.btnThemLoaiPhong_Click);
             // 
             // btnTroLaiLoaiPhong
             // 
@@ -123,6 +164,7 @@
             this.data_LoaiPhong.RowTemplate.Height = 24;
             this.data_LoaiPhong.Size = new System.Drawing.Size(599, 393);
             this.data_LoaiPhong.TabIndex = 52;
+            this.data_LoaiPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_LoaiPhong_CellClick);
             // 
             // label1
             // 
@@ -167,23 +209,14 @@
             this.tableAdapterManager.THIET_BITableAdapter = null;
             this.tableAdapterManager.UpdateOrder = DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // lOAI_PHONGBindingSource
-            // 
-            this.lOAI_PHONGBindingSource.DataMember = "LOAI_PHONG";
-            this.lOAI_PHONGBindingSource.DataSource = this.heThongKhachSanDataSet;
-            // 
             // lOAI_PHONGTableAdapter
             // 
             this.lOAI_PHONGTableAdapter.ClearBeforeFill = true;
             // 
-            // maLoaiPhongLabel
+            // lOAI_PHONGBindingSource
             // 
-            maLoaiPhongLabel.AutoSize = true;
-            maLoaiPhongLabel.Location = new System.Drawing.Point(83, 209);
-            maLoaiPhongLabel.Name = "maLoaiPhongLabel";
-            maLoaiPhongLabel.Size = new System.Drawing.Size(100, 16);
-            maLoaiPhongLabel.TabIndex = 69;
-            maLoaiPhongLabel.Text = "Ma Loai Phong:";
+            this.lOAI_PHONGBindingSource.DataMember = "LOAI_PHONG";
+            this.lOAI_PHONGBindingSource.DataSource = this.heThongKhachSanDataSet;
             // 
             // maLoaiPhongTextBox
             // 
@@ -193,15 +226,6 @@
             this.maLoaiPhongTextBox.Size = new System.Drawing.Size(272, 22);
             this.maLoaiPhongTextBox.TabIndex = 70;
             // 
-            // tenLoaiPhongLabel
-            // 
-            tenLoaiPhongLabel.AutoSize = true;
-            tenLoaiPhongLabel.Location = new System.Drawing.Point(83, 237);
-            tenLoaiPhongLabel.Name = "tenLoaiPhongLabel";
-            tenLoaiPhongLabel.Size = new System.Drawing.Size(105, 16);
-            tenLoaiPhongLabel.TabIndex = 71;
-            tenLoaiPhongLabel.Text = "Ten Loai Phong:";
-            // 
             // tenLoaiPhongTextBox
             // 
             this.tenLoaiPhongTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOAI_PHONGBindingSource, "TenLoaiPhong", true));
@@ -210,15 +234,6 @@
             this.tenLoaiPhongTextBox.Size = new System.Drawing.Size(272, 22);
             this.tenLoaiPhongTextBox.TabIndex = 72;
             // 
-            // giaLabel
-            // 
-            giaLabel.AutoSize = true;
-            giaLabel.Location = new System.Drawing.Point(83, 265);
-            giaLabel.Name = "giaLabel";
-            giaLabel.Size = new System.Drawing.Size(31, 16);
-            giaLabel.TabIndex = 73;
-            giaLabel.Text = "Gia:";
-            // 
             // giaTextBox
             // 
             this.giaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOAI_PHONGBindingSource, "Gia", true));
@@ -226,15 +241,6 @@
             this.giaTextBox.Name = "giaTextBox";
             this.giaTextBox.Size = new System.Drawing.Size(272, 22);
             this.giaTextBox.TabIndex = 74;
-            // 
-            // soNguoiToiDaLabel
-            // 
-            soNguoiToiDaLabel.AutoSize = true;
-            soNguoiToiDaLabel.Location = new System.Drawing.Point(83, 293);
-            soNguoiToiDaLabel.Name = "soNguoiToiDaLabel";
-            soNguoiToiDaLabel.Size = new System.Drawing.Size(110, 16);
-            soNguoiToiDaLabel.TabIndex = 75;
-            soNguoiToiDaLabel.Text = "So Nguoi Toi Da:";
             // 
             // soNguoiToiDaTextBox
             // 

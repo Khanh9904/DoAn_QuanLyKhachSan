@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BLL;
+using DAL.DAL;
+using DAL.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +15,12 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
 {
     public partial class ufrm_CRUDDichVu : UserControl
     {
+        Database db = new Database();
+
+        private BLL_DichVu BLL_DichVu;
+
+
+
         public ufrm_CRUDDichVu()
         {
             InitializeComponent();
@@ -24,5 +33,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             this.tableAdapterManager.UpdateAll(this.heThongKhachSanDataSet);
 
         }
+
+
     }
 }

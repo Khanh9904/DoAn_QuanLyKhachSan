@@ -41,11 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\DAL_DichVu.cs" />
+    <Compile Include="DAL\DAL_LoaiPhong.cs" />
     <Compile Include="DAL\DAL_QuanLyPhanQuyen.cs" />
     <Compile Include="DAL\DAL_TaiKhoan.cs" />
     <Compile Include="DAL\DAL_Tang.cs" />
     <Compile Include="DAL\DAL_ThongTinNhanVien.cs" />
     <Compile Include="Database\Database.cs" />
+    <Compile Include="Model\DichVu.cs" />
+    <Compile Include="Model\LoaiPhong.cs" />
     <Compile Include="Model\NhanVien.cs" />
     <Compile Include="Model\PhanQuyen.cs" />
     <Compile Include="Model\TaiKhoan.cs" />

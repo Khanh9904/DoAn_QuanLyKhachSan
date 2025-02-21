@@ -25,5 +25,13 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
             this.Controls.Add(kh);
             kh.Dock = DockStyle.Fill;
         }
+
+        private void ThongTinLoaiPhong_Click(object sender, EventArgs e)
+        {
+            ufrm_CRUDLoaiPhong kh = new ufrm_CRUDLoaiPhong();
+            this.Controls.Clear();
+            this.Controls.Add(kh);
+            kh.Dock = DockStyle.Fill;
+        }
     }
 }
