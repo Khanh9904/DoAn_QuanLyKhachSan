@@ -165,6 +165,7 @@
             this.data_LoaiPhong.Size = new System.Drawing.Size(599, 393);
             this.data_LoaiPhong.TabIndex = 52;
             this.data_LoaiPhong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_LoaiPhong_CellClick);
+            this.data_LoaiPhong.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.data_LoaiPhong_CellFormatting);
             // 
             // label1
             // 

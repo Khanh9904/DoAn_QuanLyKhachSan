@@ -13,7 +13,6 @@ namespace BLL
     public class BLL_DichVu
     {
         public DAL_DichVu DAL_DichVu;
-        private string connectionString;
 
         //--------------------------------------------------------------------------------
         // Hàm khởi tạo và truyền chuỗi kết nối
@@ -22,90 +21,62 @@ namespace BLL
             DAL_DichVu = new DAL_DichVu(Dbconnection);
         }
 
-        // Load dữ liệu
-        public DataTable LoadDichVu()
+        //--------------------------------------------------------------------------------
+        // Hàm load dữ liệu từ bảng DICHVU
+        public DataTable GetDataDichVu()
         {
-            DataTable dt = new DataTable();
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                string query = "SELECT * FROM DichVu";
-                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
-                adapter.Fill(dt);
-            }
-            return dt;
+            return DAL_DichVu.LoadDichVu();
         }
 
-        // Kiểm tra dịch vụ đã tồn tại chưa
-        public bool CheckDichVu(string TenDichVu)
+        //--------------------------------------------------------------------------------
+        // Hàm thêm dịch vụ mới
+        public bool AddDichVu(DichVu dichVu)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            // Kiểm tra dữ liệu đầu vào
+            if (string.IsNullOrWhiteSpace(dichVu.TenDichVu) || dichVu.SoLuongDichVu <= 0 || string.IsNullOrWhiteSpace(dichVu.TrangThaiDichVu))
             {
-                connection.Open();
-                string query = "SELECT COUNT(*) FROM DichVu WHERE TenDichVu = @TenDichVu";
-                SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@TenDichVu", TenDichVu);
-                return (int)cmd.ExecuteScalar() > 0;
+                throw new Exception("Vui lòng nhập đầy đủ thông tin dịch vụ");
             }
+
+            // Kiểm tra tên dịch vụ đã tồn tại chưa
+            if (DAL_DichVu.CheckDichVu(dichVu.TenDichVu))
+            {
+                throw new Exception($"Tên dịch vụ '{dichVu.TenDichVu}' đã tồn tại");
+            }
+
+            // Thêm dịch vụ thành công
+            return DAL_DichVu.AddDichVu(dichVu);
         }
 
-        // Thêm dịch vụ mới
-        public bool AddDichVu(DichVu dv)
+        //--------------------------------------------------------------------------------
+        // Hàm sửa thông tin dịch vụ
+        public bool UpdateDichVu(DichVu dichVu)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            if (dichVu.MaDichVu <= 0 || string.IsNullOrWhiteSpace(dichVu.TenDichVu) || dichVu.SoLuongDichVu <= 0 || string.IsNullOrWhiteSpace(dichVu.TrangThaiDichVu))
             {
-                connection.Open();
-                string query = "INSERT INTO DICH_VU (TenDichVu, GiaDichVu, MoTa) VALUES (@TenDichVu, @GiaDichVu, @MoTa)";
-                SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@TenDichVu", dv.TenDichVu);
-                cmd.Parameters.AddWithValue("@GiaDichVu", dv.GiaDichVu);
-
-                return cmd.ExecuteNonQuery() > 0;
+                throw new Exception("Vui lòng nhập đầy đủ thông tin dịch vụ");
             }
+
+            return DAL_DichVu.UpdateDichVu(dichVu);
         }
 
-        // Cập nhật dịch vụ
-        public bool UpdateDichVu(DichVu dv)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                string query = "UPDATE DichVu SET TenDichVu = @TenDichVu, GiaDichVu = @GiaDichVu, MoTa = @MoTa WHERE MaDichVu = @MaDichVu";
-                SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@MaDichVu", dv.MaDichVu);
-                cmd.Parameters.AddWithValue("@TenDichVu", dv.TenDichVu);
-                cmd.Parameters.AddWithValue("@GiaDichVu", dv.GiaDichVu);
-
-                return cmd.ExecuteNonQuery() > 0;
-            }
-        }
-
-        // Xóa dịch vụ
+        //--------------------------------------------------------------------------------
+        // Hàm xóa dịch vụ
         public bool DeleteDichVu(int MaDichVu)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            if (MaDichVu <= 0)
             {
-                connection.Open();
-                string query = "DELETE FROM DichVu WHERE MaDichVu = @MaDichVu";
-                SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@MaDichVu", MaDichVu);
-                return cmd.ExecuteNonQuery() > 0;
+                throw new Exception("Vui lòng chọn dịch vụ cần xóa");
             }
+
+            return DAL_DichVu.DeleteDichVu(MaDichVu);
         }
 
-        // Tìm kiếm dịch vụ
+        //--------------------------------------------------------------------------------
+        // Hàm tìm kiếm dịch vụ
         public DataTable SearchDichVu(string TenDichVu)
         {
-            DataTable dt = new DataTable();
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-                string query = "SELECT * FROM DichVu WHERE TenDichVu LIKE @TenDichVu";
-                SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
-                adapter.SelectCommand.Parameters.AddWithValue("@TenDichVu", "%" + TenDichVu + "%");
-                adapter.Fill(dt);
-            }
-            return dt;
+            return DAL_DichVu.SearchDichVu(TenDichVu);
         }
     }
 }

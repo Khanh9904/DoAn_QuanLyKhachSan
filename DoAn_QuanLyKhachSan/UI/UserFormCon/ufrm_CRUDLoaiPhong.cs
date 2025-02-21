@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DAL.DAL;
 using DAL.Database;
 using DAL.Model;
 using System;
@@ -180,6 +181,19 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void data_LoaiPhong_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (data_LoaiPhong.Columns[e.ColumnIndex].Name == "Gia" && e.Value != null)
+            {
+                if (decimal.TryParse(e.Value.ToString(), out decimal mucLuong))
+                {
+
+                    e.Value = string.Format("{0:N0} VND", mucLuong);
+                    e.FormattingApplied = true;
+                }
             }
         }
         //----------------------------------------------------------------------------------------------------------------------------------------

@@ -11,7 +11,7 @@ namespace DAL.Model
         public int MaDichVu { get; set; }
         public string TenDichVu { get; set; }
         public decimal GiaDichVu { get; set; }
-        public string TrangThai { get; set; }
-        public int SoLuong { get; set; }
+        public string TrangThaiDichVu { get; set; }
+        public int SoLuongDichVu { get; set; }
     }
 }

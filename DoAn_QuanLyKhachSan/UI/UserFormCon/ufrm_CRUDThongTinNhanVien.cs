@@ -1,4 +1,5 @@
 ﻿using BLL;
+using DAL.DAL;
 using DAL.Database;
 using DAL.Model;
 using DoAn_QuanLyKhachSan.UI.UseForm;
@@ -301,9 +302,22 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             data_NhanVien.DataSource = dt;
         }
 
+        private void data_NhanVien_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (data_NhanVien.Columns[e.ColumnIndex].Name == "TONGLUONG" && e.Value != null)
+            {
+                if (decimal.TryParse(e.Value.ToString(), out decimal mucLuong))
+                {
+
+                    e.Value = string.Format("{0:N0} VND", mucLuong);
+                    e.FormattingApplied = true;
+                }
+            }
+        }
+
         //------------------------------------------------------------------------------------------------------------------------------------------------
 
-       
+
 
     }
 }

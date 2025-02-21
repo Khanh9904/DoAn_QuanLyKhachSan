@@ -33,5 +33,13 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
             this.Controls.Add(kh);
             kh.Dock = DockStyle.Fill;
         }
+
+        private void ThongTinDichVu_Click(object sender, EventArgs e)
+        {
+            ufrm_CRUDDichVu kh = new ufrm_CRUDDichVu();
+            this.Controls.Clear();
+            this.Controls.Add(kh);
+            kh.Dock = DockStyle.Fill;
+        }
     }
 }

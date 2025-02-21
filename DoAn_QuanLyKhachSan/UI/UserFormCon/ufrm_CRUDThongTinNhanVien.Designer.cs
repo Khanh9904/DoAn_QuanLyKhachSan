@@ -326,6 +326,7 @@
             this.data_NhanVien.Size = new System.Drawing.Size(845, 352);
             this.data_NhanVien.TabIndex = 59;
             this.data_NhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_NhanVien_CellClick);
+            this.data_NhanVien.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.data_NhanVien_CellFormatting);
             // 
             // ufrm_CRUDThongTinNhanVien
             // 

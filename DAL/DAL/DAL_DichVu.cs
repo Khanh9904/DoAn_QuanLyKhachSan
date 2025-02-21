@@ -25,7 +25,7 @@ namespace DAL.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT * FROM DichVu";
+                string query = "SELECT * FROM DICH_VU";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
                 adapter.Fill(dt);
             }
@@ -38,7 +38,7 @@ namespace DAL.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT COUNT(*) FROM DichVu WHERE TenDichVu = @TenDichVu";
+                string query = "SELECT COUNT(*) FROM DICH_VU WHERE TenDichVu = @TenDichVu";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@TenDichVu", TenDichVu);
                 return (int)cmd.ExecuteScalar() > 0;
@@ -51,10 +51,12 @@ namespace DAL.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "INSERT INTO DichVu (TenDichVu, GiaDichVu, MoTa) VALUES (@TenDichVu, @GiaDichVu, @MoTa)";
+                string query = "INSERT INTO DICH_VU (TenDichVu, GiaDichVu, TrangThaiDichVu, SoLuongDichVu) VALUES (@TenDichVu, @GiaDichVu, @TrangThaiDichVu, @SoLuongDichVu)";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@TenDichVu", dv.TenDichVu);
                 cmd.Parameters.AddWithValue("@GiaDichVu", dv.GiaDichVu);
+                cmd.Parameters.AddWithValue("@TrangThaiDichVu", dv.TrangThaiDichVu);
+                cmd.Parameters.AddWithValue("@SoLuongDichVu", dv.SoLuongDichVu);
 
                 return cmd.ExecuteNonQuery() > 0;
             }
@@ -66,11 +68,13 @@ namespace DAL.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "UPDATE DichVu SET TenDichVu = @TenDichVu, GiaDichVu = @GiaDichVu, MoTa = @MoTa WHERE MaDichVu = @MaDichVu";
+                string query = "UPDATE DICH_VU SET TenDichVu = @TenDichVu, GiaDichVu = @GiaDichVu, TrangThaiDichVu = @TrangThaiDichVu, SoLuongDichVu = @SoLuongDichVu WHERE MaDichVu = @MaDichVu";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@MaDichVu", dv.MaDichVu);
                 cmd.Parameters.AddWithValue("@TenDichVu", dv.TenDichVu);
                 cmd.Parameters.AddWithValue("@GiaDichVu", dv.GiaDichVu);
+                cmd.Parameters.AddWithValue("@TrangThaiDichVu", dv.TrangThaiDichVu);
+                cmd.Parameters.AddWithValue("@SoLuongDichVu", dv.SoLuongDichVu);
 
                 return cmd.ExecuteNonQuery() > 0;
             }
@@ -82,7 +86,7 @@ namespace DAL.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "DELETE FROM DichVu WHERE MaDichVu = @MaDichVu";
+                string query = "DELETE FROM DICH_VU WHERE MaDichVu = @MaDichVu";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@MaDichVu", MaDichVu);
                 return cmd.ExecuteNonQuery() > 0;
@@ -96,7 +100,7 @@ namespace DAL.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT * FROM DichVu WHERE TenDichVu LIKE @TenDichVu";
+                string query = "SELECT * FROM DICH_VU WHERE TenDichVu LIKE @TenDichVu";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
                 adapter.SelectCommand.Parameters.AddWithValue("@TenDichVu", "%" + TenDichVu + "%");
                 adapter.Fill(dt);

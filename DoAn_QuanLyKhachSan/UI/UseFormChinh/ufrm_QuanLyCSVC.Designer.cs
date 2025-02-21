@@ -104,6 +104,7 @@
             this.ThongTinDichVu.Name = "ThongTinDichVu";
             this.ThongTinDichVu.Size = new System.Drawing.Size(154, 24);
             this.ThongTinDichVu.Text = "Thông Tin Dịch Vụ";
+            this.ThongTinDichVu.Click += new System.EventHandler(this.ThongTinDichVu_Click);
             // 
             // ufrm_QuanLyCSVC
             // 

@@ -16,5 +16,18 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
         {
             InitializeComponent();
         }
+
+        private void data_Thietbi_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
+        }
+
+        private void tHIET_BIBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.tHIET_BIBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.heThongKhachSanDataSet);
+
+        }
     }
 }

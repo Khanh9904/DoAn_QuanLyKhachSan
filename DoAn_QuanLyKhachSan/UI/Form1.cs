@@ -43,7 +43,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_ManHinhHeThong1.Visible = true;
             ufrm_QuanLyNhanVien1.Visible = false;
             ufrm_QuanLyCSVC1.Visible = false;
-            
+            ufrm_QuanLyKhachHang1.Visible = false;
+
             ufrm_QuanLyTaiKhoan1.Visible = false;
             ufrm_ThongTinKhachHang1.Visible = false;
             ufrm_BaoCaoThongKe1.Visible = false;
@@ -58,6 +59,7 @@ namespace DoAn_QuanLyKhachSan
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_QuanLyNhanVien1.Visible = false;
             ufrm_QuanLyCSVC1.Visible = false;
+            ufrm_QuanLyKhachHang1.Visible = false;
 
             ufrm_QuanLyTaiKhoan1.Visible = false;
             ufrm_ThongTinKhachHang1.Visible = true;
@@ -70,6 +72,7 @@ namespace DoAn_QuanLyKhachSan
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_QuanLyNhanVien1.Visible = false;
             ufrm_QuanLyCSVC1.Visible = false;
+            ufrm_QuanLyKhachHang1.Visible = false;
 
             ufrm_QuanLyTaiKhoan1.Visible = false;
             ufrm_ThongTinKhachHang1.Visible = false;
@@ -82,6 +85,7 @@ namespace DoAn_QuanLyKhachSan
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_QuanLyNhanVien1.Visible = true;
             ufrm_QuanLyCSVC1.Visible = false;
+            ufrm_QuanLyKhachHang1.Visible = false;
 
             ufrm_QuanLyTaiKhoan1.Visible = false;
             ufrm_ThongTinKhachHang1.Visible = false;
@@ -94,6 +98,7 @@ namespace DoAn_QuanLyKhachSan
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_QuanLyNhanVien1.Visible = false;
             ufrm_QuanLyCSVC1.Visible = true;
+            ufrm_QuanLyKhachHang1.Visible = false;
 
             ufrm_QuanLyTaiKhoan1.Visible = false;
             ufrm_ThongTinKhachHang1.Visible = false;
@@ -106,6 +111,7 @@ namespace DoAn_QuanLyKhachSan
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_QuanLyNhanVien1.Visible = false;
             ufrm_QuanLyCSVC1.Visible = false;
+            ufrm_QuanLyKhachHang1.Visible = false;
 
             ufrm_QuanLyTaiKhoan1.Visible = true;
             ufrm_ThongTinKhachHang1.Visible = false;
@@ -115,7 +121,15 @@ namespace DoAn_QuanLyKhachSan
 
         private void btnQuanLyKhachHang_Click(object sender, EventArgs e)
         {
+            ufrm_ManHinhHeThong1.Visible = false;
+            ufrm_QuanLyNhanVien1.Visible = false;
+            ufrm_QuanLyCSVC1.Visible = false;
+            ufrm_QuanLyKhachHang1.Visible = true;
 
+            ufrm_QuanLyTaiKhoan1.Visible = false;
+            ufrm_ThongTinKhachHang1.Visible = false;
+            ufrm_BaoCaoThongKe1.Visible = false;
+            HighlightButton((Button)sender);
         }
 
 

@@ -61,6 +61,51 @@
             ((System.ComponentModel.ISupportInitialize)(this.dICH_VUBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+            // maDichVuLabel
+            // 
+            maDichVuLabel.AutoSize = true;
+            maDichVuLabel.Location = new System.Drawing.Point(68, 236);
+            maDichVuLabel.Name = "maDichVuLabel";
+            maDichVuLabel.Size = new System.Drawing.Size(78, 16);
+            maDichVuLabel.TabIndex = 40;
+            maDichVuLabel.Text = "Ma Dich Vu:";
+            // 
+            // tenDichVuLabel
+            // 
+            tenDichVuLabel.AutoSize = true;
+            tenDichVuLabel.Location = new System.Drawing.Point(68, 264);
+            tenDichVuLabel.Name = "tenDichVuLabel";
+            tenDichVuLabel.Size = new System.Drawing.Size(83, 16);
+            tenDichVuLabel.TabIndex = 42;
+            tenDichVuLabel.Text = "Ten Dich Vu:";
+            // 
+            // giaDichVuLabel
+            // 
+            giaDichVuLabel.AutoSize = true;
+            giaDichVuLabel.Location = new System.Drawing.Point(68, 292);
+            giaDichVuLabel.Name = "giaDichVuLabel";
+            giaDichVuLabel.Size = new System.Drawing.Size(80, 16);
+            giaDichVuLabel.TabIndex = 44;
+            giaDichVuLabel.Text = "Gia Dich Vu:";
+            // 
+            // trangThaiDichVuLabel
+            // 
+            trangThaiDichVuLabel.AutoSize = true;
+            trangThaiDichVuLabel.Location = new System.Drawing.Point(68, 320);
+            trangThaiDichVuLabel.Name = "trangThaiDichVuLabel";
+            trangThaiDichVuLabel.Size = new System.Drawing.Size(125, 16);
+            trangThaiDichVuLabel.TabIndex = 46;
+            trangThaiDichVuLabel.Text = "Trang Thai Dich Vu:";
+            // 
+            // soLuongDichVuLabel
+            // 
+            soLuongDichVuLabel.AutoSize = true;
+            soLuongDichVuLabel.Location = new System.Drawing.Point(68, 348);
+            soLuongDichVuLabel.Name = "soLuongDichVuLabel";
+            soLuongDichVuLabel.Size = new System.Drawing.Size(116, 16);
+            soLuongDichVuLabel.TabIndex = 48;
+            soLuongDichVuLabel.Text = "So Luong Dich Vu:";
+            // 
             // btnClearDichVu
             // 
             this.btnClearDichVu.Location = new System.Drawing.Point(745, 675);
@@ -69,6 +114,7 @@
             this.btnClearDichVu.TabIndex = 39;
             this.btnClearDichVu.Text = "Xóa Dữ Liệu";
             this.btnClearDichVu.UseVisualStyleBackColor = true;
+            this.btnClearDichVu.Click += new System.EventHandler(this.btnClearDichVu_Click);
             // 
             // btnXoaDichVu
             // 
@@ -78,6 +124,7 @@
             this.btnXoaDichVu.TabIndex = 38;
             this.btnXoaDichVu.Text = "Xóa";
             this.btnXoaDichVu.UseVisualStyleBackColor = true;
+            this.btnXoaDichVu.Click += new System.EventHandler(this.btnXoaDichVu_Click);
             // 
             // btnSuaDichVu
             // 
@@ -87,6 +134,7 @@
             this.btnSuaDichVu.TabIndex = 37;
             this.btnSuaDichVu.Text = "Sửa";
             this.btnSuaDichVu.UseVisualStyleBackColor = true;
+            this.btnSuaDichVu.Click += new System.EventHandler(this.btnSuaDichVu_Click);
             // 
             // btnThemDichVu
             // 
@@ -96,6 +144,7 @@
             this.btnThemDichVu.TabIndex = 36;
             this.btnThemDichVu.Text = "Thêm";
             this.btnThemDichVu.UseVisualStyleBackColor = true;
+            this.btnThemDichVu.Click += new System.EventHandler(this.btnThemDichVu_Click);
             // 
             // btnTroLaiDichVu
             // 
@@ -115,6 +164,8 @@
             this.data_DichVu.RowTemplate.Height = 24;
             this.data_DichVu.Size = new System.Drawing.Size(599, 393);
             this.data_DichVu.TabIndex = 22;
+            this.data_DichVu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_DichVu_CellClick);
+            this.data_DichVu.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.data_DichVu_CellFormatting);
             // 
             // label1
             // 
@@ -159,15 +210,6 @@
             this.tableAdapterManager.THIET_BITableAdapter = null;
             this.tableAdapterManager.UpdateOrder = DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // maDichVuLabel
-            // 
-            maDichVuLabel.AutoSize = true;
-            maDichVuLabel.Location = new System.Drawing.Point(68, 236);
-            maDichVuLabel.Name = "maDichVuLabel";
-            maDichVuLabel.Size = new System.Drawing.Size(78, 16);
-            maDichVuLabel.TabIndex = 40;
-            maDichVuLabel.Text = "Ma Dich Vu:";
-            // 
             // maDichVuTextBox
             // 
             this.maDichVuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dICH_VUBindingSource, "MaDichVu", true));
@@ -175,15 +217,6 @@
             this.maDichVuTextBox.Name = "maDichVuTextBox";
             this.maDichVuTextBox.Size = new System.Drawing.Size(283, 22);
             this.maDichVuTextBox.TabIndex = 41;
-            // 
-            // tenDichVuLabel
-            // 
-            tenDichVuLabel.AutoSize = true;
-            tenDichVuLabel.Location = new System.Drawing.Point(68, 264);
-            tenDichVuLabel.Name = "tenDichVuLabel";
-            tenDichVuLabel.Size = new System.Drawing.Size(83, 16);
-            tenDichVuLabel.TabIndex = 42;
-            tenDichVuLabel.Text = "Ten Dich Vu:";
             // 
             // tenDichVuTextBox
             // 
@@ -193,15 +226,6 @@
             this.tenDichVuTextBox.Size = new System.Drawing.Size(283, 22);
             this.tenDichVuTextBox.TabIndex = 43;
             // 
-            // giaDichVuLabel
-            // 
-            giaDichVuLabel.AutoSize = true;
-            giaDichVuLabel.Location = new System.Drawing.Point(68, 292);
-            giaDichVuLabel.Name = "giaDichVuLabel";
-            giaDichVuLabel.Size = new System.Drawing.Size(80, 16);
-            giaDichVuLabel.TabIndex = 44;
-            giaDichVuLabel.Text = "Gia Dich Vu:";
-            // 
             // giaDichVuTextBox
             // 
             this.giaDichVuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dICH_VUBindingSource, "GiaDichVu", true));
@@ -210,15 +234,6 @@
             this.giaDichVuTextBox.Size = new System.Drawing.Size(283, 22);
             this.giaDichVuTextBox.TabIndex = 45;
             // 
-            // trangThaiDichVuLabel
-            // 
-            trangThaiDichVuLabel.AutoSize = true;
-            trangThaiDichVuLabel.Location = new System.Drawing.Point(68, 320);
-            trangThaiDichVuLabel.Name = "trangThaiDichVuLabel";
-            trangThaiDichVuLabel.Size = new System.Drawing.Size(125, 16);
-            trangThaiDichVuLabel.TabIndex = 46;
-            trangThaiDichVuLabel.Text = "Trang Thai Dich Vu:";
-            // 
             // trangThaiDichVuTextBox
             // 
             this.trangThaiDichVuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dICH_VUBindingSource, "TrangThaiDichVu", true));
@@ -226,15 +241,6 @@
             this.trangThaiDichVuTextBox.Name = "trangThaiDichVuTextBox";
             this.trangThaiDichVuTextBox.Size = new System.Drawing.Size(283, 22);
             this.trangThaiDichVuTextBox.TabIndex = 47;
-            // 
-            // soLuongDichVuLabel
-            // 
-            soLuongDichVuLabel.AutoSize = true;
-            soLuongDichVuLabel.Location = new System.Drawing.Point(68, 348);
-            soLuongDichVuLabel.Name = "soLuongDichVuLabel";
-            soLuongDichVuLabel.Size = new System.Drawing.Size(116, 16);
-            soLuongDichVuLabel.TabIndex = 48;
-            soLuongDichVuLabel.Text = "So Luong Dich Vu:";
             // 
             // soLuongDichVuTextBox
             // 
@@ -251,6 +257,7 @@
             this.txtTimKiemDichVu.Name = "txtTimKiemDichVu";
             this.txtTimKiemDichVu.Size = new System.Drawing.Size(603, 22);
             this.txtTimKiemDichVu.TabIndex = 50;
+            this.txtTimKiemDichVu.TextChanged += new System.EventHandler(this.txtTimKiemDichVu_TextChanged);
             // 
             // ufrm_CRUDDichVu
             // 
