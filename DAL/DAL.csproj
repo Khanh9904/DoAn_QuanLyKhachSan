@@ -46,6 +46,7 @@
     <Compile Include="DAL\DAL_QuanLyPhanQuyen.cs" />
     <Compile Include="DAL\DAL_TaiKhoan.cs" />
     <Compile Include="DAL\DAL_Tang.cs" />
+    <Compile Include="DAL\DAL_ThongTinKhachHang.cs" />
     <Compile Include="DAL\DAL_ThongTinNhanVien.cs" />
     <Compile Include="Database\Database.cs" />
     <Compile Include="Model\DichVu.cs" />
@@ -54,6 +55,7 @@
     <Compile Include="Model\PhanQuyen.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\Tang.cs" />
+    <Compile Include="Model\ThongTinKhachHang.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

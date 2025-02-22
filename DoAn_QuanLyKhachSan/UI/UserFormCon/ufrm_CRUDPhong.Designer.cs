@@ -44,15 +44,15 @@
             this.maPhongTextBox = new System.Windows.Forms.TextBox();
             this.tenPhongTextBox = new System.Windows.Forms.TextBox();
             this.tinhTrangTextBox = new System.Windows.Forms.TextBox();
-            this.maLoaiPhongTextBox = new System.Windows.Forms.TextBox();
-            this.maThietBiTextBox = new System.Windows.Forms.TextBox();
-            this.maDichVuTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnTroLaiQLTTP = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnXoaPhong = new System.Windows.Forms.Button();
             this.btnSuaPhong = new System.Windows.Forms.Button();
             this.btnThemPhong = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             maPhongLabel = new System.Windows.Forms.Label();
             tenPhongLabel = new System.Windows.Forms.Label();
             tinhTrangLabel = new System.Windows.Forms.Label();
@@ -195,30 +195,6 @@
             this.tinhTrangTextBox.Size = new System.Drawing.Size(237, 22);
             this.tinhTrangTextBox.TabIndex = 8;
             // 
-            // maLoaiPhongTextBox
-            // 
-            this.maLoaiPhongTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pHONGBindingSource, "MaLoaiPhong", true));
-            this.maLoaiPhongTextBox.Location = new System.Drawing.Point(216, 271);
-            this.maLoaiPhongTextBox.Name = "maLoaiPhongTextBox";
-            this.maLoaiPhongTextBox.Size = new System.Drawing.Size(237, 22);
-            this.maLoaiPhongTextBox.TabIndex = 10;
-            // 
-            // maThietBiTextBox
-            // 
-            this.maThietBiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pHONGBindingSource, "MaThietBi", true));
-            this.maThietBiTextBox.Location = new System.Drawing.Point(216, 299);
-            this.maThietBiTextBox.Name = "maThietBiTextBox";
-            this.maThietBiTextBox.Size = new System.Drawing.Size(237, 22);
-            this.maThietBiTextBox.TabIndex = 12;
-            // 
-            // maDichVuTextBox
-            // 
-            this.maDichVuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pHONGBindingSource, "MaDichVu", true));
-            this.maDichVuTextBox.Location = new System.Drawing.Point(216, 327);
-            this.maDichVuTextBox.Name = "maDichVuTextBox";
-            this.maDichVuTextBox.Size = new System.Drawing.Size(237, 22);
-            this.maDichVuTextBox.TabIndex = 14;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(-19, -19);
@@ -273,10 +249,37 @@
             this.btnThemPhong.Text = "Thêm";
             this.btnThemPhong.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(216, 274);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(237, 24);
+            this.comboBox1.TabIndex = 21;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(216, 304);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(237, 24);
+            this.comboBox2.TabIndex = 22;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(216, 330);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(237, 24);
+            this.comboBox3.TabIndex = 23;
+            // 
             // ufrm_CRUDPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnXoaPhong);
             this.Controls.Add(this.btnSuaPhong);
@@ -290,11 +293,8 @@
             this.Controls.Add(tinhTrangLabel);
             this.Controls.Add(this.tinhTrangTextBox);
             this.Controls.Add(maLoaiPhongLabel);
-            this.Controls.Add(this.maLoaiPhongTextBox);
             this.Controls.Add(maThietBiLabel);
-            this.Controls.Add(this.maThietBiTextBox);
             this.Controls.Add(maDichVuLabel);
-            this.Controls.Add(this.maDichVuTextBox);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "ufrm_CRUDPhong";
@@ -318,14 +318,14 @@
         private System.Windows.Forms.TextBox maPhongTextBox;
         private System.Windows.Forms.TextBox tenPhongTextBox;
         private System.Windows.Forms.TextBox tinhTrangTextBox;
-        private System.Windows.Forms.TextBox maLoaiPhongTextBox;
-        private System.Windows.Forms.TextBox maThietBiTextBox;
-        private System.Windows.Forms.TextBox maDichVuTextBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnTroLaiQLTTP;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnXoaPhong;
         private System.Windows.Forms.Button btnSuaPhong;
         private System.Windows.Forms.Button btnThemPhong;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }

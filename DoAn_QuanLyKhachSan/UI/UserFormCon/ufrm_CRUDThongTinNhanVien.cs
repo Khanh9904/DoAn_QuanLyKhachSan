@@ -252,13 +252,20 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
 
                 NhanVien nhanVien = new NhanVien()
                 {
-                    ID_NHANVIEN = Convert.ToInt32(data_NhanVien.CurrentRow.Cells["ID_NHANVIEN"].Value),
+                    ID_NHANVIEN = Convert.ToInt32(data_NhanVien.CurrentRow.Cells["ID_NHANVIEN"].Value), 
+
                     HOTEN = hOTENTextBox.Text.Trim(),
+
                     NGAYSINH = ngaysinh,
+
                     DIACHI = dIACHITextBox.Text.Trim(),
+
                     SDT = sDTTextBox.Text.Trim(),
+
                     TONGNGAYCONG = int.Parse(tONGNGAYCONGTextBox.Text.Trim()),
+
                     TONGLUONG = int.Parse(tONGLUONGTextBox.Text.Trim()),
+
                     ID_TAIKHOAN = (int)cbIDTaiKhoan.SelectedValue,
 
                 };

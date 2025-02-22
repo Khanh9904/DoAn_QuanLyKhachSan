@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DoAn_QuanLyKhachSan.UI.UseForm;
+using DoAn_QuanLyKhachSan.UI.UserFormPhu;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,14 @@ namespace DoAn_QuanLyKhachSan.UI.UseFormChinh
         public ufrm_QuanLyKhachHang()
         {
             InitializeComponent();
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            ufrm_CRUDThongTinKhachHang kh = new ufrm_CRUDThongTinKhachHang();
+            this.Controls.Clear();
+            this.Controls.Add(kh);
+            kh.Dock = DockStyle.Fill;
         }
     }
 }
