@@ -105,39 +105,43 @@
             // 
             // btnClearThietbi
             // 
-            this.btnClearThietbi.Location = new System.Drawing.Point(735, 679);
+            this.btnClearThietbi.Location = new System.Drawing.Point(723, 649);
             this.btnClearThietbi.Name = "btnClearThietbi";
-            this.btnClearThietbi.Size = new System.Drawing.Size(135, 23);
+            this.btnClearThietbi.Size = new System.Drawing.Size(147, 53);
             this.btnClearThietbi.TabIndex = 83;
             this.btnClearThietbi.Text = "Xóa Dữ Liệu";
             this.btnClearThietbi.UseVisualStyleBackColor = true;
+            this.btnClearThietbi.Click += new System.EventHandler(this.btnClearThietbi_Click);
             // 
             // btnXoaThietbi
             // 
-            this.btnXoaThietbi.Location = new System.Drawing.Point(584, 679);
+            this.btnXoaThietbi.Location = new System.Drawing.Point(572, 649);
             this.btnXoaThietbi.Name = "btnXoaThietbi";
-            this.btnXoaThietbi.Size = new System.Drawing.Size(75, 23);
+            this.btnXoaThietbi.Size = new System.Drawing.Size(87, 53);
             this.btnXoaThietbi.TabIndex = 82;
             this.btnXoaThietbi.Text = "Xóa";
             this.btnXoaThietbi.UseVisualStyleBackColor = true;
+            this.btnXoaThietbi.Click += new System.EventHandler(this.btnXoaThietbi_Click);
             // 
             // btnSuaThietbi
             // 
-            this.btnSuaThietbi.Location = new System.Drawing.Point(423, 679);
+            this.btnSuaThietbi.Location = new System.Drawing.Point(411, 649);
             this.btnSuaThietbi.Name = "btnSuaThietbi";
-            this.btnSuaThietbi.Size = new System.Drawing.Size(75, 23);
+            this.btnSuaThietbi.Size = new System.Drawing.Size(87, 53);
             this.btnSuaThietbi.TabIndex = 81;
             this.btnSuaThietbi.Text = "Sửa";
             this.btnSuaThietbi.UseVisualStyleBackColor = true;
+            this.btnSuaThietbi.Click += new System.EventHandler(this.btnSuaThietbi_Click);
             // 
             // btnThemThietbi
             // 
-            this.btnThemThietbi.Location = new System.Drawing.Point(274, 679);
+            this.btnThemThietbi.Location = new System.Drawing.Point(262, 649);
             this.btnThemThietbi.Name = "btnThemThietbi";
-            this.btnThemThietbi.Size = new System.Drawing.Size(75, 23);
+            this.btnThemThietbi.Size = new System.Drawing.Size(87, 53);
             this.btnThemThietbi.TabIndex = 80;
             this.btnThemThietbi.Text = "Thêm";
             this.btnThemThietbi.UseVisualStyleBackColor = true;
+            this.btnThemThietbi.Click += new System.EventHandler(this.btnThemThietbi_Click);
             // 
             // btnTroLaiThietbi
             // 
@@ -147,6 +151,7 @@
             this.btnTroLaiThietbi.TabIndex = 79;
             this.btnTroLaiThietbi.Text = "Trở lại";
             this.btnTroLaiThietbi.UseVisualStyleBackColor = true;
+            this.btnTroLaiThietbi.Click += new System.EventHandler(this.btnTroLaiThietbi_Click);
             // 
             // data_Thietbi
             // 
@@ -157,6 +162,7 @@
             this.data_Thietbi.RowTemplate.Height = 24;
             this.data_Thietbi.Size = new System.Drawing.Size(599, 393);
             this.data_Thietbi.TabIndex = 78;
+            this.data_Thietbi.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Thietbi_CellClick);
             this.data_Thietbi.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.data_Thietbi_CellFormatting);
             // 
             // label1

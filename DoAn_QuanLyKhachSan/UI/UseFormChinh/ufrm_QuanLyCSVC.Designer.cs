@@ -97,6 +97,7 @@
             this.ThongTinThietBi.Name = "ThongTinThietBi";
             this.ThongTinThietBi.Size = new System.Drawing.Size(153, 24);
             this.ThongTinThietBi.Text = "Thông Tin Thiết Bị";
+            this.ThongTinThietBi.Click += new System.EventHandler(this.ThongTinThietBi_Click);
             // 
             // ThongTinDichVu
             // 

@@ -47,6 +47,7 @@
     <Compile Include="BLL_Phong.cs" />
     <Compile Include="BLL_QuanLyPhanQuyen.cs" />
     <Compile Include="BLL_TaiKhoan.cs" />
+    <Compile Include="BLL_ThietBi.cs" />
     <Compile Include="BLL_ThongTinKhachHang.cs" />
     <Compile Include="BLL_ThongTinNhanVien.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

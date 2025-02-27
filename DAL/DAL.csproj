@@ -48,6 +48,7 @@
     <Compile Include="DAL\DAL_QuanLyPhanQuyen.cs" />
     <Compile Include="DAL\DAL_TaiKhoan.cs" />
     <Compile Include="DAL\DAL_Tang.cs" />
+    <Compile Include="DAL\DAL_ThietBi.cs" />
     <Compile Include="DAL\DAL_ThongTinKhachHang.cs" />
     <Compile Include="DAL\DAL_ThongTinNhanVien.cs" />
     <Compile Include="Database\Database.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Model\Phong.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\Tang.cs" />
+    <Compile Include="Model\ThietBi.cs" />
     <Compile Include="Model\ThongTinKhachHang.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

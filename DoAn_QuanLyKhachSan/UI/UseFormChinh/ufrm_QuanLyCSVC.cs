@@ -49,5 +49,13 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
             this.Controls.Add(kh);
             kh.Dock = DockStyle.Fill;
         }
+
+        private void ThongTinThietBi_Click(object sender, EventArgs e)
+        {
+            ufrm_CRUDThietBi kh = new ufrm_CRUDThietBi();
+            this.Controls.Clear();
+            this.Controls.Add(kh);
+            kh.Dock = DockStyle.Fill;
+        }
     }
 }
