@@ -41,29 +41,29 @@ namespace BLL
 
         //-------------------------------------------------------------
         // ham them du lieu
-        public bool AddNhanVien(NhanVien nhanVien)
-        {
+            public bool AddNhanVien(NhanVien nhanVien)
+            {
            
             
-            if (nhanVien.NGAYSINH ==default || string.IsNullOrWhiteSpace(nhanVien.HOTEN) || string.IsNullOrWhiteSpace(nhanVien.DIACHI) || string.IsNullOrWhiteSpace(nhanVien.SDT))
-            {
-                throw new Exception("Vui lòng nhập đủ thông tin");
-            }
+                if (nhanVien.NGAYSINH ==default || string.IsNullOrWhiteSpace(nhanVien.HOTEN) || string.IsNullOrWhiteSpace(nhanVien.DIACHI) || string.IsNullOrWhiteSpace(nhanVien.SDT))
+                {
+                    throw new Exception("Vui lòng nhập đủ thông tin");
+                }
            
-            if (DAL_ThongTinNhanVien.CheckNhanVien(nhanVien.HOTEN))
-            {
-                throw new Exception($"Tên Nhân Viên : {nhanVien.HOTEN} đã tồn tại");
-            }
+                if (DAL_ThongTinNhanVien.CheckNhanVien(nhanVien.HOTEN))
+                {
+                    throw new Exception($"Tên Nhân Viên : {nhanVien.HOTEN} đã tồn tại");
+                }
 
-            if (nhanVien.NGAYSINH >= DateTime.Now)
-            {
-                throw new Exception("Ngày sinh không hợp lệ");
-            }
+                if (nhanVien.NGAYSINH >= DateTime.Now)
+                {
+                    throw new Exception("Ngày sinh không hợp lệ");
+                }
 
            
 
-            return DAL_ThongTinNhanVien.AddNhanVien(nhanVien);
-        }
+                return DAL_ThongTinNhanVien.AddNhanVien(nhanVien);
+            }
 
 
         //-------------------------------------------------------------

@@ -254,6 +254,7 @@
             // iD_NHANVIENTextBox
             // 
             this.iD_NHANVIENTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.nHAN_VIENBindingSource, "ID_NHANVIEN", true));
+            this.iD_NHANVIENTextBox.Enabled = false;
             this.iD_NHANVIENTextBox.Location = new System.Drawing.Point(219, 265);
             this.iD_NHANVIENTextBox.Name = "iD_NHANVIENTextBox";
             this.iD_NHANVIENTextBox.Size = new System.Drawing.Size(200, 22);

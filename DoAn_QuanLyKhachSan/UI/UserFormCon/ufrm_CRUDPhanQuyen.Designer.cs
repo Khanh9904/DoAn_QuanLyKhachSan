@@ -143,6 +143,7 @@
             this.tableAdapterManager.PHIEU_DAT_PHONGTableAdapter = null;
             this.tableAdapterManager.PHONGTableAdapter = null;
             this.tableAdapterManager.TAIKHOANTableAdapter = null;
+            this.tableAdapterManager.TangLauTableAdapter = null;
             this.tableAdapterManager.THIET_BITableAdapter = null;
             this.tableAdapterManager.UpdateOrder = DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -235,7 +236,7 @@
             // txtTimKiemQuyen
             // 
             this.txtTimKiemQuyen.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtTimKiemQuyen.Location = new System.Drawing.Point(411, 86);
+            this.txtTimKiemQuyen.Location = new System.Drawing.Point(411, 99);
             this.txtTimKiemQuyen.Name = "txtTimKiemQuyen";
             this.txtTimKiemQuyen.Size = new System.Drawing.Size(703, 22);
             this.txtTimKiemQuyen.TabIndex = 16;

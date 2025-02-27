@@ -1,6 +1,7 @@
 ﻿using BLL;
 using DAL.Database;
 using DAL.Model;
+using DoAn_QuanLyKhachSan.UI.UseFormChinh;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,7 +42,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
         private void button1_Click(object sender, EventArgs e)
         {
             this.Controls.Clear();
-            ufrm_CRUDPhanQuyen quanly = new ufrm_CRUDPhanQuyen();
+            ufrm_QuanLyKhachHang quanly = new ufrm_QuanLyKhachHang();
             this.Controls.Add(quanly);
             quanly.Dock = DockStyle.Fill;
         }
@@ -220,6 +221,15 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
             {
                 MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtTimKiemThongTinKhachHang_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtTimKiemThongTinKhachHang.Text.Trim();
+
+            DataTable dt = BLL_ThongTinKhachHang.SearchKhachHang(keyword);
+
+            data_ThongTinKhachHang.DataSource = dt;
         }
     }
 }

@@ -36,30 +36,31 @@
             System.Windows.Forms.Label maThietBiLabel;
             System.Windows.Forms.Label maDichVuLabel;
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.data_Phong = new System.Windows.Forms.DataGridView();
             this.heThongKhachSanDataSet = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSet();
             this.pHONGBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pHONGTableAdapter = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.PHONGTableAdapter();
             this.tableAdapterManager = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.TableAdapterManager();
             this.maPhongTextBox = new System.Windows.Forms.TextBox();
             this.tenPhongTextBox = new System.Windows.Forms.TextBox();
-            this.tinhTrangTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnTroLaiQLTTP = new System.Windows.Forms.Button();
+            this.btnTroLai = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnXoaPhong = new System.Windows.Forms.Button();
             this.btnSuaPhong = new System.Windows.Forms.Button();
             this.btnThemPhong = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cbMaLoaiPhong = new System.Windows.Forms.ComboBox();
+            this.cbMaThietBi = new System.Windows.Forms.ComboBox();
+            this.cbMaDichVu = new System.Windows.Forms.ComboBox();
+            this.txtTimKiemPhong = new System.Windows.Forms.TextBox();
+            this.tinhTrangTextBox = new System.Windows.Forms.ComboBox();
             maPhongLabel = new System.Windows.Forms.Label();
             tenPhongLabel = new System.Windows.Forms.Label();
             tinhTrangLabel = new System.Windows.Forms.Label();
             maLoaiPhongLabel = new System.Windows.Forms.Label();
             maThietBiLabel = new System.Windows.Forms.Label();
             maDichVuLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_Phong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHONGBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -128,15 +129,16 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "QUẢN LÝ THÔNG TIN PHÒNG";
             // 
-            // dataGridView1
+            // data_Phong
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(563, 187);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(599, 393);
-            this.dataGridView1.TabIndex = 2;
+            this.data_Phong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_Phong.Location = new System.Drawing.Point(478, 175);
+            this.data_Phong.Name = "data_Phong";
+            this.data_Phong.RowHeadersWidth = 51;
+            this.data_Phong.RowTemplate.Height = 24;
+            this.data_Phong.Size = new System.Drawing.Size(769, 393);
+            this.data_Phong.TabIndex = 2;
+            this.data_Phong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_Phong_CellClick);
             // 
             // heThongKhachSanDataSet
             // 
@@ -174,6 +176,7 @@
             // maPhongTextBox
             // 
             this.maPhongTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pHONGBindingSource, "MaPhong", true));
+            this.maPhongTextBox.Enabled = false;
             this.maPhongTextBox.Location = new System.Drawing.Point(216, 187);
             this.maPhongTextBox.Name = "maPhongTextBox";
             this.maPhongTextBox.Size = new System.Drawing.Size(237, 22);
@@ -187,14 +190,6 @@
             this.tenPhongTextBox.Size = new System.Drawing.Size(237, 22);
             this.tenPhongTextBox.TabIndex = 6;
             // 
-            // tinhTrangTextBox
-            // 
-            this.tinhTrangTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pHONGBindingSource, "TinhTrang", true));
-            this.tinhTrangTextBox.Location = new System.Drawing.Point(216, 243);
-            this.tinhTrangTextBox.Name = "tinhTrangTextBox";
-            this.tinhTrangTextBox.Size = new System.Drawing.Size(237, 22);
-            this.tinhTrangTextBox.TabIndex = 8;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(-19, -19);
@@ -204,14 +199,15 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // btnTroLaiQLTTP
+            // btnTroLai
             // 
-            this.btnTroLaiQLTTP.Location = new System.Drawing.Point(71, 89);
-            this.btnTroLaiQLTTP.Name = "btnTroLaiQLTTP";
-            this.btnTroLaiQLTTP.Size = new System.Drawing.Size(75, 23);
-            this.btnTroLaiQLTTP.TabIndex = 16;
-            this.btnTroLaiQLTTP.Text = "Trở lại";
-            this.btnTroLaiQLTTP.UseVisualStyleBackColor = true;
+            this.btnTroLai.Location = new System.Drawing.Point(71, 89);
+            this.btnTroLai.Name = "btnTroLai";
+            this.btnTroLai.Size = new System.Drawing.Size(75, 23);
+            this.btnTroLai.TabIndex = 16;
+            this.btnTroLai.Text = "Trở lại CSVC";
+            this.btnTroLai.UseVisualStyleBackColor = true;
+            this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
             // 
             // button5
             // 
@@ -221,6 +217,7 @@
             this.button5.TabIndex = 20;
             this.button5.Text = "Xóa Dữ Liệu";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnXoaPhong
             // 
@@ -230,6 +227,7 @@
             this.btnXoaPhong.TabIndex = 19;
             this.btnXoaPhong.Text = "Xóa";
             this.btnXoaPhong.UseVisualStyleBackColor = true;
+            this.btnXoaPhong.Click += new System.EventHandler(this.btnXoaPhong_Click);
             // 
             // btnSuaPhong
             // 
@@ -239,6 +237,7 @@
             this.btnSuaPhong.TabIndex = 18;
             this.btnSuaPhong.Text = "Sửa";
             this.btnSuaPhong.UseVisualStyleBackColor = true;
+            this.btnSuaPhong.Click += new System.EventHandler(this.btnSuaPhong_Click);
             // 
             // btnThemPhong
             // 
@@ -248,58 +247,81 @@
             this.btnThemPhong.TabIndex = 17;
             this.btnThemPhong.Text = "Thêm";
             this.btnThemPhong.UseVisualStyleBackColor = true;
+            this.btnThemPhong.Click += new System.EventHandler(this.btnThemPhong_Click);
             // 
-            // comboBox1
+            // cbMaLoaiPhong
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(216, 274);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(237, 24);
-            this.comboBox1.TabIndex = 21;
+            this.cbMaLoaiPhong.FormattingEnabled = true;
+            this.cbMaLoaiPhong.Location = new System.Drawing.Point(216, 274);
+            this.cbMaLoaiPhong.Name = "cbMaLoaiPhong";
+            this.cbMaLoaiPhong.Size = new System.Drawing.Size(237, 24);
+            this.cbMaLoaiPhong.TabIndex = 21;
             // 
-            // comboBox2
+            // cbMaThietBi
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(216, 304);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(237, 24);
-            this.comboBox2.TabIndex = 22;
+            this.cbMaThietBi.FormattingEnabled = true;
+            this.cbMaThietBi.Location = new System.Drawing.Point(216, 304);
+            this.cbMaThietBi.Name = "cbMaThietBi";
+            this.cbMaThietBi.Size = new System.Drawing.Size(237, 24);
+            this.cbMaThietBi.TabIndex = 22;
             // 
-            // comboBox3
+            // cbMaDichVu
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(216, 330);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(237, 24);
-            this.comboBox3.TabIndex = 23;
+            this.cbMaDichVu.FormattingEnabled = true;
+            this.cbMaDichVu.Location = new System.Drawing.Point(216, 330);
+            this.cbMaDichVu.Name = "cbMaDichVu";
+            this.cbMaDichVu.Size = new System.Drawing.Size(237, 24);
+            this.cbMaDichVu.TabIndex = 23;
+            // 
+            // txtTimKiemPhong
+            // 
+            this.txtTimKiemPhong.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtTimKiemPhong.Location = new System.Drawing.Point(478, 147);
+            this.txtTimKiemPhong.Name = "txtTimKiemPhong";
+            this.txtTimKiemPhong.Size = new System.Drawing.Size(775, 22);
+            this.txtTimKiemPhong.TabIndex = 24;
+            this.txtTimKiemPhong.TextChanged += new System.EventHandler(this.txtTimKiemPhong_TextChanged);
+            // 
+            // tinhTrangTextBox
+            // 
+            this.tinhTrangTextBox.FormattingEnabled = true;
+            this.tinhTrangTextBox.Items.AddRange(new object[] {
+            "Tốt",
+            "Bảo Trì",
+            "Hỏng"});
+            this.tinhTrangTextBox.Location = new System.Drawing.Point(216, 246);
+            this.tinhTrangTextBox.Name = "tinhTrangTextBox";
+            this.tinhTrangTextBox.Size = new System.Drawing.Size(237, 24);
+            this.tinhTrangTextBox.TabIndex = 25;
             // 
             // ufrm_CRUDPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.tinhTrangTextBox);
+            this.Controls.Add(this.txtTimKiemPhong);
+            this.Controls.Add(this.cbMaDichVu);
+            this.Controls.Add(this.cbMaThietBi);
+            this.Controls.Add(this.cbMaLoaiPhong);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnXoaPhong);
             this.Controls.Add(this.btnSuaPhong);
             this.Controls.Add(this.btnThemPhong);
-            this.Controls.Add(this.btnTroLaiQLTTP);
+            this.Controls.Add(this.btnTroLai);
             this.Controls.Add(this.button1);
             this.Controls.Add(maPhongLabel);
             this.Controls.Add(this.maPhongTextBox);
             this.Controls.Add(tenPhongLabel);
             this.Controls.Add(this.tenPhongTextBox);
             this.Controls.Add(tinhTrangLabel);
-            this.Controls.Add(this.tinhTrangTextBox);
             this.Controls.Add(maLoaiPhongLabel);
             this.Controls.Add(maThietBiLabel);
             this.Controls.Add(maDichVuLabel);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.data_Phong);
             this.Controls.Add(this.label1);
             this.Name = "ufrm_CRUDPhong";
             this.Size = new System.Drawing.Size(1250, 830);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_Phong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHONGBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -310,22 +332,23 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView data_Phong;
         private HeThongKhachSanDataSet heThongKhachSanDataSet;
         private System.Windows.Forms.BindingSource pHONGBindingSource;
         private HeThongKhachSanDataSetTableAdapters.PHONGTableAdapter pHONGTableAdapter;
         private HeThongKhachSanDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.TextBox maPhongTextBox;
         private System.Windows.Forms.TextBox tenPhongTextBox;
-        private System.Windows.Forms.TextBox tinhTrangTextBox;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnTroLaiQLTTP;
+        private System.Windows.Forms.Button btnTroLai;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnXoaPhong;
         private System.Windows.Forms.Button btnSuaPhong;
         private System.Windows.Forms.Button btnThemPhong;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cbMaLoaiPhong;
+        private System.Windows.Forms.ComboBox cbMaThietBi;
+        private System.Windows.Forms.ComboBox cbMaDichVu;
+        private System.Windows.Forms.TextBox txtTimKiemPhong;
+        private System.Windows.Forms.ComboBox tinhTrangTextBox;
     }
 }

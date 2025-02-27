@@ -1,4 +1,5 @@
-﻿using DoAn_QuanLyKhachSan.UI.UserFormPhu;
+﻿using DoAn_QuanLyKhachSan.UI.UserFormCon;
+using DoAn_QuanLyKhachSan.UI.UserFormPhu;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +22,14 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
         private void TSThongTinNhanVien_Click(object sender, EventArgs e)
         {
             ufrm_CRUDThongTinNhanVien kh = new ufrm_CRUDThongTinNhanVien();
+            this.Controls.Clear();
+            this.Controls.Add(kh);
+            kh.Dock = DockStyle.Fill;
+        }
+
+        private void TSTinhLuong_Click(object sender, EventArgs e)
+        {
+            ufrm_Chamconglamviec kh = new ufrm_Chamconglamviec();
             this.Controls.Clear();
             this.Controls.Add(kh);
             kh.Dock = DockStyle.Fill;

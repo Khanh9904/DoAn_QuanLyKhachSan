@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ufrm_CRUDThietBi));
             System.Windows.Forms.Label maThietBiLabel;
             System.Windows.Forms.Label tenThietBiLabel;
             System.Windows.Forms.Label soLuongThietBiLabel;
@@ -46,23 +45,10 @@
             this.tHIET_BIBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tHIET_BITableAdapter = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.THIET_BITableAdapter();
             this.tableAdapterManager = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.TableAdapterManager();
-            this.tHIET_BIBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.tHIET_BIBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.maThietBiTextBox = new System.Windows.Forms.TextBox();
             this.tenThietBiTextBox = new System.Windows.Forms.TextBox();
             this.soLuongThietBiTextBox = new System.Windows.Forms.TextBox();
-            this.tinhTrangTextBox = new System.Windows.Forms.TextBox();
+            this.tinhTrangTextBox = new System.Windows.Forms.ComboBox();
             maThietBiLabel = new System.Windows.Forms.Label();
             tenThietBiLabel = new System.Windows.Forms.Label();
             soLuongThietBiLabel = new System.Windows.Forms.Label();
@@ -70,9 +56,43 @@
             ((System.ComponentModel.ISupportInitialize)(this.data_Thietbi)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHIET_BIBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tHIET_BIBindingNavigator)).BeginInit();
-            this.tHIET_BIBindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // maThietBiLabel
+            // 
+            maThietBiLabel.AutoSize = true;
+            maThietBiLabel.Location = new System.Drawing.Point(86, 237);
+            maThietBiLabel.Name = "maThietBiLabel";
+            maThietBiLabel.Size = new System.Drawing.Size(77, 16);
+            maThietBiLabel.TabIndex = 85;
+            maThietBiLabel.Text = "Ma Thiet Bi:";
+            // 
+            // tenThietBiLabel
+            // 
+            tenThietBiLabel.AutoSize = true;
+            tenThietBiLabel.Location = new System.Drawing.Point(86, 265);
+            tenThietBiLabel.Name = "tenThietBiLabel";
+            tenThietBiLabel.Size = new System.Drawing.Size(82, 16);
+            tenThietBiLabel.TabIndex = 87;
+            tenThietBiLabel.Text = "Ten Thiet Bi:";
+            // 
+            // soLuongThietBiLabel
+            // 
+            soLuongThietBiLabel.AutoSize = true;
+            soLuongThietBiLabel.Location = new System.Drawing.Point(86, 293);
+            soLuongThietBiLabel.Name = "soLuongThietBiLabel";
+            soLuongThietBiLabel.Size = new System.Drawing.Size(115, 16);
+            soLuongThietBiLabel.TabIndex = 89;
+            soLuongThietBiLabel.Text = "So Luong Thiet Bi:";
+            // 
+            // tinhTrangLabel
+            // 
+            tinhTrangLabel.AutoSize = true;
+            tinhTrangLabel.Location = new System.Drawing.Point(86, 321);
+            tinhTrangLabel.Name = "tinhTrangLabel";
+            tinhTrangLabel.Size = new System.Drawing.Size(75, 16);
+            tinhTrangLabel.TabIndex = 91;
+            tinhTrangLabel.Text = "Tinh Trang:";
             // 
             // txtTimKiemThietbi
             // 
@@ -81,6 +101,7 @@
             this.txtTimKiemThietbi.Name = "txtTimKiemThietbi";
             this.txtTimKiemThietbi.Size = new System.Drawing.Size(603, 22);
             this.txtTimKiemThietbi.TabIndex = 84;
+            this.txtTimKiemThietbi.TextChanged += new System.EventHandler(this.txtTimKiemThietbi_TextChanged);
             // 
             // btnClearThietbi
             // 
@@ -181,156 +202,14 @@
             this.tableAdapterManager.THIET_BITableAdapter = this.tHIET_BITableAdapter;
             this.tableAdapterManager.UpdateOrder = DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // tHIET_BIBindingNavigator
-            // 
-            this.tHIET_BIBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.tHIET_BIBindingNavigator.BindingSource = this.tHIET_BIBindingSource;
-            this.tHIET_BIBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.tHIET_BIBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.tHIET_BIBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.tHIET_BIBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.tHIET_BIBindingNavigatorSaveItem});
-            this.tHIET_BIBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.tHIET_BIBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.tHIET_BIBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.tHIET_BIBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.tHIET_BIBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.tHIET_BIBindingNavigator.Name = "tHIET_BIBindingNavigator";
-            this.tHIET_BIBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.tHIET_BIBindingNavigator.Size = new System.Drawing.Size(1191, 27);
-            this.tHIET_BIBindingNavigator.TabIndex = 85;
-            this.tHIET_BIBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(29, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(29, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 27);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 20);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // tHIET_BIBindingNavigatorSaveItem
-            // 
-            this.tHIET_BIBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tHIET_BIBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("tHIET_BIBindingNavigatorSaveItem.Image")));
-            this.tHIET_BIBindingNavigatorSaveItem.Name = "tHIET_BIBindingNavigatorSaveItem";
-            this.tHIET_BIBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
-            this.tHIET_BIBindingNavigatorSaveItem.Text = "Save Data";
-            this.tHIET_BIBindingNavigatorSaveItem.Click += new System.EventHandler(this.tHIET_BIBindingNavigatorSaveItem_Click);
-            // 
-            // maThietBiLabel
-            // 
-            maThietBiLabel.AutoSize = true;
-            maThietBiLabel.Location = new System.Drawing.Point(86, 237);
-            maThietBiLabel.Name = "maThietBiLabel";
-            maThietBiLabel.Size = new System.Drawing.Size(77, 16);
-            maThietBiLabel.TabIndex = 85;
-            maThietBiLabel.Text = "Ma Thiet Bi:";
-            // 
             // maThietBiTextBox
             // 
             this.maThietBiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tHIET_BIBindingSource, "MaThietBi", true));
+            this.maThietBiTextBox.Enabled = false;
             this.maThietBiTextBox.Location = new System.Drawing.Point(207, 234);
             this.maThietBiTextBox.Name = "maThietBiTextBox";
             this.maThietBiTextBox.Size = new System.Drawing.Size(257, 22);
             this.maThietBiTextBox.TabIndex = 86;
-            // 
-            // tenThietBiLabel
-            // 
-            tenThietBiLabel.AutoSize = true;
-            tenThietBiLabel.Location = new System.Drawing.Point(86, 265);
-            tenThietBiLabel.Name = "tenThietBiLabel";
-            tenThietBiLabel.Size = new System.Drawing.Size(82, 16);
-            tenThietBiLabel.TabIndex = 87;
-            tenThietBiLabel.Text = "Ten Thiet Bi:";
             // 
             // tenThietBiTextBox
             // 
@@ -340,15 +219,6 @@
             this.tenThietBiTextBox.Size = new System.Drawing.Size(257, 22);
             this.tenThietBiTextBox.TabIndex = 88;
             // 
-            // soLuongThietBiLabel
-            // 
-            soLuongThietBiLabel.AutoSize = true;
-            soLuongThietBiLabel.Location = new System.Drawing.Point(86, 293);
-            soLuongThietBiLabel.Name = "soLuongThietBiLabel";
-            soLuongThietBiLabel.Size = new System.Drawing.Size(115, 16);
-            soLuongThietBiLabel.TabIndex = 89;
-            soLuongThietBiLabel.Text = "So Luong Thiet Bi:";
-            // 
             // soLuongThietBiTextBox
             // 
             this.soLuongThietBiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tHIET_BIBindingSource, "SoLuongThietBi", true));
@@ -357,27 +227,23 @@
             this.soLuongThietBiTextBox.Size = new System.Drawing.Size(257, 22);
             this.soLuongThietBiTextBox.TabIndex = 90;
             // 
-            // tinhTrangLabel
-            // 
-            tinhTrangLabel.AutoSize = true;
-            tinhTrangLabel.Location = new System.Drawing.Point(86, 321);
-            tinhTrangLabel.Name = "tinhTrangLabel";
-            tinhTrangLabel.Size = new System.Drawing.Size(75, 16);
-            tinhTrangLabel.TabIndex = 91;
-            tinhTrangLabel.Text = "Tinh Trang:";
-            // 
             // tinhTrangTextBox
             // 
-            this.tinhTrangTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tHIET_BIBindingSource, "TinhTrang", true));
-            this.tinhTrangTextBox.Location = new System.Drawing.Point(207, 318);
+            this.tinhTrangTextBox.FormattingEnabled = true;
+            this.tinhTrangTextBox.Items.AddRange(new object[] {
+            "Tốt",
+            "Bảo Trì",
+            "Hỏng"});
+            this.tinhTrangTextBox.Location = new System.Drawing.Point(207, 321);
             this.tinhTrangTextBox.Name = "tinhTrangTextBox";
-            this.tinhTrangTextBox.Size = new System.Drawing.Size(257, 22);
+            this.tinhTrangTextBox.Size = new System.Drawing.Size(257, 24);
             this.tinhTrangTextBox.TabIndex = 92;
             // 
             // ufrm_CRUDThietBi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.tinhTrangTextBox);
             this.Controls.Add(maThietBiLabel);
             this.Controls.Add(this.maThietBiTextBox);
             this.Controls.Add(tenThietBiLabel);
@@ -385,8 +251,6 @@
             this.Controls.Add(soLuongThietBiLabel);
             this.Controls.Add(this.soLuongThietBiTextBox);
             this.Controls.Add(tinhTrangLabel);
-            this.Controls.Add(this.tinhTrangTextBox);
-            this.Controls.Add(this.tHIET_BIBindingNavigator);
             this.Controls.Add(this.txtTimKiemThietbi);
             this.Controls.Add(this.btnClearThietbi);
             this.Controls.Add(this.btnXoaThietbi);
@@ -400,9 +264,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.data_Thietbi)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tHIET_BIBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tHIET_BIBindingNavigator)).EndInit();
-            this.tHIET_BIBindingNavigator.ResumeLayout(false);
-            this.tHIET_BIBindingNavigator.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -421,22 +282,9 @@
         private System.Windows.Forms.BindingSource tHIET_BIBindingSource;
         private HeThongKhachSanDataSetTableAdapters.THIET_BITableAdapter tHIET_BITableAdapter;
         private HeThongKhachSanDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator tHIET_BIBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton tHIET_BIBindingNavigatorSaveItem;
         private System.Windows.Forms.TextBox maThietBiTextBox;
         private System.Windows.Forms.TextBox tenThietBiTextBox;
         private System.Windows.Forms.TextBox soLuongThietBiTextBox;
-        private System.Windows.Forms.TextBox tinhTrangTextBox;
+        private System.Windows.Forms.ComboBox tinhTrangTextBox;
     }
 }

@@ -44,7 +44,6 @@
             this.maKhachHangTextBox = new System.Windows.Forms.TextBox();
             this.hoTenTextBox = new System.Windows.Forms.TextBox();
             this.ngaySinhDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.gioiTinhTextBox = new System.Windows.Forms.TextBox();
             this.sDTTextBox = new System.Windows.Forms.TextBox();
             this.diaChiTextBox = new System.Windows.Forms.TextBox();
             this.cCCDTextBox = new System.Windows.Forms.TextBox();
@@ -55,6 +54,7 @@
             this.btnSuaThongTinKhachHang = new System.Windows.Forms.Button();
             this.btnThemThongTinKhachHang = new System.Windows.Forms.Button();
             this.txtTimKiemThongTinKhachHang = new System.Windows.Forms.TextBox();
+            this.gioiTinhTextBox = new System.Windows.Forms.ComboBox();
             maKhachHangLabel = new System.Windows.Forms.Label();
             hoTenLabel = new System.Windows.Forms.Label();
             ngaySinhLabel = new System.Windows.Forms.Label();
@@ -176,6 +176,7 @@
             // maKhachHangTextBox
             // 
             this.maKhachHangTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHACH_HANGBindingSource, "MaKhachHang", true));
+            this.maKhachHangTextBox.Enabled = false;
             this.maKhachHangTextBox.Location = new System.Drawing.Point(229, 141);
             this.maKhachHangTextBox.Name = "maKhachHangTextBox";
             this.maKhachHangTextBox.Size = new System.Drawing.Size(200, 22);
@@ -196,14 +197,6 @@
             this.ngaySinhDateTimePicker.Name = "ngaySinhDateTimePicker";
             this.ngaySinhDateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.ngaySinhDateTimePicker.TabIndex = 7;
-            // 
-            // gioiTinhTextBox
-            // 
-            this.gioiTinhTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHACH_HANGBindingSource, "GioiTinh", true));
-            this.gioiTinhTextBox.Location = new System.Drawing.Point(229, 230);
-            this.gioiTinhTextBox.Name = "gioiTinhTextBox";
-            this.gioiTinhTextBox.Size = new System.Drawing.Size(200, 22);
-            this.gioiTinhTextBox.TabIndex = 9;
             // 
             // sDTTextBox
             // 
@@ -297,11 +290,24 @@
             this.txtTimKiemThongTinKhachHang.Name = "txtTimKiemThongTinKhachHang";
             this.txtTimKiemThongTinKhachHang.Size = new System.Drawing.Size(593, 22);
             this.txtTimKiemThongTinKhachHang.TabIndex = 88;
+            this.txtTimKiemThongTinKhachHang.TextChanged += new System.EventHandler(this.txtTimKiemThongTinKhachHang_TextChanged);
+            // 
+            // gioiTinhTextBox
+            // 
+            this.gioiTinhTextBox.FormattingEnabled = true;
+            this.gioiTinhTextBox.Items.AddRange(new object[] {
+            "Nữ",
+            "Nam"});
+            this.gioiTinhTextBox.Location = new System.Drawing.Point(229, 224);
+            this.gioiTinhTextBox.Name = "gioiTinhTextBox";
+            this.gioiTinhTextBox.Size = new System.Drawing.Size(200, 24);
+            this.gioiTinhTextBox.TabIndex = 89;
             // 
             // ufrm_CRUDThongTinKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.gioiTinhTextBox);
             this.Controls.Add(this.txtTimKiemThongTinKhachHang);
             this.Controls.Add(this.btnClearThongTinKhachHang);
             this.Controls.Add(this.btnXoaThongTinKhachHang);
@@ -316,7 +322,6 @@
             this.Controls.Add(ngaySinhLabel);
             this.Controls.Add(this.ngaySinhDateTimePicker);
             this.Controls.Add(gioiTinhLabel);
-            this.Controls.Add(this.gioiTinhTextBox);
             this.Controls.Add(sDTLabel);
             this.Controls.Add(this.sDTTextBox);
             this.Controls.Add(diaChiLabel);
@@ -344,7 +349,6 @@
         private System.Windows.Forms.TextBox maKhachHangTextBox;
         private System.Windows.Forms.TextBox hoTenTextBox;
         private System.Windows.Forms.DateTimePicker ngaySinhDateTimePicker;
-        private System.Windows.Forms.TextBox gioiTinhTextBox;
         private System.Windows.Forms.TextBox sDTTextBox;
         private System.Windows.Forms.TextBox diaChiTextBox;
         private System.Windows.Forms.TextBox cCCDTextBox;
@@ -355,5 +359,6 @@
         private System.Windows.Forms.Button btnSuaThongTinKhachHang;
         private System.Windows.Forms.Button btnThemThongTinKhachHang;
         private System.Windows.Forms.TextBox txtTimKiemThongTinKhachHang;
+        private System.Windows.Forms.ComboBox gioiTinhTextBox;
     }
 }

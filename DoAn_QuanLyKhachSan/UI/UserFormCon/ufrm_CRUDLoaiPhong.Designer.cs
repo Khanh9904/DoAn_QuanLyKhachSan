@@ -222,6 +222,7 @@
             // maLoaiPhongTextBox
             // 
             this.maLoaiPhongTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.lOAI_PHONGBindingSource, "MaLoaiPhong", true));
+            this.maLoaiPhongTextBox.Enabled = false;
             this.maLoaiPhongTextBox.Location = new System.Drawing.Point(199, 206);
             this.maLoaiPhongTextBox.Name = "maLoaiPhongTextBox";
             this.maLoaiPhongTextBox.Size = new System.Drawing.Size(272, 22);

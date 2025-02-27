@@ -70,6 +70,7 @@
             this.ThongTinPhong.Name = "ThongTinPhong";
             this.ThongTinPhong.Size = new System.Drawing.Size(145, 24);
             this.ThongTinPhong.Text = "Thông Tin Phòng";
+            this.ThongTinPhong.Click += new System.EventHandler(this.ThongTinPhong_Click);
             // 
             // ThongTinLoaiPhong
             // 

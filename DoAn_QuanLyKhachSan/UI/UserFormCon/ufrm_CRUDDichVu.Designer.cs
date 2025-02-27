@@ -48,9 +48,9 @@
             this.maDichVuTextBox = new System.Windows.Forms.TextBox();
             this.tenDichVuTextBox = new System.Windows.Forms.TextBox();
             this.giaDichVuTextBox = new System.Windows.Forms.TextBox();
-            this.trangThaiDichVuTextBox = new System.Windows.Forms.TextBox();
             this.soLuongDichVuTextBox = new System.Windows.Forms.TextBox();
             this.txtTimKiemDichVu = new System.Windows.Forms.TextBox();
+            this.trangThaiDichVuTextBox = new System.Windows.Forms.ComboBox();
             maDichVuLabel = new System.Windows.Forms.Label();
             tenDichVuLabel = new System.Windows.Forms.Label();
             giaDichVuLabel = new System.Windows.Forms.Label();
@@ -213,6 +213,7 @@
             // maDichVuTextBox
             // 
             this.maDichVuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dICH_VUBindingSource, "MaDichVu", true));
+            this.maDichVuTextBox.Enabled = false;
             this.maDichVuTextBox.Location = new System.Drawing.Point(199, 233);
             this.maDichVuTextBox.Name = "maDichVuTextBox";
             this.maDichVuTextBox.Size = new System.Drawing.Size(283, 22);
@@ -234,14 +235,6 @@
             this.giaDichVuTextBox.Size = new System.Drawing.Size(283, 22);
             this.giaDichVuTextBox.TabIndex = 45;
             // 
-            // trangThaiDichVuTextBox
-            // 
-            this.trangThaiDichVuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dICH_VUBindingSource, "TrangThaiDichVu", true));
-            this.trangThaiDichVuTextBox.Location = new System.Drawing.Point(199, 317);
-            this.trangThaiDichVuTextBox.Name = "trangThaiDichVuTextBox";
-            this.trangThaiDichVuTextBox.Size = new System.Drawing.Size(283, 22);
-            this.trangThaiDichVuTextBox.TabIndex = 47;
-            // 
             // soLuongDichVuTextBox
             // 
             this.soLuongDichVuTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.dICH_VUBindingSource, "SoLuongDichVu", true));
@@ -259,10 +252,23 @@
             this.txtTimKiemDichVu.TabIndex = 50;
             this.txtTimKiemDichVu.TextChanged += new System.EventHandler(this.txtTimKiemDichVu_TextChanged);
             // 
+            // trangThaiDichVuTextBox
+            // 
+            this.trangThaiDichVuTextBox.FormattingEnabled = true;
+            this.trangThaiDichVuTextBox.Items.AddRange(new object[] {
+            "Tốt",
+            "Bảo trì",
+            "Hỏng"});
+            this.trangThaiDichVuTextBox.Location = new System.Drawing.Point(200, 315);
+            this.trangThaiDichVuTextBox.Name = "trangThaiDichVuTextBox";
+            this.trangThaiDichVuTextBox.Size = new System.Drawing.Size(282, 24);
+            this.trangThaiDichVuTextBox.TabIndex = 51;
+            // 
             // ufrm_CRUDDichVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.trangThaiDichVuTextBox);
             this.Controls.Add(this.txtTimKiemDichVu);
             this.Controls.Add(maDichVuLabel);
             this.Controls.Add(this.maDichVuTextBox);
@@ -271,7 +277,6 @@
             this.Controls.Add(giaDichVuLabel);
             this.Controls.Add(this.giaDichVuTextBox);
             this.Controls.Add(trangThaiDichVuLabel);
-            this.Controls.Add(this.trangThaiDichVuTextBox);
             this.Controls.Add(soLuongDichVuLabel);
             this.Controls.Add(this.soLuongDichVuTextBox);
             this.Controls.Add(this.btnClearDichVu);
@@ -307,8 +312,8 @@
         private System.Windows.Forms.TextBox maDichVuTextBox;
         private System.Windows.Forms.TextBox tenDichVuTextBox;
         private System.Windows.Forms.TextBox giaDichVuTextBox;
-        private System.Windows.Forms.TextBox trangThaiDichVuTextBox;
         private System.Windows.Forms.TextBox soLuongDichVuTextBox;
         private System.Windows.Forms.TextBox txtTimKiemDichVu;
+        private System.Windows.Forms.ComboBox trangThaiDichVuTextBox;
     }
 }

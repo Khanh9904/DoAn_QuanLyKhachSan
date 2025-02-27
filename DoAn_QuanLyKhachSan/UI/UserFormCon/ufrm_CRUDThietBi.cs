@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using DAL.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +30,11 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             this.tHIET_BIBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.heThongKhachSanDataSet);
 
+        }
+
+        private void txtTimKiemThietbi_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -201,6 +201,7 @@
             // iD_TAIKHOANTextBox
             // 
             this.iD_TAIKHOANTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tAIKHOANBindingSource, "ID_TAIKHOAN", true));
+            this.iD_TAIKHOANTextBox.Enabled = false;
             this.iD_TAIKHOANTextBox.Location = new System.Drawing.Point(165, 252);
             this.iD_TAIKHOANTextBox.Name = "iD_TAIKHOANTextBox";
             this.iD_TAIKHOANTextBox.Size = new System.Drawing.Size(302, 22);

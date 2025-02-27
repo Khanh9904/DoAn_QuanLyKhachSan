@@ -83,6 +83,12 @@
     <Compile Include="UI\UseFormChinh\ufrm_QuanLyKhachHang.Designer.cs">
       <DependentUpon>ufrm_QuanLyKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_Chamconglamviec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UserFormCon\ufrm_Chamconglamviec.Designer.cs">
+      <DependentUpon>ufrm_Chamconglamviec.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\UserFormCon\ufrm_CRUDDichVu.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -202,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UseFormChinh\ufrm_QuanLyTaiKhoan.resx">
       <DependentUpon>ufrm_QuanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserFormCon\ufrm_Chamconglamviec.resx">
+      <DependentUpon>ufrm_Chamconglamviec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\UserFormCon\ufrm_CRUDDichVu.resx">
       <DependentUpon>ufrm_CRUDDichVu.cs</DependentUpon>

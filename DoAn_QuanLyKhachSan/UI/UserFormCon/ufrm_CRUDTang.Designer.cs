@@ -186,6 +186,7 @@
             // maTangTextBox
             // 
             this.maTangTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tangLauBindingSource, "MaTang", true));
+            this.maTangTextBox.Enabled = false;
             this.maTangTextBox.Location = new System.Drawing.Point(166, 276);
             this.maTangTextBox.Name = "maTangTextBox";
             this.maTangTextBox.Size = new System.Drawing.Size(100, 22);

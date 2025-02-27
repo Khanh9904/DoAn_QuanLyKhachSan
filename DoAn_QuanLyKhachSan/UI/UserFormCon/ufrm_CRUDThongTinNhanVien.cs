@@ -170,7 +170,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             {
                 DataGridViewRow rowst = data_NhanVien.Rows[e.RowIndex];
 
-
+                iD_NHANVIENTextBox.Text = rowst.Cells["ID_NHANVIEN"]?.Value != DBNull.Value ? rowst.Cells["ID_NHANVIEN"].Value.ToString() : "";
 
                 hOTENTextBox.Text = rowst.Cells["HOTEN"]?.Value != DBNull.Value ? rowst.Cells["HOTEN"].Value.ToString() : "";
 
