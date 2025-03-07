@@ -57,36 +57,37 @@
             maLoaiPhongLabel.AutoSize = true;
             maLoaiPhongLabel.Location = new System.Drawing.Point(77, 199);
             maLoaiPhongLabel.Name = "maLoaiPhongLabel";
-            maLoaiPhongLabel.Size = new System.Drawing.Size(98, 16);
+            maLoaiPhongLabel.Size = new System.Drawing.Size(111, 16);
             maLoaiPhongLabel.TabIndex = 85;
-            maLoaiPhongLabel.Text = "Mã chấm công:";
+            maLoaiPhongLabel.Text = "MÃ CHẤM CÔNG";
             // 
             // tenLoaiPhongLabel
             // 
             tenLoaiPhongLabel.AutoSize = true;
             tenLoaiPhongLabel.Location = new System.Drawing.Point(77, 227);
             tenLoaiPhongLabel.Name = "tenLoaiPhongLabel";
-            tenLoaiPhongLabel.Size = new System.Drawing.Size(94, 16);
+            tenLoaiPhongLabel.Size = new System.Drawing.Size(111, 16);
             tenLoaiPhongLabel.TabIndex = 87;
-            tenLoaiPhongLabel.Text = "Tên nhân viên:";
+            tenLoaiPhongLabel.Text = "TÊN NHÂN VIÊN";
+            tenLoaiPhongLabel.Click += new System.EventHandler(this.tenLoaiPhongLabel_Click);
             // 
             // giaLabel
             // 
             giaLabel.AutoSize = true;
             giaLabel.Location = new System.Drawing.Point(77, 255);
             giaLabel.Name = "giaLabel";
-            giaLabel.Size = new System.Drawing.Size(99, 16);
+            giaLabel.Size = new System.Drawing.Size(108, 16);
             giaLabel.TabIndex = 89;
-            giaLabel.Text = "Ngày làm việc :";
+            giaLabel.Text = "NGÀY LÀM VIỆC";
             // 
             // soNguoiToiDaLabel
             // 
             soNguoiToiDaLabel.AutoSize = true;
             soNguoiToiDaLabel.Location = new System.Drawing.Point(77, 283);
             soNguoiToiDaLabel.Name = "soNguoiToiDaLabel";
-            soNguoiToiDaLabel.Size = new System.Drawing.Size(70, 16);
+            soNguoiToiDaLabel.Size = new System.Drawing.Size(89, 16);
             soNguoiToiDaLabel.TabIndex = 91;
-            soNguoiToiDaLabel.Text = "Trạng thái:";
+            soNguoiToiDaLabel.Text = "TRẠNG THÁI";
             // 
             // txt_machamcong
             // 

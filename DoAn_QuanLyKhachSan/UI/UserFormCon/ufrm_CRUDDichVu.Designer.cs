@@ -66,51 +66,51 @@
             maDichVuLabel.AutoSize = true;
             maDichVuLabel.Location = new System.Drawing.Point(68, 236);
             maDichVuLabel.Name = "maDichVuLabel";
-            maDichVuLabel.Size = new System.Drawing.Size(78, 16);
+            maDichVuLabel.Size = new System.Drawing.Size(84, 16);
             maDichVuLabel.TabIndex = 40;
-            maDichVuLabel.Text = "Ma Dich Vu:";
+            maDichVuLabel.Text = "MÃ DỊCH VỤ";
             // 
             // tenDichVuLabel
             // 
             tenDichVuLabel.AutoSize = true;
             tenDichVuLabel.Location = new System.Drawing.Point(68, 264);
             tenDichVuLabel.Name = "tenDichVuLabel";
-            tenDichVuLabel.Size = new System.Drawing.Size(83, 16);
+            tenDichVuLabel.Size = new System.Drawing.Size(92, 16);
             tenDichVuLabel.TabIndex = 42;
-            tenDichVuLabel.Text = "Ten Dich Vu:";
+            tenDichVuLabel.Text = "TÊN DỊCH VỤ";
             // 
             // giaDichVuLabel
             // 
             giaDichVuLabel.AutoSize = true;
             giaDichVuLabel.Location = new System.Drawing.Point(68, 292);
             giaDichVuLabel.Name = "giaDichVuLabel";
-            giaDichVuLabel.Size = new System.Drawing.Size(80, 16);
+            giaDichVuLabel.Size = new System.Drawing.Size(86, 16);
             giaDichVuLabel.TabIndex = 44;
-            giaDichVuLabel.Text = "Gia Dich Vu:";
+            giaDichVuLabel.Text = "GIÁ DỊCH VỤ";
             // 
             // trangThaiDichVuLabel
             // 
             trangThaiDichVuLabel.AutoSize = true;
             trangThaiDichVuLabel.Location = new System.Drawing.Point(68, 320);
             trangThaiDichVuLabel.Name = "trangThaiDichVuLabel";
-            trangThaiDichVuLabel.Size = new System.Drawing.Size(125, 16);
+            trangThaiDichVuLabel.Size = new System.Drawing.Size(89, 16);
             trangThaiDichVuLabel.TabIndex = 46;
-            trangThaiDichVuLabel.Text = "Trang Thai Dich Vu:";
+            trangThaiDichVuLabel.Text = "TRẠNG THÁI";
             // 
             // soLuongDichVuLabel
             // 
             soLuongDichVuLabel.AutoSize = true;
             soLuongDichVuLabel.Location = new System.Drawing.Point(68, 348);
             soLuongDichVuLabel.Name = "soLuongDichVuLabel";
-            soLuongDichVuLabel.Size = new System.Drawing.Size(116, 16);
+            soLuongDichVuLabel.Size = new System.Drawing.Size(76, 16);
             soLuongDichVuLabel.TabIndex = 48;
-            soLuongDichVuLabel.Text = "So Luong Dich Vu:";
+            soLuongDichVuLabel.Text = "SỐ LƯỢNG";
             // 
             // btnClearDichVu
             // 
-            this.btnClearDichVu.Location = new System.Drawing.Point(745, 675);
+            this.btnClearDichVu.Location = new System.Drawing.Point(749, 644);
             this.btnClearDichVu.Name = "btnClearDichVu";
-            this.btnClearDichVu.Size = new System.Drawing.Size(135, 23);
+            this.btnClearDichVu.Size = new System.Drawing.Size(182, 51);
             this.btnClearDichVu.TabIndex = 39;
             this.btnClearDichVu.Text = "Xóa Dữ Liệu";
             this.btnClearDichVu.UseVisualStyleBackColor = true;
@@ -118,9 +118,9 @@
             // 
             // btnXoaDichVu
             // 
-            this.btnXoaDichVu.Location = new System.Drawing.Point(594, 675);
+            this.btnXoaDichVu.Location = new System.Drawing.Point(598, 644);
             this.btnXoaDichVu.Name = "btnXoaDichVu";
-            this.btnXoaDichVu.Size = new System.Drawing.Size(75, 23);
+            this.btnXoaDichVu.Size = new System.Drawing.Size(122, 51);
             this.btnXoaDichVu.TabIndex = 38;
             this.btnXoaDichVu.Text = "Xóa";
             this.btnXoaDichVu.UseVisualStyleBackColor = true;
@@ -128,9 +128,9 @@
             // 
             // btnSuaDichVu
             // 
-            this.btnSuaDichVu.Location = new System.Drawing.Point(433, 675);
+            this.btnSuaDichVu.Location = new System.Drawing.Point(437, 644);
             this.btnSuaDichVu.Name = "btnSuaDichVu";
-            this.btnSuaDichVu.Size = new System.Drawing.Size(75, 23);
+            this.btnSuaDichVu.Size = new System.Drawing.Size(122, 51);
             this.btnSuaDichVu.TabIndex = 37;
             this.btnSuaDichVu.Text = "Sửa";
             this.btnSuaDichVu.UseVisualStyleBackColor = true;
@@ -138,9 +138,9 @@
             // 
             // btnThemDichVu
             // 
-            this.btnThemDichVu.Location = new System.Drawing.Point(284, 675);
+            this.btnThemDichVu.Location = new System.Drawing.Point(288, 644);
             this.btnThemDichVu.Name = "btnThemDichVu";
-            this.btnThemDichVu.Size = new System.Drawing.Size(75, 23);
+            this.btnThemDichVu.Size = new System.Drawing.Size(122, 51);
             this.btnThemDichVu.TabIndex = 36;
             this.btnThemDichVu.Text = "Thêm";
             this.btnThemDichVu.UseVisualStyleBackColor = true;

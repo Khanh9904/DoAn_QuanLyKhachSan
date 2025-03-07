@@ -31,13 +31,12 @@ namespace DAL.DAL
                 connection.Open();
 
                 string getQuery = @"
-                    SELECT PHONG.MaPhong, PHONG.TenPhong, PHONG.TinhTrang, LOAI_PHONG.MaLoaiPhong, DICH_VU.MaDichVu, THIET_BI.MaThietBi  from PHONG 
+                    SELECT PHONG.MaPhong, PHONG.TenPhong, PHONG.TinhTrang, LOAI_PHONG.MaLoaiPhong, TangLau.MaTang    from PHONG 
                     inner join 
                     LOAI_PHONG on PHONG.MaLoaiPhong  =  LOAI_PHONG.MaLoaiPhong 
                     inner join
-                    DICH_VU on PHONG.MaDichVu = DICH_VU.MaDichVu
-                    inner join
-                    THIET_BI on PHONG.MaThietBi = THIET_BI.MaThietBi
+                    TangLau on PHONG.MaTang = TangLau.MaTang
+                  
                 ";
 
                 SqlDataAdapter adapterPhanQuyen = new SqlDataAdapter(getQuery, connection);
@@ -75,7 +74,7 @@ namespace DAL.DAL
             {
                 connection.Open();
 
-                string AddQuery = "INSERT INTO PHONG (TenPhong, TinhTrang, MaLoaiPhong, MaThietBi, MaDichVu ) VALUES (@TenPhong, @TinhTrang, @MaLoaiPhong, @MaThietBi, @MaDichVu )";
+                string AddQuery = "INSERT INTO PHONG (TenPhong, TinhTrang, MaLoaiPhong, MaTang ) VALUES (@TenPhong, @TinhTrang, @MaLoaiPhong, @MaTang )";
 
                 SqlCommand AddCommand = new SqlCommand(AddQuery, connection);
 
@@ -85,9 +84,9 @@ namespace DAL.DAL
 
                 AddCommand.Parameters.AddWithValue("@MaLoaiPhong", phong.MaLoaiPhong);
 
-                AddCommand.Parameters.AddWithValue("@MaThietBi", phong.MaThietBi);
+                AddCommand.Parameters.AddWithValue("@MaTang", phong.MaTang);
 
-                AddCommand.Parameters.AddWithValue("@MaDichVu", phong.MaDichVu);
+                
 
                
                 return AddCommand.ExecuteNonQuery() > 0;
@@ -103,7 +102,7 @@ namespace DAL.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string UpdateQuery = "UPDATE PHONG SET TenPhong = @TenPhong, TinhTrang = @TinhTrang, MaLoaiPhong = @MaLoaiPhong, MaThietBi = @MaThietBi, MaDichVu = @MaDichVu WHERE MaPhong = @MaPhong";
+                string UpdateQuery = "UPDATE PHONG SET TenPhong = @TenPhong, TinhTrang = @TinhTrang, MaLoaiPhong = @MaLoaiPhong, MaTang = @MaTang WHERE MaPhong = @MaPhong";
                 SqlCommand UpdateCommand = new SqlCommand(UpdateQuery, connection);
 
                 UpdateCommand.Parameters.AddWithValue("@MaPhong", phong.MaPhong);
@@ -114,9 +113,9 @@ namespace DAL.DAL
 
                 UpdateCommand.Parameters.AddWithValue("@MaLoaiPhong", phong.MaLoaiPhong);
 
-                UpdateCommand.Parameters.AddWithValue("@MaThietBi", phong.MaThietBi);
+                UpdateCommand.Parameters.AddWithValue("@MaTang", phong.MaTang);
 
-                UpdateCommand.Parameters.AddWithValue("@MaDichVu", phong.MaDichVu);
+                
 
                 return UpdateCommand.ExecuteNonQuery() > 0;
             }

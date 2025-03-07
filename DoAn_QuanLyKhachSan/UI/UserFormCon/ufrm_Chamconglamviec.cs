@@ -254,6 +254,11 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormCon
             dgv_chamcong.DataSource = dt;
         }
 
+        private void tenLoaiPhongLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         //-----------------------------------------------------------------------------------------------------------------------------------
 

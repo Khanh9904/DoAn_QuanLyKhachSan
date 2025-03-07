@@ -1,4 +1,5 @@
-﻿using DoAn_QuanLyKhachSan.UI.UseForm;
+﻿using DoAn_QuanLyKhachSan.UI;
+using DoAn_QuanLyKhachSan.UI.UseForm;
 using System;
 using System.Collections.Generic;
 using System.Linq;

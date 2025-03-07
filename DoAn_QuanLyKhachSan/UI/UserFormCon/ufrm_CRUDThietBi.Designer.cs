@@ -61,38 +61,38 @@
             // maThietBiLabel
             // 
             maThietBiLabel.AutoSize = true;
-            maThietBiLabel.Location = new System.Drawing.Point(86, 237);
+            maThietBiLabel.Location = new System.Drawing.Point(67, 237);
             maThietBiLabel.Name = "maThietBiLabel";
-            maThietBiLabel.Size = new System.Drawing.Size(77, 16);
+            maThietBiLabel.Size = new System.Drawing.Size(85, 16);
             maThietBiLabel.TabIndex = 85;
-            maThietBiLabel.Text = "Ma Thiet Bi:";
+            maThietBiLabel.Text = "MÃ THIẾT BỊ";
             // 
             // tenThietBiLabel
             // 
             tenThietBiLabel.AutoSize = true;
-            tenThietBiLabel.Location = new System.Drawing.Point(86, 265);
+            tenThietBiLabel.Location = new System.Drawing.Point(67, 265);
             tenThietBiLabel.Name = "tenThietBiLabel";
-            tenThietBiLabel.Size = new System.Drawing.Size(82, 16);
+            tenThietBiLabel.Size = new System.Drawing.Size(93, 16);
             tenThietBiLabel.TabIndex = 87;
-            tenThietBiLabel.Text = "Ten Thiet Bi:";
+            tenThietBiLabel.Text = "TÊN THIẾT BỊ";
             // 
             // soLuongThietBiLabel
             // 
             soLuongThietBiLabel.AutoSize = true;
-            soLuongThietBiLabel.Location = new System.Drawing.Point(86, 293);
+            soLuongThietBiLabel.Location = new System.Drawing.Point(67, 293);
             soLuongThietBiLabel.Name = "soLuongThietBiLabel";
-            soLuongThietBiLabel.Size = new System.Drawing.Size(115, 16);
+            soLuongThietBiLabel.Size = new System.Drawing.Size(134, 16);
             soLuongThietBiLabel.TabIndex = 89;
-            soLuongThietBiLabel.Text = "So Luong Thiet Bi:";
+            soLuongThietBiLabel.Text = "SỐ LƯỢNG THIẾT BỊ";
             // 
             // tinhTrangLabel
             // 
             tinhTrangLabel.AutoSize = true;
-            tinhTrangLabel.Location = new System.Drawing.Point(86, 321);
+            tinhTrangLabel.Location = new System.Drawing.Point(67, 321);
             tinhTrangLabel.Name = "tinhTrangLabel";
-            tinhTrangLabel.Size = new System.Drawing.Size(75, 16);
+            tinhTrangLabel.Size = new System.Drawing.Size(90, 16);
             tinhTrangLabel.TabIndex = 91;
-            tinhTrangLabel.Text = "Tinh Trang:";
+            tinhTrangLabel.Text = "TÌNH TRẠNG";
             // 
             // txtTimKiemThietbi
             // 
@@ -237,9 +237,9 @@
             // 
             this.tinhTrangTextBox.FormattingEnabled = true;
             this.tinhTrangTextBox.Items.AddRange(new object[] {
-            "Tốt",
-            "Bảo Trì",
-            "Hỏng"});
+            "Mới 100%",
+            "Hoạt động tốt",
+            "Bảo trì"});
             this.tinhTrangTextBox.Location = new System.Drawing.Point(207, 321);
             this.tinhTrangTextBox.Name = "tinhTrangTextBox";
             this.tinhTrangTextBox.Size = new System.Drawing.Size(257, 24);

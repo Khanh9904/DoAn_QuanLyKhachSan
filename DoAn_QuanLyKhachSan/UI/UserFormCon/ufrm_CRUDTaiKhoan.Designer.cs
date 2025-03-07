@@ -61,44 +61,45 @@
             // iD_TAIKHOANLabel
             // 
             iD_TAIKHOANLabel.AutoSize = true;
-            iD_TAIKHOANLabel.Location = new System.Drawing.Point(47, 255);
+            iD_TAIKHOANLabel.Location = new System.Drawing.Point(40, 255);
             iD_TAIKHOANLabel.Name = "iD_TAIKHOANLabel";
-            iD_TAIKHOANLabel.Size = new System.Drawing.Size(94, 16);
+            iD_TAIKHOANLabel.Size = new System.Drawing.Size(101, 16);
             iD_TAIKHOANLabel.TabIndex = 40;
-            iD_TAIKHOANLabel.Text = "ID TAIKHOAN:";
+            iD_TAIKHOANLabel.Text = "MÃ TÀI KHOẢN";
+            iD_TAIKHOANLabel.Click += new System.EventHandler(this.iD_TAIKHOANLabel_Click);
             // 
             // eMAILLabel
             // 
             eMAILLabel.AutoSize = true;
-            eMAILLabel.Location = new System.Drawing.Point(47, 283);
+            eMAILLabel.Location = new System.Drawing.Point(40, 283);
             eMAILLabel.Name = "eMAILLabel";
-            eMAILLabel.Size = new System.Drawing.Size(49, 16);
+            eMAILLabel.Size = new System.Drawing.Size(46, 16);
             eMAILLabel.TabIndex = 42;
-            eMAILLabel.Text = "EMAIL:";
+            eMAILLabel.Text = "EMAIL";
             // 
             // mATKHAULabel
             // 
             mATKHAULabel.AutoSize = true;
-            mATKHAULabel.Location = new System.Drawing.Point(47, 311);
+            mATKHAULabel.Location = new System.Drawing.Point(40, 311);
             mATKHAULabel.Name = "mATKHAULabel";
             mATKHAULabel.Size = new System.Drawing.Size(76, 16);
             mATKHAULabel.TabIndex = 44;
-            mATKHAULabel.Text = "MATKHAU:";
+            mATKHAULabel.Text = "MẬT KHẨU";
             // 
             // iD_PHANQUYENLabel
             // 
             iD_PHANQUYENLabel.AutoSize = true;
-            iD_PHANQUYENLabel.Location = new System.Drawing.Point(47, 339);
+            iD_PHANQUYENLabel.Location = new System.Drawing.Point(40, 339);
             iD_PHANQUYENLabel.Name = "iD_PHANQUYENLabel";
-            iD_PHANQUYENLabel.Size = new System.Drawing.Size(112, 16);
+            iD_PHANQUYENLabel.Size = new System.Drawing.Size(119, 16);
             iD_PHANQUYENLabel.TabIndex = 46;
-            iD_PHANQUYENLabel.Text = "ID PHANQUYEN:";
+            iD_PHANQUYENLabel.Text = "MÃ PHÂN QUYỀN";
             // 
             // btnClearTaiKhoan
             // 
-            this.btnClearTaiKhoan.Location = new System.Drawing.Point(724, 689);
+            this.btnClearTaiKhoan.Location = new System.Drawing.Point(748, 659);
             this.btnClearTaiKhoan.Name = "btnClearTaiKhoan";
-            this.btnClearTaiKhoan.Size = new System.Drawing.Size(135, 23);
+            this.btnClearTaiKhoan.Size = new System.Drawing.Size(194, 58);
             this.btnClearTaiKhoan.TabIndex = 39;
             this.btnClearTaiKhoan.Text = "Xóa Dữ Liệu";
             this.btnClearTaiKhoan.UseVisualStyleBackColor = true;
@@ -106,9 +107,9 @@
             // 
             // btnXoaTaiKhoan
             // 
-            this.btnXoaTaiKhoan.Location = new System.Drawing.Point(573, 689);
+            this.btnXoaTaiKhoan.Location = new System.Drawing.Point(597, 659);
             this.btnXoaTaiKhoan.Name = "btnXoaTaiKhoan";
-            this.btnXoaTaiKhoan.Size = new System.Drawing.Size(75, 23);
+            this.btnXoaTaiKhoan.Size = new System.Drawing.Size(134, 58);
             this.btnXoaTaiKhoan.TabIndex = 38;
             this.btnXoaTaiKhoan.Text = "Xóa";
             this.btnXoaTaiKhoan.UseVisualStyleBackColor = true;
@@ -116,9 +117,9 @@
             // 
             // btnSuaTaiKhoan
             // 
-            this.btnSuaTaiKhoan.Location = new System.Drawing.Point(412, 689);
+            this.btnSuaTaiKhoan.Location = new System.Drawing.Point(436, 659);
             this.btnSuaTaiKhoan.Name = "btnSuaTaiKhoan";
-            this.btnSuaTaiKhoan.Size = new System.Drawing.Size(75, 23);
+            this.btnSuaTaiKhoan.Size = new System.Drawing.Size(134, 58);
             this.btnSuaTaiKhoan.TabIndex = 37;
             this.btnSuaTaiKhoan.Text = "Sửa";
             this.btnSuaTaiKhoan.UseVisualStyleBackColor = true;
@@ -126,9 +127,9 @@
             // 
             // btnThemTaiKhoan
             // 
-            this.btnThemTaiKhoan.Location = new System.Drawing.Point(263, 689);
+            this.btnThemTaiKhoan.Location = new System.Drawing.Point(287, 659);
             this.btnThemTaiKhoan.Name = "btnThemTaiKhoan";
-            this.btnThemTaiKhoan.Size = new System.Drawing.Size(75, 23);
+            this.btnThemTaiKhoan.Size = new System.Drawing.Size(134, 58);
             this.btnThemTaiKhoan.TabIndex = 36;
             this.btnThemTaiKhoan.Text = "Thêm";
             this.btnThemTaiKhoan.UseVisualStyleBackColor = true;

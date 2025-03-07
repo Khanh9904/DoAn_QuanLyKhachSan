@@ -55,20 +55,20 @@
             // maTangLabel
             // 
             maTangLabel.AutoSize = true;
-            maTangLabel.Location = new System.Drawing.Point(91, 279);
+            maTangLabel.Location = new System.Drawing.Point(71, 282);
             maTangLabel.Name = "maTangLabel";
-            maTangLabel.Size = new System.Drawing.Size(64, 16);
+            maTangLabel.Size = new System.Drawing.Size(68, 16);
             maTangLabel.TabIndex = 83;
-            maTangLabel.Text = "Ma Tang:";
+            maTangLabel.Text = "MÃ TẦNG";
             // 
             // tenTangLabel
             // 
             tenTangLabel.AutoSize = true;
-            tenTangLabel.Location = new System.Drawing.Point(91, 307);
+            tenTangLabel.Location = new System.Drawing.Point(71, 310);
             tenTangLabel.Name = "tenTangLabel";
-            tenTangLabel.Size = new System.Drawing.Size(69, 16);
+            tenTangLabel.Size = new System.Drawing.Size(76, 16);
             tenTangLabel.TabIndex = 85;
-            tenTangLabel.Text = "Ten Tang:";
+            tenTangLabel.Text = "TÊN TẦNG";
             // 
             // data_Tang
             // 
@@ -92,9 +92,9 @@
             // 
             // btnClearTang
             // 
-            this.btnClearTang.Location = new System.Drawing.Point(623, 634);
+            this.btnClearTang.Location = new System.Drawing.Point(740, 648);
             this.btnClearTang.Name = "btnClearTang";
-            this.btnClearTang.Size = new System.Drawing.Size(135, 23);
+            this.btnClearTang.Size = new System.Drawing.Size(170, 50);
             this.btnClearTang.TabIndex = 63;
             this.btnClearTang.Text = "Xóa Dữ Liệu";
             this.btnClearTang.UseVisualStyleBackColor = true;
@@ -102,9 +102,9 @@
             // 
             // btnXoaTang
             // 
-            this.btnXoaTang.Location = new System.Drawing.Point(472, 634);
+            this.btnXoaTang.Location = new System.Drawing.Point(589, 648);
             this.btnXoaTang.Name = "btnXoaTang";
-            this.btnXoaTang.Size = new System.Drawing.Size(75, 23);
+            this.btnXoaTang.Size = new System.Drawing.Size(110, 50);
             this.btnXoaTang.TabIndex = 62;
             this.btnXoaTang.Text = "Xóa";
             this.btnXoaTang.UseVisualStyleBackColor = true;
@@ -112,9 +112,9 @@
             // 
             // btnSuaTang
             // 
-            this.btnSuaTang.Location = new System.Drawing.Point(311, 634);
+            this.btnSuaTang.Location = new System.Drawing.Point(428, 648);
             this.btnSuaTang.Name = "btnSuaTang";
-            this.btnSuaTang.Size = new System.Drawing.Size(75, 23);
+            this.btnSuaTang.Size = new System.Drawing.Size(110, 50);
             this.btnSuaTang.TabIndex = 61;
             this.btnSuaTang.Text = "Sửa";
             this.btnSuaTang.UseVisualStyleBackColor = true;
@@ -122,9 +122,9 @@
             // 
             // btnThemTang
             // 
-            this.btnThemTang.Location = new System.Drawing.Point(162, 634);
+            this.btnThemTang.Location = new System.Drawing.Point(279, 648);
             this.btnThemTang.Name = "btnThemTang";
-            this.btnThemTang.Size = new System.Drawing.Size(75, 23);
+            this.btnThemTang.Size = new System.Drawing.Size(110, 50);
             this.btnThemTang.TabIndex = 60;
             this.btnThemTang.Text = "Thêm";
             this.btnThemTang.UseVisualStyleBackColor = true;
@@ -189,7 +189,7 @@
             this.maTangTextBox.Enabled = false;
             this.maTangTextBox.Location = new System.Drawing.Point(166, 276);
             this.maTangTextBox.Name = "maTangTextBox";
-            this.maTangTextBox.Size = new System.Drawing.Size(100, 22);
+            this.maTangTextBox.Size = new System.Drawing.Size(202, 22);
             this.maTangTextBox.TabIndex = 84;
             // 
             // tenTangTextBox
@@ -197,7 +197,7 @@
             this.tenTangTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tangLauBindingSource, "TenTang", true));
             this.tenTangTextBox.Location = new System.Drawing.Point(166, 304);
             this.tenTangTextBox.Name = "tenTangTextBox";
-            this.tenTangTextBox.Size = new System.Drawing.Size(100, 22);
+            this.tenTangTextBox.Size = new System.Drawing.Size(202, 22);
             this.tenTangTextBox.TabIndex = 86;
             // 
             // ufrm_CRUDTang

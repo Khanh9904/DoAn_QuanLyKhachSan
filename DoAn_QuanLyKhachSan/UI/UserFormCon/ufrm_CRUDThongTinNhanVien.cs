@@ -322,6 +322,46 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             }
         }
 
+        private void dIACHILabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTinhLuong_Click(object sender, EventArgs e)
+        {
+            string connectionString = db.GetDataSet();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+
+                    // Câu lệnh cập nhật TongLuong
+                    string updateQuery = @" UPDATE NHAN_VIEN
+                    SET TONGLUONG = TONGNGAYCONG * PQ.MUCLUONGLAMVIEC
+                    FROM NHAN_VIEN NV
+                    JOIN TAIKHOAN TK ON NV.ID_TAIKHOAN = TK.ID_TAIKHOAN
+                    JOIN PHANQUYEN PQ ON TK.ID_PHANQUYEN = PQ.ID_PHANQUYEN;
+                    ";
+
+                    using (SqlCommand cmd = new SqlCommand(updateQuery, connection))
+                    {
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    MessageBox.Show("Cập nhật tính tổng lương nhân viên thành công !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                    LoadNhanVien();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi khi cập nhật tổng lương: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
         //------------------------------------------------------------------------------------------------------------------------------------------------
 
 

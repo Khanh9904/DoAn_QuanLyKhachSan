@@ -58,6 +58,7 @@
             this.tONGLUONGTextBox = new System.Windows.Forms.TextBox();
             this.cbIDTaiKhoan = new System.Windows.Forms.ComboBox();
             this.data_NhanVien = new System.Windows.Forms.DataGridView();
+            this.btnTinhLuong = new System.Windows.Forms.Button();
             iD_NHANVIENLabel = new System.Windows.Forms.Label();
             hOTENLabel = new System.Windows.Forms.Label();
             nGAYSINHLabel = new System.Windows.Forms.Label();
@@ -77,9 +78,9 @@
             iD_NHANVIENLabel.AutoSize = true;
             iD_NHANVIENLabel.Location = new System.Drawing.Point(87, 268);
             iD_NHANVIENLabel.Name = "iD_NHANVIENLabel";
-            iD_NHANVIENLabel.Size = new System.Drawing.Size(96, 16);
+            iD_NHANVIENLabel.Size = new System.Drawing.Size(103, 16);
             iD_NHANVIENLabel.TabIndex = 43;
-            iD_NHANVIENLabel.Text = "ID NHANVIEN:";
+            iD_NHANVIENLabel.Text = "MÃ NHÂN VIÊN";
             // 
             // hOTENLabel
             // 
@@ -88,7 +89,7 @@
             hOTENLabel.Name = "hOTENLabel";
             hOTENLabel.Size = new System.Drawing.Size(58, 16);
             hOTENLabel.TabIndex = 45;
-            hOTENLabel.Text = "HOTEN:";
+            hOTENLabel.Text = "HỌ TÊN";
             // 
             // nGAYSINHLabel
             // 
@@ -97,34 +98,35 @@
             nGAYSINHLabel.Name = "nGAYSINHLabel";
             nGAYSINHLabel.Size = new System.Drawing.Size(80, 16);
             nGAYSINHLabel.TabIndex = 47;
-            nGAYSINHLabel.Text = "NGAYSINH:";
+            nGAYSINHLabel.Text = "NGÀY SINH";
             // 
             // dIACHILabel
             // 
             dIACHILabel.AutoSize = true;
             dIACHILabel.Location = new System.Drawing.Point(87, 352);
             dIACHILabel.Name = "dIACHILabel";
-            dIACHILabel.Size = new System.Drawing.Size(54, 16);
+            dIACHILabel.Size = new System.Drawing.Size(53, 16);
             dIACHILabel.TabIndex = 49;
-            dIACHILabel.Text = "DIACHI:";
+            dIACHILabel.Text = "ĐỊA CHỈ";
+            dIACHILabel.Click += new System.EventHandler(this.dIACHILabel_Click);
             // 
             // sDTLabel
             // 
             sDTLabel.AutoSize = true;
             sDTLabel.Location = new System.Drawing.Point(87, 380);
             sDTLabel.Name = "sDTLabel";
-            sDTLabel.Size = new System.Drawing.Size(38, 16);
+            sDTLabel.Size = new System.Drawing.Size(35, 16);
             sDTLabel.TabIndex = 51;
-            sDTLabel.Text = "SDT:";
+            sDTLabel.Text = "SDT";
             // 
             // tONGNGAYCONGLabel
             // 
             tONGNGAYCONGLabel.AutoSize = true;
             tONGNGAYCONGLabel.Location = new System.Drawing.Point(87, 408);
             tONGNGAYCONGLabel.Name = "tONGNGAYCONGLabel";
-            tONGNGAYCONGLabel.Size = new System.Drawing.Size(126, 16);
+            tONGNGAYCONGLabel.Size = new System.Drawing.Size(129, 16);
             tONGNGAYCONGLabel.TabIndex = 53;
-            tONGNGAYCONGLabel.Text = "TONGNGAYCONG:";
+            tONGNGAYCONGLabel.Text = "TỔNG NGÀY CÔNG";
             // 
             // tONGLUONGLabel
             // 
@@ -133,31 +135,31 @@
             tONGLUONGLabel.Name = "tONGLUONGLabel";
             tONGLUONGLabel.Size = new System.Drawing.Size(96, 16);
             tONGLUONGLabel.TabIndex = 55;
-            tONGLUONGLabel.Text = "TONGLUONG:";
+            tONGLUONGLabel.Text = "TỔNG LƯƠNG";
             // 
             // iD_TAIKHOANLabel
             // 
             iD_TAIKHOANLabel.AutoSize = true;
             iD_TAIKHOANLabel.Location = new System.Drawing.Point(87, 464);
             iD_TAIKHOANLabel.Name = "iD_TAIKHOANLabel";
-            iD_TAIKHOANLabel.Size = new System.Drawing.Size(94, 16);
+            iD_TAIKHOANLabel.Size = new System.Drawing.Size(101, 16);
             iD_TAIKHOANLabel.TabIndex = 57;
-            iD_TAIKHOANLabel.Text = "ID TAIKHOAN:";
+            iD_TAIKHOANLabel.Text = "MÃ TÀI KHOẢN";
             // 
             // txtTimKiemNhanVien
             // 
             this.txtTimKiemNhanVien.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtTimKiemNhanVien.Location = new System.Drawing.Point(461, 213);
             this.txtTimKiemNhanVien.Name = "txtTimKiemNhanVien";
-            this.txtTimKiemNhanVien.Size = new System.Drawing.Size(703, 22);
+            this.txtTimKiemNhanVien.Size = new System.Drawing.Size(768, 22);
             this.txtTimKiemNhanVien.TabIndex = 32;
             this.txtTimKiemNhanVien.TextChanged += new System.EventHandler(this.txtTimKiemNhanVien_TextChanged);
             // 
             // btnClearNhanVien
             // 
-            this.btnClearNhanVien.Location = new System.Drawing.Point(653, 634);
+            this.btnClearNhanVien.Location = new System.Drawing.Point(802, 630);
             this.btnClearNhanVien.Name = "btnClearNhanVien";
-            this.btnClearNhanVien.Size = new System.Drawing.Size(135, 23);
+            this.btnClearNhanVien.Size = new System.Drawing.Size(179, 55);
             this.btnClearNhanVien.TabIndex = 30;
             this.btnClearNhanVien.Text = "Xóa Dữ Liệu";
             this.btnClearNhanVien.UseVisualStyleBackColor = true;
@@ -165,9 +167,9 @@
             // 
             // btnXoaNhanVien
             // 
-            this.btnXoaNhanVien.Location = new System.Drawing.Point(502, 634);
+            this.btnXoaNhanVien.Location = new System.Drawing.Point(651, 630);
             this.btnXoaNhanVien.Name = "btnXoaNhanVien";
-            this.btnXoaNhanVien.Size = new System.Drawing.Size(75, 23);
+            this.btnXoaNhanVien.Size = new System.Drawing.Size(119, 55);
             this.btnXoaNhanVien.TabIndex = 29;
             this.btnXoaNhanVien.Text = "Xóa";
             this.btnXoaNhanVien.UseVisualStyleBackColor = true;
@@ -175,9 +177,9 @@
             // 
             // btnSuaNhanVien
             // 
-            this.btnSuaNhanVien.Location = new System.Drawing.Point(341, 634);
+            this.btnSuaNhanVien.Location = new System.Drawing.Point(490, 630);
             this.btnSuaNhanVien.Name = "btnSuaNhanVien";
-            this.btnSuaNhanVien.Size = new System.Drawing.Size(75, 23);
+            this.btnSuaNhanVien.Size = new System.Drawing.Size(119, 55);
             this.btnSuaNhanVien.TabIndex = 28;
             this.btnSuaNhanVien.Text = "Sửa";
             this.btnSuaNhanVien.UseVisualStyleBackColor = true;
@@ -185,9 +187,9 @@
             // 
             // btnThemNhanVien
             // 
-            this.btnThemNhanVien.Location = new System.Drawing.Point(192, 634);
+            this.btnThemNhanVien.Location = new System.Drawing.Point(341, 630);
             this.btnThemNhanVien.Name = "btnThemNhanVien";
-            this.btnThemNhanVien.Size = new System.Drawing.Size(75, 23);
+            this.btnThemNhanVien.Size = new System.Drawing.Size(119, 55);
             this.btnThemNhanVien.TabIndex = 27;
             this.btnThemNhanVien.Text = "Thêm";
             this.btnThemNhanVien.UseVisualStyleBackColor = true;
@@ -329,10 +331,21 @@
             this.data_NhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_NhanVien_CellClick);
             this.data_NhanVien.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.data_NhanVien_CellFormatting);
             // 
+            // btnTinhLuong
+            // 
+            this.btnTinhLuong.Location = new System.Drawing.Point(987, 630);
+            this.btnTinhLuong.Name = "btnTinhLuong";
+            this.btnTinhLuong.Size = new System.Drawing.Size(179, 55);
+            this.btnTinhLuong.TabIndex = 60;
+            this.btnTinhLuong.Text = "Tính Lương";
+            this.btnTinhLuong.UseVisualStyleBackColor = true;
+            this.btnTinhLuong.Click += new System.EventHandler(this.btnTinhLuong_Click);
+            // 
             // ufrm_CRUDThongTinNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnTinhLuong);
             this.Controls.Add(this.data_NhanVien);
             this.Controls.Add(this.cbIDTaiKhoan);
             this.Controls.Add(iD_NHANVIENLabel);
@@ -391,5 +404,6 @@
         private System.Windows.Forms.TextBox tONGLUONGTextBox;
         private System.Windows.Forms.ComboBox cbIDTaiKhoan;
         private System.Windows.Forms.DataGridView data_NhanVien;
+        private System.Windows.Forms.Button btnTinhLuong;
     }
 }

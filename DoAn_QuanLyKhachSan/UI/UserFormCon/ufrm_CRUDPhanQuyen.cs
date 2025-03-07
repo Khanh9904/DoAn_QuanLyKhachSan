@@ -239,5 +239,10 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
         {
             DonThongTin();
         }
+
+        private void moTaLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

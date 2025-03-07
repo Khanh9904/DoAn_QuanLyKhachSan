@@ -64,38 +64,38 @@
             // maLoaiPhongLabel
             // 
             maLoaiPhongLabel.AutoSize = true;
-            maLoaiPhongLabel.Location = new System.Drawing.Point(83, 209);
+            maLoaiPhongLabel.Location = new System.Drawing.Point(74, 209);
             maLoaiPhongLabel.Name = "maLoaiPhongLabel";
-            maLoaiPhongLabel.Size = new System.Drawing.Size(100, 16);
+            maLoaiPhongLabel.Size = new System.Drawing.Size(111, 16);
             maLoaiPhongLabel.TabIndex = 69;
-            maLoaiPhongLabel.Text = "Ma Loai Phong:";
+            maLoaiPhongLabel.Text = "MÃ LOẠI PHÒNG";
             // 
             // tenLoaiPhongLabel
             // 
             tenLoaiPhongLabel.AutoSize = true;
-            tenLoaiPhongLabel.Location = new System.Drawing.Point(83, 237);
+            tenLoaiPhongLabel.Location = new System.Drawing.Point(74, 237);
             tenLoaiPhongLabel.Name = "tenLoaiPhongLabel";
-            tenLoaiPhongLabel.Size = new System.Drawing.Size(105, 16);
+            tenLoaiPhongLabel.Size = new System.Drawing.Size(119, 16);
             tenLoaiPhongLabel.TabIndex = 71;
-            tenLoaiPhongLabel.Text = "Ten Loai Phong:";
+            tenLoaiPhongLabel.Text = "TÊN LOẠI PHÒNG";
             // 
             // giaLabel
             // 
             giaLabel.AutoSize = true;
-            giaLabel.Location = new System.Drawing.Point(83, 265);
+            giaLabel.Location = new System.Drawing.Point(74, 265);
             giaLabel.Name = "giaLabel";
-            giaLabel.Size = new System.Drawing.Size(31, 16);
+            giaLabel.Size = new System.Drawing.Size(29, 16);
             giaLabel.TabIndex = 73;
-            giaLabel.Text = "Gia:";
+            giaLabel.Text = "GIÁ";
             // 
             // soNguoiToiDaLabel
             // 
             soNguoiToiDaLabel.AutoSize = true;
-            soNguoiToiDaLabel.Location = new System.Drawing.Point(83, 293);
+            soNguoiToiDaLabel.Location = new System.Drawing.Point(74, 293);
             soNguoiToiDaLabel.Name = "soNguoiToiDaLabel";
-            soNguoiToiDaLabel.Size = new System.Drawing.Size(110, 16);
+            soNguoiToiDaLabel.Size = new System.Drawing.Size(118, 16);
             soNguoiToiDaLabel.TabIndex = 75;
-            soNguoiToiDaLabel.Text = "So Nguoi Toi Da:";
+            soNguoiToiDaLabel.Text = "SỐ NGƯỜI TỐI ĐA";
             // 
             // txtTimKiemLoaiPhong
             // 
@@ -108,9 +108,9 @@
             // 
             // btnClearLoaiPhong
             // 
-            this.btnClearLoaiPhong.Location = new System.Drawing.Point(760, 666);
+            this.btnClearLoaiPhong.Location = new System.Drawing.Point(751, 636);
             this.btnClearLoaiPhong.Name = "btnClearLoaiPhong";
-            this.btnClearLoaiPhong.Size = new System.Drawing.Size(135, 23);
+            this.btnClearLoaiPhong.Size = new System.Drawing.Size(182, 50);
             this.btnClearLoaiPhong.TabIndex = 57;
             this.btnClearLoaiPhong.Text = "Xóa Dữ Liệu";
             this.btnClearLoaiPhong.UseVisualStyleBackColor = true;
@@ -118,9 +118,9 @@
             // 
             // btnXoaLoaiPhong
             // 
-            this.btnXoaLoaiPhong.Location = new System.Drawing.Point(609, 666);
+            this.btnXoaLoaiPhong.Location = new System.Drawing.Point(600, 636);
             this.btnXoaLoaiPhong.Name = "btnXoaLoaiPhong";
-            this.btnXoaLoaiPhong.Size = new System.Drawing.Size(75, 23);
+            this.btnXoaLoaiPhong.Size = new System.Drawing.Size(122, 50);
             this.btnXoaLoaiPhong.TabIndex = 56;
             this.btnXoaLoaiPhong.Text = "Xóa";
             this.btnXoaLoaiPhong.UseVisualStyleBackColor = true;
@@ -128,9 +128,9 @@
             // 
             // btnSuaLoaiPhong
             // 
-            this.btnSuaLoaiPhong.Location = new System.Drawing.Point(448, 666);
+            this.btnSuaLoaiPhong.Location = new System.Drawing.Point(439, 636);
             this.btnSuaLoaiPhong.Name = "btnSuaLoaiPhong";
-            this.btnSuaLoaiPhong.Size = new System.Drawing.Size(75, 23);
+            this.btnSuaLoaiPhong.Size = new System.Drawing.Size(122, 50);
             this.btnSuaLoaiPhong.TabIndex = 55;
             this.btnSuaLoaiPhong.Text = "Sửa";
             this.btnSuaLoaiPhong.UseVisualStyleBackColor = true;
@@ -138,9 +138,9 @@
             // 
             // btnThemLoaiPhong
             // 
-            this.btnThemLoaiPhong.Location = new System.Drawing.Point(299, 666);
+            this.btnThemLoaiPhong.Location = new System.Drawing.Point(290, 636);
             this.btnThemLoaiPhong.Name = "btnThemLoaiPhong";
-            this.btnThemLoaiPhong.Size = new System.Drawing.Size(75, 23);
+            this.btnThemLoaiPhong.Size = new System.Drawing.Size(122, 50);
             this.btnThemLoaiPhong.TabIndex = 54;
             this.btnThemLoaiPhong.Text = "Thêm";
             this.btnThemLoaiPhong.UseVisualStyleBackColor = true;

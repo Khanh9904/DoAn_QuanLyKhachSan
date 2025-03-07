@@ -70,65 +70,65 @@
             // maKhachHangLabel
             // 
             maKhachHangLabel.AutoSize = true;
-            maKhachHangLabel.Location = new System.Drawing.Point(118, 144);
+            maKhachHangLabel.Location = new System.Drawing.Point(98, 144);
             maKhachHangLabel.Name = "maKhachHangLabel";
-            maKhachHangLabel.Size = new System.Drawing.Size(105, 16);
+            maKhachHangLabel.Size = new System.Drawing.Size(118, 16);
             maKhachHangLabel.TabIndex = 2;
-            maKhachHangLabel.Text = "Ma Khach Hang:";
+            maKhachHangLabel.Text = "MÃ KHÁCH HÀNG";
             // 
             // hoTenLabel
             // 
             hoTenLabel.AutoSize = true;
-            hoTenLabel.Location = new System.Drawing.Point(118, 172);
+            hoTenLabel.Location = new System.Drawing.Point(98, 172);
             hoTenLabel.Name = "hoTenLabel";
-            hoTenLabel.Size = new System.Drawing.Size(55, 16);
+            hoTenLabel.Size = new System.Drawing.Size(58, 16);
             hoTenLabel.TabIndex = 4;
-            hoTenLabel.Text = "Ho Ten:";
+            hoTenLabel.Text = "HỌ TÊN";
             // 
             // ngaySinhLabel
             // 
             ngaySinhLabel.AutoSize = true;
-            ngaySinhLabel.Location = new System.Drawing.Point(118, 201);
+            ngaySinhLabel.Location = new System.Drawing.Point(98, 201);
             ngaySinhLabel.Name = "ngaySinhLabel";
-            ngaySinhLabel.Size = new System.Drawing.Size(72, 16);
+            ngaySinhLabel.Size = new System.Drawing.Size(80, 16);
             ngaySinhLabel.TabIndex = 6;
-            ngaySinhLabel.Text = "Ngay Sinh:";
+            ngaySinhLabel.Text = "NGÀY SINH";
             // 
             // gioiTinhLabel
             // 
             gioiTinhLabel.AutoSize = true;
-            gioiTinhLabel.Location = new System.Drawing.Point(118, 233);
+            gioiTinhLabel.Location = new System.Drawing.Point(98, 233);
             gioiTinhLabel.Name = "gioiTinhLabel";
-            gioiTinhLabel.Size = new System.Drawing.Size(63, 16);
+            gioiTinhLabel.Size = new System.Drawing.Size(68, 16);
             gioiTinhLabel.TabIndex = 8;
-            gioiTinhLabel.Text = "Gioi Tinh:";
+            gioiTinhLabel.Text = "GIỚI TÍNH";
             // 
             // sDTLabel
             // 
             sDTLabel.AutoSize = true;
-            sDTLabel.Location = new System.Drawing.Point(118, 261);
+            sDTLabel.Location = new System.Drawing.Point(98, 261);
             sDTLabel.Name = "sDTLabel";
-            sDTLabel.Size = new System.Drawing.Size(38, 16);
+            sDTLabel.Size = new System.Drawing.Size(104, 16);
             sDTLabel.TabIndex = 10;
-            sDTLabel.Text = "SDT:";
+            sDTLabel.Text = "SỐ ĐIỆN THOẠI";
             // 
             // diaChiLabel
             // 
             diaChiLabel.AutoSize = true;
-            diaChiLabel.Location = new System.Drawing.Point(118, 289);
+            diaChiLabel.Location = new System.Drawing.Point(98, 289);
             diaChiLabel.Name = "diaChiLabel";
             diaChiLabel.Size = new System.Drawing.Size(53, 16);
             diaChiLabel.TabIndex = 12;
-            diaChiLabel.Text = "Dia Chi:";
+            diaChiLabel.Text = "ĐỊA CHỈ";
             // 
             // cCCDLabel
             // 
             cCCDLabel.AutoSize = true;
-            cCCDLabel.Location = new System.Drawing.Point(118, 317);
+            cCCDLabel.Location = new System.Drawing.Point(98, 317);
             cCCDLabel.Name = "cCCDLabel";
-            cCCDLabel.Size = new System.Drawing.Size(47, 16);
+            cCCDLabel.Size = new System.Drawing.Size(44, 16);
             cCCDLabel.TabIndex = 14;
-            cCCDLabel.Text = "CCCD:";
+            cCCDLabel.Text = "CCCD";
             // 
             // label1
             // 
@@ -247,7 +247,7 @@
             // 
             this.btnClearThongTinKhachHang.Location = new System.Drawing.Point(738, 474);
             this.btnClearThongTinKhachHang.Name = "btnClearThongTinKhachHang";
-            this.btnClearThongTinKhachHang.Size = new System.Drawing.Size(135, 23);
+            this.btnClearThongTinKhachHang.Size = new System.Drawing.Size(176, 55);
             this.btnClearThongTinKhachHang.TabIndex = 87;
             this.btnClearThongTinKhachHang.Text = "Xóa Dữ Liệu";
             this.btnClearThongTinKhachHang.UseVisualStyleBackColor = true;
@@ -257,7 +257,7 @@
             // 
             this.btnXoaThongTinKhachHang.Location = new System.Drawing.Point(587, 474);
             this.btnXoaThongTinKhachHang.Name = "btnXoaThongTinKhachHang";
-            this.btnXoaThongTinKhachHang.Size = new System.Drawing.Size(75, 23);
+            this.btnXoaThongTinKhachHang.Size = new System.Drawing.Size(116, 55);
             this.btnXoaThongTinKhachHang.TabIndex = 86;
             this.btnXoaThongTinKhachHang.Text = "Xóa";
             this.btnXoaThongTinKhachHang.UseVisualStyleBackColor = true;
@@ -267,7 +267,7 @@
             // 
             this.btnSuaThongTinKhachHang.Location = new System.Drawing.Point(426, 474);
             this.btnSuaThongTinKhachHang.Name = "btnSuaThongTinKhachHang";
-            this.btnSuaThongTinKhachHang.Size = new System.Drawing.Size(75, 23);
+            this.btnSuaThongTinKhachHang.Size = new System.Drawing.Size(116, 55);
             this.btnSuaThongTinKhachHang.TabIndex = 85;
             this.btnSuaThongTinKhachHang.Text = "Sửa";
             this.btnSuaThongTinKhachHang.UseVisualStyleBackColor = true;
@@ -277,7 +277,7 @@
             // 
             this.btnThemThongTinKhachHang.Location = new System.Drawing.Point(277, 474);
             this.btnThemThongTinKhachHang.Name = "btnThemThongTinKhachHang";
-            this.btnThemThongTinKhachHang.Size = new System.Drawing.Size(75, 23);
+            this.btnThemThongTinKhachHang.Size = new System.Drawing.Size(116, 55);
             this.btnThemThongTinKhachHang.TabIndex = 84;
             this.btnThemThongTinKhachHang.Text = "Thêm";
             this.btnThemThongTinKhachHang.UseVisualStyleBackColor = true;

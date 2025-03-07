@@ -279,6 +279,11 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormCon
             data_TaiKhoan.DataSource = dt;
         }
 
+        private void iD_TAIKHOANLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //-----------------------------------------------------------------------------------------------------------------------------------------------
     }
 }

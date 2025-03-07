@@ -16,8 +16,7 @@ namespace DAL.Model
 
         public int MaLoaiPhong { get; set; }
 
-        public int MaThietBi { get; set; }
-
-        public int MaDichVu { get; set; }
+        public int MaTang { get; set; }
+        
     }
 }

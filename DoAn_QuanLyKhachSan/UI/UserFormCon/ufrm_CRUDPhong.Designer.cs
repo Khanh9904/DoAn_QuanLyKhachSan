@@ -34,7 +34,6 @@
             System.Windows.Forms.Label tinhTrangLabel;
             System.Windows.Forms.Label maLoaiPhongLabel;
             System.Windows.Forms.Label maThietBiLabel;
-            System.Windows.Forms.Label maDichVuLabel;
             this.label1 = new System.Windows.Forms.Label();
             this.data_Phong = new System.Windows.Forms.DataGridView();
             this.heThongKhachSanDataSet = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSet();
@@ -50,8 +49,7 @@
             this.btnSuaPhong = new System.Windows.Forms.Button();
             this.btnThemPhong = new System.Windows.Forms.Button();
             this.cbMaLoaiPhong = new System.Windows.Forms.ComboBox();
-            this.cbMaThietBi = new System.Windows.Forms.ComboBox();
-            this.cbMaDichVu = new System.Windows.Forms.ComboBox();
+            this.cbTang = new System.Windows.Forms.ComboBox();
             this.txtTimKiemPhong = new System.Windows.Forms.TextBox();
             this.tinhTrangTextBox = new System.Windows.Forms.ComboBox();
             maPhongLabel = new System.Windows.Forms.Label();
@@ -59,7 +57,6 @@
             tinhTrangLabel = new System.Windows.Forms.Label();
             maLoaiPhongLabel = new System.Windows.Forms.Label();
             maThietBiLabel = new System.Windows.Forms.Label();
-            maDichVuLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.data_Phong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHONGBindingSource)).BeginInit();
@@ -68,56 +65,48 @@
             // maPhongLabel
             // 
             maPhongLabel.AutoSize = true;
-            maPhongLabel.Location = new System.Drawing.Point(110, 190);
+            maPhongLabel.Location = new System.Drawing.Point(68, 190);
             maPhongLabel.Name = "maPhongLabel";
-            maPhongLabel.Size = new System.Drawing.Size(71, 16);
+            maPhongLabel.Size = new System.Drawing.Size(79, 16);
             maPhongLabel.TabIndex = 3;
-            maPhongLabel.Text = "Ma Phong:";
+            maPhongLabel.Text = "MÃ PHÒNG";
             // 
             // tenPhongLabel
             // 
             tenPhongLabel.AutoSize = true;
-            tenPhongLabel.Location = new System.Drawing.Point(110, 218);
+            tenPhongLabel.Location = new System.Drawing.Point(68, 218);
             tenPhongLabel.Name = "tenPhongLabel";
-            tenPhongLabel.Size = new System.Drawing.Size(76, 16);
+            tenPhongLabel.Size = new System.Drawing.Size(87, 16);
             tenPhongLabel.TabIndex = 5;
-            tenPhongLabel.Text = "Ten Phong:";
+            tenPhongLabel.Text = "TÊN PHÒNG";
             // 
             // tinhTrangLabel
             // 
             tinhTrangLabel.AutoSize = true;
-            tinhTrangLabel.Location = new System.Drawing.Point(110, 246);
+            tinhTrangLabel.Location = new System.Drawing.Point(68, 246);
             tinhTrangLabel.Name = "tinhTrangLabel";
-            tinhTrangLabel.Size = new System.Drawing.Size(75, 16);
+            tinhTrangLabel.Size = new System.Drawing.Size(90, 16);
             tinhTrangLabel.TabIndex = 7;
-            tinhTrangLabel.Text = "Tinh Trang:";
+            tinhTrangLabel.Text = "TINH TRANG";
             // 
             // maLoaiPhongLabel
             // 
             maLoaiPhongLabel.AutoSize = true;
-            maLoaiPhongLabel.Location = new System.Drawing.Point(110, 274);
+            maLoaiPhongLabel.Location = new System.Drawing.Point(68, 274);
             maLoaiPhongLabel.Name = "maLoaiPhongLabel";
-            maLoaiPhongLabel.Size = new System.Drawing.Size(100, 16);
+            maLoaiPhongLabel.Size = new System.Drawing.Size(111, 16);
             maLoaiPhongLabel.TabIndex = 9;
-            maLoaiPhongLabel.Text = "Ma Loai Phong:";
+            maLoaiPhongLabel.Text = "MÃ LOẠI PHÒNG";
             // 
             // maThietBiLabel
             // 
             maThietBiLabel.AutoSize = true;
-            maThietBiLabel.Location = new System.Drawing.Point(110, 302);
+            maThietBiLabel.Location = new System.Drawing.Point(68, 302);
             maThietBiLabel.Name = "maThietBiLabel";
-            maThietBiLabel.Size = new System.Drawing.Size(77, 16);
+            maThietBiLabel.Size = new System.Drawing.Size(68, 16);
             maThietBiLabel.TabIndex = 11;
-            maThietBiLabel.Text = "Ma Thiet Bi:";
-            // 
-            // maDichVuLabel
-            // 
-            maDichVuLabel.AutoSize = true;
-            maDichVuLabel.Location = new System.Drawing.Point(110, 330);
-            maDichVuLabel.Name = "maDichVuLabel";
-            maDichVuLabel.Size = new System.Drawing.Size(78, 16);
-            maDichVuLabel.TabIndex = 13;
-            maDichVuLabel.Text = "Ma Dich Vu:";
+            maThietBiLabel.Text = "MÃ TẦNG";
+            maThietBiLabel.Click += new System.EventHandler(this.maThietBiLabel_Click);
             // 
             // label1
             // 
@@ -177,7 +166,7 @@
             // 
             this.maPhongTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pHONGBindingSource, "MaPhong", true));
             this.maPhongTextBox.Enabled = false;
-            this.maPhongTextBox.Location = new System.Drawing.Point(216, 187);
+            this.maPhongTextBox.Location = new System.Drawing.Point(183, 184);
             this.maPhongTextBox.Name = "maPhongTextBox";
             this.maPhongTextBox.Size = new System.Drawing.Size(237, 22);
             this.maPhongTextBox.TabIndex = 4;
@@ -185,7 +174,7 @@
             // tenPhongTextBox
             // 
             this.tenPhongTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pHONGBindingSource, "TenPhong", true));
-            this.tenPhongTextBox.Location = new System.Drawing.Point(216, 215);
+            this.tenPhongTextBox.Location = new System.Drawing.Point(183, 212);
             this.tenPhongTextBox.Name = "tenPhongTextBox";
             this.tenPhongTextBox.Size = new System.Drawing.Size(237, 22);
             this.tenPhongTextBox.TabIndex = 6;
@@ -211,9 +200,9 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(745, 654);
+            this.button5.Location = new System.Drawing.Point(758, 617);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(135, 23);
+            this.button5.Size = new System.Drawing.Size(183, 49);
             this.button5.TabIndex = 20;
             this.button5.Text = "Xóa Dữ Liệu";
             this.button5.UseVisualStyleBackColor = true;
@@ -221,9 +210,9 @@
             // 
             // btnXoaPhong
             // 
-            this.btnXoaPhong.Location = new System.Drawing.Point(594, 654);
+            this.btnXoaPhong.Location = new System.Drawing.Point(607, 617);
             this.btnXoaPhong.Name = "btnXoaPhong";
-            this.btnXoaPhong.Size = new System.Drawing.Size(75, 23);
+            this.btnXoaPhong.Size = new System.Drawing.Size(123, 49);
             this.btnXoaPhong.TabIndex = 19;
             this.btnXoaPhong.Text = "Xóa";
             this.btnXoaPhong.UseVisualStyleBackColor = true;
@@ -231,9 +220,9 @@
             // 
             // btnSuaPhong
             // 
-            this.btnSuaPhong.Location = new System.Drawing.Point(433, 654);
+            this.btnSuaPhong.Location = new System.Drawing.Point(446, 617);
             this.btnSuaPhong.Name = "btnSuaPhong";
-            this.btnSuaPhong.Size = new System.Drawing.Size(75, 23);
+            this.btnSuaPhong.Size = new System.Drawing.Size(123, 49);
             this.btnSuaPhong.TabIndex = 18;
             this.btnSuaPhong.Text = "Sửa";
             this.btnSuaPhong.UseVisualStyleBackColor = true;
@@ -241,9 +230,9 @@
             // 
             // btnThemPhong
             // 
-            this.btnThemPhong.Location = new System.Drawing.Point(284, 654);
+            this.btnThemPhong.Location = new System.Drawing.Point(297, 617);
             this.btnThemPhong.Name = "btnThemPhong";
-            this.btnThemPhong.Size = new System.Drawing.Size(75, 23);
+            this.btnThemPhong.Size = new System.Drawing.Size(123, 49);
             this.btnThemPhong.TabIndex = 17;
             this.btnThemPhong.Text = "Thêm";
             this.btnThemPhong.UseVisualStyleBackColor = true;
@@ -252,26 +241,18 @@
             // cbMaLoaiPhong
             // 
             this.cbMaLoaiPhong.FormattingEnabled = true;
-            this.cbMaLoaiPhong.Location = new System.Drawing.Point(216, 274);
+            this.cbMaLoaiPhong.Location = new System.Drawing.Point(183, 271);
             this.cbMaLoaiPhong.Name = "cbMaLoaiPhong";
             this.cbMaLoaiPhong.Size = new System.Drawing.Size(237, 24);
             this.cbMaLoaiPhong.TabIndex = 21;
             // 
-            // cbMaThietBi
+            // cbTang
             // 
-            this.cbMaThietBi.FormattingEnabled = true;
-            this.cbMaThietBi.Location = new System.Drawing.Point(216, 304);
-            this.cbMaThietBi.Name = "cbMaThietBi";
-            this.cbMaThietBi.Size = new System.Drawing.Size(237, 24);
-            this.cbMaThietBi.TabIndex = 22;
-            // 
-            // cbMaDichVu
-            // 
-            this.cbMaDichVu.FormattingEnabled = true;
-            this.cbMaDichVu.Location = new System.Drawing.Point(216, 330);
-            this.cbMaDichVu.Name = "cbMaDichVu";
-            this.cbMaDichVu.Size = new System.Drawing.Size(237, 24);
-            this.cbMaDichVu.TabIndex = 23;
+            this.cbTang.FormattingEnabled = true;
+            this.cbTang.Location = new System.Drawing.Point(183, 301);
+            this.cbTang.Name = "cbTang";
+            this.cbTang.Size = new System.Drawing.Size(237, 24);
+            this.cbTang.TabIndex = 22;
             // 
             // txtTimKiemPhong
             // 
@@ -286,10 +267,9 @@
             // 
             this.tinhTrangTextBox.FormattingEnabled = true;
             this.tinhTrangTextBox.Items.AddRange(new object[] {
-            "Tốt",
-            "Bảo Trì",
-            "Hỏng"});
-            this.tinhTrangTextBox.Location = new System.Drawing.Point(216, 246);
+            "Đang sử dụng",
+            "Trống"});
+            this.tinhTrangTextBox.Location = new System.Drawing.Point(183, 243);
             this.tinhTrangTextBox.Name = "tinhTrangTextBox";
             this.tinhTrangTextBox.Size = new System.Drawing.Size(237, 24);
             this.tinhTrangTextBox.TabIndex = 25;
@@ -300,8 +280,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tinhTrangTextBox);
             this.Controls.Add(this.txtTimKiemPhong);
-            this.Controls.Add(this.cbMaDichVu);
-            this.Controls.Add(this.cbMaThietBi);
+            this.Controls.Add(this.cbTang);
             this.Controls.Add(this.cbMaLoaiPhong);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.btnXoaPhong);
@@ -316,7 +295,6 @@
             this.Controls.Add(tinhTrangLabel);
             this.Controls.Add(maLoaiPhongLabel);
             this.Controls.Add(maThietBiLabel);
-            this.Controls.Add(maDichVuLabel);
             this.Controls.Add(this.data_Phong);
             this.Controls.Add(this.label1);
             this.Name = "ufrm_CRUDPhong";
@@ -346,8 +324,7 @@
         private System.Windows.Forms.Button btnSuaPhong;
         private System.Windows.Forms.Button btnThemPhong;
         private System.Windows.Forms.ComboBox cbMaLoaiPhong;
-        private System.Windows.Forms.ComboBox cbMaThietBi;
-        private System.Windows.Forms.ComboBox cbMaDichVu;
+        private System.Windows.Forms.ComboBox cbTang;
         private System.Windows.Forms.TextBox txtTimKiemPhong;
         private System.Windows.Forms.ComboBox tinhTrangTextBox;
     }

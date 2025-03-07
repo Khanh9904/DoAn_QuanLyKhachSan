@@ -37,12 +37,13 @@
             this.btnQuanLyNhanVien = new System.Windows.Forms.Button();
             this.btnManHinhHeThong = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ufrm_QuanLyCSVC1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_QuanLyCSVC();
-            this.ufrm_QuanLyNhanVien1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_QuanLyNhanVien();
-            this.ufrm_ThongTinKhachHang1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_ThongTinKhachHang();
-            this.ufrm_BaoCaoThongKe1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_BaoCaoThongKe();
             this.ufrm_QuanLyTaiKhoan1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_QuanLyTaiKhoan();
+            this.ufrm_BaoCaoThongKe1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_BaoCaoThongKe();
+            this.ufrm_ThongTinKhachHang1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_ThongTinKhachHang();
+            this.ufrm_QuanLyNhanVien1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_QuanLyNhanVien();
+            this.ufrm_QuanLyCSVC1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_QuanLyCSVC();
             this.ufrm_QuanLyKhachHang1 = new DoAn_QuanLyKhachSan.UI.UseFormChinh.ufrm_QuanLyKhachHang();
+            this.calamviecTableAdapter1 = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.CALAMVIECTableAdapter();
             this.ufrm_ManHinhHeThong1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_ManHinhHeThong();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -157,29 +158,13 @@
             this.panel2.Size = new System.Drawing.Size(233, 169);
             this.panel2.TabIndex = 3;
             // 
-            // ufrm_QuanLyCSVC1
+            // ufrm_QuanLyTaiKhoan1
             // 
-            this.ufrm_QuanLyCSVC1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ufrm_QuanLyCSVC1.Location = new System.Drawing.Point(233, 0);
-            this.ufrm_QuanLyCSVC1.Name = "ufrm_QuanLyCSVC1";
-            this.ufrm_QuanLyCSVC1.Size = new System.Drawing.Size(1191, 890);
-            this.ufrm_QuanLyCSVC1.TabIndex = 7;
-            // 
-            // ufrm_QuanLyNhanVien1
-            // 
-            this.ufrm_QuanLyNhanVien1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ufrm_QuanLyNhanVien1.Location = new System.Drawing.Point(233, 0);
-            this.ufrm_QuanLyNhanVien1.Name = "ufrm_QuanLyNhanVien1";
-            this.ufrm_QuanLyNhanVien1.Size = new System.Drawing.Size(1191, 890);
-            this.ufrm_QuanLyNhanVien1.TabIndex = 6;
-            // 
-            // ufrm_ThongTinKhachHang1
-            // 
-            this.ufrm_ThongTinKhachHang1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ufrm_ThongTinKhachHang1.Location = new System.Drawing.Point(233, 0);
-            this.ufrm_ThongTinKhachHang1.Name = "ufrm_ThongTinKhachHang1";
-            this.ufrm_ThongTinKhachHang1.Size = new System.Drawing.Size(1191, 890);
-            this.ufrm_ThongTinKhachHang1.TabIndex = 5;
+            this.ufrm_QuanLyTaiKhoan1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ufrm_QuanLyTaiKhoan1.Location = new System.Drawing.Point(233, 0);
+            this.ufrm_QuanLyTaiKhoan1.Name = "ufrm_QuanLyTaiKhoan1";
+            this.ufrm_QuanLyTaiKhoan1.Size = new System.Drawing.Size(1191, 890);
+            this.ufrm_QuanLyTaiKhoan1.TabIndex = 3;
             // 
             // ufrm_BaoCaoThongKe1
             // 
@@ -189,13 +174,29 @@
             this.ufrm_BaoCaoThongKe1.Size = new System.Drawing.Size(1191, 890);
             this.ufrm_BaoCaoThongKe1.TabIndex = 4;
             // 
-            // ufrm_QuanLyTaiKhoan1
+            // ufrm_ThongTinKhachHang1
             // 
-            this.ufrm_QuanLyTaiKhoan1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ufrm_QuanLyTaiKhoan1.Location = new System.Drawing.Point(233, 0);
-            this.ufrm_QuanLyTaiKhoan1.Name = "ufrm_QuanLyTaiKhoan1";
-            this.ufrm_QuanLyTaiKhoan1.Size = new System.Drawing.Size(1191, 890);
-            this.ufrm_QuanLyTaiKhoan1.TabIndex = 3;
+            this.ufrm_ThongTinKhachHang1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ufrm_ThongTinKhachHang1.Location = new System.Drawing.Point(233, 0);
+            this.ufrm_ThongTinKhachHang1.Name = "ufrm_ThongTinKhachHang1";
+            this.ufrm_ThongTinKhachHang1.Size = new System.Drawing.Size(1191, 890);
+            this.ufrm_ThongTinKhachHang1.TabIndex = 5;
+            // 
+            // ufrm_QuanLyNhanVien1
+            // 
+            this.ufrm_QuanLyNhanVien1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ufrm_QuanLyNhanVien1.Location = new System.Drawing.Point(233, 0);
+            this.ufrm_QuanLyNhanVien1.Name = "ufrm_QuanLyNhanVien1";
+            this.ufrm_QuanLyNhanVien1.Size = new System.Drawing.Size(1191, 890);
+            this.ufrm_QuanLyNhanVien1.TabIndex = 6;
+            // 
+            // ufrm_QuanLyCSVC1
+            // 
+            this.ufrm_QuanLyCSVC1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ufrm_QuanLyCSVC1.Location = new System.Drawing.Point(233, 0);
+            this.ufrm_QuanLyCSVC1.Name = "ufrm_QuanLyCSVC1";
+            this.ufrm_QuanLyCSVC1.Size = new System.Drawing.Size(1191, 890);
+            this.ufrm_QuanLyCSVC1.TabIndex = 7;
             // 
             // ufrm_QuanLyKhachHang1
             // 
@@ -204,6 +205,10 @@
             this.ufrm_QuanLyKhachHang1.Name = "ufrm_QuanLyKhachHang1";
             this.ufrm_QuanLyKhachHang1.Size = new System.Drawing.Size(1191, 890);
             this.ufrm_QuanLyKhachHang1.TabIndex = 8;
+            // 
+            // calamviecTableAdapter1
+            // 
+            this.calamviecTableAdapter1.ClearBeforeFill = true;
             // 
             // ufrm_ManHinhHeThong1
             // 
@@ -250,6 +255,7 @@
         private UI.UseForm.ufrm_QuanLyNhanVien ufrm_QuanLyNhanVien1;
         private UI.UseForm.ufrm_QuanLyCSVC ufrm_QuanLyCSVC1;
         private UI.UseFormChinh.ufrm_QuanLyKhachHang ufrm_QuanLyKhachHang1;
+        private HeThongKhachSanDataSetTableAdapters.CALAMVIECTableAdapter calamviecTableAdapter1;
         private UI.UseForm.ufrm_ManHinhHeThong ufrm_ManHinhHeThong1;
     }
 }

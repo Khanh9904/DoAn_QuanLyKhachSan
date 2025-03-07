@@ -63,36 +63,37 @@
             iD_PHANQUYENLabel.AutoSize = true;
             iD_PHANQUYENLabel.Location = new System.Drawing.Point(37, 130);
             iD_PHANQUYENLabel.Name = "iD_PHANQUYENLabel";
-            iD_PHANQUYENLabel.Size = new System.Drawing.Size(96, 16);
+            iD_PHANQUYENLabel.Size = new System.Drawing.Size(119, 16);
             iD_PHANQUYENLabel.TabIndex = 3;
-            iD_PHANQUYENLabel.Text = "ID Phân Quyền";
+            iD_PHANQUYENLabel.Text = "MÃ PHÂN QUYỀN";
             // 
             // tENQUYENLabel
             // 
             tENQUYENLabel.AutoSize = true;
             tENQUYENLabel.Location = new System.Drawing.Point(37, 158);
             tENQUYENLabel.Name = "tENQUYENLabel";
-            tENQUYENLabel.Size = new System.Drawing.Size(73, 16);
+            tENQUYENLabel.Size = new System.Drawing.Size(127, 16);
             tENQUYENLabel.TabIndex = 5;
-            tENQUYENLabel.Text = "Tên Quyền";
+            tENQUYENLabel.Text = "TÊN PHÂN QUYỀN";
             // 
             // moTaLabel
             // 
             moTaLabel.AutoSize = true;
             moTaLabel.Location = new System.Drawing.Point(37, 213);
             moTaLabel.Name = "moTaLabel";
-            moTaLabel.Size = new System.Drawing.Size(72, 16);
+            moTaLabel.Size = new System.Drawing.Size(87, 16);
             moTaLabel.TabIndex = 7;
-            moTaLabel.Text = "Mức Lương";
+            moTaLabel.Text = "MỨC LƯƠNG";
+            moTaLabel.Click += new System.EventHandler(this.moTaLabel_Click);
             // 
             // mUCLUONGLAMVIECLabel
             // 
             mUCLUONGLAMVIECLabel.AutoSize = true;
             mUCLUONGLAMVIECLabel.Location = new System.Drawing.Point(37, 186);
             mUCLUONGLAMVIECLabel.Name = "mUCLUONGLAMVIECLabel";
-            mUCLUONGLAMVIECLabel.Size = new System.Drawing.Size(46, 16);
+            mUCLUONGLAMVIECLabel.Size = new System.Drawing.Size(49, 16);
             mUCLUONGLAMVIECLabel.TabIndex = 9;
-            mUCLUONGLAMVIECLabel.Text = "Mô Tả";
+            mUCLUONGLAMVIECLabel.Text = "MÔ TẢ";
             // 
             // label1
             // 
@@ -153,7 +154,7 @@
             this.btnIDPhanQuyen.Enabled = false;
             this.btnIDPhanQuyen.Location = new System.Drawing.Point(187, 127);
             this.btnIDPhanQuyen.Name = "btnIDPhanQuyen";
-            this.btnIDPhanQuyen.Size = new System.Drawing.Size(100, 22);
+            this.btnIDPhanQuyen.Size = new System.Drawing.Size(180, 22);
             this.btnIDPhanQuyen.TabIndex = 4;
             // 
             // btnTenQuyen
@@ -161,7 +162,7 @@
             this.btnTenQuyen.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pHANQUYENBindingSource, "TENQUYEN", true));
             this.btnTenQuyen.Location = new System.Drawing.Point(187, 155);
             this.btnTenQuyen.Name = "btnTenQuyen";
-            this.btnTenQuyen.Size = new System.Drawing.Size(100, 22);
+            this.btnTenQuyen.Size = new System.Drawing.Size(180, 22);
             this.btnTenQuyen.TabIndex = 6;
             // 
             // btnMucLuong
@@ -169,7 +170,7 @@
             this.btnMucLuong.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pHANQUYENBindingSource, "MoTa", true));
             this.btnMucLuong.Location = new System.Drawing.Point(187, 213);
             this.btnMucLuong.Name = "btnMucLuong";
-            this.btnMucLuong.Size = new System.Drawing.Size(100, 22);
+            this.btnMucLuong.Size = new System.Drawing.Size(180, 22);
             this.btnMucLuong.TabIndex = 8;
             // 
             // btnMoTa
@@ -177,14 +178,14 @@
             this.btnMoTa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pHANQUYENBindingSource, "MUCLUONGLAMVIEC", true));
             this.btnMoTa.Location = new System.Drawing.Point(187, 183);
             this.btnMoTa.Name = "btnMoTa";
-            this.btnMoTa.Size = new System.Drawing.Size(100, 22);
+            this.btnMoTa.Size = new System.Drawing.Size(180, 22);
             this.btnMoTa.TabIndex = 10;
             // 
             // btnThemQuyen
             // 
-            this.btnThemQuyen.Location = new System.Drawing.Point(142, 507);
+            this.btnThemQuyen.Location = new System.Drawing.Point(265, 537);
             this.btnThemQuyen.Name = "btnThemQuyen";
-            this.btnThemQuyen.Size = new System.Drawing.Size(75, 23);
+            this.btnThemQuyen.Size = new System.Drawing.Size(134, 58);
             this.btnThemQuyen.TabIndex = 11;
             this.btnThemQuyen.Text = "Thêm";
             this.btnThemQuyen.UseVisualStyleBackColor = true;
@@ -192,9 +193,9 @@
             // 
             // btnSuaQuyen
             // 
-            this.btnSuaQuyen.Location = new System.Drawing.Point(291, 507);
+            this.btnSuaQuyen.Location = new System.Drawing.Point(414, 537);
             this.btnSuaQuyen.Name = "btnSuaQuyen";
-            this.btnSuaQuyen.Size = new System.Drawing.Size(75, 23);
+            this.btnSuaQuyen.Size = new System.Drawing.Size(134, 58);
             this.btnSuaQuyen.TabIndex = 12;
             this.btnSuaQuyen.Text = "Sửa";
             this.btnSuaQuyen.UseVisualStyleBackColor = true;
@@ -202,9 +203,9 @@
             // 
             // btnXoaQuyen
             // 
-            this.btnXoaQuyen.Location = new System.Drawing.Point(452, 507);
+            this.btnXoaQuyen.Location = new System.Drawing.Point(575, 537);
             this.btnXoaQuyen.Name = "btnXoaQuyen";
-            this.btnXoaQuyen.Size = new System.Drawing.Size(75, 23);
+            this.btnXoaQuyen.Size = new System.Drawing.Size(134, 58);
             this.btnXoaQuyen.TabIndex = 13;
             this.btnXoaQuyen.Text = "Xóa";
             this.btnXoaQuyen.UseVisualStyleBackColor = true;
@@ -212,9 +213,9 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(603, 507);
+            this.button5.Location = new System.Drawing.Point(726, 537);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(135, 23);
+            this.button5.Size = new System.Drawing.Size(194, 58);
             this.button5.TabIndex = 14;
             this.button5.Text = "Xóa Dữ Liệu";
             this.button5.UseVisualStyleBackColor = true;

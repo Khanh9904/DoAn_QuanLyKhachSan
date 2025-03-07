@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\DAL_ChamCong.cs" />
+    <Compile Include="DAL\DAL_DanhSachHoaDon.cs" />
     <Compile Include="DAL\DAL_DichVu.cs" />
     <Compile Include="DAL\DAL_LoaiPhong.cs" />
     <Compile Include="DAL\DAL_Phong.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="DAL\DAL_ThongTinNhanVien.cs" />
     <Compile Include="Database\Database.cs" />
     <Compile Include="Model\ChamCong.cs" />
+    <Compile Include="Model\DanhSachHoaDon.cs" />
     <Compile Include="Model\DichVu.cs" />
     <Compile Include="Model\LoaiPhong.cs" />
     <Compile Include="Model\NhanVien.cs" />

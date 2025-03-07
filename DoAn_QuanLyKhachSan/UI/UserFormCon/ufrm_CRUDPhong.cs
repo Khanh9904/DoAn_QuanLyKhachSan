@@ -40,13 +40,10 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
             
             taiKhoanTimer = new Timer();
             taiKhoanTimer.Interval = 1000;
-            taiKhoanTimer.Tick += (s, e) => LoadMaDichVuComboBox();
+            taiKhoanTimer.Tick += (s, e) => LoadTangLauComboBox();
             taiKhoanTimer.Start();
 
-            taiKhoanTimer = new Timer();
-            taiKhoanTimer.Interval = 1000;
-            taiKhoanTimer.Tick += (s, e) => LoadMaThietBiComboBox();
-            taiKhoanTimer.Start();
+            
 
 
         }
@@ -96,14 +93,14 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
 
         //-----------------------------------------------------------------------------------------------------------------------------------
 
-        public void LoadMaThietBiComboBox()
+        public void LoadTangLauComboBox()
         {
             string connectionString = new Database().GetDataSet();
 
-            string query = "SELECT MaThietBi, TenThietBi FROM THIET_BI";
+            string query = "SELECT MaTang, TenTang FROM TangLau";
 
 
-            var selectedValue = cbMaThietBi.SelectedValue;
+            var selectedValue = cbTang.SelectedValue;
 
             SqlDataAdapter da = new SqlDataAdapter(query, connectionString);
 
@@ -111,58 +108,27 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
 
             da.Fill(dt);
 
-            cbMaThietBi.DisplayMember = "TenThietBi";
+            cbTang.DisplayMember = "TenTang";
 
-            cbMaThietBi.ValueMember = "MaThietBi";
+            cbTang.ValueMember = "MaTang";
 
-            cbMaThietBi.DataSource = dt;
+            cbTang.DataSource = dt;
 
 
-            if (selectedValue != null && dt.AsEnumerable().Any(row => row["MaThietBi"].ToString() == selectedValue.ToString()))
+            if (selectedValue != null && dt.AsEnumerable().Any(row => row["MaTang"].ToString() == selectedValue.ToString()))
             {
-                cbMaThietBi.SelectedValue = selectedValue;
+                cbTang.SelectedValue = selectedValue;
             }
             else
             {
 
-                cbMaThietBi.SelectedIndex = 0;
+                cbTang.SelectedIndex = 0;
             }
         }
 
         //-----------------------------------------------------------------------------------------------------------------------------------
 
-        public void LoadMaDichVuComboBox()
-        {
-            string connectionString = new Database().GetDataSet();
-
-            string query = "SELECT MaDichVu, TenDichVu FROM DICH_VU";
-
-
-            var selectedValue = cbMaDichVu.SelectedValue;
-
-            SqlDataAdapter da = new SqlDataAdapter(query, connectionString);
-
-            DataTable dt = new DataTable();
-
-            da.Fill(dt);
-
-            cbMaDichVu.DisplayMember = "TenDichVu";
-
-            cbMaDichVu.ValueMember = "MaDichVu";
-
-            cbMaDichVu.DataSource = dt;
-
-
-            if (selectedValue != null && dt.AsEnumerable().Any(row => row["MaDichVu"].ToString() == selectedValue.ToString()))
-            {
-                cbMaDichVu.SelectedValue = selectedValue;
-            }
-            else
-            {
-
-                cbMaDichVu.SelectedIndex = 0;
-            }
-        }
+        
 
         //-----------------------------------------------------------------------------------------------------------------------------------
 
@@ -197,8 +163,8 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
             tenPhongTextBox.Text = "";
             tinhTrangTextBox.Text = "";
             cbMaLoaiPhong.Text = "";
-            cbMaThietBi.Text = "";
-            cbMaDichVu.Text = "";
+            cbTang.Text = "";
+            
         }
         // -----------------------------------------------------------------------------------------------------------------------------------
 
@@ -216,9 +182,9 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
 
                     MaLoaiPhong = (int)cbMaLoaiPhong.SelectedValue,
 
-                    MaThietBi = (int)cbMaThietBi.SelectedValue,
+                    MaTang = (int)cbTang.SelectedValue,
 
-                    MaDichVu = (int)cbMaDichVu.SelectedValue,
+                    
 
 
                 };
@@ -257,9 +223,9 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
 
                     MaLoaiPhong = (int)cbMaLoaiPhong.SelectedValue,
 
-                    MaThietBi = (int)cbMaThietBi.SelectedValue,
+                    MaTang = (int)cbTang.SelectedValue,
 
-                    MaDichVu = (int)cbMaDichVu.SelectedValue,
+                    
 
                 };
 
@@ -340,25 +306,16 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
                     cbMaLoaiPhong.SelectedIndex = -1;
                 }
 
-                if (rowst.Cells["MaThietBi"]?.Value != null && rowst.Cells["MaThietBi"].Value != DBNull.Value)
+                if (rowst.Cells["MaTang"]?.Value != null && rowst.Cells["MaTang"].Value != DBNull.Value)
                 {
-                    int MaThietBi = Convert.ToInt32(rowst.Cells["MaThietBi"].Value);
-                    cbMaThietBi.SelectedValue = MaThietBi;
+                    int MaThietBi = Convert.ToInt32(rowst.Cells["MaTang"].Value);
+                    cbTang.SelectedValue = MaThietBi;
                 }
                 else
                 {
-                    cbMaThietBi.SelectedIndex = -1;
+                    cbTang.SelectedIndex = -1;
                 }
 
-                if (rowst.Cells["MaDichVu"]?.Value != null && rowst.Cells["MaDichVu"].Value != DBNull.Value)
-                {
-                    int MaDichVu = Convert.ToInt32(rowst.Cells["MaDichVu"].Value);
-                    cbMaDichVu.SelectedValue = MaDichVu;
-                }
-                else
-                {
-                    cbMaDichVu.SelectedIndex = -1;
-                }
             }
             catch (Exception ex)
             {
@@ -376,6 +333,11 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
             DataTable dt = BLL_Phong.SearchPhong(keyword);
 
             data_Phong.DataSource = dt;
+        }
+
+        private void maThietBiLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
