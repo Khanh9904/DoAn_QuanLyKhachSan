@@ -184,12 +184,6 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             }
         }
 
-        private void btnTroLaiThietbi_Click(object sender, EventArgs e)
-        {
-            this.Controls.Clear();
-            ufrm_QuanLyCSVC quanly = new ufrm_QuanLyCSVC();
-            this.Controls.Add(quanly);
-            quanly.Dock = DockStyle.Fill;
-        }
+        
     }
 }

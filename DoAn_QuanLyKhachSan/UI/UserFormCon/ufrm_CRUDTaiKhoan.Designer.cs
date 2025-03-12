@@ -37,7 +37,6 @@
             this.btnXoaTaiKhoan = new System.Windows.Forms.Button();
             this.btnSuaTaiKhoan = new System.Windows.Forms.Button();
             this.btnThemTaiKhoan = new System.Windows.Forms.Button();
-            this.btnTroLaiQLTTP = new System.Windows.Forms.Button();
             this.data_TaiKhoan = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.heThongKhachSanDataSet = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSet();
@@ -134,16 +133,6 @@
             this.btnThemTaiKhoan.Text = "Thêm";
             this.btnThemTaiKhoan.UseVisualStyleBackColor = true;
             this.btnThemTaiKhoan.Click += new System.EventHandler(this.btnThemTaiKhoan_Click);
-            // 
-            // btnTroLaiQLTTP
-            // 
-            this.btnTroLaiQLTTP.Location = new System.Drawing.Point(50, 124);
-            this.btnTroLaiQLTTP.Name = "btnTroLaiQLTTP";
-            this.btnTroLaiQLTTP.Size = new System.Drawing.Size(75, 23);
-            this.btnTroLaiQLTTP.TabIndex = 35;
-            this.btnTroLaiQLTTP.Text = "Trở lại";
-            this.btnTroLaiQLTTP.UseVisualStyleBackColor = true;
-            this.btnTroLaiQLTTP.Click += new System.EventHandler(this.btnTroLaiQLTTP_Click);
             // 
             // data_TaiKhoan
             // 
@@ -258,7 +247,6 @@
             this.Controls.Add(this.btnXoaTaiKhoan);
             this.Controls.Add(this.btnSuaTaiKhoan);
             this.Controls.Add(this.btnThemTaiKhoan);
-            this.Controls.Add(this.btnTroLaiQLTTP);
             this.Controls.Add(this.data_TaiKhoan);
             this.Controls.Add(this.label1);
             this.Name = "ufrm_CRUDTaiKhoan";
@@ -277,7 +265,6 @@
         private System.Windows.Forms.Button btnXoaTaiKhoan;
         private System.Windows.Forms.Button btnSuaTaiKhoan;
         private System.Windows.Forms.Button btnThemTaiKhoan;
-        private System.Windows.Forms.Button btnTroLaiQLTTP;
         private System.Windows.Forms.DataGridView data_TaiKhoan;
         private System.Windows.Forms.Label label1;
         private HeThongKhachSanDataSet heThongKhachSanDataSet;

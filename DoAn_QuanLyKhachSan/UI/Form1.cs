@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DoAn_QuanLyKhachSan.Control;
+using DoAn_QuanLyKhachSan.UI.UserFormCon;
+using DoAn_QuanLyKhachSan.UI.UserFormPhu;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +15,26 @@ namespace DoAn_QuanLyKhachSan
 {
     public partial class Form1 : Form
     {
+        private PanelExpander quanLyNhanVienExpander;
+        private PanelExpander quanLyCSVCExpander;
+        private PanelExpander quanLyTKExpander;
+        private PanelExpander quanLyThongKeExpander;
+
+
+
+
+
         public Form1()
         {
             InitializeComponent();
+            quanLyNhanVienExpander = new PanelExpander(QLNVContainer, QLNVTimer, true);
+            quanLyCSVCExpander = new PanelExpander(panel_QLCSVC, QLCSVC, true);
+            quanLyTKExpander = new PanelExpander(panel_TaiKhoan, QLTK_Timer, true);
+            quanLyThongKeExpander = new PanelExpander(panel_ThongKe, ThongKe_timer, true);
+
+
+
+
         }
 
         // Hiển thị màu các button ở form chính
@@ -38,101 +58,268 @@ namespace DoAn_QuanLyKhachSan
 
         // Hiển thị các form con
 
-        private void btnManHinhHeThong_Click(object sender, EventArgs e)
-        {
-            ufrm_ManHinhHeThong1.Visible = true;
-            ufrm_QuanLyNhanVien1.Visible = false;
-            ufrm_QuanLyCSVC1.Visible = false;
-            ufrm_QuanLyKhachHang1.Visible = false;
+        
 
-            ufrm_QuanLyTaiKhoan1.Visible = false;
-            ufrm_ThongTinKhachHang1.Visible = false;
-            ufrm_BaoCaoThongKe1.Visible = false;
-            HighlightButton((Button)sender);
-            
+        
+
+        
+
+        private void btnQLNV_Click(object sender, EventArgs e)
+        {
+            quanLyNhanVienExpander.Start();
+           
+        }
+
+        private void btnTTNV_Click(object sender, EventArgs e)
+        {
+            ufrm_ManHinhHeThong1.Visible = false;
+            ufrm_CRUDPhanQuyen1.Visible = false;
+            ufrm_CRUDPhong1.Visible = false;
+            ufrm_CRUDTaiKhoan1.Visible = false;
+            ufrm_CRUDThongTinKhachHang1.Visible = false;
+            ufrm_CRUDThongTinNhanVien1.Visible = true;
+            ufrm_CRUDDichVu1.Visible = false;
+            ufrm_CRUDLoaiPhong1.Visible = false;
+            ufrm_CRUDTang1.Visible = false;
+            ufrm_CRUDThietBi1.Visible = false;
+            ufrm_Chamconglamviec1.Visible = false;
+            ufrm_PhanCongCaLam1.Visible = false;
+
+        }
+
+        private void btnPCCL_Click(object sender, EventArgs e)
+        {
+            ufrm_ManHinhHeThong1.Visible = false;
+            ufrm_CRUDPhanQuyen1.Visible = false;
+            ufrm_CRUDPhong1.Visible = false;
+            ufrm_CRUDTaiKhoan1.Visible = false;
+            ufrm_CRUDThongTinKhachHang1.Visible = false;
+            ufrm_CRUDThongTinNhanVien1.Visible = false;
+            ufrm_CRUDDichVu1.Visible = false;
+            ufrm_CRUDLoaiPhong1.Visible = false;
+            ufrm_CRUDTang1.Visible = false;
+            ufrm_CRUDThietBi1.Visible = false;
+            ufrm_Chamconglamviec1.Visible = false;
+            ufrm_PhanCongCaLam1.Visible = true;
+        }
+
+        private void btnChamCong_Click(object sender, EventArgs e)
+        {
+            ufrm_ManHinhHeThong1.Visible = false;
+            ufrm_CRUDPhanQuyen1.Visible = false;
+            ufrm_CRUDPhong1.Visible = false;
+            ufrm_CRUDTaiKhoan1.Visible = false;
+            ufrm_CRUDThongTinKhachHang1.Visible = false;
+            ufrm_CRUDThongTinNhanVien1.Visible = false;
+            ufrm_CRUDDichVu1.Visible = false;
+            ufrm_CRUDLoaiPhong1.Visible = false;
+            ufrm_CRUDTang1.Visible = false;
+            ufrm_CRUDThietBi1.Visible = false;
+            ufrm_Chamconglamviec1.Visible = true;
+            ufrm_PhanCongCaLam1.Visible = false;
+        }
+
+        private void btnCaLam_Click(object sender, EventArgs e)
+        {
+            ufrm_ManHinhHeThong1.Visible = false;
+            ufrm_CRUDPhanQuyen1.Visible = false;
+            ufrm_CRUDPhong1.Visible = false;
+            ufrm_CRUDTaiKhoan1.Visible = false;
+            ufrm_CRUDThongTinKhachHang1.Visible = false;
+            ufrm_CRUDThongTinNhanVien1.Visible = false;
+            ufrm_CRUDDichVu1.Visible = false;
+            ufrm_CRUDLoaiPhong1.Visible = false;
+            ufrm_CRUDTang1.Visible = false;
+            ufrm_CRUDThietBi1.Visible = false;
+            ufrm_Chamconglamviec1.Visible = false;
+            ufrm_PhanCongCaLam1.Visible = true;
+        }
+
+        private void btnQLKH_Click(object sender, EventArgs e)
+        {
+            ufrm_ManHinhHeThong1.Visible = false;
+            ufrm_CRUDPhanQuyen1.Visible = false;
+            ufrm_CRUDPhong1.Visible = false;
+            ufrm_CRUDTaiKhoan1.Visible = false;
+            ufrm_CRUDThongTinKhachHang1.Visible = true;
+            ufrm_CRUDThongTinNhanVien1.Visible = false;
+            ufrm_CRUDDichVu1.Visible = false;
+            ufrm_CRUDLoaiPhong1.Visible = false;
+            ufrm_CRUDTang1.Visible = false;
+            ufrm_CRUDThietBi1.Visible = false;
+            ufrm_Chamconglamviec1.Visible = false;
+            ufrm_PhanCongCaLam1.Visible = false;
         }
 
         
 
-        private void btnThongTinKhachHang_Click(object sender, EventArgs e)
+        private void btnQLCSVC_Click(object sender, EventArgs e)
         {
-            ufrm_ManHinhHeThong1.Visible = false;
-            ufrm_QuanLyNhanVien1.Visible = false;
-            ufrm_QuanLyCSVC1.Visible = false;
-            ufrm_QuanLyKhachHang1.Visible = false;
+            quanLyCSVCExpander.Start();
 
-            ufrm_QuanLyTaiKhoan1.Visible = false;
-            ufrm_ThongTinKhachHang1.Visible = true;
-            ufrm_BaoCaoThongKe1.Visible = false;
-            HighlightButton((Button)sender);
         }
 
-        private void btnBaoCao_Click(object sender, EventArgs e)
+        private void btnThongTinPhong_Click(object sender, EventArgs e)
         {
             ufrm_ManHinhHeThong1.Visible = false;
-            ufrm_QuanLyNhanVien1.Visible = false;
-            ufrm_QuanLyCSVC1.Visible = false;
-            ufrm_QuanLyKhachHang1.Visible = false;
-
-            ufrm_QuanLyTaiKhoan1.Visible = false;
-            ufrm_ThongTinKhachHang1.Visible = false;
-            ufrm_BaoCaoThongKe1.Visible = true;
-            HighlightButton((Button)sender);
+            ufrm_CRUDPhanQuyen1.Visible = false;
+            ufrm_CRUDPhong1.Visible = true;
+            ufrm_CRUDTaiKhoan1.Visible = false;
+            ufrm_CRUDThongTinKhachHang1.Visible = false;
+            ufrm_CRUDThongTinNhanVien1.Visible = false;
+            ufrm_CRUDDichVu1.Visible = false;
+            ufrm_CRUDLoaiPhong1.Visible = false;
+            ufrm_CRUDTang1.Visible = false;
+            ufrm_CRUDThietBi1.Visible = false;
+            ufrm_Chamconglamviec1.Visible = false;
+            ufrm_PhanCongCaLam1.Visible = false;
         }
 
-        private void btnQuanLyNhanVien_Click(object sender, EventArgs e)
+        private void btnThongTinLoaiPhong_Click(object sender, EventArgs e)
         {
             ufrm_ManHinhHeThong1.Visible = false;
-            ufrm_QuanLyNhanVien1.Visible = true;
-            ufrm_QuanLyCSVC1.Visible = false;
-            ufrm_QuanLyKhachHang1.Visible = false;
-
-            ufrm_QuanLyTaiKhoan1.Visible = false;
-            ufrm_ThongTinKhachHang1.Visible = false;
-            ufrm_BaoCaoThongKe1.Visible = false;
-            HighlightButton((Button)sender);
+            ufrm_CRUDPhanQuyen1.Visible = false;
+            ufrm_CRUDPhong1.Visible = false;
+            ufrm_CRUDTaiKhoan1.Visible = false;
+            ufrm_CRUDThongTinKhachHang1.Visible = false;
+            ufrm_CRUDThongTinNhanVien1.Visible = false;
+            ufrm_CRUDDichVu1.Visible = false;
+            ufrm_CRUDLoaiPhong1.Visible = true;
+            ufrm_CRUDTang1.Visible = false;
+            ufrm_CRUDThietBi1.Visible = false;
+            ufrm_Chamconglamviec1.Visible = false;
+            ufrm_PhanCongCaLam1.Visible = false;
         }
 
-        private void btnQuanLyCoSoVatChat_Click(object sender, EventArgs e)
+        private void btnThongTinTang_Click(object sender, EventArgs e)
         {
             ufrm_ManHinhHeThong1.Visible = false;
-            ufrm_QuanLyNhanVien1.Visible = false;
-            ufrm_QuanLyCSVC1.Visible = true;
-            ufrm_QuanLyKhachHang1.Visible = false;
-
-            ufrm_QuanLyTaiKhoan1.Visible = false;
-            ufrm_ThongTinKhachHang1.Visible = false;
-            ufrm_BaoCaoThongKe1.Visible = false;
-            HighlightButton((Button)sender);
+            ufrm_CRUDPhanQuyen1.Visible = false;
+            ufrm_CRUDPhong1.Visible = false;
+            ufrm_CRUDTaiKhoan1.Visible = false;
+            ufrm_CRUDThongTinKhachHang1.Visible = false;
+            ufrm_CRUDThongTinNhanVien1.Visible = false;
+            ufrm_CRUDDichVu1.Visible = false;
+            ufrm_CRUDLoaiPhong1.Visible = false;
+            ufrm_CRUDTang1.Visible = true;
+            ufrm_CRUDThietBi1.Visible = false;
+            ufrm_Chamconglamviec1.Visible = false;
+            ufrm_PhanCongCaLam1.Visible = false;
         }
 
-        private void btnQuanLyTaiKhoan_Click(object sender, EventArgs e)
+        private void btnThongTinThietBi_Click(object sender, EventArgs e)
         {
             ufrm_ManHinhHeThong1.Visible = false;
-            ufrm_QuanLyNhanVien1.Visible = false;
-            ufrm_QuanLyCSVC1.Visible = false;
-            ufrm_QuanLyKhachHang1.Visible = false;
-
-            ufrm_QuanLyTaiKhoan1.Visible = true;
-            ufrm_ThongTinKhachHang1.Visible = false;
-            ufrm_BaoCaoThongKe1.Visible = false;
-            HighlightButton((Button)sender);
+            ufrm_CRUDPhanQuyen1.Visible = false;
+            ufrm_CRUDPhong1.Visible = false;
+            ufrm_CRUDTaiKhoan1.Visible = false;
+            ufrm_CRUDThongTinKhachHang1.Visible = false;
+            ufrm_CRUDThongTinNhanVien1.Visible = false;
+            ufrm_CRUDDichVu1.Visible = false;
+            ufrm_CRUDLoaiPhong1.Visible = false;
+            ufrm_CRUDTang1.Visible = false;
+            ufrm_CRUDThietBi1.Visible = true;
+            ufrm_Chamconglamviec1.Visible = false;
+            ufrm_PhanCongCaLam1.Visible = false;
         }
 
-        private void btnQuanLyKhachHang_Click(object sender, EventArgs e)
+        private void btnThongTinDichVu_Click(object sender, EventArgs e)
         {
             ufrm_ManHinhHeThong1.Visible = false;
-            ufrm_QuanLyNhanVien1.Visible = false;
-            ufrm_QuanLyCSVC1.Visible = false;
-            ufrm_QuanLyKhachHang1.Visible = true;
+            ufrm_CRUDPhanQuyen1.Visible = false;
+            ufrm_CRUDPhong1.Visible = false;
+            ufrm_CRUDTaiKhoan1.Visible = false;
+            ufrm_CRUDThongTinKhachHang1.Visible = false;
+            ufrm_CRUDThongTinNhanVien1.Visible = false;
+            ufrm_CRUDDichVu1.Visible = true;
+            ufrm_CRUDLoaiPhong1.Visible = false;
+            ufrm_CRUDTang1.Visible = false;
+            ufrm_CRUDThietBi1.Visible = false;
+            ufrm_Chamconglamviec1.Visible = false;
+            ufrm_PhanCongCaLam1.Visible = false;
+        }
 
-            ufrm_QuanLyTaiKhoan1.Visible = false;
-            ufrm_ThongTinKhachHang1.Visible = false;
-            ufrm_BaoCaoThongKe1.Visible = false;
-            HighlightButton((Button)sender);
+        private void btn_QLTK_Click(object sender, EventArgs e)
+        {
+            quanLyTKExpander.Start();
+
+        }
+
+        private void btnPQ_Click(object sender, EventArgs e)
+        {
+            ufrm_ManHinhHeThong1.Visible = false;
+            ufrm_CRUDPhanQuyen1.Visible = true;
+            ufrm_CRUDPhong1.Visible = false;
+            ufrm_CRUDTaiKhoan1.Visible = false;
+            ufrm_CRUDThongTinKhachHang1.Visible = false;
+            ufrm_CRUDThongTinNhanVien1.Visible = false;
+            ufrm_CRUDDichVu1.Visible = false;
+            ufrm_CRUDLoaiPhong1.Visible = false;
+            ufrm_CRUDTang1.Visible = false;
+            ufrm_CRUDThietBi1.Visible = false;
+            ufrm_Chamconglamviec1.Visible = false;
+            ufrm_PhanCongCaLam1.Visible = false;
+        }
+
+        private void btnTK_Click(object sender, EventArgs e)
+        {
+            ufrm_ManHinhHeThong1.Visible = false;
+            ufrm_CRUDPhanQuyen1.Visible = false;
+            ufrm_CRUDPhong1.Visible = false;
+            ufrm_CRUDTaiKhoan1.Visible = true;
+            ufrm_CRUDThongTinKhachHang1.Visible = false;
+            ufrm_CRUDThongTinNhanVien1.Visible = false;
+            ufrm_CRUDDichVu1.Visible = false;
+            ufrm_CRUDLoaiPhong1.Visible = false;
+            ufrm_CRUDTang1.Visible = false;
+            ufrm_CRUDThietBi1.Visible = false;
+            ufrm_Chamconglamviec1.Visible = false;
+            ufrm_PhanCongCaLam1.Visible = false;
+        }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            quanLyThongKeExpander.Start();
+
+        }
+
+        private void btnDoanhThu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTKDichVu_Click(object sender, EventArgs e)
+        {
+
         }
 
        
+
+        private void btnManHinhChinh_Click_1(object sender, EventArgs e)
+        {
+            ufrm_ManHinhHeThong1.Visible = true;
+            ufrm_CRUDPhanQuyen1.Visible = false;
+            ufrm_CRUDPhong1.Visible = false;
+            ufrm_CRUDTaiKhoan1.Visible = false;
+            ufrm_CRUDThongTinKhachHang1.Visible = false;
+            ufrm_CRUDThongTinNhanVien1.Visible = false;
+            ufrm_CRUDDichVu1.Visible = false;
+            ufrm_CRUDLoaiPhong1.Visible = false;
+            ufrm_CRUDTang1.Visible = false;
+            ufrm_CRUDThietBi1.Visible = false;
+            ufrm_Chamconglamviec1.Visible = false;
+            ufrm_PhanCongCaLam1.Visible = false;
+
+        }
+
+
+
+
+
+
+
+
+
 
 
 

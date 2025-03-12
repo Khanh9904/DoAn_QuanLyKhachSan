@@ -39,13 +39,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Controls.Clear();
-            ufrm_QuanLyKhachHang quanly = new ufrm_QuanLyKhachHang();
-            this.Controls.Add(quanly);
-            quanly.Dock = DockStyle.Fill;
-        }
+        
         //----------------------------------------------------------------------------------------------------------------------------------------------
 
         // Hàm load dữ liệu khách hàng

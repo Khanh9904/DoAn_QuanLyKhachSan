@@ -37,7 +37,6 @@
             this.btnXoaTang = new System.Windows.Forms.Button();
             this.btnSuaTang = new System.Windows.Forms.Button();
             this.btnThemTang = new System.Windows.Forms.Button();
-            this.btnTroLaiTang = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.heThongKhachSanDataSet1 = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSet();
             this.tangLauBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -130,16 +129,6 @@
             this.btnThemTang.UseVisualStyleBackColor = true;
             this.btnThemTang.Click += new System.EventHandler(this.btnThemTang_Click);
             // 
-            // btnTroLaiTang
-            // 
-            this.btnTroLaiTang.Location = new System.Drawing.Point(60, 174);
-            this.btnTroLaiTang.Name = "btnTroLaiTang";
-            this.btnTroLaiTang.Size = new System.Drawing.Size(75, 23);
-            this.btnTroLaiTang.TabIndex = 59;
-            this.btnTroLaiTang.Text = "Trở lại";
-            this.btnTroLaiTang.UseVisualStyleBackColor = true;
-            this.btnTroLaiTang.Click += new System.EventHandler(this.btnTroLaiTang_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -215,7 +204,6 @@
             this.Controls.Add(this.btnXoaTang);
             this.Controls.Add(this.btnSuaTang);
             this.Controls.Add(this.btnThemTang);
-            this.Controls.Add(this.btnTroLaiTang);
             this.Name = "ufrm_CRUDTang";
             this.Size = new System.Drawing.Size(1191, 830);
             ((System.ComponentModel.ISupportInitialize)(this.data_Tang)).EndInit();
@@ -233,7 +221,6 @@
         private System.Windows.Forms.Button btnXoaTang;
         private System.Windows.Forms.Button btnSuaTang;
         private System.Windows.Forms.Button btnThemTang;
-        private System.Windows.Forms.Button btnTroLaiTang;
         private System.Windows.Forms.Label label1;
         private HeThongKhachSanDataSet heThongKhachSanDataSet1;
         private System.Windows.Forms.BindingSource tangLauBindingSource;

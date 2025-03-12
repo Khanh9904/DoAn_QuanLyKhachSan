@@ -38,7 +38,6 @@
             this.btnXoaDichVu = new System.Windows.Forms.Button();
             this.btnSuaDichVu = new System.Windows.Forms.Button();
             this.btnThemDichVu = new System.Windows.Forms.Button();
-            this.btnTroLaiDichVu = new System.Windows.Forms.Button();
             this.data_DichVu = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.heThongKhachSanDataSet = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSet();
@@ -145,15 +144,6 @@
             this.btnThemDichVu.Text = "Thêm";
             this.btnThemDichVu.UseVisualStyleBackColor = true;
             this.btnThemDichVu.Click += new System.EventHandler(this.btnThemDichVu_Click);
-            // 
-            // btnTroLaiDichVu
-            // 
-            this.btnTroLaiDichVu.Location = new System.Drawing.Point(71, 110);
-            this.btnTroLaiDichVu.Name = "btnTroLaiDichVu";
-            this.btnTroLaiDichVu.Size = new System.Drawing.Size(75, 23);
-            this.btnTroLaiDichVu.TabIndex = 35;
-            this.btnTroLaiDichVu.Text = "Trở lại";
-            this.btnTroLaiDichVu.UseVisualStyleBackColor = true;
             // 
             // data_DichVu
             // 
@@ -283,7 +273,6 @@
             this.Controls.Add(this.btnXoaDichVu);
             this.Controls.Add(this.btnSuaDichVu);
             this.Controls.Add(this.btnThemDichVu);
-            this.Controls.Add(this.btnTroLaiDichVu);
             this.Controls.Add(this.data_DichVu);
             this.Controls.Add(this.label1);
             this.Name = "ufrm_CRUDDichVu";
@@ -302,7 +291,6 @@
         private System.Windows.Forms.Button btnXoaDichVu;
         private System.Windows.Forms.Button btnSuaDichVu;
         private System.Windows.Forms.Button btnThemDichVu;
-        private System.Windows.Forms.Button btnTroLaiDichVu;
         private System.Windows.Forms.DataGridView data_DichVu;
         private System.Windows.Forms.Label label1;
         private HeThongKhachSanDataSet heThongKhachSanDataSet;

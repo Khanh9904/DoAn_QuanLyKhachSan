@@ -105,14 +105,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
 
 
         //--------------------------------------------------------------------------------
-        private void btnTroLaiNhanVien_Click(object sender, EventArgs e)
-        {
-            this.Controls.Clear();
-            ufrm_QuanLyNhanVien quanly = new ufrm_QuanLyNhanVien();
-            this.Controls.Add(quanly);
-            quanly.Dock = DockStyle.Fill;
-        }
-
+       
         //---------------------------------------------------------------------------------
         //hàm dọn thông tin
         public void btnDonThongTin()

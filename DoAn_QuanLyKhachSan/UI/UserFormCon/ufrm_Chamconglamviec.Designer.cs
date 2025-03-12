@@ -38,7 +38,6 @@
             this.btnXoaCong = new System.Windows.Forms.Button();
             this.btnSuaCong = new System.Windows.Forms.Button();
             this.btnThemCong = new System.Windows.Forms.Button();
-            this.btnTroLai = new System.Windows.Forms.Button();
             this.dgv_chamcong = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.cb_nhanvien = new System.Windows.Forms.ComboBox();
@@ -146,16 +145,6 @@
             this.btnThemCong.UseVisualStyleBackColor = true;
             this.btnThemCong.Click += new System.EventHandler(this.btnThemCong_Click);
             // 
-            // btnTroLai
-            // 
-            this.btnTroLai.Location = new System.Drawing.Point(80, 91);
-            this.btnTroLai.Name = "btnTroLai";
-            this.btnTroLai.Size = new System.Drawing.Size(75, 23);
-            this.btnTroLai.TabIndex = 79;
-            this.btnTroLai.Text = "Trở lại";
-            this.btnTroLai.UseVisualStyleBackColor = true;
-            this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
-            // 
             // dgv_chamcong
             // 
             this.dgv_chamcong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -220,7 +209,6 @@
             this.Controls.Add(this.btnXoaCong);
             this.Controls.Add(this.btnSuaCong);
             this.Controls.Add(this.btnThemCong);
-            this.Controls.Add(this.btnTroLai);
             this.Controls.Add(this.dgv_chamcong);
             this.Controls.Add(this.label1);
             this.Name = "ufrm_Chamconglamviec";
@@ -240,7 +228,6 @@
         private System.Windows.Forms.Button btnXoaCong;
         private System.Windows.Forms.Button btnSuaCong;
         private System.Windows.Forms.Button btnThemCong;
-        private System.Windows.Forms.Button btnTroLai;
         private System.Windows.Forms.DataGridView dgv_chamcong;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cb_nhanvien;

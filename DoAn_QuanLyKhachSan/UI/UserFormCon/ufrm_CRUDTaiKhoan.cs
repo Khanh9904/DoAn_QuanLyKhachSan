@@ -112,17 +112,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormCon
 
         }
         //-----------------------------------------------------------------------------------------------------------------------------------------------
-        //nut tro lai
-        private void btnTroLaiQLTTP_Click(object sender, EventArgs e)
-        {
-            this.Controls.Clear();
-            ufrm_QuanLyTaiKhoan quanly = new ufrm_QuanLyTaiKhoan();
-            this.Controls.Add(quanly);
-            quanly.Dock = DockStyle.Fill;
-        }
-
-        //------------------------------------------------------------------------------------------------------------------------------------------------
-
+       
 
         // HÀM TÌM KIẾM TÀI KHOẢN
         private void btnTimKiemTaiKhoan_Click(object sender, EventArgs e)

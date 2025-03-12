@@ -43,7 +43,6 @@
             this.maPhongTextBox = new System.Windows.Forms.TextBox();
             this.tenPhongTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnTroLai = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnXoaPhong = new System.Windows.Forms.Button();
             this.btnSuaPhong = new System.Windows.Forms.Button();
@@ -188,16 +187,6 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // btnTroLai
-            // 
-            this.btnTroLai.Location = new System.Drawing.Point(71, 89);
-            this.btnTroLai.Name = "btnTroLai";
-            this.btnTroLai.Size = new System.Drawing.Size(75, 23);
-            this.btnTroLai.TabIndex = 16;
-            this.btnTroLai.Text = "Trở lại CSVC";
-            this.btnTroLai.UseVisualStyleBackColor = true;
-            this.btnTroLai.Click += new System.EventHandler(this.btnTroLai_Click);
-            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(758, 617);
@@ -286,7 +275,6 @@
             this.Controls.Add(this.btnXoaPhong);
             this.Controls.Add(this.btnSuaPhong);
             this.Controls.Add(this.btnThemPhong);
-            this.Controls.Add(this.btnTroLai);
             this.Controls.Add(this.button1);
             this.Controls.Add(maPhongLabel);
             this.Controls.Add(this.maPhongTextBox);
@@ -318,7 +306,6 @@
         private System.Windows.Forms.TextBox maPhongTextBox;
         private System.Windows.Forms.TextBox tenPhongTextBox;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnTroLai;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnXoaPhong;
         private System.Windows.Forms.Button btnSuaPhong;

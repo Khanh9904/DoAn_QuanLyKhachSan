@@ -38,7 +38,6 @@
             this.btnXoaThietbi = new System.Windows.Forms.Button();
             this.btnSuaThietbi = new System.Windows.Forms.Button();
             this.btnThemThietbi = new System.Windows.Forms.Button();
-            this.btnTroLaiThietbi = new System.Windows.Forms.Button();
             this.data_Thietbi = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.heThongKhachSanDataSet = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSet();
@@ -142,16 +141,6 @@
             this.btnThemThietbi.Text = "Thêm";
             this.btnThemThietbi.UseVisualStyleBackColor = true;
             this.btnThemThietbi.Click += new System.EventHandler(this.btnThemThietbi_Click);
-            // 
-            // btnTroLaiThietbi
-            // 
-            this.btnTroLaiThietbi.Location = new System.Drawing.Point(61, 114);
-            this.btnTroLaiThietbi.Name = "btnTroLaiThietbi";
-            this.btnTroLaiThietbi.Size = new System.Drawing.Size(75, 23);
-            this.btnTroLaiThietbi.TabIndex = 79;
-            this.btnTroLaiThietbi.Text = "Trở lại";
-            this.btnTroLaiThietbi.UseVisualStyleBackColor = true;
-            this.btnTroLaiThietbi.Click += new System.EventHandler(this.btnTroLaiThietbi_Click);
             // 
             // data_Thietbi
             // 
@@ -262,7 +251,6 @@
             this.Controls.Add(this.btnXoaThietbi);
             this.Controls.Add(this.btnSuaThietbi);
             this.Controls.Add(this.btnThemThietbi);
-            this.Controls.Add(this.btnTroLaiThietbi);
             this.Controls.Add(this.data_Thietbi);
             this.Controls.Add(this.label1);
             this.Name = "ufrm_CRUDThietBi";
@@ -281,7 +269,6 @@
         private System.Windows.Forms.Button btnXoaThietbi;
         private System.Windows.Forms.Button btnSuaThietbi;
         private System.Windows.Forms.Button btnThemThietbi;
-        private System.Windows.Forms.Button btnTroLaiThietbi;
         private System.Windows.Forms.DataGridView data_Thietbi;
         private System.Windows.Forms.Label label1;
         private HeThongKhachSanDataSet heThongKhachSanDataSet;

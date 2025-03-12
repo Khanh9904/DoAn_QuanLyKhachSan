@@ -239,14 +239,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormCon
             DonThongTin();
         }
 
-        private void btnTroLai_Click(object sender, EventArgs e)
-        {
-            this.Controls.Clear();
-            ufrm_QuanLyNhanVien quanly = new ufrm_QuanLyNhanVien();
-            this.Controls.Add(quanly);
-            quanly.Dock = DockStyle.Fill;
-        }
-
+       
         private void txtTimKiemCong_TextChanged(object sender, EventArgs e)
         {
             string keyword = txtTimKiemCong.Text.Trim();

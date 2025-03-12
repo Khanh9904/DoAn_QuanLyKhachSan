@@ -146,15 +146,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
         }
         //-----------------------------------------------------------------------------------------------------------------------------------
 
-        private void btnTroLai_Click(object sender, EventArgs e)
-        {
-            this.Controls.Clear();
-            ufrm_QuanLyCSVC quanly = new ufrm_QuanLyCSVC();
-            this.Controls.Add(quanly);
-            quanly.Dock = DockStyle.Fill;
-        }
-        //-----------------------------------------------------------------------------------------------------------------------------------
-
+        
 
         //don thong tin
         public void DonThongTin()

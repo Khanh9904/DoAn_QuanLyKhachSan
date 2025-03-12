@@ -42,7 +42,6 @@
             this.btnXoaNhanVien = new System.Windows.Forms.Button();
             this.btnSuaNhanVien = new System.Windows.Forms.Button();
             this.btnThemNhanVien = new System.Windows.Forms.Button();
-            this.btnTroLaiNhanVien = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.heThongKhachSanDataSet = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSet();
             this.nHAN_VIENBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -194,16 +193,6 @@
             this.btnThemNhanVien.Text = "Thêm";
             this.btnThemNhanVien.UseVisualStyleBackColor = true;
             this.btnThemNhanVien.Click += new System.EventHandler(this.btnThemNhanVien_Click);
-            // 
-            // btnTroLaiNhanVien
-            // 
-            this.btnTroLaiNhanVien.Location = new System.Drawing.Point(90, 174);
-            this.btnTroLaiNhanVien.Name = "btnTroLaiNhanVien";
-            this.btnTroLaiNhanVien.Size = new System.Drawing.Size(75, 23);
-            this.btnTroLaiNhanVien.TabIndex = 18;
-            this.btnTroLaiNhanVien.Text = "Trở lại";
-            this.btnTroLaiNhanVien.UseVisualStyleBackColor = true;
-            this.btnTroLaiNhanVien.Click += new System.EventHandler(this.btnTroLaiNhanVien_Click);
             // 
             // label1
             // 
@@ -368,7 +357,6 @@
             this.Controls.Add(this.btnXoaNhanVien);
             this.Controls.Add(this.btnSuaNhanVien);
             this.Controls.Add(this.btnThemNhanVien);
-            this.Controls.Add(this.btnTroLaiNhanVien);
             this.Controls.Add(this.label1);
             this.Name = "ufrm_CRUDThongTinNhanVien";
             this.Size = new System.Drawing.Size(1250, 830);
@@ -388,7 +376,6 @@
         private System.Windows.Forms.Button btnXoaNhanVien;
         private System.Windows.Forms.Button btnSuaNhanVien;
         private System.Windows.Forms.Button btnThemNhanVien;
-        private System.Windows.Forms.Button btnTroLaiNhanVien;
         private System.Windows.Forms.Label label1;
         private HeThongKhachSanDataSet heThongKhachSanDataSet;
         private System.Windows.Forms.BindingSource nHAN_VIENBindingSource;

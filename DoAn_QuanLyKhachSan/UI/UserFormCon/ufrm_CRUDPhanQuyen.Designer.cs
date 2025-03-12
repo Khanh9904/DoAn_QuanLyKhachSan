@@ -34,7 +34,6 @@
             System.Windows.Forms.Label moTaLabel;
             System.Windows.Forms.Label mUCLUONGLAMVIECLabel;
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.heThongKhachSanDataSet = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSet();
             this.pHANQUYENBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pHANQUYENTableAdapter = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.PHANQUYENTableAdapter();
@@ -104,16 +103,6 @@
             this.label1.Size = new System.Drawing.Size(236, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÝ PHÂN QUYỀN";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(40, 47);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Trở lại";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // heThongKhachSanDataSet
             // 
@@ -261,7 +250,6 @@
             this.Controls.Add(this.btnMucLuong);
             this.Controls.Add(mUCLUONGLAMVIECLabel);
             this.Controls.Add(this.btnMoTa);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "ufrm_CRUDPhanQuyen";
             this.Size = new System.Drawing.Size(1250, 830);
@@ -276,7 +264,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
         private HeThongKhachSanDataSet heThongKhachSanDataSet;
         private System.Windows.Forms.BindingSource pHANQUYENBindingSource;
         private HeThongKhachSanDataSetTableAdapters.PHANQUYENTableAdapter pHANQUYENTableAdapter;

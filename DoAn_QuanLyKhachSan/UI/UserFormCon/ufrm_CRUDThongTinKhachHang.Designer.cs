@@ -47,7 +47,6 @@
             this.sDTTextBox = new System.Windows.Forms.TextBox();
             this.diaChiTextBox = new System.Windows.Forms.TextBox();
             this.cCCDTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.data_ThongTinKhachHang = new System.Windows.Forms.DataGridView();
             this.btnClearThongTinKhachHang = new System.Windows.Forms.Button();
             this.btnXoaThongTinKhachHang = new System.Windows.Forms.Button();
@@ -222,16 +221,6 @@
             this.cCCDTextBox.Size = new System.Drawing.Size(200, 22);
             this.cCCDTextBox.TabIndex = 15;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 43);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Trở Lại";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // data_ThongTinKhachHang
             // 
             this.data_ThongTinKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -314,7 +303,6 @@
             this.Controls.Add(this.btnSuaThongTinKhachHang);
             this.Controls.Add(this.btnThemThongTinKhachHang);
             this.Controls.Add(this.data_ThongTinKhachHang);
-            this.Controls.Add(this.button1);
             this.Controls.Add(maKhachHangLabel);
             this.Controls.Add(this.maKhachHangTextBox);
             this.Controls.Add(hoTenLabel);
@@ -352,7 +340,6 @@
         private System.Windows.Forms.TextBox sDTTextBox;
         private System.Windows.Forms.TextBox diaChiTextBox;
         private System.Windows.Forms.TextBox cCCDTextBox;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView data_ThongTinKhachHang;
         private System.Windows.Forms.Button btnClearThongTinKhachHang;
         private System.Windows.Forms.Button btnXoaThongTinKhachHang;
