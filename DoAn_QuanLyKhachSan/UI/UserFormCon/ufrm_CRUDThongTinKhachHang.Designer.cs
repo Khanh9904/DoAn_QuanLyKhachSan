@@ -224,17 +224,17 @@
             // data_ThongTinKhachHang
             // 
             this.data_ThongTinKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_ThongTinKhachHang.Location = new System.Drawing.Point(513, 169);
+            this.data_ThongTinKhachHang.Location = new System.Drawing.Point(508, 141);
             this.data_ThongTinKhachHang.Name = "data_ThongTinKhachHang";
             this.data_ThongTinKhachHang.RowHeadersWidth = 51;
             this.data_ThongTinKhachHang.RowTemplate.Height = 24;
-            this.data_ThongTinKhachHang.Size = new System.Drawing.Size(593, 249);
+            this.data_ThongTinKhachHang.Size = new System.Drawing.Size(803, 347);
             this.data_ThongTinKhachHang.TabIndex = 17;
             this.data_ThongTinKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_ThongTinKhachHang_CellClick);
             // 
             // btnClearThongTinKhachHang
             // 
-            this.btnClearThongTinKhachHang.Location = new System.Drawing.Point(738, 474);
+            this.btnClearThongTinKhachHang.Location = new System.Drawing.Point(740, 550);
             this.btnClearThongTinKhachHang.Name = "btnClearThongTinKhachHang";
             this.btnClearThongTinKhachHang.Size = new System.Drawing.Size(176, 55);
             this.btnClearThongTinKhachHang.TabIndex = 87;
@@ -244,7 +244,7 @@
             // 
             // btnXoaThongTinKhachHang
             // 
-            this.btnXoaThongTinKhachHang.Location = new System.Drawing.Point(587, 474);
+            this.btnXoaThongTinKhachHang.Location = new System.Drawing.Point(589, 550);
             this.btnXoaThongTinKhachHang.Name = "btnXoaThongTinKhachHang";
             this.btnXoaThongTinKhachHang.Size = new System.Drawing.Size(116, 55);
             this.btnXoaThongTinKhachHang.TabIndex = 86;
@@ -254,7 +254,7 @@
             // 
             // btnSuaThongTinKhachHang
             // 
-            this.btnSuaThongTinKhachHang.Location = new System.Drawing.Point(426, 474);
+            this.btnSuaThongTinKhachHang.Location = new System.Drawing.Point(428, 550);
             this.btnSuaThongTinKhachHang.Name = "btnSuaThongTinKhachHang";
             this.btnSuaThongTinKhachHang.Size = new System.Drawing.Size(116, 55);
             this.btnSuaThongTinKhachHang.TabIndex = 85;
@@ -264,7 +264,7 @@
             // 
             // btnThemThongTinKhachHang
             // 
-            this.btnThemThongTinKhachHang.Location = new System.Drawing.Point(277, 474);
+            this.btnThemThongTinKhachHang.Location = new System.Drawing.Point(279, 550);
             this.btnThemThongTinKhachHang.Name = "btnThemThongTinKhachHang";
             this.btnThemThongTinKhachHang.Size = new System.Drawing.Size(116, 55);
             this.btnThemThongTinKhachHang.TabIndex = 84;
@@ -275,9 +275,9 @@
             // txtTimKiemThongTinKhachHang
             // 
             this.txtTimKiemThongTinKhachHang.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtTimKiemThongTinKhachHang.Location = new System.Drawing.Point(513, 144);
+            this.txtTimKiemThongTinKhachHang.Location = new System.Drawing.Point(508, 116);
             this.txtTimKiemThongTinKhachHang.Name = "txtTimKiemThongTinKhachHang";
-            this.txtTimKiemThongTinKhachHang.Size = new System.Drawing.Size(593, 22);
+            this.txtTimKiemThongTinKhachHang.Size = new System.Drawing.Size(803, 22);
             this.txtTimKiemThongTinKhachHang.TabIndex = 88;
             this.txtTimKiemThongTinKhachHang.TextChanged += new System.EventHandler(this.txtTimKiemThongTinKhachHang_TextChanged);
             // 
@@ -318,7 +318,7 @@
             this.Controls.Add(this.cCCDTextBox);
             this.Controls.Add(this.label1);
             this.Name = "ufrm_CRUDThongTinKhachHang";
-            this.Size = new System.Drawing.Size(1191, 830);
+            this.Size = new System.Drawing.Size(1417, 830);
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHACH_HANGBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.data_ThongTinKhachHang)).EndInit();

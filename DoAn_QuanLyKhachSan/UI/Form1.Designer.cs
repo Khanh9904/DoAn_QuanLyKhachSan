@@ -62,6 +62,7 @@
             this.QLTK_Timer = new System.Windows.Forms.Timer(this.components);
             this.ThongKe_timer = new System.Windows.Forms.Timer(this.components);
             this.ufrm_ManHinhHeThong1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_ManHinhHeThong();
+            this.ufrm_CaLam1 = new DoAn_QuanLyKhachSan.UI.UserFormCon.ufrm_CaLam();
             this.ufrm_PhanCongCaLam1 = new DoAn_QuanLyKhachSan.UI.UserFormPhu.ufrm_PhanCongCaLam();
             this.ufrm_Chamconglamviec1 = new DoAn_QuanLyKhachSan.UI.UserFormCon.ufrm_Chamconglamviec();
             this.ufrm_CRUDThongTinNhanVien1 = new DoAn_QuanLyKhachSan.UI.UserFormPhu.ufrm_CRUDThongTinNhanVien();
@@ -468,7 +469,15 @@
             this.ufrm_ManHinhHeThong1.Location = new System.Drawing.Point(233, 0);
             this.ufrm_ManHinhHeThong1.Name = "ufrm_ManHinhHeThong1";
             this.ufrm_ManHinhHeThong1.Size = new System.Drawing.Size(1191, 890);
-            this.ufrm_ManHinhHeThong1.TabIndex = 14;
+            this.ufrm_ManHinhHeThong1.TabIndex = 15;
+            // 
+            // ufrm_CaLam1
+            // 
+            this.ufrm_CaLam1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ufrm_CaLam1.Location = new System.Drawing.Point(233, 0);
+            this.ufrm_CaLam1.Name = "ufrm_CaLam1";
+            this.ufrm_CaLam1.Size = new System.Drawing.Size(1191, 890);
+            this.ufrm_CaLam1.TabIndex = 14;
             // 
             // ufrm_PhanCongCaLam1
             // 
@@ -563,6 +572,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(1424, 890);
             this.Controls.Add(this.ufrm_ManHinhHeThong1);
+            this.Controls.Add(this.ufrm_CaLam1);
             this.Controls.Add(this.ufrm_PhanCongCaLam1);
             this.Controls.Add(this.ufrm_Chamconglamviec1);
             this.Controls.Add(this.ufrm_CRUDThongTinNhanVien1);
@@ -579,6 +589,7 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel_ManHinhChinh.ResumeLayout(false);
             this.panel_ThongKe.ResumeLayout(false);
@@ -634,6 +645,7 @@
         private UI.UserFormPhu.ufrm_CRUDThongTinNhanVien ufrm_CRUDThongTinNhanVien1;
         private UI.UserFormCon.ufrm_Chamconglamviec ufrm_Chamconglamviec1;
         private UI.UserFormPhu.ufrm_PhanCongCaLam ufrm_PhanCongCaLam1;
+        private UI.UserFormCon.ufrm_CaLam ufrm_CaLam1;
         private UI.UseForm.ufrm_ManHinhHeThong ufrm_ManHinhHeThong1;
     }
 }

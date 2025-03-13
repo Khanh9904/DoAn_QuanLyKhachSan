@@ -84,6 +84,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_CRUDThietBi1.Visible = false;
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
+            ufrm_CaLam1.Visible = false;
+
 
         }
 
@@ -101,6 +103,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_CRUDThietBi1.Visible = false;
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = true;
+            ufrm_CaLam1.Visible = false;
+
         }
 
         private void btnChamCong_Click(object sender, EventArgs e)
@@ -117,6 +121,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_CRUDThietBi1.Visible = false;
             ufrm_Chamconglamviec1.Visible = true;
             ufrm_PhanCongCaLam1.Visible = false;
+            ufrm_CaLam1.Visible = false;
+
         }
 
         private void btnCaLam_Click(object sender, EventArgs e)
@@ -132,7 +138,9 @@ namespace DoAn_QuanLyKhachSan
             ufrm_CRUDTang1.Visible = false;
             ufrm_CRUDThietBi1.Visible = false;
             ufrm_Chamconglamviec1.Visible = false;
-            ufrm_PhanCongCaLam1.Visible = true;
+            ufrm_PhanCongCaLam1.Visible = false;
+            ufrm_CaLam1.Visible = true;
+
         }
 
         private void btnQLKH_Click(object sender, EventArgs e)
@@ -149,9 +157,11 @@ namespace DoAn_QuanLyKhachSan
             ufrm_CRUDThietBi1.Visible = false;
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
+            ufrm_CaLam1.Visible = false;
+
         }
 
-        
+
 
         private void btnQLCSVC_Click(object sender, EventArgs e)
         {
@@ -173,6 +183,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_CRUDThietBi1.Visible = false;
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
+            ufrm_CaLam1.Visible = false;
+
         }
 
         private void btnThongTinLoaiPhong_Click(object sender, EventArgs e)
@@ -189,6 +201,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_CRUDThietBi1.Visible = false;
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
+            ufrm_CaLam1.Visible = false;
+
         }
 
         private void btnThongTinTang_Click(object sender, EventArgs e)
@@ -205,6 +219,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_CRUDThietBi1.Visible = false;
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
+            ufrm_CaLam1.Visible = false;
+
         }
 
         private void btnThongTinThietBi_Click(object sender, EventArgs e)
@@ -221,6 +237,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_CRUDThietBi1.Visible = true;
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
+            ufrm_CaLam1.Visible = false;
+
         }
 
         private void btnThongTinDichVu_Click(object sender, EventArgs e)
@@ -237,6 +255,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_CRUDThietBi1.Visible = false;
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
+            ufrm_CaLam1.Visible = false;
+
         }
 
         private void btn_QLTK_Click(object sender, EventArgs e)
@@ -259,6 +279,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_CRUDThietBi1.Visible = false;
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
+            ufrm_CaLam1.Visible = false;
+
         }
 
         private void btnTK_Click(object sender, EventArgs e)
@@ -275,6 +297,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_CRUDThietBi1.Visible = false;
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
+            ufrm_CaLam1.Visible = false;
+
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
@@ -309,6 +333,13 @@ namespace DoAn_QuanLyKhachSan
             ufrm_CRUDThietBi1.Visible = false;
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
+            ufrm_CaLam1.Visible = false;
+
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
 

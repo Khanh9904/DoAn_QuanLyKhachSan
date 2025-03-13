@@ -75,7 +75,7 @@
             // iD_NHANVIENLabel
             // 
             iD_NHANVIENLabel.AutoSize = true;
-            iD_NHANVIENLabel.Location = new System.Drawing.Point(87, 268);
+            iD_NHANVIENLabel.Location = new System.Drawing.Point(66, 265);
             iD_NHANVIENLabel.Name = "iD_NHANVIENLabel";
             iD_NHANVIENLabel.Size = new System.Drawing.Size(103, 16);
             iD_NHANVIENLabel.TabIndex = 43;
@@ -84,7 +84,7 @@
             // hOTENLabel
             // 
             hOTENLabel.AutoSize = true;
-            hOTENLabel.Location = new System.Drawing.Point(87, 296);
+            hOTENLabel.Location = new System.Drawing.Point(66, 293);
             hOTENLabel.Name = "hOTENLabel";
             hOTENLabel.Size = new System.Drawing.Size(58, 16);
             hOTENLabel.TabIndex = 45;
@@ -93,7 +93,7 @@
             // nGAYSINHLabel
             // 
             nGAYSINHLabel.AutoSize = true;
-            nGAYSINHLabel.Location = new System.Drawing.Point(87, 325);
+            nGAYSINHLabel.Location = new System.Drawing.Point(66, 322);
             nGAYSINHLabel.Name = "nGAYSINHLabel";
             nGAYSINHLabel.Size = new System.Drawing.Size(80, 16);
             nGAYSINHLabel.TabIndex = 47;
@@ -102,7 +102,7 @@
             // dIACHILabel
             // 
             dIACHILabel.AutoSize = true;
-            dIACHILabel.Location = new System.Drawing.Point(87, 352);
+            dIACHILabel.Location = new System.Drawing.Point(66, 349);
             dIACHILabel.Name = "dIACHILabel";
             dIACHILabel.Size = new System.Drawing.Size(53, 16);
             dIACHILabel.TabIndex = 49;
@@ -112,7 +112,7 @@
             // sDTLabel
             // 
             sDTLabel.AutoSize = true;
-            sDTLabel.Location = new System.Drawing.Point(87, 380);
+            sDTLabel.Location = new System.Drawing.Point(66, 377);
             sDTLabel.Name = "sDTLabel";
             sDTLabel.Size = new System.Drawing.Size(35, 16);
             sDTLabel.TabIndex = 51;
@@ -121,7 +121,7 @@
             // tONGNGAYCONGLabel
             // 
             tONGNGAYCONGLabel.AutoSize = true;
-            tONGNGAYCONGLabel.Location = new System.Drawing.Point(87, 408);
+            tONGNGAYCONGLabel.Location = new System.Drawing.Point(66, 405);
             tONGNGAYCONGLabel.Name = "tONGNGAYCONGLabel";
             tONGNGAYCONGLabel.Size = new System.Drawing.Size(129, 16);
             tONGNGAYCONGLabel.TabIndex = 53;
@@ -130,7 +130,7 @@
             // tONGLUONGLabel
             // 
             tONGLUONGLabel.AutoSize = true;
-            tONGLUONGLabel.Location = new System.Drawing.Point(87, 436);
+            tONGLUONGLabel.Location = new System.Drawing.Point(66, 433);
             tONGLUONGLabel.Name = "tONGLUONGLabel";
             tONGLUONGLabel.Size = new System.Drawing.Size(96, 16);
             tONGLUONGLabel.TabIndex = 55;
@@ -139,7 +139,7 @@
             // iD_TAIKHOANLabel
             // 
             iD_TAIKHOANLabel.AutoSize = true;
-            iD_TAIKHOANLabel.Location = new System.Drawing.Point(87, 464);
+            iD_TAIKHOANLabel.Location = new System.Drawing.Point(66, 461);
             iD_TAIKHOANLabel.Name = "iD_TAIKHOANLabel";
             iD_TAIKHOANLabel.Size = new System.Drawing.Size(101, 16);
             iD_TAIKHOANLabel.TabIndex = 57;
@@ -150,7 +150,7 @@
             this.txtTimKiemNhanVien.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtTimKiemNhanVien.Location = new System.Drawing.Point(461, 213);
             this.txtTimKiemNhanVien.Name = "txtTimKiemNhanVien";
-            this.txtTimKiemNhanVien.Size = new System.Drawing.Size(768, 22);
+            this.txtTimKiemNhanVien.Size = new System.Drawing.Size(893, 22);
             this.txtTimKiemNhanVien.TabIndex = 32;
             this.txtTimKiemNhanVien.TextChanged += new System.EventHandler(this.txtTimKiemNhanVien_TextChanged);
             // 
@@ -315,7 +315,7 @@
             this.data_NhanVien.Name = "data_NhanVien";
             this.data_NhanVien.RowHeadersWidth = 51;
             this.data_NhanVien.RowTemplate.Height = 24;
-            this.data_NhanVien.Size = new System.Drawing.Size(845, 352);
+            this.data_NhanVien.Size = new System.Drawing.Size(893, 352);
             this.data_NhanVien.TabIndex = 59;
             this.data_NhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_NhanVien_CellClick);
             this.data_NhanVien.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.data_NhanVien_CellFormatting);
@@ -359,7 +359,7 @@
             this.Controls.Add(this.btnThemNhanVien);
             this.Controls.Add(this.label1);
             this.Name = "ufrm_CRUDThongTinNhanVien";
-            this.Size = new System.Drawing.Size(1250, 830);
+            this.Size = new System.Drawing.Size(1461, 830);
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nHAN_VIENBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet1)).EndInit();

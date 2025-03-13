@@ -99,9 +99,9 @@
             // txtTimKiemCong
             // 
             this.txtTimKiemCong.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtTimKiemCong.Location = new System.Drawing.Point(572, 161);
+            this.txtTimKiemCong.Location = new System.Drawing.Point(520, 171);
             this.txtTimKiemCong.Name = "txtTimKiemCong";
-            this.txtTimKiemCong.Size = new System.Drawing.Size(675, 22);
+            this.txtTimKiemCong.Size = new System.Drawing.Size(738, 22);
             this.txtTimKiemCong.TabIndex = 84;
             this.txtTimKiemCong.TextChanged += new System.EventHandler(this.txtTimKiemCong_TextChanged);
             // 
@@ -148,11 +148,11 @@
             // dgv_chamcong
             // 
             this.dgv_chamcong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_chamcong.Location = new System.Drawing.Point(572, 189);
+            this.dgv_chamcong.Location = new System.Drawing.Point(520, 199);
             this.dgv_chamcong.Name = "dgv_chamcong";
             this.dgv_chamcong.RowHeadersWidth = 51;
             this.dgv_chamcong.RowTemplate.Height = 24;
-            this.dgv_chamcong.Size = new System.Drawing.Size(675, 393);
+            this.dgv_chamcong.Size = new System.Drawing.Size(738, 393);
             this.dgv_chamcong.TabIndex = 78;
             this.dgv_chamcong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_chamcong_CellClick);
             // 
@@ -212,7 +212,7 @@
             this.Controls.Add(this.dgv_chamcong);
             this.Controls.Add(this.label1);
             this.Name = "ufrm_Chamconglamviec";
-            this.Size = new System.Drawing.Size(1250, 830);
+            this.Size = new System.Drawing.Size(1411, 830);
             this.Load += new System.EventHandler(this.ufrm_Chamconglamviec_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_chamcong)).EndInit();
             this.ResumeLayout(false);

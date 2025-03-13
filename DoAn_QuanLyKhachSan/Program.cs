@@ -1,5 +1,6 @@
 ﻿using DoAn_QuanLyKhachSan.UI;
 using DoAn_QuanLyKhachSan.UI.UseForm;
+using DoAn_QuanLyKhachSan.UI.UserFormCon;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace DoAn_QuanLyKhachSan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new ManHinhTiepTan());
         }
     }
 }
