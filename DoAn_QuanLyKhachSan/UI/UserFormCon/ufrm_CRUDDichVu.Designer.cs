@@ -224,6 +224,7 @@
             this.giaDichVuTextBox.Name = "giaDichVuTextBox";
             this.giaDichVuTextBox.Size = new System.Drawing.Size(283, 22);
             this.giaDichVuTextBox.TabIndex = 45;
+            this.giaDichVuTextBox.TextChanged += new System.EventHandler(this.giaDichVuTextBox_TextChanged);
             // 
             // soLuongDichVuTextBox
             // 
@@ -277,6 +278,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ufrm_CRUDDichVu";
             this.Size = new System.Drawing.Size(1250, 830);
+            this.Load += new System.EventHandler(this.ufrm_CRUDDichVu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data_DichVu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dICH_VUBindingSource)).EndInit();

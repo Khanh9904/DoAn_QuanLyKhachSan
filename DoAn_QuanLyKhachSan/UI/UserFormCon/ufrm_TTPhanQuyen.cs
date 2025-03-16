@@ -47,5 +47,50 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormCon
 
             data_TTPhanQuyen.DataSource = dt;
         }
+
+        private void data_TTPhanQuyen_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow rowst = data_TTPhanQuyen.Rows[e.RowIndex];
+
+
+                btnTenQuyen.Text = rowst.Cells["TENQUYEN"]?.Value != DBNull.Value ? rowst.Cells["TENQUYEN"].Value.ToString() : "";
+
+                btnMoTa.Text = rowst.Cells["MoTa"]?.Value != DBNull.Value ? rowst.Cells["MoTa"].Value.ToString() : "";
+
+                btnMucLuong.Text = rowst.Cells["MUCLUONGLAMVIEC"]?.Value != DBNull.Value ? rowst.Cells["MUCLUONGLAMVIEC"].Value.ToString() : "";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void data_TTPhanQuyen_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (data_TTPhanQuyen.Columns[e.ColumnIndex].Name == "MUCLUONGLAMVIEC" && e.Value != null)
+            {
+                if (decimal.TryParse(e.Value.ToString(), out decimal mucLuong))
+                {
+
+                    e.Value = string.Format("{0:N0} VND", mucLuong);
+                    e.FormattingApplied = true;
+                }
+            }
+        }
+
+        private void btnMucLuong_TextChanged(object sender, EventArgs e)
+        {
+            string input = btnMucLuong.Text.Replace(".", "").Replace(" VND", "").Trim();
+
+            if (decimal.TryParse(input, out decimal mucLuong))
+            {
+
+                btnMucLuong.Text = string.Format("{0:N0} VND", mucLuong);
+                btnMucLuong.SelectionStart = btnMucLuong.Text.Length;
+            }
+        }
     }
 }

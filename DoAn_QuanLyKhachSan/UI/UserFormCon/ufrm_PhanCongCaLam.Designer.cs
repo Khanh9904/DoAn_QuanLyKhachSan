@@ -178,6 +178,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             this.txtTimKiemPhanCong.Name = "txtTimKiemPhanCong";
             this.txtTimKiemPhanCong.Size = new System.Drawing.Size(775, 22);
             this.txtTimKiemPhanCong.TabIndex = 42;
+            this.txtTimKiemPhanCong.TextChanged += new System.EventHandler(this.txtTimKiemPhanCong_TextChanged);
             // 
             // data_PhanCong
             // 

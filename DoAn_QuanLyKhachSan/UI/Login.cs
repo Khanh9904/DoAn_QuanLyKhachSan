@@ -26,8 +26,8 @@ namespace DoAn_QuanLyKhachSan.UI
 
         private void Login_Load(object sender, EventArgs e)
         {
-          
-           
+
+
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
@@ -64,7 +64,8 @@ namespace DoAn_QuanLyKhachSan.UI
                                 Form1 manHinhChinh = new Form1();
                                 manHinhChinh.Show();
                                 this.Hide();
-                            } else if  (maPQ == 9)
+                            }
+                            else if (maPQ == 9)
                             {
                                 MessageBox.Show("Đăng nhập thành công màn hình - TIẾP TÂN  !", "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -72,7 +73,7 @@ namespace DoAn_QuanLyKhachSan.UI
                                 manHinhNhanVien.Show();
                                 this.Hide();
                             }
-                            
+
                         }
                         else
                         {
@@ -85,6 +86,29 @@ namespace DoAn_QuanLyKhachSan.UI
             {
                 MessageBox.Show("Không thể kết nối : " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtnhapemail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true; // Ngăn chặn tiếng "bíp"
+                txtpass.Focus();           // Chuyển con trỏ xuống txtpass
+            }
+        }
+
+        private void txtpass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) // Kiểm tra đúng phím Enter
+            {
+                e.SuppressKeyPress = true; // Ngăn chặn tiếng "bíp"
+                btnlogin.PerformClick();   // Kích hoạt nút Login
+            }
+        }
+
+        private void btnexit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

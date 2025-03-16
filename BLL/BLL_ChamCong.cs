@@ -33,20 +33,15 @@ namespace BLL
 
                 throw new Exception("Du lieu khong hop le");
 
-            if (DAL_ChamCong.kiemtrachamcong(chamcong.ID_NHANVIEN, chamcong.NGAYLAMVIEC))
-            {
-                return false;
-
-            }
-            DAL_ChamCong.themchamcong(chamcong);
+          
+       
 
             if (chamcong.TRANGTHAI == "Có mặt")
             {
                 DAL_ChamCong.UpdateTongCong(chamcong.ID_NHANVIEN, 1);
 
             }
-            return true;
-
+            return DAL_ChamCong.themchamcong(chamcong);
 
         }
         public bool suachamcong(ChamCong chamcong)

@@ -176,7 +176,7 @@
             // 
             this.maKhachHangTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHACH_HANGBindingSource, "MaKhachHang", true));
             this.maKhachHangTextBox.Enabled = false;
-            this.maKhachHangTextBox.Location = new System.Drawing.Point(229, 141);
+            this.maKhachHangTextBox.Location = new System.Drawing.Point(254, 141);
             this.maKhachHangTextBox.Name = "maKhachHangTextBox";
             this.maKhachHangTextBox.Size = new System.Drawing.Size(200, 22);
             this.maKhachHangTextBox.TabIndex = 3;
@@ -184,7 +184,7 @@
             // hoTenTextBox
             // 
             this.hoTenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHACH_HANGBindingSource, "HoTen", true));
-            this.hoTenTextBox.Location = new System.Drawing.Point(229, 169);
+            this.hoTenTextBox.Location = new System.Drawing.Point(254, 169);
             this.hoTenTextBox.Name = "hoTenTextBox";
             this.hoTenTextBox.Size = new System.Drawing.Size(200, 22);
             this.hoTenTextBox.TabIndex = 5;
@@ -192,7 +192,7 @@
             // ngaySinhDateTimePicker
             // 
             this.ngaySinhDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.kHACH_HANGBindingSource, "NgaySinh", true));
-            this.ngaySinhDateTimePicker.Location = new System.Drawing.Point(229, 197);
+            this.ngaySinhDateTimePicker.Location = new System.Drawing.Point(254, 197);
             this.ngaySinhDateTimePicker.Name = "ngaySinhDateTimePicker";
             this.ngaySinhDateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.ngaySinhDateTimePicker.TabIndex = 7;
@@ -200,7 +200,7 @@
             // sDTTextBox
             // 
             this.sDTTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHACH_HANGBindingSource, "SDT", true));
-            this.sDTTextBox.Location = new System.Drawing.Point(229, 258);
+            this.sDTTextBox.Location = new System.Drawing.Point(254, 258);
             this.sDTTextBox.Name = "sDTTextBox";
             this.sDTTextBox.Size = new System.Drawing.Size(200, 22);
             this.sDTTextBox.TabIndex = 11;
@@ -208,7 +208,7 @@
             // diaChiTextBox
             // 
             this.diaChiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHACH_HANGBindingSource, "DiaChi", true));
-            this.diaChiTextBox.Location = new System.Drawing.Point(229, 286);
+            this.diaChiTextBox.Location = new System.Drawing.Point(254, 286);
             this.diaChiTextBox.Name = "diaChiTextBox";
             this.diaChiTextBox.Size = new System.Drawing.Size(200, 22);
             this.diaChiTextBox.TabIndex = 13;
@@ -216,7 +216,7 @@
             // cCCDTextBox
             // 
             this.cCCDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHACH_HANGBindingSource, "CCCD", true));
-            this.cCCDTextBox.Location = new System.Drawing.Point(229, 314);
+            this.cCCDTextBox.Location = new System.Drawing.Point(254, 314);
             this.cCCDTextBox.Name = "cCCDTextBox";
             this.cCCDTextBox.Size = new System.Drawing.Size(200, 22);
             this.cCCDTextBox.TabIndex = 15;
@@ -287,7 +287,7 @@
             this.gioiTinhTextBox.Items.AddRange(new object[] {
             "Nữ",
             "Nam"});
-            this.gioiTinhTextBox.Location = new System.Drawing.Point(229, 224);
+            this.gioiTinhTextBox.Location = new System.Drawing.Point(254, 224);
             this.gioiTinhTextBox.Name = "gioiTinhTextBox";
             this.gioiTinhTextBox.Size = new System.Drawing.Size(200, 24);
             this.gioiTinhTextBox.TabIndex = 89;
@@ -319,6 +319,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ufrm_CRUDThongTinKhachHang";
             this.Size = new System.Drawing.Size(1417, 830);
+            this.Load += new System.EventHandler(this.ufrm_CRUDThongTinKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHACH_HANGBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.data_ThongTinKhachHang)).EndInit();

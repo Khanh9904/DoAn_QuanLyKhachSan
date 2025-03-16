@@ -57,6 +57,12 @@ namespace BLL
                 throw new Exception("Vui lòng nhập đầy đủ thông tin dịch vụ");
             }
 
+            // Kiểm tra tên dịch vụ đã tồn tại chưa
+            if (DAL_DichVu.CheckDichVu(dichVu.TenDichVu))
+            {
+                throw new Exception($"Tên dịch vụ '{dichVu.TenDichVu}' đã tồn tại");
+            }
+
             return DAL_DichVu.UpdateDichVu(dichVu);
         }
 

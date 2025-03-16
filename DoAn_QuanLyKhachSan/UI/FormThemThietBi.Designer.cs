@@ -74,6 +74,7 @@
             this.btn_Dong.TabIndex = 148;
             this.btn_Dong.Text = "Đóng";
             this.btn_Dong.UseVisualStyleBackColor = false;
+            this.btn_Dong.Click += new System.EventHandler(this.btn_Dong_Click);
             // 
             // btn_ThemThietBi
             // 

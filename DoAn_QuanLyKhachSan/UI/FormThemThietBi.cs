@@ -141,5 +141,10 @@ namespace DoAn_QuanLyKhachSan.UI
                 txtTenThietBi.Text = data_ThietBi.Rows[e.RowIndex].Cells["TenThietBi"].Value.ToString();
             }
         }
+
+        private void btn_Dong_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

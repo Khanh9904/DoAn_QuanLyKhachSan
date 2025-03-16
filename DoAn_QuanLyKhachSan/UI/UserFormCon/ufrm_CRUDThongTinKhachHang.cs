@@ -225,5 +225,10 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
 
             data_ThongTinKhachHang.DataSource = dt;
         }
+
+        private void ufrm_CRUDThongTinKhachHang_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

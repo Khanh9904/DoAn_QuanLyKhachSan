@@ -87,7 +87,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
             else
             {
 
-                cbMaLoaiPhong.SelectedIndex = 0;
+                cbMaLoaiPhong.SelectedIndex = -1;
             }
         }
 
@@ -122,7 +122,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
             else
             {
 
-                cbTang.SelectedIndex = 0;
+                cbTang.SelectedIndex = -1;
             }
         }
 
@@ -328,6 +328,11 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
         }
 
         private void maThietBiLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ufrm_CRUDPhong_Load(object sender, EventArgs e)
         {
 
         }

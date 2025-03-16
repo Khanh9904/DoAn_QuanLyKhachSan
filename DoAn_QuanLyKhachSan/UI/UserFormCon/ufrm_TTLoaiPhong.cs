@@ -51,5 +51,40 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormCon
 
             data_TTLoaiPhong.DataSource = dt;
         }
+
+        private void data_TTLoaiPhong_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                DataGridViewRow rowst = data_TTLoaiPhong.Rows[e.RowIndex];
+
+                maLoaiPhongTextBox.Text = rowst.Cells["MaLoaiPhong"]?.Value != DBNull.Value ? rowst.Cells["MaLoaiPhong"].Value.ToString() : "";
+
+
+                tenLoaiPhongTextBox.Text = rowst.Cells["TenLoaiPhong"]?.Value != DBNull.Value ? rowst.Cells["TenLoaiPhong"].Value.ToString() : "";
+
+                giaTextBox.Text = rowst.Cells["Gia"]?.Value != DBNull.Value ? rowst.Cells["Gia"].Value.ToString() : "";
+
+                soNguoiToiDaTextBox.Text = rowst.Cells["SoNguoiToiDa"]?.Value != DBNull.Value ? rowst.Cells["SoNguoiToiDa"].Value.ToString() : "";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void giaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string input = giaTextBox.Text.Replace(".", "").Replace(" VND", "").Trim();
+
+            if (decimal.TryParse(input, out decimal mucLuong))
+            {
+
+                giaTextBox.Text = string.Format("{0:N0} VND", mucLuong);
+                giaTextBox.SelectionStart = giaTextBox.Text.Length;
+            }
+        }
     }
 }

@@ -201,7 +201,7 @@
             // 
             this.maThietBiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tHIET_BIBindingSource, "MaThietBi", true));
             this.maThietBiTextBox.Enabled = false;
-            this.maThietBiTextBox.Location = new System.Drawing.Point(207, 234);
+            this.maThietBiTextBox.Location = new System.Drawing.Point(223, 234);
             this.maThietBiTextBox.Name = "maThietBiTextBox";
             this.maThietBiTextBox.Size = new System.Drawing.Size(257, 22);
             this.maThietBiTextBox.TabIndex = 86;
@@ -209,7 +209,7 @@
             // tenThietBiTextBox
             // 
             this.tenThietBiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tHIET_BIBindingSource, "TenThietBi", true));
-            this.tenThietBiTextBox.Location = new System.Drawing.Point(207, 262);
+            this.tenThietBiTextBox.Location = new System.Drawing.Point(223, 262);
             this.tenThietBiTextBox.Name = "tenThietBiTextBox";
             this.tenThietBiTextBox.Size = new System.Drawing.Size(257, 22);
             this.tenThietBiTextBox.TabIndex = 88;
@@ -217,7 +217,7 @@
             // soLuongThietBiTextBox
             // 
             this.soLuongThietBiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.tHIET_BIBindingSource, "SoLuongThietBi", true));
-            this.soLuongThietBiTextBox.Location = new System.Drawing.Point(207, 290);
+            this.soLuongThietBiTextBox.Location = new System.Drawing.Point(223, 290);
             this.soLuongThietBiTextBox.Name = "soLuongThietBiTextBox";
             this.soLuongThietBiTextBox.Size = new System.Drawing.Size(257, 22);
             this.soLuongThietBiTextBox.TabIndex = 90;
@@ -229,7 +229,7 @@
             "Mới 100%",
             "Hoạt động tốt",
             "Bảo trì"});
-            this.tinhTrangTextBox.Location = new System.Drawing.Point(207, 321);
+            this.tinhTrangTextBox.Location = new System.Drawing.Point(223, 321);
             this.tinhTrangTextBox.Name = "tinhTrangTextBox";
             this.tinhTrangTextBox.Size = new System.Drawing.Size(257, 24);
             this.tinhTrangTextBox.TabIndex = 92;

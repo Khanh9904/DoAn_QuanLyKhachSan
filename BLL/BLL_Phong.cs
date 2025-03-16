@@ -24,6 +24,7 @@ namespace BLL
         // ham load du lieu
         public System.Data.DataTable GetDataPhong()
         {
+
             return DAL_Phong.LoadPhong();
         }
         //--------------------------------------------------------------------------------------------------------------------------------------
@@ -31,15 +32,29 @@ namespace BLL
         // ham them du lieu
         public bool AddPhong(Phong phong)
         {
+            if (string.IsNullOrEmpty(phong.TenPhong))
+            {
+                throw new ArgumentException("Tên phòng không được để trống.");
+            }
+
+            if (DAL_Phong.CheckPhong(phong.TenPhong))
+            {
+                throw new ArgumentException("Phòng đã tồn tại.");
+            }
 
             return DAL_Phong.AddPhong(phong);
         }
+
 
         //--------------------------------------------------------------------------------------------------------------------------------------
 
         // ham sua du lieu
         public bool UpdatePhong(Phong phong)
         {
+            if (DAL_Phong.CheckPhong(phong.TenPhong))
+            {
+                throw new ArgumentException("Phòng đã tồn tại.");
+            }
             return DAL_Phong.UpdatePhong(phong);
         }
 
@@ -50,7 +65,7 @@ namespace BLL
         {
             if (MaPhong <= 0)
             {
-                throw new Exception("Vui lòng chọn nhân viên cần xóa");
+                throw new Exception("Vui lòng chọn phòng cần xóa");
             }
 
             return DAL_Phong.DeletePhong(MaPhong);

@@ -76,7 +76,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormCon
             else
             {
 
-                cb_nhanvien.SelectedIndex = 0;
+                cb_nhanvien.SelectedIndex = -1;
             }
         }
         //-----------------------------------------------------------------------------------------------------------------------------------
@@ -84,9 +84,9 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormCon
         public void Clear()
         {
             txt_machamcong.Text = "";
-            cb_trangthai.SelectedIndex = 0;
+            cb_trangthai.SelectedIndex = -1;
             dtngaylam.Value = DateTime.Now;
-            cb_nhanvien.SelectedIndex = 0;
+            cb_nhanvien.SelectedIndex = -1;
         }
         //-----------------------------------------------------------------------------------------------------------------------------------
 
@@ -109,11 +109,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormCon
 
                 };
 
-                if (!BLL_ChamCong.themchamcong(chamcong))
-                {
-                    MessageBox.Show("Thêm thất bại ! Nhân viên này đã chấm công hôm nay ròi ! ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
+                BLL_ChamCong.themchamcong(chamcong);
 
 
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -190,9 +186,9 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormCon
         public void DonThongTin()
         {
             txt_machamcong.Text = "";
-            cb_trangthai.SelectedIndex = 0;
+            cb_trangthai.SelectedIndex = -1;
             dtngaylam.Value = DateTime.Now;
-            cb_nhanvien.SelectedIndex = 0;
+            cb_nhanvien.SelectedIndex = -1;
         }
 
         private void dgv_chamcong_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -83,7 +83,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormCon
             else
             {
 
-                cbIDPhanQuyen.SelectedIndex = 0;
+                cbIDPhanQuyen.SelectedIndex = -1;
             }
         }
 
@@ -136,7 +136,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormCon
             iD_TAIKHOANTextBox.Text = "";
             eMAILTextBox.Text = "";
             mATKHAUTextBox.Text = "";
-            cbIDPhanQuyen.SelectedIndex = 0;
+            cbIDPhanQuyen.SelectedIndex = -1;
         }
         //-----------------------------------------------------------------------------------------------------------------------------------------------
 

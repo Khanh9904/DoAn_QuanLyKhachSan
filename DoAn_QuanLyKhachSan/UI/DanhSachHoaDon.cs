@@ -33,7 +33,7 @@ namespace DoAn_QuanLyKhachSan.UI
 
         private void btn_LoadTongTien_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.LoadHoaDon();
         }
 
         private void btn_InHoaDon_Click(object sender, EventArgs e)

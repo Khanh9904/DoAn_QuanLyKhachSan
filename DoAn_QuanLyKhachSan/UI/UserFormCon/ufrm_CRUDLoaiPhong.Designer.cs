@@ -63,7 +63,7 @@
             // maLoaiPhongLabel
             // 
             maLoaiPhongLabel.AutoSize = true;
-            maLoaiPhongLabel.Location = new System.Drawing.Point(74, 209);
+            maLoaiPhongLabel.Location = new System.Drawing.Point(60, 209);
             maLoaiPhongLabel.Name = "maLoaiPhongLabel";
             maLoaiPhongLabel.Size = new System.Drawing.Size(111, 16);
             maLoaiPhongLabel.TabIndex = 69;
@@ -72,7 +72,7 @@
             // tenLoaiPhongLabel
             // 
             tenLoaiPhongLabel.AutoSize = true;
-            tenLoaiPhongLabel.Location = new System.Drawing.Point(74, 237);
+            tenLoaiPhongLabel.Location = new System.Drawing.Point(60, 237);
             tenLoaiPhongLabel.Name = "tenLoaiPhongLabel";
             tenLoaiPhongLabel.Size = new System.Drawing.Size(119, 16);
             tenLoaiPhongLabel.TabIndex = 71;
@@ -81,7 +81,7 @@
             // giaLabel
             // 
             giaLabel.AutoSize = true;
-            giaLabel.Location = new System.Drawing.Point(74, 265);
+            giaLabel.Location = new System.Drawing.Point(60, 265);
             giaLabel.Name = "giaLabel";
             giaLabel.Size = new System.Drawing.Size(29, 16);
             giaLabel.TabIndex = 73;
@@ -90,7 +90,7 @@
             // soNguoiToiDaLabel
             // 
             soNguoiToiDaLabel.AutoSize = true;
-            soNguoiToiDaLabel.Location = new System.Drawing.Point(74, 293);
+            soNguoiToiDaLabel.Location = new System.Drawing.Point(60, 293);
             soNguoiToiDaLabel.Name = "soNguoiToiDaLabel";
             soNguoiToiDaLabel.Size = new System.Drawing.Size(118, 16);
             soNguoiToiDaLabel.TabIndex = 75;
@@ -233,6 +233,7 @@
             this.giaTextBox.Name = "giaTextBox";
             this.giaTextBox.Size = new System.Drawing.Size(272, 22);
             this.giaTextBox.TabIndex = 74;
+            this.giaTextBox.TextChanged += new System.EventHandler(this.giaTextBox_TextChanged);
             // 
             // soNguoiToiDaTextBox
             // 

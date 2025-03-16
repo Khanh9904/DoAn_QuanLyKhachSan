@@ -59,7 +59,7 @@ namespace DoAn_QuanLyKhachSan.UI
             else
             {
 
-                cb_NhanVien.SelectedIndex = 0;
+                cb_NhanVien.SelectedIndex = -1;
             }
         }
 
@@ -224,7 +224,7 @@ namespace DoAn_QuanLyKhachSan.UI
             else
             {
 
-                cb_DichVu.SelectedIndex = 0;
+                cb_DichVu.SelectedIndex = -1;
             }
         }
     }

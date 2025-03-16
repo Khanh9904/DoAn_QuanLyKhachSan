@@ -75,7 +75,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             else
             {
 
-                cbIDTaiKhoan.SelectedIndex = 0;
+                cbIDTaiKhoan.SelectedIndex = -1;
             }
         }
 
@@ -352,6 +352,18 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
                 {
                     MessageBox.Show("Lỗi khi cập nhật tổng lương: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void tONGLUONGTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string input = tONGLUONGTextBox.Text.Replace(".", "").Replace(" VND", "").Trim();
+
+            if (decimal.TryParse(input, out decimal mucLuong))
+            {
+
+                tONGLUONGTextBox.Text = string.Format("{0:N0} VND", mucLuong);
+                tONGLUONGTextBox.SelectionStart = tONGLUONGTextBox.Text.Length;
             }
         }
 

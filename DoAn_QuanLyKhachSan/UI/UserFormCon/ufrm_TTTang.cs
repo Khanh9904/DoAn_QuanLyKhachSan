@@ -45,5 +45,21 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormCon
 
             data_TTTang.DataSource = dt;
         }
+
+        private void data_TTTang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (data_TTTang.CurrentRow != null)
+                {
+                    maTangTextBox.Text = data_TTTang.CurrentRow.Cells["MaTang"].Value.ToString();
+                    tenTangTextBox.Text = data_TTTang.CurrentRow.Cells["TenTang"].Value.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi thông tin liên kết nối : " + ex.Message, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

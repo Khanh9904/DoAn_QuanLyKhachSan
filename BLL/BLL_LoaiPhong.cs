@@ -56,6 +56,12 @@ namespace BLL
                 throw new Exception("Vui lòng nhập đầy đủ thông tin loại phòng");
             }
 
+            if (DAL_LoaiPhong.CheckLoaiPhong(loaiPhong.TenLoaiPhong))
+            {
+                throw new Exception($"Tên loại phòng '{loaiPhong.TenLoaiPhong}' đã tồn tại");
+            }
+
+
             return DAL_LoaiPhong.UpdateLoaiPhong(loaiPhong);
         }
 

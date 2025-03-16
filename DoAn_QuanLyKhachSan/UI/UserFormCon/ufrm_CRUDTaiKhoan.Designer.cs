@@ -60,7 +60,7 @@
             // iD_TAIKHOANLabel
             // 
             iD_TAIKHOANLabel.AutoSize = true;
-            iD_TAIKHOANLabel.Location = new System.Drawing.Point(40, 255);
+            iD_TAIKHOANLabel.Location = new System.Drawing.Point(22, 255);
             iD_TAIKHOANLabel.Name = "iD_TAIKHOANLabel";
             iD_TAIKHOANLabel.Size = new System.Drawing.Size(101, 16);
             iD_TAIKHOANLabel.TabIndex = 40;
@@ -70,7 +70,7 @@
             // eMAILLabel
             // 
             eMAILLabel.AutoSize = true;
-            eMAILLabel.Location = new System.Drawing.Point(40, 283);
+            eMAILLabel.Location = new System.Drawing.Point(22, 283);
             eMAILLabel.Name = "eMAILLabel";
             eMAILLabel.Size = new System.Drawing.Size(46, 16);
             eMAILLabel.TabIndex = 42;
@@ -79,7 +79,7 @@
             // mATKHAULabel
             // 
             mATKHAULabel.AutoSize = true;
-            mATKHAULabel.Location = new System.Drawing.Point(40, 311);
+            mATKHAULabel.Location = new System.Drawing.Point(22, 311);
             mATKHAULabel.Name = "mATKHAULabel";
             mATKHAULabel.Size = new System.Drawing.Size(76, 16);
             mATKHAULabel.TabIndex = 44;
@@ -88,7 +88,7 @@
             // iD_PHANQUYENLabel
             // 
             iD_PHANQUYENLabel.AutoSize = true;
-            iD_PHANQUYENLabel.Location = new System.Drawing.Point(40, 339);
+            iD_PHANQUYENLabel.Location = new System.Drawing.Point(22, 339);
             iD_PHANQUYENLabel.Name = "iD_PHANQUYENLabel";
             iD_PHANQUYENLabel.Size = new System.Drawing.Size(119, 16);
             iD_PHANQUYENLabel.TabIndex = 46;

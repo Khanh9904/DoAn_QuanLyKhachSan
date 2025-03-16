@@ -25,29 +25,52 @@ namespace BLL
         //ham them du lieu
         public bool AddPhanCongCaLam(PhanCongCaLam phanCongCaLam)
         {
-            //kiem tra du lieu dau vao
-            if (phanCongCaLam.ID_NHANVIEN <= 0 || phanCongCaLam.ID_CALAM <= 0 || phanCongCaLam.NGAYLAM == null)
+            // Kiểm tra dữ liệu đầu vào
+            if (phanCongCaLam.ID_NHANVIEN <= 0 || phanCongCaLam.ID_CALAM <= 0)
             {
-                throw new Exception("Vui lòng nhập đầy đủ thông tin phân công ca làm");
+                throw new ArgumentException("Vui lòng nhập đầy đủ thông tin phân công ca làm.");
             }
-            //kiem tra phan cong ca lam da ton tai chua
-            if (DAL_PhanCongCaLam.CheckPhanCongCaLam(phanCongCaLam.ID_NHANVIEN, phanCongCaLam.ID_CALAM, phanCongCaLam.NGAYLAM))
+
+            if (phanCongCaLam.NGAYLAM == default)
             {
-                throw new Exception($"Phân công ca làm '{phanCongCaLam.ID_NHANVIEN}' đã tồn tại");
+                throw new ArgumentException("Ngày làm không hợp lệ.");
             }
-            //them phan cong ca lam thanh cong
+
+            // Kiểm tra phân công ca làm đã tồn tại chưa
+            if (DAL_PhanCongCaLam.CheckPhanCongCaLam(phanCongCaLam.ID_CALAM, phanCongCaLam.ID_NHANVIEN, phanCongCaLam.NGAYLAM))
+            {
+                throw new Exception($"Phân công ca làm cho nhân viên {phanCongCaLam.ID_NHANVIEN} đã tồn tại.");
+            }
+
+            // Thêm phân công ca làm
             return DAL_PhanCongCaLam.AddPhanCongCaLam(phanCongCaLam);
         }
+
 
         //ham sua phan cong ca lam
         public bool UpdatePhanCongCaLam(PhanCongCaLam phanCongCaLam)
         {
-            if (phanCongCaLam.ID_PHANCONG <= 0 || phanCongCaLam.ID_NHANVIEN <= 0 || phanCongCaLam.ID_CALAM <= 0 || phanCongCaLam.NGAYLAM == null)
+            // Kiểm tra dữ liệu đầu vào
+            if (phanCongCaLam.ID_PHANCONG <= 0 || phanCongCaLam.ID_NHANVIEN <= 0 || phanCongCaLam.ID_CALAM <= 0)
             {
-                throw new Exception("Vui lòng nhập đầy đủ thông tin phân công ca làm");
+                throw new ArgumentException("Vui lòng nhập đầy đủ thông tin phân công ca làm.");
             }
+
+            if (phanCongCaLam.NGAYLAM == default)
+            {
+                throw new ArgumentException("Ngày làm không hợp lệ.");
+            }
+
+            // Kiểm tra phân công ca làm đã tồn tại chưa
+            if (DAL_PhanCongCaLam.CheckPhanCongCaLam(phanCongCaLam.ID_CALAM, phanCongCaLam.ID_NHANVIEN, phanCongCaLam.NGAYLAM))
+            {
+                throw new Exception($"Phân công ca làm cho nhân viên {phanCongCaLam.ID_NHANVIEN} đã tồn tại.");
+            }
+
+            // Cập nhật phân công ca làm
             return DAL_PhanCongCaLam.UpdatePhanCongCaLam(phanCongCaLam);
         }
+
 
         //ham xoa phan cong ca lam
         public bool DeletePhanCongCaLam(int ID_PHANCONG)
@@ -58,6 +81,7 @@ namespace BLL
             }
             return DAL_PhanCongCaLam.DeletePhanCongCaLam(ID_PHANCONG);
         }
+
         //ham tim kiem phan cong ca lam theo ngay
         public System.Data.DataTable SearchPhanCongCaLam(DateTime NGAYLAM)
         {
@@ -66,8 +90,18 @@ namespace BLL
         // check phan cong ca lam
         public bool CheckPhanCongCaLam(int ID_NHANVIEN, int ID_CALAM, DateTime NGAYLAM)
         {
-            return DAL_PhanCongCaLam.CheckPhanCongCaLam(ID_NHANVIEN, ID_CALAM, NGAYLAM);
+            if (ID_NHANVIEN <= 0)
+                throw new ArgumentException("ID nhân viên không hợp lệ.");
+
+            if (ID_CALAM <= 0)
+                throw new ArgumentException("ID ca làm không hợp lệ.");
+
+            if (NGAYLAM == default)
+                throw new ArgumentException("Ngày làm không hợp lệ.");
+
+            return DAL_PhanCongCaLam.CheckPhanCongCaLam(ID_CALAM, ID_NHANVIEN, NGAYLAM);
         }
+
 
 
     }

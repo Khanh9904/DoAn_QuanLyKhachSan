@@ -46,6 +46,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnLoad = new System.Windows.Forms.Button();
             this.btnDSHD = new System.Windows.Forms.Button();
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.cb_Phuongthuc = new System.Windows.Forms.ComboBox();
@@ -241,6 +242,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnLoad);
             this.groupBox1.Controls.Add(this.btnDSHD);
             this.groupBox1.Controls.Add(this.btnThanhToan);
             this.groupBox1.Controls.Add(this.cb_Phuongthuc);
@@ -264,6 +266,18 @@
             this.groupBox1.TabIndex = 30;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin thanh toán";
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(187)))), ((int)(((byte)(178)))));
+            this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoad.Location = new System.Drawing.Point(26, 790);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(378, 49);
+            this.btnLoad.TabIndex = 16;
+            this.btnLoad.Text = "TẢI LẠI TRANG";
+            this.btnLoad.UseVisualStyleBackColor = false;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // btnDSHD
             // 
@@ -537,5 +551,6 @@
         private HeThongKhachSanDataSet heThongKhachSanDataSet1;
         private System.Windows.Forms.DataGridView data_ThongTinPhong;
         private System.Windows.Forms.DataGridView data_ThongTinThietBi;
+        private System.Windows.Forms.Button btnLoad;
     }
 }

@@ -131,8 +131,8 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
                             ForeColor = Color.White,
                             Tag = Tuple.Create(maPhong, tinhTrang) // Sử dụng Tuple để truyền dữ liệu
                         };
-                        phongButton.FlatAppearance.BorderSize = 1;
-                        phongButton.Click += PhongButton_Click;
+                        phongButton.FlatAppearance.BorderSize = 1; 
+                        phongButton.Click += PhongButton_Click;// Sự kiện click vào phòng
 
 
 
@@ -274,7 +274,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
                        pdp.TrangThaiPhieuDat,
                        pdp.TienCoc,
                        pdp.NgayDat
-                   FROM CHITIETPHONG ctp
+                   FROM CHITIETPHONG ctp   
                    LEFT JOIN KHACH_HANG kh ON ctp.MaKhachHang = kh.MaKhachHang
                    LEFT JOIN DICH_VU dv ON ctp.MaDichVu = dv.MaDichVu
                    LEFT JOIN PHIEU_DAT_PHONG pdp ON ctp.MaPhong = pdp.MaPhong
@@ -324,6 +324,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
                 MessageBox.Show("Lỗi khi tải chi tiết phòng: " + ex.Message);
             }
         }
+
 
 
 
@@ -541,34 +542,57 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
             }
         }
 
+
+
         private void btnApDung_Click(object sender, EventArgs e)
         {
-            if (decimal.TryParse(txtTongThanhToan.Text.Replace(" VNĐ", "").Replace(",", ""), out decimal tongThanhToan))
+            // Kiểm tra nếu textbox tổng tiền rỗng
+            if (string.IsNullOrWhiteSpace(txtTongThanhToan.Text))
             {
-                if (decimal.TryParse(txtKhuyenMai.Text, out decimal giamGia))
-                {
-                    if (giamGia >= 0 && giamGia <= 100)
-                    {
-                        decimal soTienGiam = (tongThanhToan * giamGia) / 100;
-                        tongThanhToan -= soTienGiam;
-
-                        // Hiển thị tổng tiền sau khi giảm giá
-                        txtTongThanhToan.Text = tongThanhToan.ToString("N0") + " VNĐ";
-                    }
-                    else
-                    {
-                        MessageBox.Show("Vui lòng nhập số phần trăm từ 0 đến 100!");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Vui lòng nhập số hợp lệ!");
-                }
+                MessageBox.Show("Lỗi: Tổng thanh toán không hợp lệ!");
+                return;
             }
-            else
+
+            // Chuyển đổi tổng tiền thanh toán
+            if (!decimal.TryParse(txtTongThanhToan.Text.Replace(" VNĐ", "").Replace(",", ""), out decimal tongThanhToan))
             {
                 MessageBox.Show("Lỗi khi lấy tổng thanh toán!");
+                return;
             }
+
+            // Nếu tổng thanh toán gốc chưa được lưu, gán giá trị ban đầu
+            if (tongThanhToanGoc == 0)
+            {
+                tongThanhToanGoc = tongThanhToan;
+            }
+
+            // Kiểm tra nếu textbox khuyến mãi rỗng
+            if (string.IsNullOrWhiteSpace(txtKhuyenMai.Text))
+            {
+                MessageBox.Show("Vui lòng nhập số phần trăm giảm giá!");
+                return;
+            }
+
+            // Chuyển đổi giá trị khuyến mãi
+            if (!decimal.TryParse(txtKhuyenMai.Text, out decimal giamGia))
+            {
+                MessageBox.Show("Vui lòng nhập số hợp lệ!");
+                return;
+            }
+
+            // Kiểm tra xem giá trị khuyến mãi có hợp lệ không
+            if (giamGia < 0 || giamGia > 100)
+            {
+                MessageBox.Show("Vui lòng nhập số phần trăm từ 0 đến 100!");
+                return;
+            }
+
+            // Tính toán giảm giá
+            decimal soTienGiam = (tongThanhToanGoc * giamGia) / 100;
+            tongThanhToan = tongThanhToanGoc - soTienGiam; // Tính lại tổng thanh toán từ giá trị gốc
+
+            // Cập nhật textbox tổng thanh toán
+            txtTongThanhToan.Text = tongThanhToan.ToString("N0") + " VNĐ";
         }
 
         private void btnTaiLai_Click(object sender, EventArgs e)
@@ -711,6 +735,12 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
         {
             DanhSachHoaDon ds = new DanhSachHoaDon();
             ds.ShowDialog();
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            LoadData();
+
         }
     }
 }

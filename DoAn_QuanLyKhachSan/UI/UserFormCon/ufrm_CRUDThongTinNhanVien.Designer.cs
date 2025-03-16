@@ -298,6 +298,7 @@
             this.tONGLUONGTextBox.Name = "tONGLUONGTextBox";
             this.tONGLUONGTextBox.Size = new System.Drawing.Size(200, 22);
             this.tONGLUONGTextBox.TabIndex = 56;
+            this.tONGLUONGTextBox.TextChanged += new System.EventHandler(this.tONGLUONGTextBox_TextChanged);
             // 
             // cbIDTaiKhoan
             // 

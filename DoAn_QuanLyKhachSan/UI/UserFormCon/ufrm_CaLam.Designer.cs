@@ -63,7 +63,7 @@
             // iD_CALAMLabel
             // 
             iD_CALAMLabel.AutoSize = true;
-            iD_CALAMLabel.Location = new System.Drawing.Point(136, 247);
+            iD_CALAMLabel.Location = new System.Drawing.Point(110, 250);
             iD_CALAMLabel.Name = "iD_CALAMLabel";
             iD_CALAMLabel.Size = new System.Drawing.Size(78, 16);
             iD_CALAMLabel.TabIndex = 67;
@@ -72,7 +72,7 @@
             // tENCALabel
             // 
             tENCALabel.AutoSize = true;
-            tENCALabel.Location = new System.Drawing.Point(136, 275);
+            tENCALabel.Location = new System.Drawing.Point(110, 278);
             tENCALabel.Name = "tENCALabel";
             tENCALabel.Size = new System.Drawing.Size(86, 16);
             tENCALabel.TabIndex = 69;
@@ -81,7 +81,7 @@
             // gIOBATDAULabel
             // 
             gIOBATDAULabel.AutoSize = true;
-            gIOBATDAULabel.Location = new System.Drawing.Point(136, 303);
+            gIOBATDAULabel.Location = new System.Drawing.Point(110, 306);
             gIOBATDAULabel.Name = "gIOBATDAULabel";
             gIOBATDAULabel.Size = new System.Drawing.Size(91, 16);
             gIOBATDAULabel.TabIndex = 71;
@@ -90,7 +90,7 @@
             // gIOKETTHUCLabel
             // 
             gIOKETTHUCLabel.AutoSize = true;
-            gIOKETTHUCLabel.Location = new System.Drawing.Point(136, 331);
+            gIOKETTHUCLabel.Location = new System.Drawing.Point(110, 334);
             gIOKETTHUCLabel.Name = "gIOKETTHUCLabel";
             gIOKETTHUCLabel.Size = new System.Drawing.Size(100, 16);
             gIOKETTHUCLabel.TabIndex = 73;

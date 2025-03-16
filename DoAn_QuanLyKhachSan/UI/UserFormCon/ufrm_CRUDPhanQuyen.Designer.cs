@@ -161,6 +161,7 @@
             this.btnMucLuong.Name = "btnMucLuong";
             this.btnMucLuong.Size = new System.Drawing.Size(180, 22);
             this.btnMucLuong.TabIndex = 8;
+            this.btnMucLuong.TextChanged += new System.EventHandler(this.btnMucLuong_TextChanged);
             // 
             // btnMoTa
             // 

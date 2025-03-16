@@ -41,9 +41,29 @@ namespace DAL.DAL
                 string query = "SELECT COUNT(*) FROM DICH_VU WHERE TenDichVu = @TenDichVu";
                 SqlCommand cmd = new SqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@TenDichVu", TenDichVu);
-                return (int)cmd.ExecuteScalar() > 0;
+                return (int)cmd.ExecuteScalar() > 0;    
             }
         }
+
+
+        ////============================================================
+        //// Kiểm tra dịch vụ có đang được sử dụng không trước khi xóa
+        //public bool IsDichVuInUse(int MaDichVu)
+        //{
+        //    using (SqlConnection conn = new SqlConnection(connectionString))
+        //    {
+        //        conn.Open();
+        //        string query = @"SELECT COUNT(*) FROM PHIEU_DAT_PHONG WHERE MaDichVu = @MaDichVu";
+
+        //        using (SqlCommand cmd = new SqlCommand(query, conn))
+        //        {
+        //            cmd.Parameters.AddWithValue("@MaDichVu", MaDichVu);
+        //            int count = Convert.ToInt32(cmd.ExecuteScalar());
+        //            return count > 0; // Nếu count > 0 nghĩa là dịch vụ đang được sử dụng
+        //        }
+        //    }
+        //}
+
 
         // Thêm dịch vụ mới
         public bool AddDichVu(DichVu dv)

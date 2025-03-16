@@ -39,7 +39,7 @@ namespace BLL
            
             if (DAL_Tang.CheckTang(tang.TenTang))
             {
-                throw new Exception($"Tên Phân Quyền : {tang.TenTang} đã tồn tại");
+                throw new Exception($"Tên tầng : {tang.TenTang} đã tồn tại");
 
             }
            

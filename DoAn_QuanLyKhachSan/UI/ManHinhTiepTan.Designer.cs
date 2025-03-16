@@ -46,8 +46,6 @@
             this.panel_ManHinhChinh = new System.Windows.Forms.Panel();
             this.btnManHinhChinh = new System.Windows.Forms.Button();
             this.panel_ThongKe = new System.Windows.Forms.Panel();
-            this.btnTKDichVu = new System.Windows.Forms.Button();
-            this.btnDoanhThu = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.panel_TaiKhoan = new System.Windows.Forms.Panel();
             this.btnTK = new System.Windows.Forms.Button();
@@ -61,7 +59,6 @@
             this.btnThongTinPhong = new System.Windows.Forms.Button();
             this.btnQLCSVC = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.ufrm_ManHinhHeThong1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_ManHinhHeThong();
             this.ufrm_TTTaiKhoan1 = new DoAn_QuanLyKhachSan.UI.UserFormCon.ufrm_TTTaiKhoan();
             this.ufrm_TTPhanQuyen1 = new DoAn_QuanLyKhachSan.UI.UserFormCon.ufrm_TTPhanQuyen();
             this.ufrm_TTDichVu1 = new DoAn_QuanLyKhachSan.UI.UserFormCon.ufrm_TTDichVu();
@@ -74,6 +71,8 @@
             this.ufrm_TTPhanCong1 = new DoAn_QuanLyKhachSan.UI.UserFormCon.ufrm_TTPhanCong();
             this.ufrm_TTChamCong1 = new DoAn_QuanLyKhachSan.UI.UserFormCon.ufrm_TTChamCong();
             this.ufrm_TTThongTinNhanVien1 = new DoAn_QuanLyKhachSan.UI.UserFormCon.ufrm_TTThongTinNhanVien();
+            this.ufrm_ThongKe1 = new DoAn_QuanLyKhachSan.UI.UserFormCon.ufrm_ThongKe();
+            this.ufrm_ManHinhHeThong1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_ManHinhHeThong();
             this.QLNVContainer.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_ManHinhChinh.SuspendLayout();
@@ -258,8 +257,6 @@
             // 
             // panel_ThongKe
             // 
-            this.panel_ThongKe.Controls.Add(this.btnTKDichVu);
-            this.panel_ThongKe.Controls.Add(this.btnDoanhThu);
             this.panel_ThongKe.Controls.Add(this.btnThongKe);
             this.panel_ThongKe.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_ThongKe.Location = new System.Drawing.Point(0, 371);
@@ -268,30 +265,6 @@
             this.panel_ThongKe.Name = "panel_ThongKe";
             this.panel_ThongKe.Size = new System.Drawing.Size(229, 51);
             this.panel_ThongKe.TabIndex = 13;
-            // 
-            // btnTKDichVu
-            // 
-            this.btnTKDichVu.FlatAppearance.BorderSize = 0;
-            this.btnTKDichVu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTKDichVu.Location = new System.Drawing.Point(1, 101);
-            this.btnTKDichVu.Name = "btnTKDichVu";
-            this.btnTKDichVu.Size = new System.Drawing.Size(227, 48);
-            this.btnTKDichVu.TabIndex = 14;
-            this.btnTKDichVu.Text = "Thống Kê Dịch Vụ";
-            this.btnTKDichVu.UseVisualStyleBackColor = true;
-            this.btnTKDichVu.Click += new System.EventHandler(this.btnTKDichVu_Click);
-            // 
-            // btnDoanhThu
-            // 
-            this.btnDoanhThu.FlatAppearance.BorderSize = 0;
-            this.btnDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDoanhThu.Location = new System.Drawing.Point(1, 55);
-            this.btnDoanhThu.Name = "btnDoanhThu";
-            this.btnDoanhThu.Size = new System.Drawing.Size(227, 48);
-            this.btnDoanhThu.TabIndex = 13;
-            this.btnDoanhThu.Text = "Thống Kê Doanh Thu";
-            this.btnDoanhThu.UseVisualStyleBackColor = true;
-            this.btnDoanhThu.Click += new System.EventHandler(this.btnDoanhThu_Click);
             // 
             // btnThongKe
             // 
@@ -463,14 +436,6 @@
             this.panel3.Size = new System.Drawing.Size(233, 50);
             this.panel3.TabIndex = 11;
             // 
-            // ufrm_ManHinhHeThong1
-            // 
-            this.ufrm_ManHinhHeThong1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ufrm_ManHinhHeThong1.Location = new System.Drawing.Point(233, 0);
-            this.ufrm_ManHinhHeThong1.Name = "ufrm_ManHinhHeThong1";
-            this.ufrm_ManHinhHeThong1.Size = new System.Drawing.Size(1173, 843);
-            this.ufrm_ManHinhHeThong1.TabIndex = 29;
-            // 
             // ufrm_TTTaiKhoan1
             // 
             this.ufrm_TTTaiKhoan1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -567,12 +532,29 @@
             this.ufrm_TTThongTinNhanVien1.Size = new System.Drawing.Size(1173, 843);
             this.ufrm_TTThongTinNhanVien1.TabIndex = 17;
             // 
+            // ufrm_ThongKe1
+            // 
+            this.ufrm_ThongKe1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ufrm_ThongKe1.Location = new System.Drawing.Point(233, 0);
+            this.ufrm_ThongKe1.Name = "ufrm_ThongKe1";
+            this.ufrm_ThongKe1.Size = new System.Drawing.Size(1173, 843);
+            this.ufrm_ThongKe1.TabIndex = 29;
+            // 
+            // ufrm_ManHinhHeThong1
+            // 
+            this.ufrm_ManHinhHeThong1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ufrm_ManHinhHeThong1.Location = new System.Drawing.Point(233, 0);
+            this.ufrm_ManHinhHeThong1.Name = "ufrm_ManHinhHeThong1";
+            this.ufrm_ManHinhHeThong1.Size = new System.Drawing.Size(1173, 843);
+            this.ufrm_ManHinhHeThong1.TabIndex = 30;
+            // 
             // ManHinhTiepTan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1406, 843);
             this.Controls.Add(this.ufrm_ManHinhHeThong1);
+            this.Controls.Add(this.ufrm_ThongKe1);
             this.Controls.Add(this.ufrm_TTTaiKhoan1);
             this.Controls.Add(this.ufrm_TTPhanQuyen1);
             this.Controls.Add(this.ufrm_TTDichVu1);
@@ -587,6 +569,7 @@
             this.Controls.Add(this.ufrm_TTThongTinNhanVien1);
             this.Controls.Add(this.panel1);
             this.Name = "ManHinhTiepTan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ManHinhTiepTan";
             this.QLNVContainer.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -618,8 +601,6 @@
         private System.Windows.Forms.Panel panel_ManHinhChinh;
         private System.Windows.Forms.Button btnManHinhChinh;
         private System.Windows.Forms.Panel panel_ThongKe;
-        private System.Windows.Forms.Button btnTKDichVu;
-        private System.Windows.Forms.Button btnDoanhThu;
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.Panel panel_TaiKhoan;
         private System.Windows.Forms.Button btnTK;
@@ -645,6 +626,7 @@
         private UserFormCon.ufrm_TTDichVu ufrm_TTDichVu1;
         private UserFormCon.ufrm_TTPhanQuyen ufrm_TTPhanQuyen1;
         private UserFormCon.ufrm_TTTaiKhoan ufrm_TTTaiKhoan1;
+        private UserFormCon.ufrm_ThongKe ufrm_ThongKe1;
         private UseForm.ufrm_ManHinhHeThong ufrm_ManHinhHeThong1;
     }
 }

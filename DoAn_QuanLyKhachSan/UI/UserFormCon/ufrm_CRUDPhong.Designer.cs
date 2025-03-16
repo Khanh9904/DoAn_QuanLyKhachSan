@@ -60,6 +60,52 @@
             ((System.ComponentModel.ISupportInitialize)(this.data_Phong)).BeginInit();
             this.SuspendLayout();
             // 
+            // maThietBiLabel
+            // 
+            maThietBiLabel.AutoSize = true;
+            maThietBiLabel.Location = new System.Drawing.Point(42, 302);
+            maThietBiLabel.Name = "maThietBiLabel";
+            maThietBiLabel.Size = new System.Drawing.Size(68, 16);
+            maThietBiLabel.TabIndex = 11;
+            maThietBiLabel.Text = "MÃ TẦNG";
+            maThietBiLabel.Click += new System.EventHandler(this.maThietBiLabel_Click);
+            // 
+            // maLoaiPhongLabel
+            // 
+            maLoaiPhongLabel.AutoSize = true;
+            maLoaiPhongLabel.Location = new System.Drawing.Point(42, 274);
+            maLoaiPhongLabel.Name = "maLoaiPhongLabel";
+            maLoaiPhongLabel.Size = new System.Drawing.Size(111, 16);
+            maLoaiPhongLabel.TabIndex = 9;
+            maLoaiPhongLabel.Text = "MÃ LOẠI PHÒNG";
+            // 
+            // tinhTrangLabel
+            // 
+            tinhTrangLabel.AutoSize = true;
+            tinhTrangLabel.Location = new System.Drawing.Point(42, 246);
+            tinhTrangLabel.Name = "tinhTrangLabel";
+            tinhTrangLabel.Size = new System.Drawing.Size(90, 16);
+            tinhTrangLabel.TabIndex = 7;
+            tinhTrangLabel.Text = "TINH TRANG";
+            // 
+            // tenPhongLabel
+            // 
+            tenPhongLabel.AutoSize = true;
+            tenPhongLabel.Location = new System.Drawing.Point(42, 218);
+            tenPhongLabel.Name = "tenPhongLabel";
+            tenPhongLabel.Size = new System.Drawing.Size(87, 16);
+            tenPhongLabel.TabIndex = 5;
+            tenPhongLabel.Text = "TÊN PHÒNG";
+            // 
+            // maPhongLabel
+            // 
+            maPhongLabel.AutoSize = true;
+            maPhongLabel.Location = new System.Drawing.Point(42, 190);
+            maPhongLabel.Name = "maPhongLabel";
+            maPhongLabel.Size = new System.Drawing.Size(79, 16);
+            maPhongLabel.TabIndex = 3;
+            maPhongLabel.Text = "MÃ PHÒNG";
+            // 
             // tinhTrangTextBox
             // 
             this.tinhTrangTextBox.FormattingEnabled = true;
@@ -204,52 +250,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "QUẢN LÝ THÔNG TIN PHÒNG";
             // 
-            // maThietBiLabel
-            // 
-            maThietBiLabel.AutoSize = true;
-            maThietBiLabel.Location = new System.Drawing.Point(68, 302);
-            maThietBiLabel.Name = "maThietBiLabel";
-            maThietBiLabel.Size = new System.Drawing.Size(68, 16);
-            maThietBiLabel.TabIndex = 11;
-            maThietBiLabel.Text = "MÃ TẦNG";
-            maThietBiLabel.Click += new System.EventHandler(this.maThietBiLabel_Click);
-            // 
-            // maLoaiPhongLabel
-            // 
-            maLoaiPhongLabel.AutoSize = true;
-            maLoaiPhongLabel.Location = new System.Drawing.Point(68, 274);
-            maLoaiPhongLabel.Name = "maLoaiPhongLabel";
-            maLoaiPhongLabel.Size = new System.Drawing.Size(111, 16);
-            maLoaiPhongLabel.TabIndex = 9;
-            maLoaiPhongLabel.Text = "MÃ LOẠI PHÒNG";
-            // 
-            // tinhTrangLabel
-            // 
-            tinhTrangLabel.AutoSize = true;
-            tinhTrangLabel.Location = new System.Drawing.Point(68, 246);
-            tinhTrangLabel.Name = "tinhTrangLabel";
-            tinhTrangLabel.Size = new System.Drawing.Size(90, 16);
-            tinhTrangLabel.TabIndex = 7;
-            tinhTrangLabel.Text = "TINH TRANG";
-            // 
-            // tenPhongLabel
-            // 
-            tenPhongLabel.AutoSize = true;
-            tenPhongLabel.Location = new System.Drawing.Point(68, 218);
-            tenPhongLabel.Name = "tenPhongLabel";
-            tenPhongLabel.Size = new System.Drawing.Size(87, 16);
-            tenPhongLabel.TabIndex = 5;
-            tenPhongLabel.Text = "TÊN PHÒNG";
-            // 
-            // maPhongLabel
-            // 
-            maPhongLabel.AutoSize = true;
-            maPhongLabel.Location = new System.Drawing.Point(68, 190);
-            maPhongLabel.Name = "maPhongLabel";
-            maPhongLabel.Size = new System.Drawing.Size(79, 16);
-            maPhongLabel.TabIndex = 3;
-            maPhongLabel.Text = "MÃ PHÒNG";
-            // 
             // ufrm_CRUDPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -273,6 +273,7 @@
             this.Controls.Add(this.label1);
             this.Name = "ufrm_CRUDPhong";
             this.Size = new System.Drawing.Size(1250, 830);
+            this.Load += new System.EventHandler(this.ufrm_CRUDPhong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pHONGBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.data_Phong)).EndInit();

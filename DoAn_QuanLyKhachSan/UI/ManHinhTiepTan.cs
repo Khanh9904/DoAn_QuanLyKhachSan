@@ -48,6 +48,8 @@ namespace DoAn_QuanLyKhachSan.UI
             ufrm_TTDichVu1.Visible = false;
             ufrm_TTPhanQuyen1.Visible = false;
             ufrm_TTTaiKhoan1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
 
 
 
@@ -68,6 +70,8 @@ namespace DoAn_QuanLyKhachSan.UI
             ufrm_TTDichVu1.Visible = false;
             ufrm_TTPhanQuyen1.Visible = false;
             ufrm_TTTaiKhoan1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
         }
 
         private void btnChamCong_Click(object sender, EventArgs e)
@@ -85,6 +89,8 @@ namespace DoAn_QuanLyKhachSan.UI
             ufrm_TTDichVu1.Visible = false;
             ufrm_TTPhanQuyen1.Visible = false;
             ufrm_TTTaiKhoan1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
         }
 
         private void btnCaLam_Click(object sender, EventArgs e)
@@ -102,6 +108,8 @@ namespace DoAn_QuanLyKhachSan.UI
             ufrm_TTDichVu1.Visible = false;
             ufrm_TTPhanQuyen1.Visible = false;
             ufrm_TTTaiKhoan1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
         }
 
         private void btnQLKH_Click(object sender, EventArgs e)
@@ -119,6 +127,8 @@ namespace DoAn_QuanLyKhachSan.UI
             ufrm_TTDichVu1.Visible = false;
             ufrm_TTPhanQuyen1.Visible = false;
             ufrm_TTTaiKhoan1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
         }
 
         private void btnThongTinPhong_Click(object sender, EventArgs e)
@@ -136,6 +146,8 @@ namespace DoAn_QuanLyKhachSan.UI
             ufrm_TTDichVu1.Visible = false;
             ufrm_TTPhanQuyen1.Visible = false;
             ufrm_TTTaiKhoan1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
         }
 
         private void btnThongTinLoaiPhong_Click(object sender, EventArgs e)
@@ -153,6 +165,8 @@ namespace DoAn_QuanLyKhachSan.UI
             ufrm_TTDichVu1.Visible = false;
             ufrm_TTPhanQuyen1.Visible = false;
             ufrm_TTTaiKhoan1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
         }
 
         private void btnThongTinTang_Click(object sender, EventArgs e)
@@ -170,6 +184,8 @@ namespace DoAn_QuanLyKhachSan.UI
             ufrm_TTDichVu1.Visible = false;
             ufrm_TTPhanQuyen1.Visible = false;
             ufrm_TTTaiKhoan1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
         }
 
         private void btnThongTinThietBi_Click(object sender, EventArgs e)
@@ -187,6 +203,8 @@ namespace DoAn_QuanLyKhachSan.UI
             ufrm_TTDichVu1.Visible = false;
             ufrm_TTPhanQuyen1.Visible = false;
             ufrm_TTTaiKhoan1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
         }
 
         private void btnThongTinDichVu_Click(object sender, EventArgs e)
@@ -204,6 +222,8 @@ namespace DoAn_QuanLyKhachSan.UI
             ufrm_TTDichVu1.Visible = true;
             ufrm_TTPhanQuyen1.Visible = false;
             ufrm_TTTaiKhoan1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
         }
 
         private void btn_QLTK_Click(object sender, EventArgs e)
@@ -227,6 +247,8 @@ namespace DoAn_QuanLyKhachSan.UI
             ufrm_TTDichVu1.Visible = false;
             ufrm_TTPhanQuyen1.Visible = true;
             ufrm_TTTaiKhoan1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
         }
 
         private void btnTK_Click(object sender, EventArgs e)
@@ -244,10 +266,26 @@ namespace DoAn_QuanLyKhachSan.UI
             ufrm_TTDichVu1.Visible = false;
             ufrm_TTPhanQuyen1.Visible = false;
             ufrm_TTTaiKhoan1.Visible = true;
+            ufrm_ThongKe1.Visible = false;
+
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
+            ufrm_ManHinhHeThong1.Visible = false;
+            ufrm_TTThongTinNhanVien1.Visible = false;
+            ufrm_TTPhanCong1.Visible = false;
+            ufrm_TTChamCong1.Visible = false;
+            ufrm_TTCaLam1.Visible = false;
+            ufrm_TTThongTinKhachHang1.Visible = false;
+            ufrm_TTPhong1.Visible = false;
+            ufrm_TTLoaiPhong1.Visible = false;
+            ufrm_TTTang1.Visible = false;
+            ufrm_TTThietBi1.Visible = false;
+            ufrm_TTDichVu1.Visible = false;
+            ufrm_TTPhanQuyen1.Visible = false;
+            ufrm_TTTaiKhoan1.Visible = false;
+            ufrm_ThongKe1.Visible = true;
 
         }
 
@@ -276,6 +314,8 @@ namespace DoAn_QuanLyKhachSan.UI
             ufrm_TTDichVu1.Visible = false;
             ufrm_TTPhanQuyen1.Visible = false;
             ufrm_TTTaiKhoan1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
         }
 
         private void btnQLCSVC_Click(object sender, EventArgs e)

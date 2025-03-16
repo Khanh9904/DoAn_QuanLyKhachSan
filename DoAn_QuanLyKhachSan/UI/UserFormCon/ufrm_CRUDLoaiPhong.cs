@@ -197,7 +197,19 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             }
         }
 
-       
+        private void giaTextBox_TextChanged(object sender, EventArgs e)
+        {
+            string input = giaTextBox.Text.Replace(".", "").Replace(" VND", "").Trim();
+
+            if (decimal.TryParse(input, out decimal mucLuong))
+            {
+
+                giaTextBox.Text = string.Format("{0:N0} VND", mucLuong);
+                giaTextBox.SelectionStart = giaTextBox.Text.Length;
+            }
+        }
+
+
         //----------------------------------------------------------------------------------------------------------------------------------------
 
 

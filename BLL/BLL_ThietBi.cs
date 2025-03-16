@@ -26,16 +26,26 @@ namespace BLL
         //ham them thiet bi
         public bool AddThietBi(DAL.Model.ThietBi thietBi)
         {
+            if (thietBi == null)
+            {
+                throw new ArgumentNullException(nameof(thietBi), "Thông tin thiết bị không được để trống.");
+            }
+
+            thietBi.TenThietBi = thietBi.TenThietBi.Trim();
+
             if (string.IsNullOrWhiteSpace(thietBi.TenThietBi) || thietBi.SoLuongThietBi <= 0 || string.IsNullOrWhiteSpace(thietBi.TinhTrang))
             {
-                throw new Exception("Vui lòng nhập đầy đủ thông tin thiết bị");
+                throw new ArgumentException("Vui lòng nhập đầy đủ và hợp lệ thông tin thiết bị.");
             }
+
             if (DAL_ThietBi.CheckThietBi(thietBi.TenThietBi))
             {
-                throw new Exception($"Tên thiết bị '{thietBi.TenThietBi}' đã tồn tại");
+                throw new ArgumentException($"Thiết bị '{thietBi.TenThietBi}' đã tồn tại.");
             }
+
             return DAL_ThietBi.AddThietBi(thietBi);
         }
+
 
         //ham sua thiet bi
 
@@ -44,6 +54,10 @@ namespace BLL
             if (thietBi.MaThietBi <= 0 || string.IsNullOrWhiteSpace(thietBi.TenThietBi) || thietBi.SoLuongThietBi <= 0 || string.IsNullOrWhiteSpace(thietBi.TinhTrang))
             {
                 throw new Exception("Vui lòng nhập đầy đủ thông tin thiết bị");
+            }
+            if (DAL_ThietBi.CheckThietBi(thietBi.TenThietBi))
+            {
+                throw new Exception($"Tên thiết bị '{thietBi.TenThietBi}' đã tồn tại");
             }
             return DAL_ThietBi.UpdateThietBi(thietBi);
         }

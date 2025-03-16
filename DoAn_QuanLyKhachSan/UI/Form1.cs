@@ -85,6 +85,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
             ufrm_CaLam1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
 
 
         }
@@ -104,6 +106,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = true;
             ufrm_CaLam1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
 
         }
 
@@ -122,6 +126,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_Chamconglamviec1.Visible = true;
             ufrm_PhanCongCaLam1.Visible = false;
             ufrm_CaLam1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
 
         }
 
@@ -140,6 +146,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
             ufrm_CaLam1.Visible = true;
+            ufrm_ThongKe1.Visible = false;
+
 
         }
 
@@ -158,6 +166,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
             ufrm_CaLam1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
 
         }
 
@@ -184,6 +194,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
             ufrm_CaLam1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
 
         }
 
@@ -202,6 +214,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
             ufrm_CaLam1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
 
         }
 
@@ -220,6 +234,7 @@ namespace DoAn_QuanLyKhachSan
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
             ufrm_CaLam1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
 
         }
 
@@ -238,6 +253,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
             ufrm_CaLam1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
 
         }
 
@@ -256,6 +273,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
             ufrm_CaLam1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
 
         }
 
@@ -280,6 +299,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
             ufrm_CaLam1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
 
         }
 
@@ -298,12 +319,27 @@ namespace DoAn_QuanLyKhachSan
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
             ufrm_CaLam1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
 
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            quanLyThongKeExpander.Start();
+            ufrm_ManHinhHeThong1.Visible = false;
+            ufrm_CRUDPhanQuyen1.Visible = false;
+            ufrm_CRUDPhong1.Visible = false;
+            ufrm_CRUDTaiKhoan1.Visible = false;
+            ufrm_CRUDThongTinKhachHang1.Visible = false;
+            ufrm_CRUDThongTinNhanVien1.Visible = false;
+            ufrm_CRUDDichVu1.Visible = false;
+            ufrm_CRUDLoaiPhong1.Visible = false;
+            ufrm_CRUDTang1.Visible = false;
+            ufrm_CRUDThietBi1.Visible = false;
+            ufrm_Chamconglamviec1.Visible = false;
+            ufrm_PhanCongCaLam1.Visible = false;
+            ufrm_CaLam1.Visible = false;
+            ufrm_ThongKe1.Visible = true;
 
         }
 
@@ -334,6 +370,8 @@ namespace DoAn_QuanLyKhachSan
             ufrm_Chamconglamviec1.Visible = false;
             ufrm_PhanCongCaLam1.Visible = false;
             ufrm_CaLam1.Visible = false;
+            ufrm_ThongKe1.Visible = false;
+
 
 
         }

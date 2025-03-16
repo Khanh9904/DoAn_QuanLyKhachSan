@@ -10,7 +10,7 @@ namespace DAL.Model
     {
         public int MaHoaDon { get; set; }
 
-        public DateTime NgayLapHoaDon { get; set; }
+        public  DateTime NgayLapHoaDon { get; set; }
 
         public decimal TongTienPhong { get; set; }
 

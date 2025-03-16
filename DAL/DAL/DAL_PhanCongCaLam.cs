@@ -1,4 +1,4 @@
-﻿using DAL.Model;
+﻿    using DAL.Model;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -103,14 +103,24 @@ namespace DAL.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT COUNT(*) FROM PHANCONGCALAM WHERE ID_CALAM = @ID_CALAM AND ID_NHANVIEN = @ID_NHANVIEN AND CAST(NGAYLAM AS DATE) = @NGAYLAM";
-                SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@ID_CALAM", ID_CALAM);
-                cmd.Parameters.AddWithValue("@ID_NHANVIEN", ID_NHANVIEN);
-                cmd.Parameters.AddWithValue("@NGAYLAM", NGAYLAM.Date);
-                return (int)cmd.ExecuteScalar() > 0;
+                string query = @"
+                    SELECT COUNT(*) 
+                    FROM PHANCONGCALAM 
+                    WHERE ID_CALAM = @ID_CALAM 
+                        AND ID_NHANVIEN = @ID_NHANVIEN 
+                        AND CAST(NGAYLAM AS DATE) = @NGAYLAM";
+
+                using (SqlCommand cmd = new SqlCommand(query, connection))
+                {
+                    cmd.Parameters.Add("@ID_CALAM", SqlDbType.Int).Value = ID_CALAM;
+                    cmd.Parameters.Add("@ID_NHANVIEN", SqlDbType.Int).Value = ID_NHANVIEN;
+                    cmd.Parameters.Add("@NGAYLAM", SqlDbType.Date).Value = NGAYLAM.Date;
+
+                    return (int)cmd.ExecuteScalar() > 0;
+                }
             }
         }
+
 
         // tim kiem phan cong ca lam theo ngay
         public DataTable SearchPhanCongCaLam(DateTime NGAYLAM)

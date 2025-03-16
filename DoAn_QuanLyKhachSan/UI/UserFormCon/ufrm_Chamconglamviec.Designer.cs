@@ -54,7 +54,7 @@
             // maLoaiPhongLabel
             // 
             maLoaiPhongLabel.AutoSize = true;
-            maLoaiPhongLabel.Location = new System.Drawing.Point(77, 199);
+            maLoaiPhongLabel.Location = new System.Drawing.Point(46, 202);
             maLoaiPhongLabel.Name = "maLoaiPhongLabel";
             maLoaiPhongLabel.Size = new System.Drawing.Size(111, 16);
             maLoaiPhongLabel.TabIndex = 85;
@@ -63,7 +63,7 @@
             // tenLoaiPhongLabel
             // 
             tenLoaiPhongLabel.AutoSize = true;
-            tenLoaiPhongLabel.Location = new System.Drawing.Point(77, 227);
+            tenLoaiPhongLabel.Location = new System.Drawing.Point(46, 230);
             tenLoaiPhongLabel.Name = "tenLoaiPhongLabel";
             tenLoaiPhongLabel.Size = new System.Drawing.Size(111, 16);
             tenLoaiPhongLabel.TabIndex = 87;
@@ -73,7 +73,7 @@
             // giaLabel
             // 
             giaLabel.AutoSize = true;
-            giaLabel.Location = new System.Drawing.Point(77, 255);
+            giaLabel.Location = new System.Drawing.Point(46, 258);
             giaLabel.Name = "giaLabel";
             giaLabel.Size = new System.Drawing.Size(108, 16);
             giaLabel.TabIndex = 89;
@@ -82,7 +82,7 @@
             // soNguoiToiDaLabel
             // 
             soNguoiToiDaLabel.AutoSize = true;
-            soNguoiToiDaLabel.Location = new System.Drawing.Point(77, 283);
+            soNguoiToiDaLabel.Location = new System.Drawing.Point(46, 286);
             soNguoiToiDaLabel.Name = "soNguoiToiDaLabel";
             soNguoiToiDaLabel.Size = new System.Drawing.Size(89, 16);
             soNguoiToiDaLabel.TabIndex = 91;

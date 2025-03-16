@@ -74,7 +74,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             else
             {
 
-                cbNhanVien.SelectedIndex = 0;
+                cbNhanVien.SelectedIndex = -1;
             }
         }
 
@@ -108,7 +108,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             else
             {
 
-                cbMaCa.SelectedIndex = 0;
+                cbMaCa.SelectedIndex = -1;
             }
         }
 
@@ -129,8 +129,8 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
         public void DonThongTin()
         {
             iD_PHANCONGTextBox.Text = "";
-            cbMaCa.SelectedIndex = 0;
-            cbNhanVien.SelectedIndex = 0;
+            cbMaCa.SelectedIndex = -1;
+            cbNhanVien.SelectedIndex = -1;
             nGAYLAMDateTimePicker.Value = DateTime.Now;
         }
 
@@ -283,6 +283,29 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTimKiemPhanCong_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtTimKiemPhanCong.Text.Trim();
+
+            if (string.IsNullOrEmpty(keyword))
+            {
+
+                data_PhanCong.DataSource = BLL_PhanCongCaLam.GetDataPhanCongCaLam();
+                return;
+            }
+
+            if (DateTime.TryParse(keyword, out DateTime ngayLam))
+            {
+                DataTable dt = BLL_PhanCongCaLam.SearchPhanCongCaLam(ngayLam);
+                data_PhanCong.DataSource = dt;
             }
         }
     }

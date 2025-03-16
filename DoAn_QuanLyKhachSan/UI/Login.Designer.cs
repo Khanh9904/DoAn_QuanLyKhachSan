@@ -84,6 +84,7 @@
             this.txtnhapemail.Name = "txtnhapemail";
             this.txtnhapemail.Size = new System.Drawing.Size(255, 34);
             this.txtnhapemail.TabIndex = 1;
+            this.txtnhapemail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtnhapemail_KeyDown);
             // 
             // pictureBox2
             // 
@@ -111,8 +112,10 @@
             this.txtpass.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpass.Location = new System.Drawing.Point(49, 13);
             this.txtpass.Name = "txtpass";
+            this.txtpass.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(255, 34);
             this.txtpass.TabIndex = 1;
+            this.txtpass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtpass_KeyDown);
             // 
             // pictureBox3
             // 
@@ -133,6 +136,7 @@
             this.btnexit.TabIndex = 5;
             this.btnexit.Text = "Cancel";
             this.btnexit.UseVisualStyleBackColor = true;
+            this.btnexit.Click += new System.EventHandler(this.btnexit_Click);
             // 
             // btnlogin
             // 
@@ -141,7 +145,7 @@
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(323, 55);
             this.btnlogin.TabIndex = 6;
-            this.btnlogin.Text = "Cancel";
+            this.btnlogin.Text = "Login";
             this.btnlogin.UseVisualStyleBackColor = true;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
