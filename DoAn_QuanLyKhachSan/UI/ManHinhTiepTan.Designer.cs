@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.btnQLKH = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.calamviecTableAdapter1 = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.CALAMVIECTableAdapter();
             this.QLNVTimer = new System.Windows.Forms.Timer(this.components);
             this.QLCSVC = new System.Windows.Forms.Timer(this.components);
@@ -73,8 +74,9 @@
             this.ufrm_TTThongTinNhanVien1 = new DoAn_QuanLyKhachSan.UI.UserFormCon.ufrm_TTThongTinNhanVien();
             this.ufrm_ThongKe1 = new DoAn_QuanLyKhachSan.UI.UserFormCon.ufrm_ThongKe();
             this.ufrm_ManHinhHeThong1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_ManHinhHeThong();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnDangXuat = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.QLNVContainer.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel_ManHinhChinh.SuspendLayout();
@@ -82,7 +84,6 @@
             this.panel_TaiKhoan.SuspendLayout();
             this.panel_QLCSVC.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnQLKH
@@ -110,6 +111,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(233, 169);
             this.panel2.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DoAn_QuanLyKhachSan.Properties.Resources.icon_5404125_640;
+            this.pictureBox1.Location = new System.Drawing.Point(5, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(222, 164);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // calamviecTableAdapter1
             // 
@@ -221,6 +232,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(187)))), ((int)(((byte)(178)))));
+            this.panel1.Controls.Add(this.btnDangXuat);
             this.panel1.Controls.Add(this.panel_ManHinhChinh);
             this.panel1.Controls.Add(this.panel_ThongKe);
             this.panel1.Controls.Add(this.panel_TaiKhoan);
@@ -546,21 +558,28 @@
             // 
             // ufrm_ManHinhHeThong1
             // 
+            this.ufrm_ManHinhHeThong1.AutoSize = true;
             this.ufrm_ManHinhHeThong1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ufrm_ManHinhHeThong1.Location = new System.Drawing.Point(233, 0);
             this.ufrm_ManHinhHeThong1.Name = "ufrm_ManHinhHeThong1";
             this.ufrm_ManHinhHeThong1.Size = new System.Drawing.Size(1173, 843);
             this.ufrm_ManHinhHeThong1.TabIndex = 30;
             // 
-            // pictureBox1
+            // btnDangXuat
             // 
-            this.pictureBox1.Image = global::DoAn_QuanLyKhachSan.Properties.Resources.icon_5404125_640;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(222, 164);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDangXuat.FlatAppearance.BorderSize = 0;
+            this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 468);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnDangXuat.Size = new System.Drawing.Size(233, 48);
+            this.btnDangXuat.TabIndex = 14;
+            this.btnDangXuat.Text = "Đăng Xuất";
+            this.btnDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // ManHinhTiepTan
             // 
@@ -585,7 +604,10 @@
             this.Name = "ManHinhTiepTan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ManHinhTiepTan";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ManHinhTiepTan_Load);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.QLNVContainer.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel_ManHinhChinh.ResumeLayout(false);
@@ -593,8 +615,8 @@
             this.panel_TaiKhoan.ResumeLayout(false);
             this.panel_QLCSVC.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -645,5 +667,6 @@
         private UserFormCon.ufrm_ThongKe ufrm_ThongKe1;
         private UseForm.ufrm_ManHinhHeThong ufrm_ManHinhHeThong1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnDangXuat;
     }
 }

@@ -27,6 +27,28 @@ namespace DoAn_QuanLyKhachSan.UI
             quanLyThongKeExpander = new PanelExpander(panel_ThongKe, ThongKe_timer, true);
         }
 
+        // Hiển thị màu các button ở form chính
+        private Button _currentButton = null;
+
+        private void HighlightButton(Button selectedButton)
+        {
+            if (_currentButton != null)
+            {
+
+                // chưa chọn 
+                _currentButton.BackColor = Color.FromArgb(113, 187, 178); // màu nút chưa chọn 
+                _currentButton.ForeColor = Color.Black; // màu chữ 
+                _currentButton.FlatAppearance.BorderSize = 0;
+            }
+
+            // hành động chọn 
+            selectedButton.BackColor = Color.FromArgb(235, 91, 0);
+            selectedButton.ForeColor = Color.White;
+            _currentButton = selectedButton;
+        }
+
+        // Hiển thị các form con
+
         private void btnQLNV_Click(object sender, EventArgs e)
         {
             quanLyNhanVienExpander.Start();
@@ -35,6 +57,8 @@ namespace DoAn_QuanLyKhachSan.UI
 
         private void btnTTNV_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
+
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_TTThongTinNhanVien1.Visible = true;
             ufrm_TTPhanCong1.Visible = false;
@@ -57,6 +81,8 @@ namespace DoAn_QuanLyKhachSan.UI
 
         private void btnPCCL_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
+
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_TTThongTinNhanVien1.Visible = false;
             ufrm_TTPhanCong1.Visible = true;
@@ -76,6 +102,8 @@ namespace DoAn_QuanLyKhachSan.UI
 
         private void btnChamCong_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
+
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_TTThongTinNhanVien1.Visible = false;
             ufrm_TTPhanCong1.Visible = false;
@@ -95,6 +123,8 @@ namespace DoAn_QuanLyKhachSan.UI
 
         private void btnCaLam_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
+
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_TTThongTinNhanVien1.Visible = false;
             ufrm_TTPhanCong1.Visible = false;
@@ -114,6 +144,8 @@ namespace DoAn_QuanLyKhachSan.UI
 
         private void btnQLKH_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
+
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_TTThongTinNhanVien1.Visible = false;
             ufrm_TTPhanCong1.Visible = false;
@@ -133,6 +165,8 @@ namespace DoAn_QuanLyKhachSan.UI
 
         private void btnThongTinPhong_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
+
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_TTThongTinNhanVien1.Visible = false;
             ufrm_TTPhanCong1.Visible = false;
@@ -152,6 +186,8 @@ namespace DoAn_QuanLyKhachSan.UI
 
         private void btnThongTinLoaiPhong_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
+
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_TTThongTinNhanVien1.Visible = false;
             ufrm_TTPhanCong1.Visible = false;
@@ -171,6 +207,8 @@ namespace DoAn_QuanLyKhachSan.UI
 
         private void btnThongTinTang_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
+
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_TTThongTinNhanVien1.Visible = false;
             ufrm_TTPhanCong1.Visible = false;
@@ -190,6 +228,8 @@ namespace DoAn_QuanLyKhachSan.UI
 
         private void btnThongTinThietBi_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
+
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_TTThongTinNhanVien1.Visible = false;
             ufrm_TTPhanCong1.Visible = false;
@@ -209,6 +249,8 @@ namespace DoAn_QuanLyKhachSan.UI
 
         private void btnThongTinDichVu_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
+
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_TTThongTinNhanVien1.Visible = false;
             ufrm_TTPhanCong1.Visible = false;
@@ -228,12 +270,16 @@ namespace DoAn_QuanLyKhachSan.UI
 
         private void btn_QLTK_Click(object sender, EventArgs e)
         {
+            
+
             quanLyTKExpander.Start();
 
         }
 
         private void btnPQ_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
+
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_TTThongTinNhanVien1.Visible = false;
             ufrm_TTPhanCong1.Visible = false;
@@ -253,6 +299,8 @@ namespace DoAn_QuanLyKhachSan.UI
 
         private void btnTK_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
+
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_TTThongTinNhanVien1.Visible = false;
             ufrm_TTPhanCong1.Visible = false;
@@ -272,6 +320,8 @@ namespace DoAn_QuanLyKhachSan.UI
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
+
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_TTThongTinNhanVien1.Visible = false;
             ufrm_TTPhanCong1.Visible = false;
@@ -301,6 +351,8 @@ namespace DoAn_QuanLyKhachSan.UI
 
         private void btnManHinhChinh_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
+
             ufrm_ManHinhHeThong1.Visible = true;
             ufrm_TTThongTinNhanVien1.Visible = false;
             ufrm_TTPhanCong1.Visible = false;
@@ -320,8 +372,37 @@ namespace DoAn_QuanLyKhachSan.UI
 
         private void btnQLCSVC_Click(object sender, EventArgs e)
         {
+            
+
             quanLyCSVCExpander.Start();
 
         }
+
+        private void ManHinhTiepTan_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            HighlightButton(sender as Button);
+
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Xác nhận đăng xuất",
+                                                  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Ẩn form hiện tại
+                this.Hide();
+
+                // Mở lại form login
+                Login loginForm = new Login();
+                loginForm.ShowDialog();
+
+                // Thoát toàn bộ chương trình nếu đăng xuất
+                Application.Exit();
+            }
+        }
     }
+
 }

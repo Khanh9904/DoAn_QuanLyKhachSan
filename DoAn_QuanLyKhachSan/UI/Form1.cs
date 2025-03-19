@@ -1,4 +1,5 @@
 ﻿using DoAn_QuanLyKhachSan.Control;
+using DoAn_QuanLyKhachSan.UI;
 using DoAn_QuanLyKhachSan.UI.UserFormCon;
 using DoAn_QuanLyKhachSan.UI.UserFormPhu;
 using System;
@@ -397,6 +398,27 @@ namespace DoAn_QuanLyKhachSan
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            HighlightButton(sender as Button);
+
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn đăng xuất không?", "Xác nhận đăng xuất",
+                                                  MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // Ẩn form hiện tại
+                this.Hide();
+
+                // Mở lại form login
+                Login loginForm = new Login();
+                loginForm.ShowDialog();
+
+                // Thoát toàn bộ chương trình nếu đăng xuất
+                Application.Exit();
+            }
         }
 
 

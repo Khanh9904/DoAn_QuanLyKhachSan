@@ -54,6 +54,7 @@
             this.btnTTNV = new System.Windows.Forms.Button();
             this.btnQLNV = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.calamviecTableAdapter1 = new DoAn_QuanLyKhachSan.HeThongKhachSanDataSetTableAdapters.CALAMVIECTableAdapter();
             this.QLNVTimer = new System.Windows.Forms.Timer(this.components);
             this.QLCSVC = new System.Windows.Forms.Timer(this.components);
@@ -73,7 +74,7 @@
             this.ufrm_CRUDThongTinKhachHang1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_CRUDThongTinKhachHang();
             this.ufrm_CRUDPhong1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_CRUDPhong();
             this.ufrm_CRUDPhanQuyen1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_CRUDPhanQuyen();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnDangXuat = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel_ManHinhChinh.SuspendLayout();
             this.panel_ThongKe.SuspendLayout();
@@ -88,6 +89,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(187)))), ((int)(((byte)(178)))));
+            this.panel1.Controls.Add(this.btnDangXuat);
             this.panel1.Controls.Add(this.panel_ManHinhChinh);
             this.panel1.Controls.Add(this.panel_ThongKe);
             this.panel1.Controls.Add(this.panel_TaiKhoan);
@@ -420,6 +422,16 @@
             this.panel2.Size = new System.Drawing.Size(233, 169);
             this.panel2.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DoAn_QuanLyKhachSan.Properties.Resources.icon_5404125_640;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(233, 166);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // calamviecTableAdapter1
             // 
             this.calamviecTableAdapter1.ClearBeforeFill = true;
@@ -552,15 +564,21 @@
             this.ufrm_CRUDPhanQuyen1.Size = new System.Drawing.Size(1191, 890);
             this.ufrm_CRUDPhanQuyen1.TabIndex = 3;
             // 
-            // pictureBox1
+            // btnDangXuat
             // 
-            this.pictureBox1.Image = global::DoAn_QuanLyKhachSan.Properties.Resources.icon_5404125_640;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(233, 166);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.btnDangXuat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDangXuat.FlatAppearance.BorderSize = 0;
+            this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.Location = new System.Drawing.Point(0, 468);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnDangXuat.Size = new System.Drawing.Size(233, 48);
+            this.btnDangXuat.TabIndex = 15;
+            this.btnDangXuat.Text = "Đăng Xuất";
+            this.btnDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // Form1
             // 
@@ -582,9 +600,11 @@
             this.Controls.Add(this.ufrm_CRUDPhanQuyen1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel_ManHinhChinh.ResumeLayout(false);
@@ -645,6 +665,7 @@
         private UI.UserFormCon.ufrm_ThongKe ufrm_ThongKe1;
         private UI.UseForm.ufrm_ManHinhHeThong ufrm_ManHinhHeThong1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnDangXuat;
     }
 }
 
