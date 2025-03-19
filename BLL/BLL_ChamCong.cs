@@ -27,23 +27,34 @@ namespace BLL
         public bool themchamcong(ChamCong chamcong)
         {
 
-            //kiem tra du lieu
+          
             //kiem tra du lieu
             if (chamcong.ID_NHANVIEN <= 0 || string.IsNullOrWhiteSpace(chamcong.TRANGTHAI) || chamcong.NGAYLAMVIEC == default)
 
                 throw new Exception("Du lieu khong hop le");
 
-          
-       
+            if (DAL_ChamCong.kiemtrachamcong(chamcong.ID_NHANVIEN, chamcong.NGAYLAMVIEC))
+            {
+                return false;
+
+            }
+
+            DAL_ChamCong.themchamcong(chamcong); // -> thiếu
 
             if (chamcong.TRANGTHAI == "Có mặt")
             {
-                DAL_ChamCong.UpdateTongCong(chamcong.ID_NHANVIEN, 1);
+                DAL_ChamCong.UpdateTongCong(chamcong.ID_NHANVIEN, 0,chamcong);
 
             }
-            return DAL_ChamCong.themchamcong(chamcong);
+            return true;
 
         }
+
+        public bool UpdateTongCongNV(int maNV, int increment, ChamCong chamCong)
+        {
+            return DAL_ChamCong.UpdateTongCong(maNV, increment, chamCong);
+        }
+
         public bool suachamcong(ChamCong chamcong)
         {
             if (chamcong.ID_CHAMCONG <= 0 || chamcong.ID_NHANVIEN <= 0 || string.IsNullOrWhiteSpace(chamcong.TRANGTHAI) || chamcong.NGAYLAMVIEC == default)
@@ -52,11 +63,24 @@ namespace BLL
             }
 
 
-            //tra ve ket qua
-            return DAL_ChamCong.suachamconglamviec(chamcong);
+            if (DAL_ChamCong.kiemtrachamcong(chamcong.ID_NHANVIEN, chamcong.NGAYLAMVIEC))
+            {
+                return false;
+
+            }
+
+
+            if (chamcong.TRANGTHAI == "Có mặt")
+            {
+                DAL_ChamCong.UpdateTongCong(chamcong.ID_NHANVIEN, 0, chamcong);
+
+            }
+            return true;
 
 
         }
+
+        
         //================================================
         public bool xoachamcong(int ID_CHAMCONG)
         {

@@ -69,7 +69,7 @@
             // maKhachHangLabel
             // 
             maKhachHangLabel.AutoSize = true;
-            maKhachHangLabel.Location = new System.Drawing.Point(98, 144);
+            maKhachHangLabel.Location = new System.Drawing.Point(53, 126);
             maKhachHangLabel.Name = "maKhachHangLabel";
             maKhachHangLabel.Size = new System.Drawing.Size(118, 16);
             maKhachHangLabel.TabIndex = 2;
@@ -78,7 +78,7 @@
             // hoTenLabel
             // 
             hoTenLabel.AutoSize = true;
-            hoTenLabel.Location = new System.Drawing.Point(98, 172);
+            hoTenLabel.Location = new System.Drawing.Point(53, 154);
             hoTenLabel.Name = "hoTenLabel";
             hoTenLabel.Size = new System.Drawing.Size(58, 16);
             hoTenLabel.TabIndex = 4;
@@ -87,7 +87,7 @@
             // ngaySinhLabel
             // 
             ngaySinhLabel.AutoSize = true;
-            ngaySinhLabel.Location = new System.Drawing.Point(98, 201);
+            ngaySinhLabel.Location = new System.Drawing.Point(53, 183);
             ngaySinhLabel.Name = "ngaySinhLabel";
             ngaySinhLabel.Size = new System.Drawing.Size(80, 16);
             ngaySinhLabel.TabIndex = 6;
@@ -96,7 +96,7 @@
             // gioiTinhLabel
             // 
             gioiTinhLabel.AutoSize = true;
-            gioiTinhLabel.Location = new System.Drawing.Point(98, 233);
+            gioiTinhLabel.Location = new System.Drawing.Point(53, 215);
             gioiTinhLabel.Name = "gioiTinhLabel";
             gioiTinhLabel.Size = new System.Drawing.Size(68, 16);
             gioiTinhLabel.TabIndex = 8;
@@ -105,7 +105,7 @@
             // sDTLabel
             // 
             sDTLabel.AutoSize = true;
-            sDTLabel.Location = new System.Drawing.Point(98, 261);
+            sDTLabel.Location = new System.Drawing.Point(53, 243);
             sDTLabel.Name = "sDTLabel";
             sDTLabel.Size = new System.Drawing.Size(104, 16);
             sDTLabel.TabIndex = 10;
@@ -114,7 +114,7 @@
             // diaChiLabel
             // 
             diaChiLabel.AutoSize = true;
-            diaChiLabel.Location = new System.Drawing.Point(98, 289);
+            diaChiLabel.Location = new System.Drawing.Point(53, 271);
             diaChiLabel.Name = "diaChiLabel";
             diaChiLabel.Size = new System.Drawing.Size(53, 16);
             diaChiLabel.TabIndex = 12;
@@ -123,7 +123,7 @@
             // cCCDLabel
             // 
             cCCDLabel.AutoSize = true;
-            cCCDLabel.Location = new System.Drawing.Point(98, 317);
+            cCCDLabel.Location = new System.Drawing.Point(53, 299);
             cCCDLabel.Name = "cCCDLabel";
             cCCDLabel.Size = new System.Drawing.Size(44, 16);
             cCCDLabel.TabIndex = 14;
@@ -133,7 +133,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(421, 36);
+            this.label1.Location = new System.Drawing.Point(558, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(391, 29);
             this.label1.TabIndex = 0;
@@ -176,7 +176,7 @@
             // 
             this.maKhachHangTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHACH_HANGBindingSource, "MaKhachHang", true));
             this.maKhachHangTextBox.Enabled = false;
-            this.maKhachHangTextBox.Location = new System.Drawing.Point(254, 141);
+            this.maKhachHangTextBox.Location = new System.Drawing.Point(209, 123);
             this.maKhachHangTextBox.Name = "maKhachHangTextBox";
             this.maKhachHangTextBox.Size = new System.Drawing.Size(200, 22);
             this.maKhachHangTextBox.TabIndex = 3;
@@ -184,7 +184,7 @@
             // hoTenTextBox
             // 
             this.hoTenTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHACH_HANGBindingSource, "HoTen", true));
-            this.hoTenTextBox.Location = new System.Drawing.Point(254, 169);
+            this.hoTenTextBox.Location = new System.Drawing.Point(209, 151);
             this.hoTenTextBox.Name = "hoTenTextBox";
             this.hoTenTextBox.Size = new System.Drawing.Size(200, 22);
             this.hoTenTextBox.TabIndex = 5;
@@ -192,7 +192,7 @@
             // ngaySinhDateTimePicker
             // 
             this.ngaySinhDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.kHACH_HANGBindingSource, "NgaySinh", true));
-            this.ngaySinhDateTimePicker.Location = new System.Drawing.Point(254, 197);
+            this.ngaySinhDateTimePicker.Location = new System.Drawing.Point(209, 179);
             this.ngaySinhDateTimePicker.Name = "ngaySinhDateTimePicker";
             this.ngaySinhDateTimePicker.Size = new System.Drawing.Size(200, 22);
             this.ngaySinhDateTimePicker.TabIndex = 7;
@@ -200,7 +200,7 @@
             // sDTTextBox
             // 
             this.sDTTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHACH_HANGBindingSource, "SDT", true));
-            this.sDTTextBox.Location = new System.Drawing.Point(254, 258);
+            this.sDTTextBox.Location = new System.Drawing.Point(209, 240);
             this.sDTTextBox.Name = "sDTTextBox";
             this.sDTTextBox.Size = new System.Drawing.Size(200, 22);
             this.sDTTextBox.TabIndex = 11;
@@ -208,7 +208,7 @@
             // diaChiTextBox
             // 
             this.diaChiTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHACH_HANGBindingSource, "DiaChi", true));
-            this.diaChiTextBox.Location = new System.Drawing.Point(254, 286);
+            this.diaChiTextBox.Location = new System.Drawing.Point(209, 268);
             this.diaChiTextBox.Name = "diaChiTextBox";
             this.diaChiTextBox.Size = new System.Drawing.Size(200, 22);
             this.diaChiTextBox.TabIndex = 13;
@@ -216,7 +216,7 @@
             // cCCDTextBox
             // 
             this.cCCDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.kHACH_HANGBindingSource, "CCCD", true));
-            this.cCCDTextBox.Location = new System.Drawing.Point(254, 314);
+            this.cCCDTextBox.Location = new System.Drawing.Point(209, 296);
             this.cCCDTextBox.Name = "cCCDTextBox";
             this.cCCDTextBox.Size = new System.Drawing.Size(200, 22);
             this.cCCDTextBox.TabIndex = 15;
@@ -228,13 +228,13 @@
             this.data_ThongTinKhachHang.Name = "data_ThongTinKhachHang";
             this.data_ThongTinKhachHang.RowHeadersWidth = 51;
             this.data_ThongTinKhachHang.RowTemplate.Height = 24;
-            this.data_ThongTinKhachHang.Size = new System.Drawing.Size(803, 347);
+            this.data_ThongTinKhachHang.Size = new System.Drawing.Size(934, 488);
             this.data_ThongTinKhachHang.TabIndex = 17;
             this.data_ThongTinKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_ThongTinKhachHang_CellClick);
             // 
             // btnClearThongTinKhachHang
             // 
-            this.btnClearThongTinKhachHang.Location = new System.Drawing.Point(740, 550);
+            this.btnClearThongTinKhachHang.Location = new System.Drawing.Point(851, 676);
             this.btnClearThongTinKhachHang.Name = "btnClearThongTinKhachHang";
             this.btnClearThongTinKhachHang.Size = new System.Drawing.Size(176, 55);
             this.btnClearThongTinKhachHang.TabIndex = 87;
@@ -244,7 +244,7 @@
             // 
             // btnXoaThongTinKhachHang
             // 
-            this.btnXoaThongTinKhachHang.Location = new System.Drawing.Point(589, 550);
+            this.btnXoaThongTinKhachHang.Location = new System.Drawing.Point(700, 676);
             this.btnXoaThongTinKhachHang.Name = "btnXoaThongTinKhachHang";
             this.btnXoaThongTinKhachHang.Size = new System.Drawing.Size(116, 55);
             this.btnXoaThongTinKhachHang.TabIndex = 86;
@@ -254,7 +254,7 @@
             // 
             // btnSuaThongTinKhachHang
             // 
-            this.btnSuaThongTinKhachHang.Location = new System.Drawing.Point(428, 550);
+            this.btnSuaThongTinKhachHang.Location = new System.Drawing.Point(539, 676);
             this.btnSuaThongTinKhachHang.Name = "btnSuaThongTinKhachHang";
             this.btnSuaThongTinKhachHang.Size = new System.Drawing.Size(116, 55);
             this.btnSuaThongTinKhachHang.TabIndex = 85;
@@ -264,7 +264,7 @@
             // 
             // btnThemThongTinKhachHang
             // 
-            this.btnThemThongTinKhachHang.Location = new System.Drawing.Point(279, 550);
+            this.btnThemThongTinKhachHang.Location = new System.Drawing.Point(390, 676);
             this.btnThemThongTinKhachHang.Name = "btnThemThongTinKhachHang";
             this.btnThemThongTinKhachHang.Size = new System.Drawing.Size(116, 55);
             this.btnThemThongTinKhachHang.TabIndex = 84;
@@ -277,7 +277,7 @@
             this.txtTimKiemThongTinKhachHang.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtTimKiemThongTinKhachHang.Location = new System.Drawing.Point(508, 116);
             this.txtTimKiemThongTinKhachHang.Name = "txtTimKiemThongTinKhachHang";
-            this.txtTimKiemThongTinKhachHang.Size = new System.Drawing.Size(803, 22);
+            this.txtTimKiemThongTinKhachHang.Size = new System.Drawing.Size(934, 22);
             this.txtTimKiemThongTinKhachHang.TabIndex = 88;
             this.txtTimKiemThongTinKhachHang.TextChanged += new System.EventHandler(this.txtTimKiemThongTinKhachHang_TextChanged);
             // 
@@ -287,7 +287,7 @@
             this.gioiTinhTextBox.Items.AddRange(new object[] {
             "Nữ",
             "Nam"});
-            this.gioiTinhTextBox.Location = new System.Drawing.Point(254, 224);
+            this.gioiTinhTextBox.Location = new System.Drawing.Point(209, 206);
             this.gioiTinhTextBox.Name = "gioiTinhTextBox";
             this.gioiTinhTextBox.Size = new System.Drawing.Size(200, 24);
             this.gioiTinhTextBox.TabIndex = 89;
@@ -318,7 +318,7 @@
             this.Controls.Add(this.cCCDTextBox);
             this.Controls.Add(this.label1);
             this.Name = "ufrm_CRUDThongTinKhachHang";
-            this.Size = new System.Drawing.Size(1417, 830);
+            this.Size = new System.Drawing.Size(1487, 830);
             this.Load += new System.EventHandler(this.ufrm_CRUDThongTinKhachHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.heThongKhachSanDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kHACH_HANGBindingSource)).EndInit();

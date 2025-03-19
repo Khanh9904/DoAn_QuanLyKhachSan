@@ -63,7 +63,7 @@
             // iD_CALAMLabel
             // 
             iD_CALAMLabel.AutoSize = true;
-            iD_CALAMLabel.Location = new System.Drawing.Point(110, 250);
+            iD_CALAMLabel.Location = new System.Drawing.Point(54, 204);
             iD_CALAMLabel.Name = "iD_CALAMLabel";
             iD_CALAMLabel.Size = new System.Drawing.Size(78, 16);
             iD_CALAMLabel.TabIndex = 67;
@@ -72,7 +72,7 @@
             // tENCALabel
             // 
             tENCALabel.AutoSize = true;
-            tENCALabel.Location = new System.Drawing.Point(110, 278);
+            tENCALabel.Location = new System.Drawing.Point(54, 232);
             tENCALabel.Name = "tENCALabel";
             tENCALabel.Size = new System.Drawing.Size(86, 16);
             tENCALabel.TabIndex = 69;
@@ -81,7 +81,7 @@
             // gIOBATDAULabel
             // 
             gIOBATDAULabel.AutoSize = true;
-            gIOBATDAULabel.Location = new System.Drawing.Point(110, 306);
+            gIOBATDAULabel.Location = new System.Drawing.Point(54, 260);
             gIOBATDAULabel.Name = "gIOBATDAULabel";
             gIOBATDAULabel.Size = new System.Drawing.Size(91, 16);
             gIOBATDAULabel.TabIndex = 71;
@@ -90,7 +90,7 @@
             // gIOKETTHUCLabel
             // 
             gIOKETTHUCLabel.AutoSize = true;
-            gIOKETTHUCLabel.Location = new System.Drawing.Point(110, 334);
+            gIOKETTHUCLabel.Location = new System.Drawing.Point(54, 288);
             gIOKETTHUCLabel.Name = "gIOKETTHUCLabel";
             gIOKETTHUCLabel.Size = new System.Drawing.Size(100, 16);
             gIOKETTHUCLabel.TabIndex = 73;
@@ -132,15 +132,15 @@
             // txtTimKiemCaLam
             // 
             this.txtTimKiemCaLam.Cursor = System.Windows.Forms.Cursors.Default;
-            this.txtTimKiemCaLam.Location = new System.Drawing.Point(571, 195);
+            this.txtTimKiemCaLam.Location = new System.Drawing.Point(445, 187);
             this.txtTimKiemCaLam.Name = "txtTimKiemCaLam";
-            this.txtTimKiemCaLam.Size = new System.Drawing.Size(603, 22);
+            this.txtTimKiemCaLam.Size = new System.Drawing.Size(644, 22);
             this.txtTimKiemCaLam.TabIndex = 67;
             this.txtTimKiemCaLam.TextChanged += new System.EventHandler(this.txtTimKiemCaLam_TextChanged);
             // 
             // btnClearCaLam
             // 
-            this.btnClearCaLam.Location = new System.Drawing.Point(757, 659);
+            this.btnClearCaLam.Location = new System.Drawing.Point(776, 668);
             this.btnClearCaLam.Name = "btnClearCaLam";
             this.btnClearCaLam.Size = new System.Drawing.Size(182, 51);
             this.btnClearCaLam.TabIndex = 57;
@@ -150,7 +150,7 @@
             // 
             // btnXoaCaLam
             // 
-            this.btnXoaCaLam.Location = new System.Drawing.Point(606, 659);
+            this.btnXoaCaLam.Location = new System.Drawing.Point(625, 668);
             this.btnXoaCaLam.Name = "btnXoaCaLam";
             this.btnXoaCaLam.Size = new System.Drawing.Size(122, 51);
             this.btnXoaCaLam.TabIndex = 56;
@@ -160,7 +160,7 @@
             // 
             // btnSuaCaLam
             // 
-            this.btnSuaCaLam.Location = new System.Drawing.Point(445, 659);
+            this.btnSuaCaLam.Location = new System.Drawing.Point(464, 668);
             this.btnSuaCaLam.Name = "btnSuaCaLam";
             this.btnSuaCaLam.Size = new System.Drawing.Size(122, 51);
             this.btnSuaCaLam.TabIndex = 55;
@@ -170,7 +170,7 @@
             // 
             // btnThemCaLam
             // 
-            this.btnThemCaLam.Location = new System.Drawing.Point(296, 659);
+            this.btnThemCaLam.Location = new System.Drawing.Point(315, 668);
             this.btnThemCaLam.Name = "btnThemCaLam";
             this.btnThemCaLam.Size = new System.Drawing.Size(122, 51);
             this.btnThemCaLam.TabIndex = 54;
@@ -181,11 +181,11 @@
             // data_CaLam
             // 
             this.data_CaLam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.data_CaLam.Location = new System.Drawing.Point(571, 223);
+            this.data_CaLam.Location = new System.Drawing.Point(445, 215);
             this.data_CaLam.Name = "data_CaLam";
             this.data_CaLam.RowHeadersWidth = 51;
             this.data_CaLam.RowTemplate.Height = 24;
-            this.data_CaLam.Size = new System.Drawing.Size(599, 393);
+            this.data_CaLam.Size = new System.Drawing.Size(640, 393);
             this.data_CaLam.TabIndex = 53;
             this.data_CaLam.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_CaLam_CellClick);
             // 
@@ -193,11 +193,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(466, 120);
+            this.label1.Location = new System.Drawing.Point(502, 71);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(333, 29);
             this.label1.TabIndex = 52;
             this.label1.Text = "QUẢN LÝ THÔNG TIN CA LÀM";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cALAMVIECBindingSource
             // 
@@ -212,7 +213,7 @@
             // 
             this.iD_CALAMTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cALAMVIECBindingSource, "ID_CALAM", true));
             this.iD_CALAMTextBox.Enabled = false;
-            this.iD_CALAMTextBox.Location = new System.Drawing.Point(239, 244);
+            this.iD_CALAMTextBox.Location = new System.Drawing.Point(183, 198);
             this.iD_CALAMTextBox.Name = "iD_CALAMTextBox";
             this.iD_CALAMTextBox.Size = new System.Drawing.Size(235, 22);
             this.iD_CALAMTextBox.TabIndex = 68;
@@ -220,7 +221,7 @@
             // tENCATextBox
             // 
             this.tENCATextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cALAMVIECBindingSource, "TENCA", true));
-            this.tENCATextBox.Location = new System.Drawing.Point(239, 272);
+            this.tENCATextBox.Location = new System.Drawing.Point(183, 226);
             this.tENCATextBox.Name = "tENCATextBox";
             this.tENCATextBox.Size = new System.Drawing.Size(235, 22);
             this.tENCATextBox.TabIndex = 70;
@@ -228,7 +229,7 @@
             // gIOBATDAUTextBox
             // 
             this.gIOBATDAUTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cALAMVIECBindingSource, "GIOBATDAU", true));
-            this.gIOBATDAUTextBox.Location = new System.Drawing.Point(239, 300);
+            this.gIOBATDAUTextBox.Location = new System.Drawing.Point(183, 254);
             this.gIOBATDAUTextBox.Name = "gIOBATDAUTextBox";
             this.gIOBATDAUTextBox.Size = new System.Drawing.Size(235, 22);
             this.gIOBATDAUTextBox.TabIndex = 72;
@@ -236,7 +237,7 @@
             // gIOKETTHUCTextBox
             // 
             this.gIOKETTHUCTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cALAMVIECBindingSource, "GIOKETTHUC", true));
-            this.gIOKETTHUCTextBox.Location = new System.Drawing.Point(239, 328);
+            this.gIOKETTHUCTextBox.Location = new System.Drawing.Point(183, 282);
             this.gIOKETTHUCTextBox.Name = "gIOKETTHUCTextBox";
             this.gIOKETTHUCTextBox.Size = new System.Drawing.Size(235, 22);
             this.gIOKETTHUCTextBox.TabIndex = 74;

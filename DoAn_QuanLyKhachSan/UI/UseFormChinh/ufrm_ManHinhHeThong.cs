@@ -603,7 +603,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             string connectionString = db.GetDataSet();
-            string phuongThucThanhToan = cb_Phuongthuc.SelectedItem?.ToString();
+            string phuongThucThanhToan = cb_Phuongthuc.Text;
             string trangThai = "Đã thanh toán";
 
 

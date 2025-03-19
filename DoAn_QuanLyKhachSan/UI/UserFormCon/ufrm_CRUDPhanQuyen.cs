@@ -240,14 +240,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
 
         private void btnMucLuong_TextChanged(object sender, EventArgs e)
         {
-            string input = btnMucLuong.Text.Replace(".", "").Replace(" VND", "").Trim();
-
-            if (decimal.TryParse(input, out decimal mucLuong))
-            {
-
-                btnMucLuong.Text = string.Format("{0:N0} VND", mucLuong);
-                btnMucLuong.SelectionStart = btnMucLuong.Text.Length;
-            }
+            
         }
     }
 }

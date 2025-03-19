@@ -39,6 +39,7 @@ namespace DoAn_QuanLyKhachSan
 
         // Hiển thị màu các button ở form chính
         private Button _currentButton = null;
+
         private void HighlightButton(Button selectedButton)
         {
             if (_currentButton != null)
@@ -66,12 +67,14 @@ namespace DoAn_QuanLyKhachSan
 
         private void btnQLNV_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             quanLyNhanVienExpander.Start();
            
         }
 
         private void btnTTNV_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_CRUDPhanQuyen1.Visible = false;
             ufrm_CRUDPhong1.Visible = false;
@@ -93,6 +96,7 @@ namespace DoAn_QuanLyKhachSan
 
         private void btnPCCL_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_CRUDPhanQuyen1.Visible = false;
             ufrm_CRUDPhong1.Visible = false;
@@ -113,6 +117,7 @@ namespace DoAn_QuanLyKhachSan
 
         private void btnChamCong_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_CRUDPhanQuyen1.Visible = false;
             ufrm_CRUDPhong1.Visible = false;
@@ -133,6 +138,7 @@ namespace DoAn_QuanLyKhachSan
 
         private void btnCaLam_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_CRUDPhanQuyen1.Visible = false;
             ufrm_CRUDPhong1.Visible = false;
@@ -153,6 +159,7 @@ namespace DoAn_QuanLyKhachSan
 
         private void btnQLKH_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_CRUDPhanQuyen1.Visible = false;
             ufrm_CRUDPhong1.Visible = false;
@@ -175,12 +182,14 @@ namespace DoAn_QuanLyKhachSan
 
         private void btnQLCSVC_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             quanLyCSVCExpander.Start();
 
         }
 
         private void btnThongTinPhong_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_CRUDPhanQuyen1.Visible = false;
             ufrm_CRUDPhong1.Visible = true;
@@ -201,6 +210,7 @@ namespace DoAn_QuanLyKhachSan
 
         private void btnThongTinLoaiPhong_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_CRUDPhanQuyen1.Visible = false;
             ufrm_CRUDPhong1.Visible = false;
@@ -221,6 +231,7 @@ namespace DoAn_QuanLyKhachSan
 
         private void btnThongTinTang_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_CRUDPhanQuyen1.Visible = false;
             ufrm_CRUDPhong1.Visible = false;
@@ -240,6 +251,7 @@ namespace DoAn_QuanLyKhachSan
 
         private void btnThongTinThietBi_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_CRUDPhanQuyen1.Visible = false;
             ufrm_CRUDPhong1.Visible = false;
@@ -260,6 +272,7 @@ namespace DoAn_QuanLyKhachSan
 
         private void btnThongTinDichVu_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_CRUDPhanQuyen1.Visible = false;
             ufrm_CRUDPhong1.Visible = false;
@@ -280,12 +293,14 @@ namespace DoAn_QuanLyKhachSan
 
         private void btn_QLTK_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             quanLyTKExpander.Start();
 
         }
 
         private void btnPQ_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_CRUDPhanQuyen1.Visible = true;
             ufrm_CRUDPhong1.Visible = false;
@@ -306,6 +321,7 @@ namespace DoAn_QuanLyKhachSan
 
         private void btnTK_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_CRUDPhanQuyen1.Visible = false;
             ufrm_CRUDPhong1.Visible = false;
@@ -326,6 +342,7 @@ namespace DoAn_QuanLyKhachSan
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             ufrm_ManHinhHeThong1.Visible = false;
             ufrm_CRUDPhanQuyen1.Visible = false;
             ufrm_CRUDPhong1.Visible = false;
@@ -357,6 +374,7 @@ namespace DoAn_QuanLyKhachSan
 
         private void btnManHinhChinh_Click_1(object sender, EventArgs e)
         {
+            HighlightButton(sender as Button);
             ufrm_ManHinhHeThong1.Visible = true;
             ufrm_CRUDPhanQuyen1.Visible = false;
             ufrm_CRUDPhong1.Visible = false;

@@ -80,7 +80,7 @@
             // 
             // btn_DatPhong
             // 
-            this.btn_DatPhong.BackColor = System.Drawing.Color.Green;
+            this.btn_DatPhong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(187)))), ((int)(((byte)(178)))));
             this.btn_DatPhong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DatPhong.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_DatPhong.ForeColor = System.Drawing.SystemColors.ControlLightLight;

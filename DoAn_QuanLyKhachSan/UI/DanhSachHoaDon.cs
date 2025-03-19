@@ -33,10 +33,54 @@ namespace DoAn_QuanLyKhachSan.UI
 
         private void btn_LoadTongTien_Click(object sender, EventArgs e)
         {
-            this.LoadHoaDon();
+            this.Close();
         }
 
-        private void btn_InHoaDon_Click(object sender, EventArgs e)
+        
+
+        private void data_hoaDon_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            string columnName = data_hoaDon.Columns[e.ColumnIndex].Name;
+
+            // Kiểm tra nếu cột là một trong các cột tiền tệ
+            if ((columnName == "TienCoc" || columnName == "GiaDichVu" || columnName == "TongTienPhong" ||
+                 columnName == "TongTienDichVu" || columnName == "TongTienThanhToan") && e.Value != null)
+            {
+                if (decimal.TryParse(e.Value.ToString(), out decimal soTien))
+                {
+                    e.Value = string.Format("{0:N0} VND", soTien);
+                    e.FormattingApplied = true;
+                }
+            }
+        }
+
+        private void btnXoaHoaDon_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (data_hoaDon.CurrentRow == null)
+                {
+                    MessageBox.Show("Vui lòng chọn hóa đơn cần xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                int MaHoaDon = Convert.ToInt32(data_hoaDon.CurrentRow.Cells["MaHoaDon"].Value);
+
+                // Gọi phương thức thông qua đối tượng hoaDonBLL
+                hoaDonBLL.deleteHoaDon(MaHoaDon);
+
+                MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                LoadHoaDon(); // Cập nhật lại danh sách hóa đơn
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi thông tin liên kết nối : " + ex.Message, "Thông báo ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        
+
+            private void btn_InHoaDon_Click(object sender, EventArgs e)
         {
             try
             {
@@ -119,20 +163,10 @@ namespace DoAn_QuanLyKhachSan.UI
             }
         }
 
-        private void data_hoaDon_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        private void txttimhoadon_TextChanged(object sender, EventArgs e)
         {
-            string columnName = data_hoaDon.Columns[e.ColumnIndex].Name;
 
-            // Kiểm tra nếu cột là một trong các cột tiền tệ
-            if ((columnName == "TienCoc" || columnName == "GiaDichVu" || columnName == "TongTienPhong" ||
-                 columnName == "TongTienDichVu" || columnName == "TongTienThanhToan") && e.Value != null)
-            {
-                if (decimal.TryParse(e.Value.ToString(), out decimal soTien))
-                {
-                    e.Value = string.Format("{0:N0} VND", soTien);
-                    e.FormattingApplied = true;
-                }
-            }
         }
     }
-}
+   }
+

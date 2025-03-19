@@ -227,5 +227,10 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormCon
                 MessageBox.Show("Lỗi khi tải dữ liệu: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

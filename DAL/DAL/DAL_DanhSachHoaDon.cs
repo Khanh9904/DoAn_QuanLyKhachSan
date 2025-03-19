@@ -16,6 +16,42 @@ namespace DAL.DAL
         {
             connectionSring = Dbconnection;
         }
+
+        public bool DeleteHoaDon(int MaHoaDon)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionSring))
+            {
+                connection.Open();
+                string query = "DELETE FROM HOA_DON WHERE MaHoaDon = @MaHoaDon";
+                SqlCommand cmd = new SqlCommand(query, connection);
+                cmd.Parameters.AddWithValue("@MaHoaDon", MaHoaDon);
+                return cmd.ExecuteNonQuery() > 0;
+            }
+        }
+
+        public DataTable SearchHoaDon(string TenNhanVien)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionSring))
+            {
+                connection.Open();
+
+                string TimKiemQuery = "SELECT * FROM NHAN_VIEN WHERE HOTEN LIKE @HOTEN";
+
+                SqlDataAdapter TimKiemAdapter = new SqlDataAdapter(TimKiemQuery, connection);
+
+                TimKiemAdapter.SelectCommand.Parameters.AddWithValue("@HOTEN", "%" + TenNhanVien + "%");
+
+                SqlDataAdapter adapterPhanQuyen = new SqlDataAdapter(TimKiemQuery, connection);
+
+                DataTable dt = new DataTable();
+
+                TimKiemAdapter.Fill(dt);
+
+                return dt;
+            }
+        }
+
+
         public DataTable LoadDataHoaDon()
         {
             DataTable dt = new DataTable();

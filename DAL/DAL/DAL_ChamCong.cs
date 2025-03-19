@@ -60,22 +60,55 @@ namespace DAL.DAL
         //-------------------------------------------------------------------------------------------------------------------------------
 
         // Cập nhật tổng công 
-        public void UpdateTongCong(int maNV, int increment)
+        public bool UpdateTongCong(int maNV, int increment, ChamCong chamCong)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
 
-                string query = "UPDATE NHAN_VIEN SET TONGNGAYCONG = TONGNGAYCONG + @Increment WHERE ID_NHANVIEN = @ID_NHANVIEN";
-
-                using (SqlCommand cmd = new SqlCommand(query, connection))
+                string getOldStatusQuery = "SELECT TRANGTHAI FROM CHAMCONGLAMVIEC WHERE ID_CHAMCONG = @MaChamCong";
+                string oldStatus = "";
+                using (SqlCommand cmd = new SqlCommand(getOldStatusQuery, connection))
                 {
-                    cmd.Parameters.AddWithValue("@Increment", increment);
-                    cmd.Parameters.AddWithValue("@ID_NHANVIEN", maNV);
+                    cmd.Parameters.AddWithValue("@MaChamCong", chamCong.ID_CHAMCONG);
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                        oldStatus = result.ToString();
+                }
+
+                string updateQuery = "UPDATE CHAMCONGLAMVIEC SET TRANGTHAI = @TrangThai, NGAYLAMVIEC = @NgayCong WHERE ID_CHAMCONG = @MaChamCong";
+                using (SqlCommand cmd = new SqlCommand(updateQuery, connection))
+                {
+                    cmd.Parameters.AddWithValue("@MaChamCong", chamCong.ID_CHAMCONG);
+                    cmd.Parameters.AddWithValue("@TrangThai", chamCong.TRANGTHAI);
+                    cmd.Parameters.AddWithValue("@NgayCong", chamCong.NGAYLAMVIEC);
                     cmd.ExecuteNonQuery();
                 }
-            }
 
+                // Cập nhật lại tổng ngày công của nhân viên -----------------------------------------------------------------------------------
+
+                if (oldStatus == "Có mặt" && chamCong.TRANGTHAI == "Vắng mặt")
+                {
+                    increment = -1;
+                }
+                else if (oldStatus == "Vắng mặt" && chamCong.TRANGTHAI == "Có mặt")
+                {
+                    increment = 1;
+                }
+
+                if (increment != 0)
+                {
+                    string updateTongCongQuery = "UPDATE NHAN_VIEN SET TONGNGAYCONG = TONGNGAYCONG + @Increment WHERE ID_NHANVIEN = @MaNV";
+                    using (SqlCommand cmd = new SqlCommand(updateTongCongQuery, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@Increment", increment);
+                        cmd.Parameters.AddWithValue("@MaNV", chamCong.ID_NHANVIEN);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                return true;
+            }
         }
         public bool CheckChamCongExists(int maNV, DateTime ngayCong)
         {
@@ -135,6 +168,40 @@ namespace DAL.DAL
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
+
+                // chưa chọn nhân viên để xóa ngày công 
+                string selectNV = "Select ID_NHANVIEN , TRANGTHAI from CHAMCONGLAMVIEC where ID_CHAMCONG = @MaCC";
+
+                int maNhanVien = -1;
+
+                string trangThaiCong = "";
+
+                using (SqlCommand selectCmd = new SqlCommand(selectNV, connection))
+                {
+                    selectCmd.Parameters.AddWithValue("@MaCC", ID_CHAMCONG);
+                    using (SqlDataReader reader = selectCmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            maNhanVien = Convert.ToInt32(reader["ID_NHANVIEN"]);
+                            trangThaiCong = reader["TRANGTHAI"].ToString();
+                        }
+                    }
+
+                }
+                // cập nhật nếu xóa và trừ lại tổng công 
+                if (maNhanVien != -1 && trangThaiCong == "Có mặt")
+                {
+                    string updateTongCong = "UPDATE NHAN_VIEN SET TONGNGAYCONG = CASE WHEN TONGNGAYCONG > 0 THEN TONGNGAYCONG - 1 ELSE 0 END WHERE ID_NHANVIEN = @MaNhanVien";
+
+                    using (SqlCommand updateCmd = new SqlCommand(updateTongCong, connection))
+                    {
+                        updateCmd.Parameters.AddWithValue("@MaNhanVien", maNhanVien);
+                        updateCmd.ExecuteNonQuery();
+                    }
+                }
+
+
                 string xoaQuery = "delete from CHAMCONGLAMVIEC where ID_CHAMCONG = @ID_CHAMCONG";
                 SqlCommand xoacmd = new SqlCommand(xoaQuery, connection);//thuc hien lenh truy van
                 xoacmd.Parameters.AddWithValue("@ID_CHAMCONG", ID_CHAMCONG);// goi lai lenh thuc hien

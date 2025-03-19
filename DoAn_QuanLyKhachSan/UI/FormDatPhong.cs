@@ -19,6 +19,7 @@ namespace DoAn_QuanLyKhachSan.UI
         private Timer NhanVienTimer, DichVuTimer;
 
         private int maPhong;
+
         public FormDatPhong(int maPhong)
         {
             InitializeComponent();
@@ -84,7 +85,7 @@ namespace DoAn_QuanLyKhachSan.UI
 
             if (!decimal.TryParse(tienCoc, out decimal nhapTienCoc) || nhapTienCoc < 0)
             {
-                MessageBox.Show("Mức lương phải là số hợp lệ lớn hơn 0!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Tiền cọc phải là số hợp lệ lớn hơn 0!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

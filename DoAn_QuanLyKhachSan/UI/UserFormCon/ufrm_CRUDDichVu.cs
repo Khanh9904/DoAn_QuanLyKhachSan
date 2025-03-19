@@ -208,14 +208,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
 
         private void giaDichVuTextBox_TextChanged(object sender, EventArgs e)
         {
-            string input = giaDichVuTextBox.Text.Replace(".", "").Replace(" VND", "").Trim();
-
-            if (decimal.TryParse(input, out decimal mucLuong))
-            {
-
-                giaDichVuTextBox.Text = string.Format("{0:N0} VND", mucLuong);
-                giaDichVuTextBox.SelectionStart = giaDichVuTextBox.Text.Length;
-            }
+            
         }
 
 

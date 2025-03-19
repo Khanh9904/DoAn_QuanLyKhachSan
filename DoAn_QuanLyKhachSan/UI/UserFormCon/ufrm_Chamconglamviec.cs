@@ -109,8 +109,14 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormCon
 
                 };
 
-                BLL_ChamCong.themchamcong(chamcong);
+                if (!BLL_ChamCong.themchamcong(chamcong))
+                {
+                    MessageBox.Show("Thêm thất bại ! Nhân viên này đã chấm công hôm nay ròi ! ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
 
+                int increment = chamcong.TRANGTHAI == "Có mặt" ? 1 : 0;
+                BLL_ChamCong.UpdateTongCongNV(chamcong.ID_NHANVIEN, increment, chamcong);
 
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -145,10 +151,19 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormCon
                     NGAYLAMVIEC = dtngaylam.Value,
                 };
 
-                BLL_ChamCong.suachamcong(chamcong);
+                if (BLL_ChamCong.UpdateTongCongNV(chamcong.ID_NHANVIEN, 0, chamcong))
+                {
+                    MessageBox.Show("Cập nhật chấm công nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadChamcong();
+                    Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Cập nhật chấm công thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
 
-                MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
                 LoadChamcong();
                 Clear();
 

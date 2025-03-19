@@ -73,6 +73,7 @@
             this.ufrm_CRUDThongTinKhachHang1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_CRUDThongTinKhachHang();
             this.ufrm_CRUDPhong1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_CRUDPhong();
             this.ufrm_CRUDPhanQuyen1 = new DoAn_QuanLyKhachSan.UI.UseForm.ufrm_CRUDPhanQuyen();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel_ManHinhChinh.SuspendLayout();
             this.panel_ThongKe.SuspendLayout();
@@ -80,6 +81,8 @@
             this.panel_QLCSVC.SuspendLayout();
             this.panel3.SuspendLayout();
             this.QLNVContainer.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -410,6 +413,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(233)))), ((int)(((byte)(213)))));
+            this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -548,6 +552,16 @@
             this.ufrm_CRUDPhanQuyen1.Size = new System.Drawing.Size(1191, 890);
             this.ufrm_CRUDPhanQuyen1.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::DoAn_QuanLyKhachSan.Properties.Resources.icon_5404125_640;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(233, 166);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -579,6 +593,8 @@
             this.panel_QLCSVC.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.QLNVContainer.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -628,6 +644,7 @@
         private UI.UserFormCon.ufrm_CaLam ufrm_CaLam1;
         private UI.UserFormCon.ufrm_ThongKe ufrm_ThongKe1;
         private UI.UseForm.ufrm_ManHinhHeThong ufrm_ManHinhHeThong1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -20,5 +20,10 @@ namespace BLL
         {
             return hoaDonDAL.LoadDataHoaDon();
         }
+
+        public bool deleteHoaDon(int MaHoaDon)
+        {
+            return hoaDonDAL.DeleteHoaDon(MaHoaDon);
+        }
     }
 }

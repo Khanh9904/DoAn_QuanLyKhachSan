@@ -331,12 +331,13 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
                     connection.Open();
 
                     // Câu lệnh cập nhật TongLuong
-                    string updateQuery = @" UPDATE NHAN_VIEN
-                    SET TONGLUONG = TONGNGAYCONG * PQ.MUCLUONGLAMVIEC
-                    FROM NHAN_VIEN NV
-                    JOIN TAIKHOAN TK ON NV.ID_TAIKHOAN = TK.ID_TAIKHOAN
-                    JOIN PHANQUYEN PQ ON TK.ID_PHANQUYEN = PQ.ID_PHANQUYEN;
-                    ";
+                    string updateQuery = @"
+                            UPDATE NHAN_VIEN
+                            SET TONGLUONG = TONGNGAYCONG * PQ.MUCLUONGLAMVIEC
+                            FROM NHAN_VIEN NV
+                            JOIN TAIKHOAN TK ON NV.ID_TAIKHOAN = TK.ID_TAIKHOAN
+                            JOIN PHANQUYEN PQ ON TK.ID_PHANQUYEN = PQ.ID_PHANQUYEN;
+                            ";
 
                     using (SqlCommand cmd = new SqlCommand(updateQuery, connection))
                     {
@@ -357,14 +358,7 @@ namespace DoAn_QuanLyKhachSan.UI.UserFormPhu
 
         private void tONGLUONGTextBox_TextChanged(object sender, EventArgs e)
         {
-            string input = tONGLUONGTextBox.Text.Replace(".", "").Replace(" VND", "").Trim();
-
-            if (decimal.TryParse(input, out decimal mucLuong))
-            {
-
-                tONGLUONGTextBox.Text = string.Format("{0:N0} VND", mucLuong);
-                tONGLUONGTextBox.SelectionStart = tONGLUONGTextBox.Text.Length;
-            }
+           
         }
 
         //------------------------------------------------------------------------------------------------------------------------------------------------
