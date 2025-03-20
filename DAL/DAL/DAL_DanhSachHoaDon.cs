@@ -59,27 +59,32 @@ namespace DAL.DAL
             {
                 connection.Open();
                 string query = @"
-            SELECT 
-                hd.MaHoaDon,
-                hd.NgayLapHoaDon,
-                p.TenPhong,
-                pdp.NgayNhanPhong,
-                pdp.NgayTraPhong,
-                pdp.SoNguoiO,
-                pdp.TienCoc,
-                dv.TenDichVu,
-                dv.GiaDichVu,
-                hd.TongTienPhong,
-                hd.TongTienDichVu,
-                hd.TongTienThanhToan,
-                hd.PhuongThucThanhToan,
-                hd.TrangThai,
-                nv.HoTen AS TenNhanVien
-            FROM HOA_DON hd
-            INNER JOIN PHIEU_DAT_PHONG pdp ON hd.MaLapPhieu = pdp.MaLapPhieu
-            INNER JOIN PHONG p ON pdp.MaPhong = p.MaPhong
-            LEFT JOIN DICH_VU dv ON pdp.MaDichVu = dv.MaDichVu
-            LEFT JOIN NHAN_VIEN nv ON pdp.ID_NHANVIEN = nv.ID_NHANVIEN";
+                 SELECT 
+                     hd.MaHoaDon,
+                     hd.NgayLapHoaDon,
+                     p.TenPhong,
+                     pdp.NgayNhanPhong,
+                     pdp.NgayTraPhong,
+                     pdp.SoNguoiO,
+                     pdp.TienCoc,
+                     dv.TenDichVu,
+                     dv.GiaDichVu,
+                     hd.TongTienPhong,
+                     hd.TongTienDichVu,
+                     hd.TongTienThanhToan,
+                     hd.PhuongThucThanhToan,
+                     hd.TrangThai,
+                     nv.HoTen AS TenNhanVien,
+                     kh.HoTen AS TenKhachHang,  
+                     kh.GioiTinh,
+                     kh.SDT,             
+                     kh.DiaChi                 
+                 FROM HOA_DON hd
+                 INNER JOIN PHIEU_DAT_PHONG pdp ON hd.MaLapPhieu = pdp.MaLapPhieu
+                 INNER JOIN PHONG p ON pdp.MaPhong = p.MaPhong
+                 LEFT JOIN DICH_VU dv ON pdp.MaDichVu = dv.MaDichVu
+                 LEFT JOIN NHAN_VIEN nv ON pdp.ID_NHANVIEN = nv.ID_NHANVIEN
+                 LEFT JOIN KHACH_HANG kh ON hd.MaKhachHang = kh.MaKhachHang";
 
                 SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
                 adapter.Fill(dt);

@@ -266,6 +266,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
                        pdp.MaLapPhieu,
                        ctp.MaChiTietPhong,
                        pdp.MaPhong,
+                        kh.MaKhachHang,
                        kh.HoTen,
                        dv.TenDichVu,
                        pdp.NgayNhanPhong,
@@ -644,10 +645,22 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
                                 transaction.Rollback();
                                 return;
                             }
+                            string getKhachHangQuery = "SELECT MaKhachHang FROM PHIEU_DAT_PHONG WHERE MaLapPhieu = @MaLapPhieu";
+                            int? maKhachHang = null;
+
+                            using (SqlCommand khCmd = new SqlCommand(getKhachHangQuery, conn, transaction))
+                            {
+                                khCmd.Parameters.AddWithValue("@MaLapPhieu", maLapPhieu);
+                                object khResult = khCmd.ExecuteScalar();
+                                if (khResult != null)
+                                {
+                                    maKhachHang = Convert.ToInt32(khResult);
+                                }
+                            }
 
                             string insertHoaDonQuery = @"
-                        INSERT INTO HOA_DON (NgayLapHoaDon, TongTienPhong, TongTienDichVu, TongTienThanhToan, PhuongThucThanhToan, TrangThai, MaLapPhieu)
-                        VALUES (@NgayLapHoaDon, @TongTienPhong, @TongTienDichVu, @TongTienThanhToan, @PhuongThucThanhToan, @TrangThai, @MaLapPhieu)";
+                        INSERT INTO HOA_DON (NgayLapHoaDon, TongTienPhong, TongTienDichVu, TongTienThanhToan, PhuongThucThanhToan, TrangThai, MaLapPhieu , MaKhachHang)
+                        VALUES (@NgayLapHoaDon, @TongTienPhong, @TongTienDichVu, @TongTienThanhToan, @PhuongThucThanhToan, @TrangThai, @MaLapPhieu, @MaKhachHang)";
 
                             using (SqlCommand cmd = new SqlCommand(insertHoaDonQuery, conn, transaction))
                             {
@@ -658,6 +671,7 @@ namespace DoAn_QuanLyKhachSan.UI.UseForm
                                 cmd.Parameters.AddWithValue("@PhuongThucThanhToan", phuongThucThanhToan);
                                 cmd.Parameters.AddWithValue("@TrangThai", trangThai);
                                 cmd.Parameters.AddWithValue("@MaLapPhieu", maLapPhieu);
+                                cmd.Parameters.AddWithValue("@MaKhachHang", (object)maKhachHang ?? DBNull.Value); // Xử lý nếu null
                                 cmd.ExecuteNonQuery();
                             }
 

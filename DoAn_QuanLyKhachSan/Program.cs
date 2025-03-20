@@ -19,7 +19,7 @@ namespace DoAn_QuanLyKhachSan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManHinhTiepTan());
+            Application.Run(new Form1());
 
         }
     }

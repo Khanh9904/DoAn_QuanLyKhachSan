@@ -136,8 +136,8 @@ namespace DoAn_QuanLyKhachSan.UI
 
                     // Lưu thông tin phiếu đặt phòng
                     string insertPhieuDat = @"INSERT INTO PHIEU_DAT_PHONG 
-    (NgayNhanPhong, NgayTraPhong, SoNguoiO, TrangThaiPhieuDat, TienCoc, NgayDat, MaPhong , MaDichVu , ID_NHANVIEN) 
-    VALUES (@NgayNhan, @NgayTra, @SoNguoiO, @TrangThai, @TienCoc, @NgayDat, @MaPhong, @MaDichVu , @MaNhanVien);";
+    (NgayNhanPhong, NgayTraPhong, SoNguoiO, TrangThaiPhieuDat, TienCoc, NgayDat, MaPhong , MaDichVu , ID_NHANVIEN , MaKhachHang) 
+    VALUES (@NgayNhan, @NgayTra, @SoNguoiO, @TrangThai, @TienCoc, @NgayDat, @MaPhong, @MaDichVu , @MaNhanVien , @MaKhachHang);";
 
                     SqlCommand cmdPhieuDat = new SqlCommand(insertPhieuDat, conn, transaction);
                     cmdPhieuDat.Parameters.AddWithValue("@NgayNhan", ngayNhan);
@@ -149,6 +149,8 @@ namespace DoAn_QuanLyKhachSan.UI
                     cmdPhieuDat.Parameters.AddWithValue("@MaNhanVien", 7);
                     cmdPhieuDat.Parameters.AddWithValue("@MaDichVu", cb_DichVu.SelectedValue);
                     cmdPhieuDat.Parameters.AddWithValue("@MaPhong", maPhong);
+
+                    cmdPhieuDat.Parameters.AddWithValue("@MaKhachHang", maKH);
 
                     cmdPhieuDat.ExecuteNonQuery();
 

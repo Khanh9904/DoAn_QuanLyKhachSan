@@ -105,6 +105,11 @@ namespace DoAn_QuanLyKhachSan.UI
                     string trangThai = selectedRow.Cells["TrangThai"].Value?.ToString() ?? "Chưa thanh toán";
                     string tenNhanVien = selectedRow.Cells["TenNhanVien"].Value?.ToString() ?? "N/A";
 
+                    // Thêm thông tin khách hàng-----------------------
+                    string tenKhachHang = selectedRow.Cells["TenKhachHang"].Value?.ToString() ?? "N/A";
+                    string soDienThoai = selectedRow.Cells["SDT"].Value?.ToString() ?? "N/A";
+                    string diaChi = selectedRow.Cells["DiaChi"].Value?.ToString() ?? "N/A";
+
                     // Định dạng số tiền
                     string FormatCurrency(decimal amount) => amount.ToString("N0") + " VNĐ";
 
@@ -115,6 +120,11 @@ namespace DoAn_QuanLyKhachSan.UI
                             Mã Hóa Đơn       : {maHD}
                             Ngày Lập Hóa Đơn : {ngayLapHoaDon}
                             Nhân Viên Lập    : {tenNhanVien}
+
+                            Thông tin khách hàng:
+                            {"Tên Khách Hàng:",-20} {tenKhachHang}
+                            {"Số Điện Thoại:",-20} {soDienThoai}
+                            {"Địa Chỉ:",-20} {diaChi}
 
                             Thông tin phòng:
                             {"Phòng:",-20} {tenPhong}
